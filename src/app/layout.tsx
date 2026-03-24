@@ -4,6 +4,10 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { siteConfig } from '@/lib/site-config';
+import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
+import { Breadcrumbs } from '@/components/layout/breadcrumbs';
+import { OrganizationSchema } from '@/components/seo/organization-schema';
 import './globals.css';
 
 const inter = Inter({
@@ -29,8 +33,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="min-h-screen bg-background font-sans antialiased">
-        {/* Header and Footer added in Plan 02 */}
-        <main>{children}</main>
+        <OrganizationSchema />
+        <Header />
+        <main id="main-content">
+          <Breadcrumbs />
+          {children}
+        </main>
+        <Footer />
         <Analytics />
         <SpeedInsights />
       </body>
