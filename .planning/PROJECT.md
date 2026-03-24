@@ -12,7 +12,9 @@ Users can find a trustworthy, interactive tool or guide that helps them make a c
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] SEO-optimized pages targeting long-tail financial keywords — Validated in Phase 01: Foundation & Trust (sitemap, robots, meta tags, canonical URLs, JSON-LD schemas)
+- [x] Schema markup and rich results for calculators and guides — Validated in Phase 01: Foundation & Trust (Organization, Article, FAQ, BreadcrumbList, WebApplication schemas)
+- [x] Responsive, fast, modern design that feels trustworthy — Validated in Phase 01: Foundation & Trust (Tailwind OKLCH blue palette, Inter font, shadcn/ui, static generation)
 
 ### Active
 
@@ -84,4 +86,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after initialization*
+*Last updated: 2026-03-24 after Phase 01 completion*
