@@ -48,7 +48,15 @@ Plans:
   3. Calculator state is stored in URL query parameters so results can be bookmarked and shared, and every calculator loads with sensible national-average defaults
   4. Side-by-side "what-if" scenario comparison works, allowing users to compare two sets of inputs with contrasted outcomes
   5. All financial math is accurate (validated against reference sources) with no floating-point rounding errors visible to users
-**Plans**: TBD
+**Plans**: 7 plans
+Plans:
+- [ ] 02-01-PLAN.md -- Foundation: dependencies, Velite config, types, precision math, NuqsAdapter, shadcn/ui components
+- [ ] 02-02-PLAN.md -- Calculator engine UI: InputSliderCombo, CalculatorInputs, ResultCard, CalculatorShell with two-column layout
+- [ ] 02-03-PLAN.md -- Charts (Recharts wrapper) and comparison view with delta badges and CSV export
+- [ ] 02-04-PLAN.md -- Math modules batch 1: mortgage, rent affordability, compound interest, loan repayment, savings goal + YAML configs
+- [ ] 02-05-PLAN.md -- Math modules batch 2: retirement, budget, tax estimator, rent vs buy, student loan + YAML configs
+- [ ] 02-06-PLAN.md -- Integration: calculator registry, index page, dynamic [slug] route with Velite
+- [ ] 02-07-PLAN.md -- Final verification and human checkpoint
 **UI hint**: yes
 
 ### Phase 3: Content System & Life-Stage Hubs
@@ -82,7 +90,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Trust | 0/5 | Planned | - |
-| 2. Calculator Engine & Core Tools | 0/0 | Not started | - |
+| 1. Foundation & Trust | 4/5 | In progress | - |
+| 2. Calculator Engine & Core Tools | 0/7 | Planned | - |
 | 3. Content System & Life-Stage Hubs | 0/0 | Not started | - |
 | 4. Comparison & Affiliate Infrastructure | 0/0 | Not started | - |
