@@ -19,12 +19,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Legal & Trust
 
-- [ ] **TRUST-01**: Standardized affiliate disclosure component displayed near all affiliate links
+- [x] **TRUST-01**: Standardized affiliate disclosure component displayed near all affiliate links
 - [x] **TRUST-02**: "Not financial advice" disclaimer on all calculator and guide pages
-- [ ] **TRUST-03**: Privacy policy page compliant with CCPA/GDPR basics
-- [ ] **TRUST-04**: Editorial standards / methodology page explaining how content is created
-- [ ] **TRUST-05**: Author bio pages with credentials and "reviewed by" attribution on content
-- [ ] **TRUST-06**: About page establishing site credibility and mission
+- [x] **TRUST-03**: Privacy policy page compliant with CCPA/GDPR basics
+- [x] **TRUST-04**: Editorial standards / methodology page explaining how content is created
+- [x] **TRUST-05**: Author bio pages with credentials and "reviewed by" attribution on content
+- [x] **TRUST-06**: About page establishing site credibility and mission
 
 ### Calculator Engine
 
@@ -127,12 +127,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INFRA-05 | Phase 1 | Complete |
 | INFRA-06 | Phase 1 | Complete |
 | INFRA-07 | Phase 1 | Complete |
-| TRUST-01 | Phase 1 | Pending |
+| TRUST-01 | Phase 1 | Complete |
 | TRUST-02 | Phase 1 | Complete |
-| TRUST-03 | Phase 1 | Pending |
-| TRUST-04 | Phase 1 | Pending |
-| TRUST-05 | Phase 1 | Pending |
-| TRUST-06 | Phase 1 | Pending |
+| TRUST-03 | Phase 1 | Complete |
+| TRUST-04 | Phase 1 | Complete |
+| TRUST-05 | Phase 1 | Complete |
+| TRUST-06 | Phase 1 | Complete |
 | CALC-01 | Phase 2 | Pending |
 | CALC-02 | Phase 2 | Pending |
 | CALC-03 | Phase 2 | Pending |
