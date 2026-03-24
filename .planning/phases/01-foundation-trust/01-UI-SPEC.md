@@ -54,9 +54,9 @@ Exceptions: Touch targets for mobile navigation hamburger button and footer link
 | Role | Size | Weight | Line Height | Usage |
 |------|------|--------|-------------|-------|
 | Body | 16px | 400 (regular) | 1.6 | Paragraph text, trust page content, privacy policy, editorial standards |
-| Label | 14px | 500 (medium) | 1.4 | Navigation links, breadcrumb text, badge text, disclaimer text, footer links, meta info |
+| Label | 14px | 400 (regular) | 1.4 | Navigation links, breadcrumb text, badge text, disclaimer text, footer links, meta info |
 | Heading | 24px | 600 (semibold) | 1.3 | Page titles (About, Editorial Standards, Privacy Policy), section headings |
-| Display | 36px | 700 (bold) | 1.15 | Homepage hero headline only |
+| Display | 36px | 600 (semibold) | 1.15 | Homepage hero headline only |
 
 **Font family:** `var(--font-inter), ui-sans-serif, system-ui, sans-serif` applied via `--font-sans` in `@theme inline`.
 
@@ -65,7 +65,7 @@ Exceptions: Touch targets for mobile navigation hamburger button and footer link
 - Heading: 24px on desktop, 20px on mobile (< md)
 - Body and Label: No responsive changes
 
-**Source:** D-03 (CONTEXT.md) locks Inter. Sizes chosen for financial content readability -- 16px body is the minimum for long-form YMYL content. Two primary weights (400, 600) with 500 for labels and 700 reserved for Display only.
+**Source:** D-03 (CONTEXT.md) locks Inter. Sizes chosen for financial content readability -- 16px body is the minimum for long-form YMYL content. Two weights: 400 (regular) for body and label text, 600 (semibold) for headings and display. Size differentiation (14px vs 16px, 24px vs 36px) provides sufficient hierarchy without additional weight variants.
 
 ---
 
