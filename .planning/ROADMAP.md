@@ -29,7 +29,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Breadcrumb navigation with BreadcrumbList schema, automated XML sitemap, and robots.txt are all functioning
   4. Trust pages exist and are linked from site navigation: About, Editorial Standards, Privacy Policy, and "Not financial advice" disclaimers appear on relevant pages
   5. Author bio pages with credentials exist, affiliate disclosure component renders near affiliate link locations, and FAQPage/HowTo/Article/WebApplication schema markup is in place on relevant page types
-**Plans**: TBD
+**Plans**: 5 plans
+Plans:
+- [ ] 01-01-PLAN.md -- Project scaffold, design system, root layout with analytics
+- [ ] 01-02-PLAN.md -- Layout components (header, footer, mobile nav, breadcrumbs) and SEO infrastructure (JSON-LD, sitemap, robots)
+- [ ] 01-03-PLAN.md -- Homepage with hero/CTAs/trust signals, placeholder pages, error pages, disclaimer banner
+- [ ] 01-04-PLAN.md -- Trust pages (About, Editorial Standards, Privacy Policy, Author Bio) and trust components
+- [ ] 01-05-PLAN.md -- Final verification and human checkpoint
 **UI hint**: yes
 
 ### Phase 2: Calculator Engine & Core Tools
@@ -76,7 +82,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Trust | 0/0 | Not started | - |
+| 1. Foundation & Trust | 0/5 | Planned | - |
 | 2. Calculator Engine & Core Tools | 0/0 | Not started | - |
 | 3. Content System & Life-Stage Hubs | 0/0 | Not started | - |
 | 4. Comparison & Affiliate Infrastructure | 0/0 | Not started | - |
