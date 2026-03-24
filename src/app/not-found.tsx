@@ -12,7 +12,7 @@ export default function NotFound() {
         to the homepage or try one of the links below.
       </p>
       <div className="mt-8">
-        <Button render={<Link href="/" />}>Go to Homepage</Button>
+        <Button nativeButton={false} render={<Link href="/" />}>Go to Homepage</Button>
       </div>
       <div className="mt-8 border-t border-border pt-6">
         <p className="text-sm text-muted-foreground">

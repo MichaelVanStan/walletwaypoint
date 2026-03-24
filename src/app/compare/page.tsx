@@ -25,7 +25,7 @@ export default function ComparePage() {
         how we evaluate and rank products.
       </p>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Button variant="outline" render={<Link href="/" />}>
+        <Button nativeButton={false} variant="outline" render={<Link href="/" />}>
           Back to Home
         </Button>
       </div>

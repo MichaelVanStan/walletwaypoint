@@ -65,12 +65,13 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Button
+              nativeButton={false}
               render={<Link href="/calculators" />}
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
               Explore Calculators
             </Button>
-            <Button variant="outline" render={<Link href="/guides" />}>
+            <Button nativeButton={false} variant="outline" render={<Link href="/guides" />}>
               Read Our Guides
             </Button>
           </div>
