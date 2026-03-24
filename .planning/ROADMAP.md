@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-PLAN.md -- Project scaffold, design system, root layout with analytics
 - [x] 01-02-PLAN.md -- Layout components (header, footer, mobile nav, breadcrumbs) and SEO infrastructure (JSON-LD, sitemap, robots)
-- [ ] 01-03-PLAN.md -- Homepage with hero/CTAs/trust signals, placeholder pages, error pages, disclaimer banner
+- [x] 01-03-PLAN.md -- Homepage with hero/CTAs/trust signals, placeholder pages, error pages, disclaimer banner
 - [ ] 01-04-PLAN.md -- Trust pages (About, Editorial Standards, Privacy Policy, Author Bio) and trust components
 - [ ] 01-05-PLAN.md -- Final verification and human checkpoint
 **UI hint**: yes
