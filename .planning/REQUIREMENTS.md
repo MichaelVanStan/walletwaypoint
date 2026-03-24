@@ -120,60 +120,60 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | TBD | Pending |
-| INFRA-02 | TBD | Pending |
-| INFRA-03 | TBD | Pending |
-| INFRA-04 | TBD | Pending |
-| INFRA-05 | TBD | Pending |
-| INFRA-06 | TBD | Pending |
-| INFRA-07 | TBD | Pending |
-| TRUST-01 | TBD | Pending |
-| TRUST-02 | TBD | Pending |
-| TRUST-03 | TBD | Pending |
-| TRUST-04 | TBD | Pending |
-| TRUST-05 | TBD | Pending |
-| TRUST-06 | TBD | Pending |
-| CALC-01 | TBD | Pending |
-| CALC-02 | TBD | Pending |
-| CALC-03 | TBD | Pending |
-| CALC-04 | TBD | Pending |
-| CALC-05 | TBD | Pending |
-| CALC-06 | TBD | Pending |
-| CALC-07 | TBD | Pending |
-| CALC-08 | TBD | Pending |
-| TOOL-01 | TBD | Pending |
-| TOOL-02 | TBD | Pending |
-| TOOL-03 | TBD | Pending |
-| TOOL-04 | TBD | Pending |
-| TOOL-05 | TBD | Pending |
-| TOOL-06 | TBD | Pending |
-| TOOL-07 | TBD | Pending |
-| TOOL-08 | TBD | Pending |
-| TOOL-09 | TBD | Pending |
-| TOOL-10 | TBD | Pending |
-| CONT-01 | TBD | Pending |
-| CONT-02 | TBD | Pending |
-| CONT-03 | TBD | Pending |
-| CONT-04 | TBD | Pending |
-| CONT-05 | TBD | Pending |
-| HUB-01 | TBD | Pending |
-| HUB-02 | TBD | Pending |
-| HUB-03 | TBD | Pending |
-| HUB-04 | TBD | Pending |
-| HUB-05 | TBD | Pending |
-| HUB-06 | TBD | Pending |
-| AFFIL-01 | TBD | Pending |
-| AFFIL-02 | TBD | Pending |
-| AFFIL-03 | TBD | Pending |
-| AFFIL-04 | TBD | Pending |
-| AFFIL-05 | TBD | Pending |
-| AFFIL-06 | TBD | Pending |
+| INFRA-01 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Pending |
+| INFRA-05 | Phase 1 | Pending |
+| INFRA-06 | Phase 1 | Pending |
+| INFRA-07 | Phase 1 | Pending |
+| TRUST-01 | Phase 1 | Pending |
+| TRUST-02 | Phase 1 | Pending |
+| TRUST-03 | Phase 1 | Pending |
+| TRUST-04 | Phase 1 | Pending |
+| TRUST-05 | Phase 1 | Pending |
+| TRUST-06 | Phase 1 | Pending |
+| CALC-01 | Phase 2 | Pending |
+| CALC-02 | Phase 2 | Pending |
+| CALC-03 | Phase 2 | Pending |
+| CALC-04 | Phase 2 | Pending |
+| CALC-05 | Phase 2 | Pending |
+| CALC-06 | Phase 2 | Pending |
+| CALC-07 | Phase 2 | Pending |
+| CALC-08 | Phase 2 | Pending |
+| TOOL-01 | Phase 2 | Pending |
+| TOOL-02 | Phase 2 | Pending |
+| TOOL-03 | Phase 2 | Pending |
+| TOOL-04 | Phase 2 | Pending |
+| TOOL-05 | Phase 2 | Pending |
+| TOOL-06 | Phase 2 | Pending |
+| TOOL-07 | Phase 2 | Pending |
+| TOOL-08 | Phase 2 | Pending |
+| TOOL-09 | Phase 2 | Pending |
+| TOOL-10 | Phase 2 | Pending |
+| CONT-01 | Phase 3 | Pending |
+| CONT-02 | Phase 3 | Pending |
+| CONT-03 | Phase 3 | Pending |
+| CONT-04 | Phase 3 | Pending |
+| CONT-05 | Phase 3 | Pending |
+| HUB-01 | Phase 3 | Pending |
+| HUB-02 | Phase 3 | Pending |
+| HUB-03 | Phase 3 | Pending |
+| HUB-04 | Phase 3 | Pending |
+| HUB-05 | Phase 3 | Pending |
+| HUB-06 | Phase 3 | Pending |
+| AFFIL-01 | Phase 4 | Pending |
+| AFFIL-02 | Phase 4 | Pending |
+| AFFIL-03 | Phase 4 | Pending |
+| AFFIL-04 | Phase 4 | Pending |
+| AFFIL-05 | Phase 4 | Pending |
+| AFFIL-06 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 48 total
-- Mapped to phases: 0
-- Unmapped: 48
+- Mapped to phases: 48
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-24*
-*Last updated: 2026-03-24 after initial definition*
+*Last updated: 2026-03-24 after roadmap creation*
