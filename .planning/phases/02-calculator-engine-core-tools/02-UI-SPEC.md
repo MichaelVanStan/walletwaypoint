@@ -55,26 +55,25 @@ Exceptions:
 
 ## Typography
 
-Inherited from Phase 1 with Phase 2-specific role additions:
+4 declared sizes, 2 weights. Consolidated from Phase 1 base scale with Phase 2 role assignments.
 
 | Role | Size | Weight | Line Height | Phase 2 Usage |
 |------|------|--------|-------------|---------------|
-| Body | 16px | 400 (regular) | 1.6 | Interpretation text ("friendly mentor" summary), input labels, hint text body |
-| Label | 14px | 400 (regular) | 1.4 | Input hint text, chart axis labels, "US average" contextual labels, comparison delta labels, expandable section triggers |
-| Heading | 24px | 600 (semibold) | 1.3 | Calculator page title (H1), section headings ("Results", "Amortization Schedule"), comparison section heading |
-| Display | 36px | 600 (semibold) | 1.15 | Not used on individual calculator pages. Used on calculator index page heading only. |
+| Label | 14px | 400 (regular) | 1.4 | Input hint text ("Typical range: $100K--$1M"), "Unusual value" warnings, chart axis labels, "US average" contextual labels, comparison delta labels, expandable section triggers, result card labels (e.g., "Monthly Payment"), chart tooltip text |
+| Body | 16px | 400 (regular) | 1.6 | Interpretation text ("friendly mentor" summary), input labels, form body text |
+| Heading | 24px | 600 (semibold) | 1.3 | Calculator page title (H1), calculator index page heading (H1), section headings ("Results", "Amortization Schedule"), comparison section heading |
+| Result | 28px | 600 (semibold) | 1.2 | Primary result metric in result cards (e.g., "$2,528/mo"). Desktop only -- scales to 24px semibold on mobile via responsive class. |
 
-**Phase 2 additions (within existing scale):**
+**Weights:** 400 (regular) and 600 (semibold). No other weights used.
 
-| Role | Size | Weight | Line Height | Usage |
-|------|------|--------|-------------|-------|
-| Result number | 28px | 600 (semibold) | 1.2 | Primary result metric in result cards (e.g., "$2,528/mo"). Desktop only -- scales to 24px on mobile. |
-| Result label | 14px | 400 (regular) | 1.4 | Label above result numbers in result cards (e.g., "Monthly Payment") |
-| Hint | 12px | 400 (regular) | 1.4 | Input range hints (e.g., "Typical range: $100K--$1M"), "Unusual value" warnings, chart tooltip text |
+**Consolidation notes:**
+- Hint text (previously 12px) merged into 14px Label. Visual distinction is achieved through `--muted-foreground` color, not a separate size. Hint text uses `text-sm text-muted-foreground` -- the color contrast provides sufficient hierarchy without introducing a fifth size.
+- Display (previously 36px) merged into 24px Heading. The calculator index page heading uses the same 24px semibold as individual calculator page H1 titles, maintaining consistency across calculator routes.
+- Result label (previously a separate entry at 14px) is part of the Label role. Same size, same weight, same line height.
 
-**Note:** Result number at 28px and hint at 12px are additions to the Phase 1 type scale. Both use existing weights (400, 600). The 28px result number uses Tailwind `text-[28px]` or the closest utility (`text-2xl` maps to 24px, so use explicit 28px). The 12px hint uses `text-xs`.
+**Implementation:** 14px maps to Tailwind `text-sm`. 16px maps to `text-base`. 24px maps to `text-2xl`. 28px uses `text-[28px]` (no standard Tailwind utility matches exactly). Mobile result scaling uses `text-2xl lg:text-[28px]`.
 
-**Source:** Phase 1 UI-SPEC typography. Result number size chosen for visual prominence as the primary output. 12px hint size for non-essential contextual information that must not compete with input labels.
+**Source:** Phase 1 UI-SPEC typography (base scale). Consolidated per checker feedback to stay within 4-size maximum.
 
 ---
 
