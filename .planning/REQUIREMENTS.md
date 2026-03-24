@@ -9,13 +9,13 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Infrastructure & SEO
 
-- [ ] **INFRA-01**: All content pages are statically generated (SSG) or ISR for crawlability
+- [x] **INFRA-01**: All content pages are statically generated (SSG) or ISR for crawlability
 - [ ] **INFRA-02**: Every page has correct meta tags (title, description, og:image, canonical URL)
 - [ ] **INFRA-03**: Breadcrumb navigation on all pages with BreadcrumbList schema markup
 - [ ] **INFRA-04**: Automated XML sitemap and robots.txt generation
 - [ ] **INFRA-05**: FAQPage, HowTo, Article, and WebApplication schema markup on relevant pages
-- [ ] **INFRA-06**: Core Web Vitals passing on all pages (LCP < 2.5s, CLS < 0.1, INP < 200ms)
-- [ ] **INFRA-07**: Responsive design that works on mobile, tablet, and desktop
+- [x] **INFRA-06**: Core Web Vitals passing on all pages (LCP < 2.5s, CLS < 0.1, INP < 200ms)
+- [x] **INFRA-07**: Responsive design that works on mobile, tablet, and desktop
 
 ### Legal & Trust
 
@@ -120,13 +120,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | Phase 1 | Pending |
+| INFRA-01 | Phase 1 | Complete |
 | INFRA-02 | Phase 1 | Pending |
 | INFRA-03 | Phase 1 | Pending |
 | INFRA-04 | Phase 1 | Pending |
 | INFRA-05 | Phase 1 | Pending |
-| INFRA-06 | Phase 1 | Pending |
-| INFRA-07 | Phase 1 | Pending |
+| INFRA-06 | Phase 1 | Complete |
+| INFRA-07 | Phase 1 | Complete |
 | TRUST-01 | Phase 1 | Pending |
 | TRUST-02 | Phase 1 | Pending |
 | TRUST-03 | Phase 1 | Pending |

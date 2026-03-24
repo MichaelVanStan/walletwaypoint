@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. Author bio pages with credentials exist, affiliate disclosure component renders near affiliate link locations, and FAQPage/HowTo/Article/WebApplication schema markup is in place on relevant page types
 **Plans**: 5 plans
 Plans:
-- [ ] 01-01-PLAN.md -- Project scaffold, design system, root layout with analytics
+- [x] 01-01-PLAN.md -- Project scaffold, design system, root layout with analytics
 - [ ] 01-02-PLAN.md -- Layout components (header, footer, mobile nav, breadcrumbs) and SEO infrastructure (JSON-LD, sitemap, robots)
 - [ ] 01-03-PLAN.md -- Homepage with hero/CTAs/trust signals, placeholder pages, error pages, disclaimer banner
 - [ ] 01-04-PLAN.md -- Trust pages (About, Editorial Standards, Privacy Policy, Author Bio) and trust components
