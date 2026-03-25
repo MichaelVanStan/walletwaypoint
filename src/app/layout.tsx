@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import { siteConfig } from '@/lib/site-config';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
@@ -33,15 +34,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="min-h-screen bg-background font-sans antialiased">
-        <OrganizationSchema />
-        <Header />
-        <main id="main-content">
-          <Breadcrumbs />
-          {children}
-        </main>
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
+        <NuqsAdapter>
+          <OrganizationSchema />
+          <Header />
+          <main id="main-content">
+            <Breadcrumbs />
+            {children}
+          </main>
+          <Footer />
+          <Analytics />
+          <SpeedInsights />
+        </NuqsAdapter>
       </body>
       {siteConfig.gaId && <GoogleAnalytics gaId={siteConfig.gaId} />}
     </html>
