@@ -325,31 +325,40 @@ export function CalculatorShell({
 
         {/* Results Panel */}
         <section className="flex-1 min-w-0" aria-label="Calculator results">
-          {/* Charts */}
-          <CalculatorCharts
-            charts={config.charts}
-            chartData={results.chartData}
-            reducedMotion={prefersReducedMotion}
-          />
-
-          {/* Result summary cards */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {config.outputs.map((output) => (
-              <ResultCard
-                key={output.key}
-                label={output.label}
-                value={formatByType(
-                  results.outputs[output.key] ?? 0,
-                  output.format
-                )}
-                primary={output.primary}
-              />
-            ))}
+          {/* Scorecards — sorted so primary renders first */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[...config.outputs]
+              .sort((a, b) => {
+                if (a.primary && !b.primary) return -1;
+                if (!a.primary && b.primary) return 1;
+                return 0;
+              })
+              .map((output) => (
+                <ResultCard
+                  key={output.key}
+                  label={output.label}
+                  value={formatByType(
+                    results.outputs[output.key] ?? 0,
+                    output.format
+                  )}
+                  primary={output.primary}
+                  className={output.primary ? "sm:col-span-2 lg:col-span-1" : undefined}
+                />
+              ))}
           </div>
 
-          {/* Interpretation */}
-          <div className="mt-8">
+          {/* Recommendation nugget */}
+          <div className="mt-4">
             <Interpretation text={results.interpretation} />
+          </div>
+
+          {/* Charts */}
+          <div className="mt-8">
+            <CalculatorCharts
+              charts={config.charts}
+              chartData={results.chartData}
+              reducedMotion={prefersReducedMotion}
+            />
           </div>
 
           {/* Detail table for single-scenario mode (per D-15) */}
