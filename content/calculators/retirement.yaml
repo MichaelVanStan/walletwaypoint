@@ -1,0 +1,100 @@
+slug: retirement
+title: "Retirement Calculator"
+description: "Project your retirement savings and see if you are on track."
+category: retirement
+
+inputs:
+  primary:
+    - name: currentAge
+      label: "Current Age"
+      type: number
+      min: 18
+      max: 70
+      step: 1
+      default: 30
+      urlKey: age
+    - name: retirementAge
+      label: "Retirement Age"
+      type: number
+      min: 50
+      max: 80
+      step: 1
+      default: 65
+      urlKey: retireAge
+    - name: currentSavings
+      label: "Current Savings"
+      type: currency
+      min: 0
+      max: 2000000
+      step: 5000
+      default: 50000
+      urlKey: savings
+      hint: "Your current retirement balance"
+    - name: monthlyContribution
+      label: "Monthly Contribution"
+      type: currency
+      min: 0
+      max: 10000
+      step: 50
+      default: 500
+      urlKey: monthly
+      hint: "Monthly 401k/IRA contribution"
+    - name: expectedReturn
+      label: "Expected Return"
+      type: percent
+      min: 1
+      max: 15
+      step: 0.5
+      default: 7
+      urlKey: returnRate
+      hint: "S&P 500 avg: ~7%"
+    - name: withdrawalRate
+      label: "Withdrawal Rate"
+      type: percent
+      min: 1
+      max: 10
+      step: 0.5
+      default: 4
+      urlKey: withdrawalRate
+      hint: "Safe withdrawal: 4%"
+
+charts:
+  - type: area
+    title: "Retirement Balance Projection"
+    dataKey: retirementProjection
+
+outputs:
+  - key: retirementBalance
+    label: "Retirement Balance"
+    format: currency
+    primary: true
+  - key: monthlyWithdrawal
+    label: "Monthly Withdrawal"
+    format: currency
+  - key: annualWithdrawal
+    label: "Annual Withdrawal"
+    format: currency
+  - key: yearsUntilDepleted
+    label: "Years of Withdrawals"
+    format: number
+  - key: totalContributed
+    label: "Total Contributed"
+    format: currency
+
+callouts:
+  - title: "Maximize employer match"
+    href: "/guides/employer-match"
+  - title: "Catch-up contributions"
+    href: "/guides/catch-up-contributions"
+  - title: "Understand Social Security"
+    href: "/guides/social-security-basics"
+
+interpretation:
+  template: retirement
+  contextLabel: "years of withdrawals at chosen rate"
+
+mathModule: retirement
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication

@@ -1,0 +1,85 @@
+slug: tax-estimator
+title: "Tax Estimator"
+description: "Estimate your federal tax liability by income and filing status."
+category: tax
+
+inputs:
+  primary:
+    - name: annualIncome
+      label: "Annual Income"
+      type: currency
+      min: 0
+      max: 1000000
+      step: 1000
+      default: 75000
+      urlKey: income
+      hint: "Gross annual income"
+    - name: filingStatus
+      label: "Filing Status"
+      type: select
+      min: 0
+      max: 0
+      step: 0
+      default: 0
+      urlKey: filing
+      hint: "Your tax filing status"
+      options:
+        - value: "single"
+          label: "Single"
+        - value: "married"
+          label: "Married Filing Jointly"
+        - value: "head"
+          label: "Head of Household"
+    - name: standardDeduction
+      label: "Standard Deduction"
+      type: currency
+      min: 0
+      max: 50000
+      step: 100
+      default: 15700
+      urlKey: deduction
+      hint: "2026 single: ~$15,700"
+
+charts:
+  - type: bar
+    title: "Tax by Bracket"
+    dataKey: brackets
+  - type: pie
+    title: "Tax vs Take Home"
+    dataKey: breakdown
+
+outputs:
+  - key: totalTax
+    label: "Total Federal Tax"
+    format: currency
+    primary: true
+  - key: effectiveRate
+    label: "Effective Rate"
+    format: percent
+  - key: marginalRate
+    label: "Marginal Rate"
+    format: percent
+  - key: takeHome
+    label: "Take Home"
+    format: currency
+  - key: taxableIncome
+    label: "Taxable Income"
+    format: currency
+
+callouts:
+  - title: "Maximize deductions"
+    href: "/guides/tax-deductions"
+  - title: "Adjust withholding"
+    href: "/guides/w4-withholding"
+  - title: "Plan quarterly payments"
+    href: "/guides/quarterly-tax-payments"
+
+interpretation:
+  template: tax
+  contextLabel: "effective vs marginal tax rate"
+
+mathModule: tax
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication

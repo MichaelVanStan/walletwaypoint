@@ -1,0 +1,57 @@
+slug: budget
+title: "Budget Calculator"
+description: "Break down your income using the 50/30/20 rule."
+category: budget
+
+inputs:
+  primary:
+    - name: monthlyIncome
+      label: "Monthly Income"
+      type: currency
+      min: 1000
+      max: 50000
+      step: 100
+      default: 7000
+      urlKey: income
+      hint: "US median household: ~$7,000/mo"
+
+charts:
+  - type: pie
+    title: "50/30/20 Budget Allocation"
+    dataKey: budgetAllocation
+  - type: bar
+    title: "Your Budget vs US Average"
+    dataKey: comparison
+
+outputs:
+  - key: needs
+    label: "Needs (50%)"
+    format: currency
+    primary: true
+  - key: wants
+    label: "Wants (30%)"
+    format: currency
+  - key: savings
+    label: "Savings (20%)"
+    format: currency
+  - key: annualIncome
+    label: "Annual Income"
+    format: currency
+
+callouts:
+  - title: "Track your spending"
+    href: "/guides/spending-tracker"
+  - title: "Cut unnecessary subscriptions"
+    href: "/guides/subscription-audit"
+  - title: "Build an emergency fund"
+    href: "/guides/emergency-fund"
+
+interpretation:
+  template: budget
+  contextLabel: "50/30/20 budget breakdown"
+
+mathModule: budget
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication

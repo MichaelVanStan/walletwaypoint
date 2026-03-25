@@ -1,0 +1,110 @@
+slug: rent-vs-buy
+title: "Rent vs. Buy Calculator"
+description: "Compare the total cost of renting versus buying over time."
+category: home
+
+inputs:
+  primary:
+    - name: monthlyRent
+      label: "Monthly Rent"
+      type: currency
+      min: 500
+      max: 10000
+      step: 50
+      default: 1800
+      urlKey: rent
+      hint: "Current/expected rent"
+    - name: homePrice
+      label: "Home Price"
+      type: currency
+      min: 50000
+      max: 2000000
+      step: 5000
+      default: 415000
+      urlKey: price
+      hint: "US median: $415K"
+    - name: downPayment
+      label: "Down Payment"
+      type: percent
+      min: 0
+      max: 50
+      step: 1
+      default: 20
+      urlKey: dp
+    - name: mortgageRate
+      label: "Mortgage Rate"
+      type: percent
+      min: 1
+      max: 15
+      step: 0.125
+      default: 6.5
+      urlKey: rate
+    - name: timeHorizon
+      label: "Time Horizon"
+      type: years
+      min: 1
+      max: 30
+      step: 1
+      default: 7
+      urlKey: years
+      hint: "Avg homeowner tenure: 7 years"
+  advanced:
+    - name: homeAppreciation
+      label: "Home Appreciation"
+      type: percent
+      min: 0
+      max: 10
+      step: 0.5
+      default: 3
+      urlKey: appreciation
+      hint: "Historical avg: ~3%"
+    - name: annualRentIncrease
+      label: "Annual Rent Increase"
+      type: percent
+      min: 0
+      max: 10
+      step: 0.5
+      default: 3
+      urlKey: rentIncrease
+      hint: "Typical: 2-4%"
+
+charts:
+  - type: area
+    title: "Cumulative Cost Over Time"
+    dataKey: cumulativeCost
+
+outputs:
+  - key: totalRentCost
+    label: "Total Rent Cost"
+    format: currency
+  - key: totalBuyCost
+    label: "Total Buy Cost"
+    format: currency
+  - key: netRentCost
+    label: "Net Rent Cost"
+    format: currency
+    primary: true
+  - key: netBuyCost
+    label: "Net Buy Cost"
+    format: currency
+  - key: savingsAmount
+    label: "Savings"
+    format: currency
+
+callouts:
+  - title: "Calculate closing costs"
+    href: "/guides/closing-costs"
+  - title: "Understand opportunity cost"
+    href: "/guides/opportunity-cost"
+  - title: "Check first-time buyer programs"
+    href: "/guides/first-time-buyer"
+
+interpretation:
+  template: rent-vs-buy
+  contextLabel: "net cost comparison"
+
+mathModule: rent-vs-buy
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication

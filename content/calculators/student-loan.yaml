@@ -1,0 +1,84 @@
+slug: student-loan
+title: "Student Loan Repayment Calculator"
+description: "Compare standard, graduated, and income-driven repayment plans."
+category: loans
+
+inputs:
+  primary:
+    - name: loanBalance
+      label: "Loan Balance"
+      type: currency
+      min: 1000
+      max: 300000
+      step: 1000
+      default: 30000
+      urlKey: balance
+      hint: "Avg student debt: ~$30K"
+    - name: interestRate
+      label: "Interest Rate"
+      type: percent
+      min: 1
+      max: 15
+      step: 0.25
+      default: 5.5
+      urlKey: rate
+      hint: "Federal rate: ~5.5%"
+    - name: annualIncome
+      label: "Annual Income"
+      type: currency
+      min: 0
+      max: 200000
+      step: 1000
+      default: 55000
+      urlKey: income
+      hint: "For income-driven plan calc"
+
+charts:
+  - type: bar
+    title: "Total Cost by Repayment Plan"
+    dataKey: planComparison
+  - type: line
+    title: "Monthly Payment Over Time"
+    dataKey: paymentOverTime
+
+outputs:
+  - key: standardMonthly
+    label: "Standard Monthly"
+    format: currency
+    primary: true
+  - key: standardTotal
+    label: "Standard Total"
+    format: currency
+  - key: graduatedInitial
+    label: "Graduated Initial"
+    format: currency
+  - key: graduatedTotal
+    label: "Graduated Total"
+    format: currency
+  - key: idrMonthly
+    label: "IDR Monthly"
+    format: currency
+  - key: idrTotal
+    label: "IDR Total"
+    format: currency
+  - key: idrForgiven
+    label: "IDR Forgiven"
+    format: currency
+
+callouts:
+  - title: "Apply for forgiveness"
+    href: "/guides/loan-forgiveness"
+  - title: "Refinance your loans"
+    href: "/guides/student-loan-refinance"
+  - title: "Income-driven plan details"
+    href: "/guides/idr-plans"
+
+interpretation:
+  template: student-loan
+  contextLabel: "repayment plan comparison"
+
+mathModule: student-loan
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication
