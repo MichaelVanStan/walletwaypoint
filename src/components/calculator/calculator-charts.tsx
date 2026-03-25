@@ -1,0 +1,412 @@
+"use client";
+
+import {
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+  PieChart,
+  Pie,
+  Cell,
+  LineChart,
+  Line,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  ReferenceLine,
+} from "recharts";
+import type { ChartConfig } from "@/lib/calculators/types";
+import { formatCurrency, formatNumber } from "@/lib/calculators/formatters";
+
+/** OKLCH chart colors matching globals.css --chart-1 through --chart-5 */
+const CHART_COLORS = [
+  "oklch(0.35 0.1 245)", // chart-1 blue
+  "oklch(0.55 0.12 175)", // chart-2 teal
+  "oklch(0.65 0.1 140)", // chart-3 green
+  "oklch(0.45 0.08 260)", // chart-4 indigo
+  "oklch(0.75 0.08 200)", // chart-5 light blue
+];
+
+/** Hex fallbacks for SVG contexts that may not support oklch() */
+const CHART_COLORS_HEX = [
+  "#1e40af",
+  "#0d9488",
+  "#16a34a",
+  "#4338ca",
+  "#38bdf8",
+];
+
+/** Get chart color with hex fallback for SVG rendering */
+function getColor(index: number): string {
+  // Use OKLCH if CSS supports it, otherwise fall back to hex
+  if (typeof CSS !== "undefined" && CSS.supports?.("color", CHART_COLORS[0])) {
+    return CHART_COLORS[index % CHART_COLORS.length];
+  }
+  return CHART_COLORS_HEX[index % CHART_COLORS_HEX.length];
+}
+
+/** Keys commonly used for X-axis labels -- excluded when detecting data series */
+const X_AXIS_KEYS = new Set([
+  "year",
+  "month",
+  "age",
+  "label",
+  "name",
+  "period",
+  "date",
+  "category",
+]);
+
+/** Detect data series keys from the first data point (excludes X-axis keys) */
+function getSeriesKeys(data: Record<string, number | string>[]): {
+  xKey: string;
+  seriesKeys: string[];
+} {
+  if (!data.length) return { xKey: "label", seriesKeys: [] };
+  const allKeys = Object.keys(data[0]);
+  const xKey = allKeys.find((k) => X_AXIS_KEYS.has(k)) ?? allKeys[0];
+  const seriesKeys = allKeys.filter(
+    (k) => k !== xKey && typeof data[0][k] === "number"
+  );
+  return { xKey, seriesKeys };
+}
+
+/** Format large currency values as abbreviated (e.g., "$150K") */
+function formatAxisCurrency(value: number): string {
+  if (Math.abs(value) >= 1_000_000) {
+    return `$${(value / 1_000_000).toFixed(1)}M`;
+  }
+  if (Math.abs(value) >= 1_000) {
+    return `$${(value / 1_000).toFixed(0)}K`;
+  }
+  return formatCurrency(value);
+}
+
+/** Shared custom tooltip component using Tailwind classes for proper theming */
+function CustomTooltip({
+  active,
+  payload,
+  formatter,
+}: {
+  active?: boolean;
+  payload?: Array<{ name: string; value: number; color: string }>;
+  formatter?: (value: number) => string;
+}) {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="rounded-md border border-border bg-card px-3 py-2 text-sm shadow-sm">
+      {payload.map((entry, i) => (
+        <div key={i} className="flex items-center gap-2">
+          <div
+            className="h-2 w-2 rounded-full"
+            style={{ backgroundColor: entry.color }}
+          />
+          <span className="text-muted-foreground">{entry.name}:</span>
+          <span className="font-medium text-foreground">
+            {formatter ? formatter(entry.value) : formatNumber(entry.value)}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+interface CalculatorChartsProps {
+  charts: ChartConfig[];
+  chartData: Record<string, Record<string, number | string>[]>;
+  reducedMotion?: boolean;
+}
+
+export function CalculatorCharts({
+  charts,
+  chartData,
+  reducedMotion = false,
+}: CalculatorChartsProps) {
+  if (!charts.length) return null;
+
+  return (
+    <div className="space-y-6">
+      {charts.map((chart) => {
+        const data = chartData[chart.dataKey];
+        if (!data?.length) {
+          return (
+            <div key={chart.dataKey} className="py-8 text-center">
+              <p className="text-sm text-muted-foreground">
+                No data to display
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Adjust the inputs above to see your results visualized here.
+              </p>
+            </div>
+          );
+        }
+
+        return (
+          <div key={chart.dataKey}>
+            <h3 className="mb-3 text-sm font-semibold text-foreground">
+              {chart.title}
+            </h3>
+            <div
+              className="h-[240px] md:h-[300px]"
+              role="img"
+              aria-label={`${chart.title} chart`}
+            >
+              {chart.type === "area" && (
+                <AreaChartRenderer
+                  data={data}
+                  reducedMotion={reducedMotion}
+                />
+              )}
+              {chart.type === "pie" && (
+                <PieChartRenderer data={data} reducedMotion={reducedMotion} />
+              )}
+              {chart.type === "line" && (
+                <LineChartRenderer data={data} reducedMotion={reducedMotion} />
+              )}
+              {chart.type === "bar" && (
+                <BarChartRenderer data={data} reducedMotion={reducedMotion} />
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+/** Area chart with gradient fills for amortization curves, growth projections */
+function AreaChartRenderer({
+  data,
+  reducedMotion,
+}: {
+  data: Record<string, number | string>[];
+  reducedMotion: boolean;
+}) {
+  const { xKey, seriesKeys } = getSeriesKeys(data);
+
+  return (
+    <ResponsiveContainer width="100%" height="100%">
+      <AreaChart data={data}>
+        <defs>
+          {seriesKeys.map((key, i) => (
+            <linearGradient
+              key={key}
+              id={`gradient-${i}`}
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+              <stop
+                offset="5%"
+                stopColor={getColor(i)}
+                stopOpacity={0.3}
+              />
+              <stop
+                offset="95%"
+                stopColor={getColor(i)}
+                stopOpacity={0}
+              />
+            </linearGradient>
+          ))}
+        </defs>
+        <XAxis
+          dataKey={xKey}
+          tick={{ fontSize: 14 }}
+          axisLine={false}
+          tickLine={false}
+        />
+        <YAxis
+          tickFormatter={formatAxisCurrency}
+          tick={{ fontSize: 14 }}
+          axisLine={false}
+          tickLine={false}
+          width={60}
+        />
+        <Tooltip
+          content={
+            <CustomTooltip formatter={(v) => formatCurrency(v)} />
+          }
+        />
+        {seriesKeys.length > 1 && (
+          <Legend iconType="circle" iconSize={8} />
+        )}
+        {seriesKeys.map((key, i) => (
+          <Area
+            key={key}
+            type="monotone"
+            dataKey={key}
+            stroke={getColor(i)}
+            strokeWidth={2}
+            fill={`url(#gradient-${i})`}
+            animationDuration={reducedMotion ? 0 : 300}
+            isAnimationActive={!reducedMotion}
+          />
+        ))}
+      </AreaChart>
+    </ResponsiveContainer>
+  );
+}
+
+/** Pie (donut) chart for breakdowns */
+function PieChartRenderer({
+  data,
+  reducedMotion,
+}: {
+  data: Record<string, number | string>[];
+  reducedMotion: boolean;
+}) {
+  const { xKey, seriesKeys } = getSeriesKeys(data);
+  const valueKey = seriesKeys[0] ?? "value";
+
+  return (
+    <ResponsiveContainer width="100%" height="100%">
+      <PieChart>
+        <Pie
+          data={data}
+          dataKey={valueKey}
+          nameKey={xKey}
+          cx="50%"
+          cy="50%"
+          innerRadius={60}
+          outerRadius={100}
+          animationDuration={reducedMotion ? 0 : 300}
+          isAnimationActive={!reducedMotion}
+        >
+          {data.map((_, i) => (
+            <Cell key={i} fill={getColor(i)} />
+          ))}
+        </Pie>
+        <Tooltip
+          content={
+            <CustomTooltip formatter={(v) => formatCurrency(v)} />
+          }
+        />
+        <Legend
+          verticalAlign="bottom"
+          iconType="circle"
+          iconSize={8}
+        />
+      </PieChart>
+    </ResponsiveContainer>
+  );
+}
+
+/** Line chart for savings progress, projections */
+function LineChartRenderer({
+  data,
+  reducedMotion,
+}: {
+  data: Record<string, number | string>[];
+  reducedMotion: boolean;
+}) {
+  const { xKey, seriesKeys } = getSeriesKeys(data);
+  const hasGoal = data.some((d) => "goal" in d && typeof d.goal === "number");
+
+  return (
+    <ResponsiveContainer width="100%" height="100%">
+      <LineChart data={data}>
+        <XAxis
+          dataKey={xKey}
+          tick={{ fontSize: 14 }}
+          axisLine={false}
+          tickLine={false}
+        />
+        <YAxis
+          tickFormatter={formatAxisCurrency}
+          tick={{ fontSize: 14 }}
+          axisLine={false}
+          tickLine={false}
+          width={60}
+        />
+        <Tooltip
+          content={
+            <CustomTooltip formatter={(v) => formatCurrency(v)} />
+          }
+        />
+        {seriesKeys.length > 1 && (
+          <Legend iconType="circle" iconSize={8} />
+        )}
+        {hasGoal && (
+          <ReferenceLine
+            y={Number(data[0]?.goal ?? 0)}
+            stroke={getColor(2)}
+            strokeDasharray="4 4"
+            label={{
+              value: "Goal",
+              position: "right",
+              fontSize: 12,
+              fill: getColor(2),
+            }}
+          />
+        )}
+        {seriesKeys
+          .filter((k) => k !== "goal")
+          .map((key, i) => (
+            <Line
+              key={key}
+              type="monotone"
+              dataKey={key}
+              stroke={getColor(i)}
+              strokeWidth={2}
+              dot={false}
+              animationDuration={reducedMotion ? 0 : 300}
+              isAnimationActive={!reducedMotion}
+            />
+          ))}
+      </LineChart>
+    </ResponsiveContainer>
+  );
+}
+
+/** Bar chart for plan comparisons, bracket visualization */
+function BarChartRenderer({
+  data,
+  reducedMotion,
+}: {
+  data: Record<string, number | string>[];
+  reducedMotion: boolean;
+}) {
+  const { xKey, seriesKeys } = getSeriesKeys(data);
+
+  return (
+    <ResponsiveContainer width="100%" height="100%">
+      <BarChart data={data}>
+        <XAxis
+          dataKey={xKey}
+          tick={{ fontSize: 14 }}
+          axisLine={false}
+          tickLine={false}
+        />
+        <YAxis
+          tickFormatter={formatAxisCurrency}
+          tick={{ fontSize: 14 }}
+          axisLine={false}
+          tickLine={false}
+          width={60}
+        />
+        <Tooltip
+          content={
+            <CustomTooltip formatter={(v) => formatCurrency(v)} />
+          }
+        />
+        {seriesKeys.length > 1 && (
+          <Legend iconType="circle" iconSize={8} />
+        )}
+        {seriesKeys.map((key, i) => (
+          <Bar
+            key={key}
+            dataKey={key}
+            fill={getColor(i)}
+            barSize={40}
+            radius={[4, 4, 0, 0]}
+            animationDuration={reducedMotion ? 0 : 300}
+            isAnimationActive={!reducedMotion}
+          />
+        ))}
+      </BarChart>
+    </ResponsiveContainer>
+  );
+}
