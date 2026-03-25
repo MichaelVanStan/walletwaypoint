@@ -39,11 +39,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Core Calculators
 
-- [ ] **TOOL-01**: Mortgage payment calculator (monthly payment, total interest, amortization schedule)
-- [ ] **TOOL-02**: Rent affordability calculator (max rent based on income, expenses, location)
-- [ ] **TOOL-03**: Compound interest calculator (growth over time with contributions)
-- [ ] **TOOL-04**: Loan repayment calculator (payoff timeline, total cost, extra payment impact)
-- [ ] **TOOL-05**: Savings goal calculator (how much to save monthly to reach a target)
+- [x] **TOOL-01**: Mortgage payment calculator (monthly payment, total interest, amortization schedule)
+- [x] **TOOL-02**: Rent affordability calculator (max rent based on income, expenses, location)
+- [x] **TOOL-03**: Compound interest calculator (growth over time with contributions)
+- [x] **TOOL-04**: Loan repayment calculator (payoff timeline, total cost, extra payment impact)
+- [x] **TOOL-05**: Savings goal calculator (how much to save monthly to reach a target)
 - [ ] **TOOL-06**: Retirement calculator (projected retirement savings, withdrawal rate, timeline)
 - [ ] **TOOL-07**: Budget calculator (50/30/20 rule breakdown with category allocation)
 - [ ] **TOOL-08**: Tax estimator (estimated federal tax liability by filing status and income)
@@ -141,11 +141,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CALC-06 | Phase 2 | Complete |
 | CALC-07 | Phase 2 | Complete |
 | CALC-08 | Phase 2 | Complete |
-| TOOL-01 | Phase 2 | Pending |
-| TOOL-02 | Phase 2 | Pending |
-| TOOL-03 | Phase 2 | Pending |
-| TOOL-04 | Phase 2 | Pending |
-| TOOL-05 | Phase 2 | Pending |
+| TOOL-01 | Phase 2 | Complete |
+| TOOL-02 | Phase 2 | Complete |
+| TOOL-03 | Phase 2 | Complete |
+| TOOL-04 | Phase 2 | Complete |
+| TOOL-05 | Phase 2 | Complete |
 | TOOL-06 | Phase 2 | Pending |
 | TOOL-07 | Phase 2 | Pending |
 | TOOL-08 | Phase 2 | Pending |

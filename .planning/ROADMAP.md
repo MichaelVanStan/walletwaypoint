@@ -53,7 +53,7 @@ Plans:
 - [x] 02-01-PLAN.md -- Foundation: dependencies, Velite config, types, precision math, NuqsAdapter, shadcn/ui components
 - [x] 02-02-PLAN.md -- Calculator engine UI: InputSliderCombo, CalculatorInputs, ResultCard, CalculatorShell with two-column layout
 - [x] 02-03-PLAN.md -- Charts (Recharts wrapper) and comparison view with delta badges and CSV export
-- [ ] 02-04-PLAN.md -- Math modules batch 1: mortgage, rent affordability, compound interest, loan repayment, savings goal + YAML configs
+- [x] 02-04-PLAN.md -- Math modules batch 1: mortgage, rent affordability, compound interest, loan repayment, savings goal + YAML configs
 - [ ] 02-05-PLAN.md -- Math modules batch 2: retirement, budget, tax estimator, rent vs buy, student loan + YAML configs
 - [ ] 02-06-PLAN.md -- Integration: calculator registry, index page, dynamic [slug] route with Velite
 - [ ] 02-07-PLAN.md -- Final verification and human checkpoint
