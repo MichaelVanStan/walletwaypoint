@@ -39,6 +39,8 @@ export function calculateLoanRepayment(params: Record<string, number>): Calculat
   let standardBalance = new Decimal(loanAmount);
   let standardTotalInterest = new Decimal(0);
   const standardBalances: number[] = [];
+  const stdPrincipalPerMonth: number[] = [];
+  const stdInterestPerMonth: number[] = [];
 
   for (let month = 1; month <= n; month++) {
     const interest = isZeroRate ? new Decimal(0) : standardBalance.times(monthlyRate);
@@ -48,6 +50,8 @@ export function calculateLoanRepayment(params: Record<string, number>): Calculat
     standardBalances.push(
       (standardBalance.lt(0) ? new Decimal(0) : standardBalance).toDecimalPlaces(2).toNumber()
     );
+    stdPrincipalPerMonth.push(principal.toDecimalPlaces(2).toNumber());
+    stdInterestPerMonth.push(interest.toDecimalPlaces(2).toNumber());
   }
 
   const totalInterestNum = standardTotalInterest.toDecimalPlaces(2).toNumber();
@@ -58,11 +62,15 @@ export function calculateLoanRepayment(params: Record<string, number>): Calculat
   let extraTotalInterest = new Decimal(0);
   let payoffMonths = n;
   const extraBalances: number[] = [];
+  const extraPrincipalPerMonth: number[] = [];
+  const extraInterestPerMonth: number[] = [];
   const detailRows: Array<Record<string, string | number>> = [];
 
   for (let month = 1; month <= n; month++) {
     if (extraBalance.lte(0)) {
       extraBalances.push(0);
+      extraPrincipalPerMonth.push(0);
+      extraInterestPerMonth.push(0);
       continue;
     }
 
@@ -77,6 +85,8 @@ export function calculateLoanRepayment(params: Record<string, number>): Calculat
 
     const balanceVal = (extraBalance.lt(0) ? new Decimal(0) : extraBalance).toDecimalPlaces(2).toNumber();
     extraBalances.push(balanceVal);
+    extraPrincipalPerMonth.push(principal.toDecimalPlaces(2).toNumber());
+    extraInterestPerMonth.push(interest.toDecimalPlaces(2).toNumber());
 
     detailRows.push({
       month,
@@ -95,15 +105,24 @@ export function calculateLoanRepayment(params: Record<string, number>): Calculat
   const interestSaved = standardTotalInterest.minus(extraTotalInterest).toDecimalPlaces(2).toNumber();
   const monthsSaved = n - payoffMonths;
 
-  // Chart data: balance over time
-  const balanceOverTime: Record<string, number | string>[] = [];
-  const maxMonths = Math.max(n, payoffMonths);
+  // Chart data: balance over time with per-month breakdown
+  const balanceOverTime: Array<Record<string, number | string | unknown>> = [];
 
   for (let month = 1; month <= n; month++) {
     balanceOverTime.push({
       month,
       standard: standardBalances[month - 1],
       withExtra: month - 1 < extraBalances.length ? extraBalances[month - 1] : 0,
+      _breakdown: {
+        standard: {
+          principal: stdPrincipalPerMonth[month - 1],
+          interest: stdInterestPerMonth[month - 1],
+        },
+        withExtra: {
+          principal: extraPrincipalPerMonth[month - 1],
+          interest: extraInterestPerMonth[month - 1],
+        },
+      },
     });
   }
 

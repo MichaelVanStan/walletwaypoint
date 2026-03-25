@@ -78,8 +78,8 @@ export interface CalculatorConfig {
 export interface CalculatorResults {
   /** Key-value pairs matching OutputConfig keys to computed values */
   outputs: Record<string, number>;
-  /** Chart data arrays keyed by ChartConfig dataKey */
-  chartData: Record<string, Record<string, number | string>[]>;
+  /** Chart data arrays keyed by ChartConfig dataKey. Points may include _breakdown metadata for tooltips. */
+  chartData: Record<string, Array<Record<string, number | string | unknown>>>;
   /** Plain-English interpretation string */
   interpretation: string;
   /** Detail breakdown rows for expandable table */

@@ -59,8 +59,25 @@ const X_AXIS_KEYS = new Set([
   "category",
 ]);
 
+/** Human-friendly labels for chart data keys */
+const SERIES_LABELS: Record<string, string> = {
+  standard: "Standard",
+  withExtra: "With Extra Payments",
+  balance: "Balance",
+  principal: "Principal",
+  interest: "Interest",
+  savings: "Savings",
+  growth: "Growth",
+};
+
+function formatSeriesName(key: string): string {
+  if (SERIES_LABELS[key]) return SERIES_LABELS[key];
+  // camelCase → Title Case
+  return key.replace(/([A-Z])/g, " $1").replace(/^./, (s) => s.toUpperCase());
+}
+
 /** Detect data series keys from the first data point (excludes X-axis keys) */
-function getSeriesKeys(data: Record<string, number | string>[]): {
+function getSeriesKeys(data: Record<string, number | string | unknown>[]): {
   xKey: string;
   seriesKeys: string[];
 } {
@@ -91,31 +108,55 @@ function CustomTooltip({
   formatter,
 }: {
   active?: boolean;
-  payload?: Array<{ name: string; value: number; color: string }>;
+  payload?: Array<{
+    name: string;
+    dataKey: string;
+    value: number;
+    color: string;
+    payload: Record<string, unknown>;
+  }>;
   formatter?: (value: number) => string;
 }) {
   if (!active || !payload?.length) return null;
+  const dataPoint = payload[0]?.payload;
+  const breakdown = dataPoint?._breakdown as
+    | Record<string, { principal: number; interest: number }>
+    | undefined;
+
   return (
     <div className="rounded-md border border-border bg-card px-3 py-2 text-sm shadow-sm">
-      {payload.map((entry, i) => (
-        <div key={i} className="flex items-center gap-2">
-          <div
-            className="h-2 w-2 rounded-full"
-            style={{ backgroundColor: entry.color }}
-          />
-          <span className="text-muted-foreground">{entry.name}:</span>
-          <span className="font-medium text-foreground">
-            {formatter ? formatter(entry.value) : formatNumber(entry.value)}
-          </span>
-        </div>
-      ))}
+      {payload.map((entry, i) => {
+        const seriesBreakdown = breakdown?.[entry.dataKey];
+        return (
+          <div key={i} className="mb-1 last:mb-0">
+            <div className="flex items-center gap-2">
+              <div
+                className="h-2 w-2 rounded-full"
+                style={{ backgroundColor: entry.color }}
+              />
+              <span className="text-muted-foreground">
+                {formatSeriesName(entry.dataKey)}:
+              </span>
+              <span className="font-medium text-foreground">
+                {formatter ? formatter(entry.value) : formatNumber(entry.value)}
+              </span>
+            </div>
+            {seriesBreakdown && (
+              <div className="ml-4 flex gap-3 text-xs text-muted-foreground">
+                <span>P: {formatCurrency(seriesBreakdown.principal)}</span>
+                <span>I: {formatCurrency(seriesBreakdown.interest)}</span>
+              </div>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
 
 interface CalculatorChartsProps {
   charts: ChartConfig[];
-  chartData: Record<string, Record<string, number | string>[]>;
+  chartData: Record<string, Record<string, number | string | unknown>[]>;
   reducedMotion?: boolean;
 }
 
@@ -181,7 +222,7 @@ function AreaChartRenderer({
   data,
   reducedMotion,
 }: {
-  data: Record<string, number | string>[];
+  data: Record<string, number | string | unknown>[];
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
@@ -238,6 +279,7 @@ function AreaChartRenderer({
             key={key}
             type="monotone"
             dataKey={key}
+            name={formatSeriesName(key)}
             stroke={getColor(i)}
             strokeWidth={2}
             fill={`url(#gradient-${i})`}
@@ -255,7 +297,7 @@ function PieChartRenderer({
   data,
   reducedMotion,
 }: {
-  data: Record<string, number | string>[];
+  data: Record<string, number | string | unknown>[];
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
@@ -299,7 +341,7 @@ function LineChartRenderer({
   data,
   reducedMotion,
 }: {
-  data: Record<string, number | string>[];
+  data: Record<string, number | string | unknown>[];
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
@@ -349,6 +391,7 @@ function LineChartRenderer({
               key={key}
               type="monotone"
               dataKey={key}
+              name={formatSeriesName(key)}
               stroke={getColor(i)}
               strokeWidth={2}
               dot={false}
@@ -366,7 +409,7 @@ function BarChartRenderer({
   data,
   reducedMotion,
 }: {
-  data: Record<string, number | string>[];
+  data: Record<string, number | string | unknown>[];
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
@@ -399,6 +442,7 @@ function BarChartRenderer({
           <Bar
             key={key}
             dataKey={key}
+            name={formatSeriesName(key)}
             fill={getColor(i)}
             barSize={40}
             radius={[4, 4, 0, 0]}
