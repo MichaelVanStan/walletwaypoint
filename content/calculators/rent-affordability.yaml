@@ -1,0 +1,79 @@
+slug: rent-affordability
+title: "Rent Affordability Calculator"
+description: "Find out how much rent fits your income and expenses."
+category: home
+
+inputs:
+  primary:
+    - name: monthlyIncome
+      label: "Monthly Income"
+      type: currency
+      min: 1000
+      max: 30000
+      step: 100
+      default: 5500
+      urlKey: income
+      hint: "US median individual: ~$5,500/mo"
+    - name: maxRentPercent
+      label: "Max Rent Percent"
+      type: percent
+      min: 10
+      max: 50
+      step: 1
+      default: 28
+      urlKey: maxPct
+      hint: "Standard guideline: 28%"
+    - name: utilities
+      label: "Utilities"
+      type: currency
+      min: 0
+      max: 1000
+      step: 25
+      default: 200
+      urlKey: utilities
+    - name: otherExpenses
+      label: "Other Expenses"
+      type: currency
+      min: 0
+      max: 2000
+      step: 50
+      default: 300
+      urlKey: other
+
+charts:
+  - type: pie
+    title: "Income Allocation"
+    dataKey: incomeAllocation
+
+outputs:
+  - key: maxRent
+    label: "Max Rent"
+    format: currency
+    primary: true
+  - key: affordableRent
+    label: "Affordable Rent"
+    format: currency
+  - key: monthlyRemaining
+    label: "Monthly Remaining"
+    format: currency
+  - key: annualRentCost
+    label: "Annual Rent Cost"
+    format: currency
+
+callouts:
+  - title: "Reduce monthly expenses"
+    href: "/guides/reduce-expenses"
+  - title: "Negotiate your lease"
+    href: "/guides/lease-negotiation"
+  - title: "Find affordable areas"
+    href: "/guides/affordable-areas"
+
+interpretation:
+  template: rent-affordability
+  contextLabel: "% of monthly income"
+
+mathModule: rent-affordability
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication

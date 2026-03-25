@@ -1,0 +1,101 @@
+slug: mortgage-payment
+title: "Mortgage Payment Calculator"
+description: "See your monthly payment, total interest, and full amortization schedule."
+category: home
+
+inputs:
+  primary:
+    - name: homePrice
+      label: "Home Price"
+      type: currency
+      min: 50000
+      max: 2000000
+      step: 5000
+      default: 415000
+      urlKey: price
+      hint: "US median: $415K"
+    - name: downPayment
+      label: "Down Payment"
+      type: percent
+      min: 0
+      max: 50
+      step: 1
+      default: 20
+      urlKey: dp
+      hint: "Typical: 10-20%"
+    - name: interestRate
+      label: "Interest Rate"
+      type: percent
+      min: 1
+      max: 15
+      step: 0.125
+      default: 6.5
+      urlKey: rate
+      hint: "Current avg: ~6.5%"
+    - name: loanTerm
+      label: "Loan Term"
+      type: years
+      min: 10
+      max: 30
+      step: 5
+      default: 30
+      urlKey: term
+      hint: "Standard: 15 or 30 years"
+  advanced:
+    - name: propertyTax
+      label: "Property Tax Rate"
+      type: percent
+      min: 0
+      max: 5
+      step: 0.1
+      default: 1.1
+      urlKey: tax
+    - name: insurance
+      label: "Annual Insurance"
+      type: currency
+      min: 0
+      max: 10000
+      step: 100
+      default: 1500
+      urlKey: ins
+
+charts:
+  - type: area
+    title: "Principal vs Interest Over Time"
+    dataKey: amortization
+  - type: pie
+    title: "Monthly Payment Breakdown"
+    dataKey: paymentBreakdown
+
+outputs:
+  - key: monthlyPayment
+    label: "Monthly Payment"
+    format: currency
+    primary: true
+  - key: totalInterest
+    label: "Total Interest"
+    format: currency
+  - key: totalCost
+    label: "Total Cost"
+    format: currency
+  - key: loanAmount
+    label: "Loan Amount"
+    format: currency
+
+callouts:
+  - title: "Lower your interest rate"
+    href: "/guides/mortgage-rate-tips"
+  - title: "Increase your down payment"
+    href: "/guides/down-payment-strategies"
+  - title: "Compare lenders"
+    href: "/guides/mortgage-lender-comparison"
+
+interpretation:
+  template: mortgage
+  contextLabel: "% of median US household income"
+
+mathModule: mortgage
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication

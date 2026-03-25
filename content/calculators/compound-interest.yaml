@@ -1,0 +1,77 @@
+slug: compound-interest
+title: "Compound Interest Calculator"
+description: "Watch your money grow over time with regular contributions."
+category: savings
+
+inputs:
+  primary:
+    - name: initialDeposit
+      label: "Initial Deposit"
+      type: currency
+      min: 0
+      max: 1000000
+      step: 1000
+      default: 10000
+      urlKey: initial
+      hint: "Your starting amount"
+    - name: monthlyContribution
+      label: "Monthly Contribution"
+      type: currency
+      min: 0
+      max: 10000
+      step: 50
+      default: 500
+      urlKey: monthly
+      hint: "Typical monthly savings"
+    - name: annualReturn
+      label: "Annual Return"
+      type: percent
+      min: 0
+      max: 20
+      step: 0.5
+      default: 7
+      urlKey: rate
+      hint: "S&P 500 avg: ~7%"
+    - name: timeHorizon
+      label: "Time Horizon"
+      type: years
+      min: 1
+      max: 50
+      step: 1
+      default: 20
+      urlKey: years
+
+charts:
+  - type: area
+    title: "Investment Growth Over Time"
+    dataKey: growth
+
+outputs:
+  - key: futureValue
+    label: "Future Value"
+    format: currency
+    primary: true
+  - key: totalContributions
+    label: "Total Contributions"
+    format: currency
+  - key: totalInterestEarned
+    label: "Total Interest Earned"
+    format: currency
+
+callouts:
+  - title: "Start investing early"
+    href: "/guides/investing-basics"
+  - title: "Increase contributions"
+    href: "/guides/boost-savings"
+  - title: "Choose the right account"
+    href: "/guides/investment-accounts"
+
+interpretation:
+  template: compound-interest
+  contextLabel: "earned on contributions"
+
+mathModule: compound-interest
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication

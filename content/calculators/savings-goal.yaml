@@ -1,0 +1,80 @@
+slug: savings-goal
+title: "Savings Goal Calculator"
+description: "Find out how much to save each month to reach your target."
+category: savings
+
+inputs:
+  primary:
+    - name: goalAmount
+      label: "Goal Amount"
+      type: currency
+      min: 1000
+      max: 1000000
+      step: 1000
+      default: 50000
+      urlKey: goal
+      hint: "Your target amount"
+    - name: currentSavings
+      label: "Current Savings"
+      type: currency
+      min: 0
+      max: 500000
+      step: 500
+      default: 5000
+      urlKey: current
+      hint: "What you have now"
+    - name: annualReturn
+      label: "Annual Return"
+      type: percent
+      min: 0
+      max: 15
+      step: 0.25
+      default: 4.5
+      urlKey: rate
+      hint: "HYSA rate: ~4.5%"
+    - name: timeHorizon
+      label: "Time Horizon"
+      type: years
+      min: 1
+      max: 30
+      step: 1
+      default: 5
+      urlKey: years
+
+charts:
+  - type: line
+    title: "Savings Progress"
+    dataKey: savingsProgress
+
+outputs:
+  - key: monthlyRequired
+    label: "Monthly Required"
+    format: currency
+    primary: true
+  - key: projectedTotal
+    label: "Projected Total"
+    format: currency
+  - key: totalContributed
+    label: "Total Contributed"
+    format: currency
+  - key: interestEarned
+    label: "Interest Earned"
+    format: currency
+
+callouts:
+  - title: "Automate your savings"
+    href: "/guides/automated-savings"
+  - title: "High-yield accounts"
+    href: "/guides/high-yield-savings"
+  - title: "Set milestone rewards"
+    href: "/guides/savings-milestones"
+
+interpretation:
+  template: savings-goal
+  contextLabel: "interest earned"
+
+mathModule: savings
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication

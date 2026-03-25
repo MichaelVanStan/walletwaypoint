@@ -1,0 +1,84 @@
+slug: loan-repayment
+title: "Loan Repayment Calculator"
+description: "See your payoff timeline and how extra payments save you money."
+category: loans
+
+inputs:
+  primary:
+    - name: loanAmount
+      label: "Loan Amount"
+      type: currency
+      min: 1000
+      max: 500000
+      step: 1000
+      default: 25000
+      urlKey: amount
+      hint: "Typical personal/auto loan"
+    - name: interestRate
+      label: "Interest Rate"
+      type: percent
+      min: 1
+      max: 30
+      step: 0.25
+      default: 8
+      urlKey: rate
+      hint: "Avg personal loan: ~8%"
+    - name: loanTerm
+      label: "Loan Term"
+      type: years
+      min: 1
+      max: 30
+      step: 1
+      default: 5
+      urlKey: term
+      hint: "Common: 3-7 years"
+    - name: extraPayment
+      label: "Extra Payment"
+      type: currency
+      min: 0
+      max: 5000
+      step: 25
+      default: 0
+      urlKey: extra
+      hint: "Extra monthly principal"
+
+charts:
+  - type: area
+    title: "Loan Balance Over Time"
+    dataKey: balanceOverTime
+
+outputs:
+  - key: monthlyPayment
+    label: "Monthly Payment"
+    format: currency
+    primary: true
+  - key: totalInterest
+    label: "Total Interest"
+    format: currency
+  - key: totalCost
+    label: "Total Cost"
+    format: currency
+  - key: payoffMonths
+    label: "Payoff Months"
+    format: number
+  - key: interestSaved
+    label: "Interest Saved"
+    format: currency
+
+callouts:
+  - title: "Make extra payments"
+    href: "/guides/extra-payments"
+  - title: "Refinance options"
+    href: "/guides/refinancing"
+  - title: "Debt payoff strategies"
+    href: "/guides/debt-payoff"
+
+interpretation:
+  template: loan-repayment
+  contextLabel: "total cost"
+
+mathModule: loan
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication
