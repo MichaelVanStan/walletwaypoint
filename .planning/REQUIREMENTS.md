@@ -29,12 +29,12 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Calculator Engine
 
 - [x] **CALC-01**: Parameterized calculator engine that renders calculators from YAML/JSON config definitions
-- [ ] **CALC-02**: Slider inputs with real-time result updates (no submit button)
+- [x] **CALC-02**: Slider inputs with real-time result updates (no submit button)
 - [x] **CALC-03**: Precision math using decimal.js or integer-cents to avoid floating-point errors
 - [ ] **CALC-04**: Results visualization with charts (pie, bar, line/amortization curves) via Recharts
-- [ ] **CALC-05**: Contextual results with plain-English interpretation and actionable next steps
+- [x] **CALC-05**: Contextual results with plain-English interpretation and actionable next steps
 - [x] **CALC-06**: Calculator state stored in URL query params (nuqs) for bookmarkable/shareable results
-- [ ] **CALC-07**: Side-by-side "what-if" scenario comparison (two sets of inputs, compared outcomes)
+- [x] **CALC-07**: Side-by-side "what-if" scenario comparison (two sets of inputs, compared outcomes)
 - [x] **CALC-08**: Sensible default values for all calculator inputs based on national averages
 
 ### Core Calculators
@@ -134,12 +134,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TRUST-05 | Phase 1 | Complete |
 | TRUST-06 | Phase 1 | Complete |
 | CALC-01 | Phase 2 | Complete |
-| CALC-02 | Phase 2 | Pending |
+| CALC-02 | Phase 2 | Complete |
 | CALC-03 | Phase 2 | Complete |
 | CALC-04 | Phase 2 | Pending |
-| CALC-05 | Phase 2 | Pending |
+| CALC-05 | Phase 2 | Complete |
 | CALC-06 | Phase 2 | Complete |
-| CALC-07 | Phase 2 | Pending |
+| CALC-07 | Phase 2 | Complete |
 | CALC-08 | Phase 2 | Complete |
 | TOOL-01 | Phase 2 | Pending |
 | TOOL-02 | Phase 2 | Pending |
