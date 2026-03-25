@@ -48,6 +48,7 @@ inputs:
       default: 7
       urlKey: returnRate
       hint: "S&P 500 avg: ~7%"
+      tooltip: "Expected yearly investment growth. The S&P 500 has averaged ~7% after inflation historically, but past performance doesn't guarantee future results."
     - name: withdrawalRate
       label: "Withdrawal Rate"
       type: percent
@@ -57,6 +58,7 @@ inputs:
       default: 4
       urlKey: withdrawalRate
       hint: "Safe withdrawal: 4%"
+      tooltip: "The percentage of your portfolio you withdraw each year in retirement. The 4% rule suggests this rate historically sustains portfolios for 30+ years."
 
 charts:
   - type: area

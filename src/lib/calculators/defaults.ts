@@ -31,6 +31,7 @@ export const calculatorDefaults = {
     current: 5000,
     rate: 4.5,
     years: 5,
+    monthly: 0,
   },
   retirement: {
     age: 30,
@@ -53,7 +54,7 @@ export const calculatorDefaults = {
     price: 415000,
     dp: 20,
     rate: 6.5,
-    years: 7,
+    years: 30,
     appreciation: 3,
     rentIncrease: 3,
   },

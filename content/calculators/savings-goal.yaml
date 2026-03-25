@@ -32,6 +32,7 @@ inputs:
       default: 4.5
       urlKey: rate
       hint: "HYSA rate: ~4.5%"
+      tooltip: "Expected annual interest or return on your savings. High-yield savings accounts (HYSAs) currently offer ~4-5%. Investments may earn more but with higher risk."
     - name: timeHorizon
       label: "Time Horizon"
       type: years
@@ -40,6 +41,16 @@ inputs:
       step: 1
       default: 5
       urlKey: years
+    - name: monthlySavings
+      label: "Monthly Savings"
+      type: currency
+      min: 0
+      max: 10000
+      step: 50
+      default: 0
+      urlKey: monthly
+      hint: "0 = auto (minimum required)"
+      tooltip: "Set to 0 to auto-calculate the minimum. Increase to see how saving more shortens your timeline."
 
 charts:
   - type: line
@@ -48,9 +59,12 @@ charts:
 
 outputs:
   - key: monthlyRequired
-    label: "Monthly Required"
+    label: "Monthly Savings Required"
     format: currency
     primary: true
+  - key: yearsToGoal
+    label: "Years to Goal"
+    format: number
   - key: projectedTotal
     label: "Projected Total"
     format: currency

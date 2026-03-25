@@ -31,6 +31,18 @@ function computeDeltas(
     const valueA = resultsA.outputs[output.key] ?? 0;
     const valueB = resultsB.outputs[output.key] ?? 0;
     const delta = valueA - valueB;
+    const semantic = output.deltaSemantic ?? "lower_is_better";
+
+    let direction: "positive" | "negative" | "neutral";
+    if (delta === 0 || semantic === "neutral") {
+      direction = "neutral";
+    } else if (semantic === "higher_is_better") {
+      direction = delta > 0 ? "positive" : "negative";
+    } else {
+      // lower_is_better (default)
+      direction = delta > 0 ? "negative" : "positive";
+    }
+
     return {
       key: output.key,
       label: output.label,
@@ -38,12 +50,7 @@ function computeDeltas(
       valueB,
       delta,
       format: output.format,
-      direction:
-        delta > 0
-          ? ("negative" as const)
-          : delta < 0
-            ? ("positive" as const)
-            : ("neutral" as const),
+      direction,
     };
   });
 }
@@ -86,11 +93,47 @@ export function CalculatorShell({
     [setValues]
   );
 
+  const handleCompareToggle = useCallback(
+    (enabled: boolean) => {
+      if (enabled) {
+        // Copy current Scenario A values to Scenario B
+        const updates: Record<string, unknown> = { compare: true };
+        const allInputs = [
+          ...config.inputs.primary,
+          ...(config.inputs.advanced ?? []),
+        ];
+        for (const input of allInputs) {
+          const currentValue = values[input.urlKey];
+          if (currentValue !== undefined) {
+            updates[`b_${input.urlKey}`] = currentValue;
+          }
+        }
+        setValues(updates);
+      } else {
+        setValues({ compare: false });
+      }
+    },
+    [setValues, values, config.inputs.primary, config.inputs.advanced]
+  );
+
   // Compute results for Scenario A
   const results = useMemo(
     () => computeResults(values as Record<string, number | string>),
     [values, computeResults]
   );
+
+  // Auto-populate computed defaults (e.g., savings calculator monthly input)
+  // When an input is 0 and there's a matching "Required" output, sync once
+  useEffect(() => {
+    const vals = values as Record<string, unknown>;
+    if (
+      vals.monthly === 0 &&
+      results.outputs.monthlyRequired != null &&
+      results.outputs.monthlyRequired > 0
+    ) {
+      setValues({ monthly: Math.round(results.outputs.monthlyRequired) });
+    }
+  }, [results.outputs.monthlyRequired, values, setValues]);
 
   // Compute results for Scenario B when comparison mode is active
   // Extract b_ prefixed values and map them back to original param keys
@@ -178,7 +221,7 @@ export function CalculatorShell({
       <div className="mt-8 flex flex-col md:flex-row gap-8">
         {/* Input Panel */}
         <aside
-          className="w-full md:w-[300px] lg:w-[360px] shrink-0 md:sticky md:top-[120px] md:self-start md:max-h-[calc(100vh-152px)] md:overflow-y-auto rounded-lg border border-border bg-muted/50 p-6"
+          className="w-full md:w-[300px] lg:w-[360px] shrink-0 md:sticky md:top-[120px] md:self-start rounded-lg border border-border bg-muted/50 p-6"
           aria-label="Calculator inputs"
         >
           {/* Desktop: show both scenarios stacked */}
@@ -198,7 +241,7 @@ export function CalculatorShell({
             <div className="mt-6">
               <ScenarioToggle
                 enabled={isComparing}
-                onToggle={(v) => setValues({ compare: v })}
+                onToggle={handleCompareToggle}
               />
             </div>
 
@@ -252,7 +295,7 @@ export function CalculatorShell({
             <div className="mt-6">
               <ScenarioToggle
                 enabled={isComparing}
-                onToggle={(v) => setValues({ compare: v })}
+                onToggle={handleCompareToggle}
               />
             </div>
           </div>

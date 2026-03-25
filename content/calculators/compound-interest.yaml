@@ -32,6 +32,7 @@ inputs:
       default: 7
       urlKey: rate
       hint: "S&P 500 avg: ~7%"
+      tooltip: "Expected yearly investment growth. Index funds average ~7% after inflation historically, but returns vary year to year."
     - name: timeHorizon
       label: "Time Horizon"
       type: years

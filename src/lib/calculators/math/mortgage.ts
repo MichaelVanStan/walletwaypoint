@@ -64,6 +64,7 @@ export function calculateMortgage(params: Record<string, number>): CalculatorRes
   let balance = new Decimal(loanAmount);
   let cumulativePrincipal = new Decimal(0);
   let cumulativeInterest = new Decimal(0);
+  const yearlyTaxInsurance = monthlyTax.plus(monthlyIns).times(12);
 
   for (let year = 1; year <= termYears; year++) {
     for (let month = 0; month < 12; month++) {
@@ -78,11 +79,16 @@ export function calculateMortgage(params: Record<string, number>): CalculatorRes
       cumulativeInterest = cumulativeInterest.plus(interestPayment);
     }
 
+    const totalPaid = cumulativePrincipal
+      .plus(cumulativeInterest)
+      .plus(yearlyTaxInsurance.times(year));
+
     amortization.push({
       year,
       principal: cumulativePrincipal.toDecimalPlaces(0).toNumber(),
       interest: cumulativeInterest.toDecimalPlaces(0).toNumber(),
       balance: (balance.lt(0) ? new Decimal(0) : balance).toDecimalPlaces(0).toNumber(),
+      totalPaid: totalPaid.toDecimalPlaces(0).toNumber(),
     });
   }
 

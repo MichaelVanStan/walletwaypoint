@@ -42,7 +42,18 @@ export default async function CalculatorPage({
         url={`${siteConfig.url}/calculators/${calc.slug}`}
         applicationCategory={calc.seo.applicationCategory}
       />
-      <Suspense fallback={null}>
+      <Suspense
+        fallback={
+          <div className="mx-auto max-w-[1080px] px-4 sm:px-6 py-8 md:py-12">
+            <div className="h-8 w-64 animate-pulse rounded bg-muted" />
+            <div className="mt-2 h-5 w-96 animate-pulse rounded bg-muted" />
+            <div className="mt-8 flex flex-col md:flex-row gap-8">
+              <div className="w-full md:w-[360px] shrink-0 h-[400px] animate-pulse rounded-lg bg-muted/50" />
+              <div className="flex-1 h-[300px] animate-pulse rounded-lg bg-muted/50" />
+            </div>
+          </div>
+        }
+      >
         <CalculatorPageClient config={calc} />
       </Suspense>
     </>

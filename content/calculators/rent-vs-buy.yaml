@@ -45,9 +45,9 @@ inputs:
       min: 1
       max: 30
       step: 1
-      default: 7
+      default: 30
       urlKey: years
-      hint: "Avg homeowner tenure: 7 years"
+      hint: "Full mortgage term: 30 years"
   advanced:
     - name: homeAppreciation
       label: "Home Appreciation"
@@ -58,6 +58,7 @@ inputs:
       default: 3
       urlKey: appreciation
       hint: "Historical avg: ~3%"
+      tooltip: "Annual property value growth rate. The US historical average is ~3%, but varies significantly by location and market conditions."
     - name: annualRentIncrease
       label: "Annual Rent Increase"
       type: percent
@@ -72,14 +73,19 @@ charts:
   - type: area
     title: "Cumulative Cost Over Time"
     dataKey: cumulativeCost
+  - type: line
+    title: "Net Cost (After Equity & Investments)"
+    dataKey: netPosition
 
 outputs:
   - key: totalRentCost
     label: "Total Rent Cost"
     format: currency
+    deltaSemantic: neutral
   - key: totalBuyCost
     label: "Total Buy Cost"
     format: currency
+    deltaSemantic: neutral
   - key: netRentCost
     label: "Net Rent Cost"
     format: currency
@@ -90,6 +96,7 @@ outputs:
   - key: savingsAmount
     label: "Savings"
     format: currency
+    deltaSemantic: higher_is_better
 
 callouts:
   - title: "Calculate closing costs"

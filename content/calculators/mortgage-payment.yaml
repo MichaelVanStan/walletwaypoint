@@ -41,6 +41,14 @@ inputs:
       default: 30
       urlKey: term
       hint: "Standard: 15 or 30 years"
+      unitToggle:
+        primary:
+          label: "Years"
+          suffix: "yr"
+        alternate:
+          label: "Months"
+          suffix: "mo"
+          multiplier: 12
   advanced:
     - name: propertyTax
       label: "Property Tax Rate"
@@ -50,6 +58,7 @@ inputs:
       step: 0.1
       default: 1.1
       urlKey: tax
+      tooltip: "Annual property tax as a percentage of home value. Ranges from 0.4% to 2.5% depending on state. Check your county assessor's website for local rates."
     - name: insurance
       label: "Annual Insurance"
       type: currency

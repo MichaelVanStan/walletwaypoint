@@ -11,6 +11,13 @@ export interface InputConfig {
   urlKey: string;
   /** Options for 'select' type inputs (e.g., filing status dropdown) */
   options?: Array<{ value: string; label: string }>;
+  /** Tooltip explanation for financial jargon */
+  tooltip?: string;
+  /** Optional unit toggle for progressive disclosure (e.g., years ↔ months) */
+  unitToggle?: {
+    primary: { label: string; suffix: string };
+    alternate: { label: string; suffix: string; multiplier: number };
+  };
 }
 
 /** Chart configuration from YAML calculator config */
@@ -26,6 +33,8 @@ export interface OutputConfig {
   label: string;
   format: 'currency' | 'percent' | 'number' | 'years';
   primary?: boolean;
+  /** How to color-code deltas in comparison mode */
+  deltaSemantic?: 'lower_is_better' | 'higher_is_better' | 'neutral';
 }
 
 /** Action callout card configuration */

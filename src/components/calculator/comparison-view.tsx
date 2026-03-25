@@ -35,6 +35,7 @@ interface ComparisonViewProps {
 
 /** Format delta value with semantic prefix/suffix */
 function formatDelta(delta: ComparisonDelta): string {
+  if (delta.delta === 0) return "No change";
   const formatted = formatByType(Math.abs(delta.delta), delta.format);
   if (delta.direction === "positive") {
     return `saves ${formatted}`;
@@ -42,18 +43,20 @@ function formatDelta(delta: ComparisonDelta): string {
   if (delta.direction === "negative") {
     return `${formatted} more`;
   }
-  return "No change";
+  // neutral with non-zero delta
+  return delta.delta > 0 ? `${formatted} higher` : `${formatted} lower`;
 }
 
 /** Get aria-label for delta badge */
 function getDeltaAriaLabel(delta: ComparisonDelta): string {
+  if (delta.delta === 0) return "no change";
   if (delta.direction === "positive") {
     return `saves ${formatByType(Math.abs(delta.delta), delta.format)}`;
   }
   if (delta.direction === "negative") {
     return `costs ${formatByType(Math.abs(delta.delta), delta.format)} more`;
   }
-  return "no change";
+  return `${formatByType(Math.abs(delta.delta), delta.format)} difference`;
 }
 
 /** Render delta badge with semantic color */

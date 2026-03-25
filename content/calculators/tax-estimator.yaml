@@ -39,6 +39,7 @@ inputs:
       default: 15700
       urlKey: deduction
       hint: "2026 single: ~$15,700"
+      tooltip: "The amount of income you can earn tax-free. The IRS adjusts this annually. Most filers use the standard deduction rather than itemizing."
 
 charts:
   - type: bar

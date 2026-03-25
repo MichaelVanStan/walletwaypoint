@@ -16,6 +16,11 @@ const inputConfigSchema = s.object({
   hint: s.string().optional(),
   urlKey: s.string(),
   options: s.array(inputOptionSchema).optional(),
+  tooltip: s.string().optional(),
+  unitToggle: s.object({
+    primary: s.object({ label: s.string(), suffix: s.string() }),
+    alternate: s.object({ label: s.string(), suffix: s.string(), multiplier: s.number() }),
+  }).optional(),
 });
 
 const chartConfigSchema = s.object({
@@ -29,6 +34,7 @@ const outputConfigSchema = s.object({
   label: s.string(),
   format: s.enum(['currency', 'percent', 'number', 'years']),
   primary: s.boolean().optional(),
+  deltaSemantic: s.enum(['lower_is_better', 'higher_is_better', 'neutral']).optional(),
 });
 
 const calloutConfigSchema = s.object({

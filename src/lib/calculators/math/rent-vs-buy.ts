@@ -41,6 +41,7 @@ export function calculateRentVsBuy(params: Record<string, number>): CalculatorRe
   let cumulativeRentCost = new Decimal(0);
   let cumulativeBuyCost = new Decimal(0);
   const chartData: Record<string, number | string>[] = [];
+  const netPositionData: Record<string, number | string>[] = [];
 
   // Track mortgage balance for equity calculation
   const monthlyRate = new Decimal(rate).div(100).div(12);
@@ -80,6 +81,27 @@ export function calculateRentVsBuy(params: Record<string, number>): CalculatorRe
       year: y,
       renting: cumulativeRentCost.toDecimalPlaces(0).toNumber(),
       buying: cumulativeBuyCost.toDecimalPlaces(0).toNumber(),
+    });
+
+    // Net position at this year (accounting for equity and investment gains)
+    const homeValueAtYear = price.times(
+      new Decimal(1).plus(appreciation.div(100)).toPower(y),
+    );
+    const equityAtYear = homeValueAtYear.minus(
+      mortgageBalance.lt(0) ? new Decimal(0) : mortgageBalance,
+    );
+    const investmentAtYear = investedAmount.times(
+      new Decimal(1).plus(investmentReturnRate).toPower(y),
+    );
+    const investmentGainsAtYear = investmentAtYear.minus(investedAmount);
+
+    const netRentAtYear = cumulativeRentCost.minus(investmentGainsAtYear);
+    const netBuyAtYear = cumulativeBuyCost.plus(downPayment).plus(closingCosts).minus(equityAtYear);
+
+    netPositionData.push({
+      year: y,
+      netRentCost: netRentAtYear.toDecimalPlaces(0).toNumber(),
+      netBuyCost: netBuyAtYear.toDecimalPlaces(0).toNumber(),
     });
   }
 
@@ -131,6 +153,7 @@ export function calculateRentVsBuy(params: Record<string, number>): CalculatorRe
     },
     chartData: {
       cumulativeCost: chartData,
+      netPosition: netPositionData,
     },
     interpretation,
   };

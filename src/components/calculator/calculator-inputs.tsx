@@ -77,6 +77,8 @@ export function CalculatorInputs({
             step={input.step}
             hint={input.hint}
             format={input.type}
+            tooltip={input.tooltip}
+            unitToggle={input.unitToggle}
           />
         )
       )}

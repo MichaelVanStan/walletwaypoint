@@ -72,11 +72,13 @@ export const savingsParams = {
   current: parseAsInteger.withDefault(5000),
   rate: parseAsFloat.withDefault(4.5),
   years: parseAsInteger.withDefault(5),
+  monthly: parseAsInteger.withDefault(0),
   compare: parseAsBoolean.withDefault(false),
   b_goal: parseAsInteger.withDefault(50000),
   b_current: parseAsInteger.withDefault(5000),
   b_rate: parseAsFloat.withDefault(4.5),
   b_years: parseAsInteger.withDefault(5),
+  b_monthly: parseAsInteger.withDefault(0),
 };
 
 // ============================================================================
@@ -130,7 +132,7 @@ export const rentVsBuyParams = {
   price: parseAsInteger.withDefault(415000),
   dp: parseAsInteger.withDefault(20),
   rate: parseAsFloat.withDefault(6.5),
-  years: parseAsInteger.withDefault(7),
+  years: parseAsInteger.withDefault(30),
   appreciation: parseAsFloat.withDefault(3),
   rentIncrease: parseAsFloat.withDefault(3),
   compare: parseAsBoolean.withDefault(false),
@@ -138,7 +140,7 @@ export const rentVsBuyParams = {
   b_price: parseAsInteger.withDefault(415000),
   b_dp: parseAsInteger.withDefault(20),
   b_rate: parseAsFloat.withDefault(6.5),
-  b_years: parseAsInteger.withDefault(7),
+  b_years: parseAsInteger.withDefault(30),
   b_appreciation: parseAsFloat.withDefault(3),
   b_rentIncrease: parseAsFloat.withDefault(3),
 };
