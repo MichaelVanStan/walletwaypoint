@@ -31,7 +31,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **CALC-01**: Parameterized calculator engine that renders calculators from YAML/JSON config definitions
 - [x] **CALC-02**: Slider inputs with real-time result updates (no submit button)
 - [x] **CALC-03**: Precision math using decimal.js or integer-cents to avoid floating-point errors
-- [ ] **CALC-04**: Results visualization with charts (pie, bar, line/amortization curves) via Recharts
+- [x] **CALC-04**: Results visualization with charts (pie, bar, line/amortization curves) via Recharts
 - [x] **CALC-05**: Contextual results with plain-English interpretation and actionable next steps
 - [x] **CALC-06**: Calculator state stored in URL query params (nuqs) for bookmarkable/shareable results
 - [x] **CALC-07**: Side-by-side "what-if" scenario comparison (two sets of inputs, compared outcomes)
@@ -136,7 +136,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CALC-01 | Phase 2 | Complete |
 | CALC-02 | Phase 2 | Complete |
 | CALC-03 | Phase 2 | Complete |
-| CALC-04 | Phase 2 | Pending |
+| CALC-04 | Phase 2 | Complete |
 | CALC-05 | Phase 2 | Complete |
 | CALC-06 | Phase 2 | Complete |
 | CALC-07 | Phase 2 | Complete |
