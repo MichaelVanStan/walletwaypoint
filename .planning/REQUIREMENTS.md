@@ -44,11 +44,11 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **TOOL-03**: Compound interest calculator (growth over time with contributions)
 - [x] **TOOL-04**: Loan repayment calculator (payoff timeline, total cost, extra payment impact)
 - [x] **TOOL-05**: Savings goal calculator (how much to save monthly to reach a target)
-- [ ] **TOOL-06**: Retirement calculator (projected retirement savings, withdrawal rate, timeline)
-- [ ] **TOOL-07**: Budget calculator (50/30/20 rule breakdown with category allocation)
-- [ ] **TOOL-08**: Tax estimator (estimated federal tax liability by filing status and income)
-- [ ] **TOOL-09**: Rent vs buy calculator (total cost comparison over time with opportunity cost)
-- [ ] **TOOL-10**: Student loan repayment calculator (standard, graduated, income-driven plan comparison)
+- [x] **TOOL-06**: Retirement calculator (projected retirement savings, withdrawal rate, timeline)
+- [x] **TOOL-07**: Budget calculator (50/30/20 rule breakdown with category allocation)
+- [x] **TOOL-08**: Tax estimator (estimated federal tax liability by filing status and income)
+- [x] **TOOL-09**: Rent vs buy calculator (total cost comparison over time with opportunity cost)
+- [x] **TOOL-10**: Student loan repayment calculator (standard, graduated, income-driven plan comparison)
 
 ### Content & Guides
 
@@ -146,11 +146,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TOOL-03 | Phase 2 | Complete |
 | TOOL-04 | Phase 2 | Complete |
 | TOOL-05 | Phase 2 | Complete |
-| TOOL-06 | Phase 2 | Pending |
-| TOOL-07 | Phase 2 | Pending |
-| TOOL-08 | Phase 2 | Pending |
-| TOOL-09 | Phase 2 | Pending |
-| TOOL-10 | Phase 2 | Pending |
+| TOOL-06 | Phase 2 | Complete |
+| TOOL-07 | Phase 2 | Complete |
+| TOOL-08 | Phase 2 | Complete |
+| TOOL-09 | Phase 2 | Complete |
+| TOOL-10 | Phase 2 | Complete |
 | CONT-01 | Phase 3 | Pending |
 | CONT-02 | Phase 3 | Pending |
 | CONT-03 | Phase 3 | Pending |
