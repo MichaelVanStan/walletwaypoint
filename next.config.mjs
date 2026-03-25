@@ -10,6 +10,7 @@ if (!process.env.VELITE_STARTED && (isDev || isBuild)) {
 const nextConfig = {
   trailingSlash: false,
   allowedDevOrigins: ['192.168.50.194'],
+  turbopack: {},
 };
 
 export default nextConfig;
