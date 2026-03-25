@@ -6,6 +6,8 @@ interface InterpretationProps {
 
 export function Interpretation({ text }: InterpretationProps) {
   return (
-    <p className="text-base leading-[1.6] text-foreground">{text}</p>
+    <div className="rounded-lg border border-primary/15 bg-primary/5 px-4 py-3.5">
+      <p className="text-sm leading-relaxed text-foreground">{text}</p>
+    </div>
   );
 }
