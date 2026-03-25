@@ -73,7 +73,7 @@ export function calculateCompoundInterest(params: Record<string, number>): Calcu
   const totalInterestEarnedNum = totalInterestEarned.toDecimalPlaces(2).toNumber();
 
   // Interpretation
-  const interpretation = `Starting with ${formatCurrency(params.initial)} and adding ${formatCurrency(params.monthly)} monthly at ${params.rate}% return, your investment would grow to ${formatCurrency(futureValueNum)} in ${years} years -- that is ${formatCurrency(totalInterestEarnedNum)} in earnings on ${formatCurrency(totalContributionsNum)} contributed.`;
+  const interpretation = `Starting with **${formatCurrency(params.initial)}** and adding **${formatCurrency(params.monthly)}/mo** at **${params.rate}%** return, your investment would grow to **${formatCurrency(futureValueNum)}** in **${years} years** -- that is **${formatCurrency(totalInterestEarnedNum)}** in earnings on **${formatCurrency(totalContributionsNum)}** contributed.`;
 
   return {
     outputs: {

@@ -217,6 +217,69 @@ export function CalculatorCharts({
   );
 }
 
+/**
+ * Find the best index to place a direct label for a series.
+ * For series that drop to 0 early (e.g., "withExtra" in loan charts),
+ * we label at the midpoint of the active range.
+ * For series that span the full chart, we label near the middle.
+ */
+function findLabelIndex(
+  data: Record<string, number | string | unknown>[],
+  key: string
+): number {
+  // Find the last non-zero data point
+  let lastNonZero = data.length - 1;
+  for (let i = data.length - 1; i >= 0; i--) {
+    if (typeof data[i][key] === "number" && (data[i][key] as number) > 0) {
+      lastNonZero = i;
+      break;
+    }
+  }
+  // Label at ~40% of the active range (avoids edges and overlapping starts)
+  return Math.max(0, Math.round(lastNonZero * 0.4));
+}
+
+/** Render a direct label on a specific data point in a series */
+function SeriesLabel({
+  x,
+  y,
+  index,
+  labelIndex,
+  label,
+  color,
+}: {
+  x?: number;
+  y?: number;
+  index?: number;
+  labelIndex: number;
+  label: string;
+  color: string;
+}) {
+  if (index !== labelIndex || x == null || y == null) return null;
+  return (
+    <g>
+      <rect
+        x={x - 2}
+        y={y - 14}
+        width={label.length * 6.5 + 8}
+        height={18}
+        rx={4}
+        fill="white"
+        fillOpacity={0.85}
+      />
+      <text
+        x={x + 2}
+        y={y - 1}
+        fontSize={11}
+        fontWeight={600}
+        fill={color}
+      >
+        {label}
+      </text>
+    </g>
+  );
+}
+
 /** Area chart with gradient fills for amortization curves, growth projections */
 function AreaChartRenderer({
   data,
@@ -226,6 +289,7 @@ function AreaChartRenderer({
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
+  const hasMultipleSeries = seriesKeys.length > 1;
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -271,22 +335,42 @@ function AreaChartRenderer({
             <CustomTooltip formatter={(v) => formatCurrency(v)} />
           }
         />
-        {seriesKeys.length > 1 && (
+        {hasMultipleSeries && (
           <Legend iconType="circle" iconSize={8} />
         )}
-        {seriesKeys.map((key, i) => (
-          <Area
-            key={key}
-            type="monotone"
-            dataKey={key}
-            name={formatSeriesName(key)}
-            stroke={getColor(i)}
-            strokeWidth={2}
-            fill={`url(#gradient-${i})`}
-            animationDuration={reducedMotion ? 0 : 300}
-            isAnimationActive={!reducedMotion}
-          />
-        ))}
+        {seriesKeys.map((key, i) => {
+          const labelIndex = hasMultipleSeries
+            ? findLabelIndex(data, key)
+            : -1;
+          return (
+            <Area
+              key={key}
+              type="monotone"
+              dataKey={key}
+              name={formatSeriesName(key)}
+              stroke={getColor(i)}
+              strokeWidth={2}
+              fill={`url(#gradient-${i})`}
+              animationDuration={reducedMotion ? 0 : 300}
+              isAnimationActive={!reducedMotion}
+              label={
+                hasMultipleSeries
+                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    ((props: any) => (
+                      <SeriesLabel
+                        x={props.x}
+                        y={props.y}
+                        index={props.index}
+                        labelIndex={labelIndex}
+                        label={formatSeriesName(key)}
+                        color={getColor(i)}
+                      />
+                    )) as any
+                  : undefined
+              }
+            />
+          );
+        })}
       </AreaChart>
     </ResponsiveContainer>
   );
@@ -346,6 +430,8 @@ function LineChartRenderer({
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
   const hasGoal = data.some((d) => "goal" in d && typeof d.goal === "number");
+  const plotKeys = seriesKeys.filter((k) => k !== "goal");
+  const hasMultipleSeries = plotKeys.length > 1;
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -368,7 +454,7 @@ function LineChartRenderer({
             <CustomTooltip formatter={(v) => formatCurrency(v)} />
           }
         />
-        {seriesKeys.length > 1 && (
+        {hasMultipleSeries && (
           <Legend iconType="circle" iconSize={8} />
         )}
         {hasGoal && (
@@ -384,9 +470,11 @@ function LineChartRenderer({
             }}
           />
         )}
-        {seriesKeys
-          .filter((k) => k !== "goal")
-          .map((key, i) => (
+        {plotKeys.map((key, i) => {
+          const labelIndex = hasMultipleSeries
+            ? findLabelIndex(data, key)
+            : -1;
+          return (
             <Line
               key={key}
               type="monotone"
@@ -397,8 +485,24 @@ function LineChartRenderer({
               dot={false}
               animationDuration={reducedMotion ? 0 : 300}
               isAnimationActive={!reducedMotion}
+              label={
+                hasMultipleSeries
+                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    ((props: any) => (
+                      <SeriesLabel
+                        x={props.x}
+                        y={props.y}
+                        index={props.index}
+                        labelIndex={labelIndex}
+                        label={formatSeriesName(key)}
+                        color={getColor(i)}
+                      />
+                    )) as any
+                  : undefined
+              }
             />
-          ))}
+          );
+        })}
       </LineChart>
     </ResponsiveContainer>
   );

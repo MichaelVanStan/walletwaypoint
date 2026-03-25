@@ -121,8 +121,8 @@ export function calculateSavingsGoal(params: Record<string, number>): Calculator
   // Interpretation
   const savingMore = monthlyOverride > 0 && actualMonthly.gt(monthlyRequired);
   const interpretation = savingMore
-    ? `Saving ${formatCurrency(monthlyOverride)} per month (${formatCurrency(monthlyOverride - monthlyRequiredNum)} above the minimum), you will reach ${formatCurrency(params.goal)} in about ${yearsToGoal} years instead of ${years}. You will earn ${formatCurrency(Math.max(interestEarnedNum, 0))} in interest.`
-    : `To reach ${formatCurrency(params.goal)} in ${years} years starting with ${formatCurrency(params.current)}, save ${formatCurrency(monthlyRequiredNum)} per month at ${params.rate}% return. You will contribute ${formatCurrency(totalContributedNum)} and earn ${formatCurrency(Math.max(interestEarnedNum, 0))} in interest.`;
+    ? `Saving **${formatCurrency(monthlyOverride)}/mo** (**${formatCurrency(monthlyOverride - monthlyRequiredNum)}** above the minimum), you will reach **${formatCurrency(params.goal)}** in about **${yearsToGoal} years** instead of ${years}. You will earn **${formatCurrency(Math.max(interestEarnedNum, 0))}** in interest.`
+    : `To reach **${formatCurrency(params.goal)}** in **${years} years** starting with **${formatCurrency(params.current)}**, save **${formatCurrency(monthlyRequiredNum)}/mo** at **${params.rate}%** return. You will contribute **${formatCurrency(totalContributedNum)}** and earn **${formatCurrency(Math.max(interestEarnedNum, 0))}** in interest.`;
 
   return {
     outputs: {

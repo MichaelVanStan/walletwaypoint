@@ -169,7 +169,7 @@ export function calculateStudentLoan(params: Record<string, number>): Calculator
   ];
 
   // Interpretation
-  const interpretation = `For a ${formatCurrency(params.balance)} student loan at ${rate}%: Standard repayment costs ${formatCurrency(standardMonthly)}/mo (${formatCurrency(standardTotal)} total). Income-driven at ${formatCurrency(params.income)}/yr income costs ${formatCurrency(idrMonthly)}/mo with ${formatCurrency(idrForgiven)} potentially forgiven after 20 years.`;
+  const interpretation = `For a **${formatCurrency(params.balance)}** student loan at **${rate}%**: Standard repayment costs **${formatCurrency(standardMonthly)}/mo** (**${formatCurrency(standardTotal)}** total). Income-driven at **${formatCurrency(params.income)}/yr** income costs **${formatCurrency(idrMonthly)}/mo** with **${formatCurrency(idrForgiven)}** potentially forgiven after **20 years**.`;
 
   return {
     outputs: {

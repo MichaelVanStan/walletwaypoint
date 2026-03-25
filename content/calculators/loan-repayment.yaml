@@ -49,9 +49,12 @@ charts:
 
 outputs:
   - key: monthlyPayment
-    label: "Monthly Payment"
+    label: "Base Payment"
     format: currency
     primary: true
+  - key: totalMonthlyPayment
+    label: "Total Monthly Payment"
+    format: currency
   - key: totalInterest
     label: "Total Interest"
     format: currency
@@ -60,6 +63,9 @@ outputs:
     format: currency
   - key: payoffMonths
     label: "Payoff Months"
+    format: number
+  - key: monthsSaved
+    label: "Months Saved"
     format: number
   - key: interestSaved
     label: "Interest Saved"

@@ -135,10 +135,12 @@ export function calculateLoanRepayment(params: Record<string, number>): Calculat
     { key: 'balance', label: 'Balance', format: 'currency' as const },
   ];
 
-  // Interpretation
-  let interpretation = `A ${formatCurrency(params.amount)} loan at ${params.rate}% over ${termYears} years costs ${formatCurrency(monthlyPaymentNum)}/mo.`;
+  const totalMonthlyPayment = standardPayment.plus(extra).toDecimalPlaces(2).toNumber();
+
+  // Interpretation with **bold** markers for variable highlighting
+  let interpretation = `A **${formatCurrency(params.amount)}** loan at **${params.rate}%** over **${termYears} years** costs **${formatCurrency(monthlyPaymentNum)}/mo**.`;
   if (params.extra > 0) {
-    interpretation += ` Adding ${formatCurrency(params.extra)}/mo extra saves ${formatCurrency(interestSaved)} in interest and pays off ${monthsSaved} months early.`;
+    interpretation += ` Adding **${formatCurrency(params.extra)}/mo** extra brings your total payment to **${formatCurrency(totalMonthlyPayment)}/mo**, saves **${formatCurrency(interestSaved)}** in interest, and pays off **${monthsSaved} months early**.`;
   } else {
     interpretation += ' Consider extra payments to save on interest.';
   }
@@ -146,9 +148,11 @@ export function calculateLoanRepayment(params: Record<string, number>): Calculat
   return {
     outputs: {
       monthlyPayment: monthlyPaymentNum,
+      totalMonthlyPayment,
       totalInterest: totalInterestNum,
       totalCost: totalCostNum,
       payoffMonths,
+      monthsSaved,
       interestSaved: Math.max(interestSaved, 0),
     },
     chartData: {

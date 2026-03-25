@@ -101,7 +101,7 @@ export function calculateRetirement(params: Record<string, number>): CalculatorR
   }
 
   // Interpretation
-  const interpretation = `By saving ${formatCurrency(monthly)}/mo from age ${age} to ${retireAge} at ${returnRate}% return, you would have ${formatCurrency(retirementBalance)}. At a ${withdrawalRate}% withdrawal rate, that provides ${formatCurrency(monthlyWithdrawal)}/mo for an estimated ${yearsUntilDepleted} years.`;
+  const interpretation = `By saving **${formatCurrency(monthly)}/mo** from age **${age}** to **${retireAge}** at **${returnRate}%** return, you would have **${formatCurrency(retirementBalance)}**. At a **${withdrawalRate}%** withdrawal rate, that provides **${formatCurrency(monthlyWithdrawal)}/mo** for an estimated **${yearsUntilDepleted} years**.`;
 
   return {
     outputs: {

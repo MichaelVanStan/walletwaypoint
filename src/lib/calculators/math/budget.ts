@@ -48,7 +48,7 @@ export function calculateBudget(params: Record<string, number>): CalculatorResul
   ];
 
   // Interpretation
-  const interpretation = `Based on ${formatCurrency(params.income)}/mo income, the 50/30/20 rule suggests ${formatCurrency(needs)} for needs, ${formatCurrency(wants)} for wants, and ${formatCurrency(savings)} for savings each month.`;
+  const interpretation = `Based on **${formatCurrency(params.income)}/mo** income, the 50/30/20 rule suggests **${formatCurrency(needs)}** for needs, **${formatCurrency(wants)}** for wants, and **${formatCurrency(savings)}** for savings each month.`;
 
   return {
     outputs: {

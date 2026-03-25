@@ -136,7 +136,7 @@ export function calculateMortgage(params: Record<string, number>): CalculatorRes
       ? 'Consider a 15-year term to save significantly on total interest.'
       : 'A shorter term means more equity built faster.';
 
-  const interpretation = `With a ${formatCurrency(params.price)} home at ${params.rate}%, you would pay ${formatCurrency(monthlyPaymentNum)} per month -- that is about ${incomePercent}% of the median US household income. ${savingsHint}`;
+  const interpretation = `With a **${formatCurrency(params.price)}** home at **${params.rate}%**, you would pay **${formatCurrency(monthlyPaymentNum)}/mo** -- that is about **${incomePercent}%** of the median US household income. ${savingsHint}`;
 
   return {
     outputs: {

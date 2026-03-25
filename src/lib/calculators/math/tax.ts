@@ -141,7 +141,7 @@ export function calculateTax(params: Record<string, number | string>): Calculato
     head: 'head of household',
   };
 
-  const interpretation = `On ${formatCurrency(income)} income (${filingNames[filing] || filing} filing), your estimated federal tax is ${formatCurrency(totalTaxNum)} -- an effective rate of ${effectiveRate}%. Your marginal rate is ${marginalRate}%. You take home ${formatCurrency(takeHome)}.`;
+  const interpretation = `On **${formatCurrency(income)}** income (**${filingNames[filing] || filing}** filing), your estimated federal tax is **${formatCurrency(totalTaxNum)}** -- an effective rate of **${effectiveRate}%**. Your marginal rate is **${marginalRate}%**. You take home **${formatCurrency(takeHome)}**.`;
 
   return {
     outputs: {

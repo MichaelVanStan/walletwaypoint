@@ -40,7 +40,7 @@ export function calculateRentAffordability(params: Record<string, number>): Calc
   ];
 
   // Interpretation
-  const interpretation = `Based on $${params.income}/mo income, you can afford up to ${formatCurrency(Math.max(affordableRentNum, 0))} in rent after ${formatCurrency(params.utilities)} utilities and ${formatCurrency(params.other)} in other housing costs.`;
+  const interpretation = `Based on **$${params.income}/mo** income, you can afford up to **${formatCurrency(Math.max(affordableRentNum, 0))}** in rent after **${formatCurrency(params.utilities)}** utilities and **${formatCurrency(params.other)}** in other housing costs.`;
 
   return {
     outputs: {

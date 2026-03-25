@@ -140,7 +140,7 @@ export function calculateRentVsBuy(params: Record<string, number>): CalculatorRe
   const savingsAmount = netBuyCostDecimal.minus(netRentCostDecimal).abs().toDecimalPlaces(2).toNumber();
 
   // Interpretation
-  const interpretation = `Over ${years} years, renting costs ${formatCurrency(netRentCost)} net while buying costs ${formatCurrency(netBuyCost)} net. ${recommendation === 1 ? 'Buying' : 'Renting'} saves you ${formatCurrency(savingsAmount)}.`;
+  const interpretation = `Over **${years} years**, renting costs **${formatCurrency(netRentCost)}** net while buying costs **${formatCurrency(netBuyCost)}** net. **${recommendation === 1 ? 'Buying' : 'Renting'}** saves you **${formatCurrency(savingsAmount)}**.`;
 
   return {
     outputs: {
