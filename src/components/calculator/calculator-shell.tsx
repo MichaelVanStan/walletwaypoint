@@ -8,11 +8,45 @@ import { ResultCard } from "./result-card";
 import { Interpretation } from "./interpretation";
 import { ActionCallout } from "./action-callout";
 import { DetailTable } from "./detail-table";
+import { CalculatorCharts } from "./calculator-charts";
+import { ComparisonView } from "./comparison-view";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Share2, RotateCcw } from "lucide-react";
 import { formatByType } from "@/lib/calculators/formatters";
-import type { CalculatorConfig, CalculatorResults } from "@/lib/calculators/types";
+import type {
+  CalculatorConfig,
+  CalculatorResults,
+  ComparisonDelta,
+  OutputConfig,
+} from "@/lib/calculators/types";
+
+/** Compute comparison deltas between two result sets */
+function computeDeltas(
+  resultsA: CalculatorResults,
+  resultsB: CalculatorResults,
+  outputs: OutputConfig[]
+): ComparisonDelta[] {
+  return outputs.map((output) => {
+    const valueA = resultsA.outputs[output.key] ?? 0;
+    const valueB = resultsB.outputs[output.key] ?? 0;
+    const delta = valueA - valueB;
+    return {
+      key: output.key,
+      label: output.label,
+      valueA,
+      valueB,
+      delta,
+      format: output.format,
+      direction:
+        delta > 0
+          ? ("negative" as const)
+          : delta < 0
+            ? ("positive" as const)
+            : ("neutral" as const),
+    };
+  });
+}
 
 interface CalculatorShellProps {
   config: CalculatorConfig;
@@ -59,9 +93,22 @@ export function CalculatorShell({
   );
 
   // Compute results for Scenario B when comparison mode is active
+  // Extract b_ prefixed values and map them back to original param keys
   const resultsB = useMemo(() => {
     if (!(values as Record<string, unknown>).compare) return null;
-    return computeResults(values as Record<string, number | string>);
+    const bValues: Record<string, number | string> = {};
+    for (const [key, val] of Object.entries(values)) {
+      if (key.startsWith("b_")) {
+        bValues[key.slice(2)] = val as number | string;
+      }
+    }
+    // Carry over non-b_ keys that don't have a b_ counterpart (like compare flag itself)
+    for (const [key, val] of Object.entries(values)) {
+      if (!key.startsWith("b_") && !(key in bValues) && key !== "compare") {
+        bValues[key] = val as number | string;
+      }
+    }
+    return computeResults(bValues);
   }, [values, computeResults]);
 
   // Build default values from params for reset
@@ -235,10 +282,11 @@ export function CalculatorShell({
 
         {/* Results Panel */}
         <section className="flex-1 min-w-0" aria-label="Calculator results">
-          {/* Chart placeholder - wired in Plan 06 */}
-          <div
-            id="chart-area"
-            className="min-h-[240px] md:min-h-[300px]"
+          {/* Charts */}
+          <CalculatorCharts
+            charts={config.charts}
+            chartData={results.chartData}
+            reducedMotion={prefersReducedMotion}
           />
 
           {/* Result summary cards */}
@@ -272,8 +320,18 @@ export function CalculatorShell({
             </div>
           )}
 
-          {/* Comparison results placeholder - wired in Plan 06 */}
-          {isComparing && <div id="comparison-area" className="mt-8" />}
+          {/* Comparison results */}
+          {isComparing && resultsB && (
+            <div className="mt-8">
+              <ComparisonView
+                deltas={computeDeltas(results, resultsB, config.outputs)}
+                calculatorSlug={config.slug}
+                detailRowsA={results.detailRows}
+                detailRowsB={resultsB.detailRows}
+                detailColumns={results.detailColumns}
+              />
+            </div>
+          )}
 
           {/* Action callout cards */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
