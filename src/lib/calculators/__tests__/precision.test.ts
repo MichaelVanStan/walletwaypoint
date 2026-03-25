@@ -24,8 +24,10 @@ describe('precision math utilities', () => {
   describe('fv (future value with contributions)', () => {
     it('calculates compound interest future value', () => {
       const result = fv(10000, 500, 7, 20);
-      // PV * (1+r/12)^(240) + PMT * [((1+r/12)^240 - 1) / (r/12)]
-      expect(result).toBeCloseTo(308175, -2); // within hundreds
+      // FV = PV*(1+r/12)^(240) + PMT*[((1+r/12)^240 - 1)/(r/12)]
+      // = 10000*(1.005833)^240 + 500*((1.005833)^240 - 1)/0.005833
+      // = 40387.39 + 260463.33 = 300850.72
+      expect(result).toBeCloseTo(300850.72, 0);
     });
 
     it('handles zero interest rate', () => {
