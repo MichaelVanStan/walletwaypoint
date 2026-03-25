@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { calculators } from '#site/content';
 import { CalculatorPageClient } from '@/components/calculator/calculator-page-client';
 import { WebAppSchema } from '@/components/seo/web-app-schema';
@@ -41,7 +42,9 @@ export default async function CalculatorPage({
         url={`${siteConfig.url}/calculators/${calc.slug}`}
         applicationCategory={calc.seo.applicationCategory}
       />
-      <CalculatorPageClient config={calc} />
+      <Suspense fallback={null}>
+        <CalculatorPageClient config={calc} />
+      </Suspense>
     </>
   );
 }
