@@ -16,6 +16,7 @@ import {
   Tooltip,
   Legend,
   ReferenceLine,
+  Customized,
 } from "recharts";
 import type { ChartConfig } from "@/lib/calculators/types";
 import { formatCurrency, formatNumber } from "@/lib/calculators/formatters";
@@ -217,65 +218,88 @@ export function CalculatorCharts({
   );
 }
 
-/**
- * Find the best index to place a direct label for a series.
- * For series that drop to 0 early (e.g., "withExtra" in loan charts),
- * we label at the midpoint of the active range.
- * For series that span the full chart, we label near the middle.
- */
-function findLabelIndex(
-  data: Record<string, number | string | unknown>[],
-  key: string
-): number {
-  // Find the last non-zero data point
-  let lastNonZero = data.length - 1;
-  for (let i = data.length - 1; i >= 0; i--) {
-    if (typeof data[i][key] === "number" && (data[i][key] as number) > 0) {
-      lastNonZero = i;
-      break;
+/** Right-margin labels with dotted leader lines from the last data point of each series */
+function RightMarginLabels({
+  data,
+  seriesKeys,
+  xAxisMap,
+  yAxisMap,
+}: {
+  data: Record<string, number | string | unknown>[];
+  seriesKeys: string[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  xAxisMap?: Record<string, any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  yAxisMap?: Record<string, any>;
+}) {
+  if (!xAxisMap || !yAxisMap || seriesKeys.length < 2) return null;
+
+  const xAxis = Object.values(xAxisMap)[0];
+  const yAxis = Object.values(yAxisMap)[0];
+  if (!xAxis || !yAxis) return null;
+
+  // For each series, find the last valid data point and compute its pixel position
+  const labelData = seriesKeys.map((key, i) => {
+    let lastIdx = data.length - 1;
+    for (let j = data.length - 1; j >= 0; j--) {
+      if (typeof data[j][key] === "number" && (data[j][key] as number) > 0) {
+        lastIdx = j;
+        break;
+      }
+    }
+    const value = Number(data[lastIdx]?.[key] ?? 0);
+    // Map data coordinates to pixel coordinates via axis scale
+    const xPixel = xAxis.scale(xAxis.niceTicks?.[xAxis.niceTicks.length - 1] ?? lastIdx) ?? xAxis.width + xAxis.x;
+    const yPixel = yAxis.scale(value) ?? yAxis.y;
+    return { key, label: formatSeriesName(key), color: getColor(i), xPixel, yPixel };
+  });
+
+  // Right margin x position (just past the plot area)
+  const marginX = (xAxis.x ?? 0) + (xAxis.width ?? 0) + 8;
+
+  // Space labels vertically in the margin to avoid overlap
+  const sortedLabels = [...labelData].sort((a, b) => a.yPixel - b.yPixel);
+  const minGap = 18;
+  for (let i = 1; i < sortedLabels.length; i++) {
+    if (sortedLabels[i].yPixel - sortedLabels[i - 1].yPixel < minGap) {
+      sortedLabels[i] = { ...sortedLabels[i], yPixel: sortedLabels[i - 1].yPixel + minGap };
     }
   }
-  // Label at ~40% of the active range (avoids edges and overlapping starts)
-  return Math.max(0, Math.round(lastNonZero * 0.4));
-}
 
-/** Render a direct label on a specific data point in a series */
-function SeriesLabel({
-  x,
-  y,
-  index,
-  labelIndex,
-  label,
-  color,
-}: {
-  x?: number;
-  y?: number;
-  index?: number;
-  labelIndex: number;
-  label: string;
-  color: string;
-}) {
-  if (index !== labelIndex || x == null || y == null) return null;
   return (
-    <g>
-      <rect
-        x={x - 2}
-        y={y - 14}
-        width={label.length * 6.5 + 8}
-        height={18}
-        rx={4}
-        fill="white"
-        fillOpacity={0.85}
-      />
-      <text
-        x={x + 2}
-        y={y - 1}
-        fontSize={11}
-        fontWeight={600}
-        fill={color}
-      >
-        {label}
-      </text>
+    <g className="right-margin-labels">
+      {sortedLabels.map((item) => (
+        <g key={item.key}>
+          {/* Dotted leader line */}
+          <line
+            x1={item.xPixel}
+            y1={item.yPixel}
+            x2={marginX - 2}
+            y2={item.yPixel}
+            stroke={item.color}
+            strokeWidth={1}
+            strokeDasharray="3 3"
+            opacity={0.6}
+          />
+          {/* Color dot */}
+          <circle
+            cx={marginX + 2}
+            cy={item.yPixel}
+            r={3.5}
+            fill={item.color}
+          />
+          {/* Label text */}
+          <text
+            x={marginX + 10}
+            y={item.yPixel + 4}
+            fontSize={11}
+            fontWeight={500}
+            fill={item.color}
+          >
+            {item.label}
+          </text>
+        </g>
+      ))}
     </g>
   );
 }
@@ -293,7 +317,7 @@ function AreaChartRenderer({
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <AreaChart data={data}>
+      <AreaChart data={data} margin={hasMultipleSeries ? { right: 120 } : undefined}>
         <defs>
           {seriesKeys.map((key, i) => (
             <linearGradient
@@ -335,42 +359,31 @@ function AreaChartRenderer({
             <CustomTooltip formatter={(v) => formatCurrency(v)} />
           }
         />
+        {seriesKeys.map((key, i) => (
+          <Area
+            key={key}
+            type="monotone"
+            dataKey={key}
+            name={formatSeriesName(key)}
+            stroke={getColor(i)}
+            strokeWidth={2}
+            fill={`url(#gradient-${i})`}
+            animationDuration={reducedMotion ? 0 : 300}
+            isAnimationActive={!reducedMotion}
+          />
+        ))}
         {hasMultipleSeries && (
-          <Legend iconType="circle" iconSize={8} />
+          <Customized
+            component={(props: Record<string, unknown>) => (
+              <RightMarginLabels
+                data={data}
+                seriesKeys={seriesKeys}
+                xAxisMap={props.xAxisMap as Record<string, unknown>}
+                yAxisMap={props.yAxisMap as Record<string, unknown>}
+              />
+            )}
+          />
         )}
-        {seriesKeys.map((key, i) => {
-          const labelIndex = hasMultipleSeries
-            ? findLabelIndex(data, key)
-            : -1;
-          return (
-            <Area
-              key={key}
-              type="monotone"
-              dataKey={key}
-              name={formatSeriesName(key)}
-              stroke={getColor(i)}
-              strokeWidth={2}
-              fill={`url(#gradient-${i})`}
-              animationDuration={reducedMotion ? 0 : 300}
-              isAnimationActive={!reducedMotion}
-              label={
-                hasMultipleSeries
-                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    ((props: any) => (
-                      <SeriesLabel
-                        x={props.x}
-                        y={props.y}
-                        index={props.index}
-                        labelIndex={labelIndex}
-                        label={formatSeriesName(key)}
-                        color={getColor(i)}
-                      />
-                    )) as any
-                  : undefined
-              }
-            />
-          );
-        })}
       </AreaChart>
     </ResponsiveContainer>
   );
@@ -435,7 +448,7 @@ function LineChartRenderer({
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <LineChart data={data}>
+      <LineChart data={data} margin={hasMultipleSeries ? { right: 120 } : undefined}>
         <XAxis
           dataKey={xKey}
           tick={{ fontSize: 14 }}
@@ -454,9 +467,6 @@ function LineChartRenderer({
             <CustomTooltip formatter={(v) => formatCurrency(v)} />
           }
         />
-        {hasMultipleSeries && (
-          <Legend iconType="circle" iconSize={8} />
-        )}
         {hasGoal && (
           <ReferenceLine
             y={Number(data[0]?.goal ?? 0)}
@@ -470,39 +480,31 @@ function LineChartRenderer({
             }}
           />
         )}
-        {plotKeys.map((key, i) => {
-          const labelIndex = hasMultipleSeries
-            ? findLabelIndex(data, key)
-            : -1;
-          return (
-            <Line
-              key={key}
-              type="monotone"
-              dataKey={key}
-              name={formatSeriesName(key)}
-              stroke={getColor(i)}
-              strokeWidth={2}
-              dot={false}
-              animationDuration={reducedMotion ? 0 : 300}
-              isAnimationActive={!reducedMotion}
-              label={
-                hasMultipleSeries
-                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    ((props: any) => (
-                      <SeriesLabel
-                        x={props.x}
-                        y={props.y}
-                        index={props.index}
-                        labelIndex={labelIndex}
-                        label={formatSeriesName(key)}
-                        color={getColor(i)}
-                      />
-                    )) as any
-                  : undefined
-              }
-            />
-          );
-        })}
+        {plotKeys.map((key, i) => (
+          <Line
+            key={key}
+            type="monotone"
+            dataKey={key}
+            name={formatSeriesName(key)}
+            stroke={getColor(i)}
+            strokeWidth={2}
+            dot={false}
+            animationDuration={reducedMotion ? 0 : 300}
+            isAnimationActive={!reducedMotion}
+          />
+        ))}
+        {hasMultipleSeries && (
+          <Customized
+            component={(props: Record<string, unknown>) => (
+              <RightMarginLabels
+                data={data}
+                seriesKeys={plotKeys}
+                xAxisMap={props.xAxisMap as Record<string, unknown>}
+                yAxisMap={props.yAxisMap as Record<string, unknown>}
+              />
+            )}
+          />
+        )}
       </LineChart>
     </ResponsiveContainer>
   );
