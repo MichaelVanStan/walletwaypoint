@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 1: Foundation & Trust** - Next.js project scaffold with SEO infrastructure, responsive design system, legal compliance pages, and E-E-A-T signals
 - [ ] **Phase 2: Calculator Engine & Core Tools** - Parameterized calculator engine with real-time UI, charts, URL state, and all 10 financial calculators
 - [ ] **Phase 3: Content System & Life-Stage Hubs** - MDX content pipeline with educational guides, life-stage hub pages, internal linking, and inline glossary
-- [ ] **Phase 4: Comparison & Affiliate Infrastructure** - Product comparison tables, affiliate link registry, click tracking, and compliance-first ranking methodology
+- [x] **Phase 4: Comparison & Affiliate Infrastructure** - Product comparison tables, affiliate link registry, click tracking, and compliance-first ranking methodology (completed 2026-03-26)
 
 ## Phase Details
 
@@ -91,10 +91,10 @@ Plans:
 **Plans**: 5 plans
 Plans:
 - [x] 04-01-PLAN.md -- Data foundation: Velite product collection schema, TypeScript types, nuqs URL params, sort/filter utilities
-- [ ] 04-02-PLAN.md -- How We Rank Products methodology page (CFPB-compliant ranking transparency)
-- [ ] 04-03-PLAN.md -- Product YAML data: 4 categories with real products (credit cards, loans, savings, insurance)
-- [ ] 04-04-PLAN.md -- Compare UI components: sortable table, product cards, filters, affiliate link with GA4 tracking
-- [ ] 04-05-PLAN.md -- Compare pages (index + [category] route), navigation enablement, sitemap updates
+- [x] 04-02-PLAN.md -- How We Rank Products methodology page (CFPB-compliant ranking transparency)
+- [x] 04-03-PLAN.md -- Product YAML data: 4 categories with real products (credit cards, loans, savings, insurance)
+- [x] 04-04-PLAN.md -- Compare UI components: sortable table, product cards, filters, affiliate link with GA4 tracking
+- [x] 04-05-PLAN.md -- Compare pages (index + [category] route), navigation enablement, sitemap updates
 **UI hint**: yes
 
 ## Progress
@@ -107,4 +107,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation & Trust | 4/5 | In progress | - |
 | 2. Calculator Engine & Core Tools | 6/7 | In progress | - |
 | 3. Content System & Life-Stage Hubs | 1/7 | In Progress|  |
-| 4. Comparison & Affiliate Infrastructure | 1/5 | In progress | - |
+| 4. Comparison & Affiliate Infrastructure | 5/5 | Complete   | 2026-03-26 |
