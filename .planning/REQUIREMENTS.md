@@ -70,10 +70,10 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Comparison & Affiliate
 
 - [x] **AFFIL-01**: Comparison table component with sortable columns for financial products
-- [ ] **AFFIL-02**: Product data schema for credit cards (APR, annual fee, rewards, credit score range)
-- [ ] **AFFIL-03**: Product data schema for loans (rates, terms, eligibility)
+- [x] **AFFIL-02**: Product data schema for credit cards (APR, annual fee, rewards, credit score range)
+- [x] **AFFIL-03**: Product data schema for loans (rates, terms, eligibility)
 - [x] **AFFIL-04**: Centralized affiliate link registry with automatic disclosure injection
-- [ ] **AFFIL-05**: CFPB-compliant product ranking methodology (consumer benefit, not commission)
+- [x] **AFFIL-05**: CFPB-compliant product ranking methodology (consumer benefit, not commission)
 - [x] **AFFIL-06**: Affiliate link click tracking for revenue attribution
 
 ## v2 Requirements
@@ -163,10 +163,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HUB-05 | Phase 3 | Complete |
 | HUB-06 | Phase 3 | Complete |
 | AFFIL-01 | Phase 4 | Complete |
-| AFFIL-02 | Phase 4 | Pending |
-| AFFIL-03 | Phase 4 | Pending |
+| AFFIL-02 | Phase 4 | Complete |
+| AFFIL-03 | Phase 4 | Complete |
 | AFFIL-04 | Phase 4 | Complete |
-| AFFIL-05 | Phase 4 | Pending |
+| AFFIL-05 | Phase 4 | Complete |
 | AFFIL-06 | Phase 4 | Complete |
 
 **Coverage:**
