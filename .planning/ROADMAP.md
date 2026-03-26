@@ -88,7 +88,13 @@ Plans:
   2. All affiliate links are served from a centralized registry with automatic FTC-compliant disclosure injected above the fold before the first affiliate link on any page
   3. A published "How We Rank Products" methodology page explains CFPB-compliant ranking criteria based on consumer benefit, not commission
   4. Affiliate link clicks are tracked for revenue attribution
-**Plans**: TBD
+**Plans**: 5 plans
+Plans:
+- [ ] 04-01-PLAN.md -- Data foundation: Velite product collection schema, TypeScript types, nuqs URL params, sort/filter utilities
+- [ ] 04-02-PLAN.md -- How We Rank Products methodology page (CFPB-compliant ranking transparency)
+- [ ] 04-03-PLAN.md -- Product YAML data: 4 categories with real products (credit cards, loans, savings, insurance)
+- [ ] 04-04-PLAN.md -- Compare UI components: sortable table, product cards, filters, affiliate link with GA4 tracking
+- [ ] 04-05-PLAN.md -- Compare pages (index + [category] route), navigation enablement, sitemap updates
 **UI hint**: yes
 
 ## Progress
@@ -101,4 +107,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation & Trust | 4/5 | In progress | - |
 | 2. Calculator Engine & Core Tools | 6/7 | In progress | - |
 | 3. Content System & Life-Stage Hubs | 1/7 | In Progress|  |
-| 4. Comparison & Affiliate Infrastructure | 0/0 | Not started | - |
+| 4. Comparison & Affiliate Infrastructure | 0/5 | Planning complete | - |
