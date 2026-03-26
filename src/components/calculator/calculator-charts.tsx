@@ -306,14 +306,15 @@ function AreaChartRenderer({
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
 
-  // Skip labels if only one series, or if all series have identical data
-  const showLabels =
+  // Show labels: always for single series, only when distinct for multi-series
+  const hasDistinctMultiple =
     seriesKeys.length > 1 &&
     !seriesKeys.every((k) => seriesAreIdentical(data, seriesKeys[0], k));
+  const showLabels = seriesKeys.length === 1 || hasDistinctMultiple;
 
   // Precompute last indices and detect endpoint overlap for vertical offset
   const lastIndices = seriesKeys.map((key) => findLastNonZeroIndex(data, key));
-  const endpointsSame = showLabels && lastIndices.every((idx) => idx === lastIndices[0]);
+  const endpointsSame = hasDistinctMultiple && lastIndices.every((idx) => idx === lastIndices[0]);
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -454,12 +455,14 @@ function LineChartRenderer({
   const hasGoal = data.some((d) => "goal" in d && typeof d.goal === "number");
   const plotKeys = seriesKeys.filter((k) => k !== "goal");
 
-  const showLabels =
+  // Show labels when there are multiple plotted series OR a goal reference line
+  const hasDistinctSeries =
     plotKeys.length > 1 &&
     !plotKeys.every((k) => seriesAreIdentical(data, plotKeys[0], k));
+  const showLabels = hasDistinctSeries || (plotKeys.length >= 1 && hasGoal);
 
   const lastIndices = plotKeys.map((key) => findLastNonZeroIndex(data, key));
-  const endpointsSame = showLabels && lastIndices.every((idx) => idx === lastIndices[0]);
+  const endpointsSame = hasDistinctSeries && lastIndices.every((idx) => idx === lastIndices[0]);
 
   return (
     <ResponsiveContainer width="100%" height="100%">
