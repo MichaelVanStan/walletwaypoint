@@ -1,49 +1,86 @@
 import Link from 'next/link';
+import { products } from '#site/content';
 import { createMetadata } from '@/lib/metadata';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
+import { CreditCard, Landmark, PiggyBank, Shield } from 'lucide-react';
 
 export const metadata = createMetadata({
   title: 'Product Comparisons',
   description:
-    'Side-by-side comparisons of credit cards, loans, and financial products with transparent ranking methodology.',
+    'Side-by-side comparisons of credit cards, loans, savings accounts, and insurance. Every comparison explains exactly how we rank products.',
   path: '/compare',
 });
 
+const categoryIcons: Record<string, React.ElementType> = {
+  'credit-cards': CreditCard,
+  'personal-loans': Landmark,
+  'savings-accounts': PiggyBank,
+  insurance: Shield,
+};
+
 export default function ComparePage() {
   return (
-    <div className="mx-auto max-w-[720px] px-4 py-12 sm:px-6 md:py-16">
-      <Badge variant="secondary" className="mb-4">
-        Coming Soon
-      </Badge>
-      <h1 className="text-2xl font-semibold text-foreground md:text-[24px]">
+    <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-6 md:py-12">
+      <h1 className="text-2xl font-semibold text-foreground">
         Product Comparisons
       </h1>
-      <p className="mt-4 text-base leading-[1.6] text-muted-foreground">
-        Side-by-side comparisons of credit cards, loans, and financial products
-        with transparent ranking methodology. Every comparison explains exactly
-        how we evaluate and rank products.
+      <p className="mt-3 max-w-[640px] text-base leading-[1.6] text-muted-foreground">
+        Side-by-side comparisons of credit cards, loans, savings accounts, and
+        insurance. Every comparison explains exactly how we rank products.
       </p>
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Button nativeButton={false} variant="outline" render={<Link href="/" />}>
-          Back to Home
-        </Button>
+
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {products.map((category) => {
+          const Icon = categoryIcons[category.category] || CreditCard;
+          return (
+            <Link
+              key={category.category}
+              href={`/compare/${category.category}`}
+              className="group"
+            >
+              <Card className="h-full transition-colors group-hover:border-accent/50">
+                <CardHeader>
+                  <div className="flex items-center gap-2">
+                    <Icon className="h-5 w-5 text-muted-foreground" />
+                    <CardTitle className="text-xl">
+                      {category.categoryTitle}
+                    </CardTitle>
+                  </div>
+                  <CardDescription className="mt-1">
+                    {category.categoryDescription}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <span className="text-sm text-muted-foreground">
+                    {category.products.length} products
+                  </span>
+                </CardContent>
+                <CardFooter>
+                  <span className="text-sm font-medium text-accent">
+                    Compare products &rarr;
+                  </span>
+                </CardFooter>
+              </Card>
+            </Link>
+          );
+        })}
       </div>
-      <div className="mt-8 border-t border-border pt-6">
+
+      <div className="py-8">
         <p className="text-sm text-muted-foreground">
-          Learn more about our methodology:{' '}
+          See how we rank products:{' '}
           <Link
-            href="/about"
+            href="/how-we-rank"
             className="underline hover:text-foreground"
           >
-            About Us
-          </Link>
-          {' | '}
-          <Link
-            href="/editorial-standards"
-            className="underline hover:text-foreground"
-          >
-            Editorial Standards
+            Our ranking methodology
           </Link>
         </p>
       </div>
