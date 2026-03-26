@@ -1,4 +1,6 @@
 import { defineConfig, defineCollection, s } from 'velite';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 const inputOptionSchema = s.object({
   value: s.string(),
@@ -74,6 +76,65 @@ const calculators = defineCollection({
   }),
 });
 
+const guides = defineCollection({
+  name: 'Guide',
+  pattern: 'guides/*.mdx',
+  schema: s.object({
+    slug: s.slug('guides'),
+    title: s.string().max(120),
+    description: s.string().max(300),
+    calculator: s.string(),
+    hub: s.string(),
+    lastUpdated: s.isodate(),
+    keyTakeaways: s.array(s.string()),
+    faqs: s.array(s.object({
+      question: s.string(),
+      answer: s.string(),
+    })),
+    relatedGuides: s.array(s.string()).optional(),
+    metadata: s.metadata(),
+    body: s.mdx(),
+  }),
+});
+
+const hubs = defineCollection({
+  name: 'Hub',
+  pattern: 'hubs/*.yaml',
+  schema: s.object({
+    slug: s.slug('hubs'),
+    name: s.string(),
+    tagline: s.string(),
+    description: s.string(),
+    icon: s.string(),
+    accentColor: s.string(),
+    intro: s.string().optional(),
+    calculatorSlugs: s.array(s.string()),
+    guideSlugs: s.array(s.string()),
+    tips: s.array(s.object({
+      title: s.string(),
+      description: s.string(),
+    })),
+    nextSteps: s.array(s.object({
+      hubSlug: s.string(),
+      label: s.string(),
+    })),
+  }),
+});
+
+const glossary = defineCollection({
+  name: 'GlossaryTerm',
+  pattern: 'glossary.yaml',
+  single: true,
+  schema: s.object({
+    terms: s.array(s.object({
+      term: s.string(),
+      slug: s.slug('glossary'),
+      definition: s.string().max(300),
+      longDefinition: s.string().optional(),
+    })),
+  }),
+});
+
 export default defineConfig({
   root: 'content',
   output: {
@@ -83,5 +144,11 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { calculators },
+  collections: { calculators, guides, hubs, glossary },
+  mdx: {
+    rehypePlugins: [
+      rehypeSlug,
+      [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+    ],
+  },
 });
