@@ -1,7 +1,15 @@
 import Link from 'next/link';
+import { guides } from '#site/content';
 import { createMetadata } from '@/lib/metadata';
-import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Clock, ArrowRight } from 'lucide-react';
 
 export const metadata = createMetadata({
   title: 'Financial Guides',
@@ -12,40 +20,49 @@ export const metadata = createMetadata({
 
 export default function GuidesPage() {
   return (
-    <div className="mx-auto max-w-[720px] px-4 py-12 sm:px-6 md:py-16">
-      <Badge variant="secondary" className="mb-4">
-        Coming Soon
-      </Badge>
-      <h1 className="text-2xl font-semibold text-foreground md:text-[24px]">
-        Financial Guides
-      </h1>
-      <p className="mt-4 text-base leading-[1.6] text-muted-foreground">
+    <div className="mx-auto max-w-[1200px] px-4 sm:px-6 py-12 md:py-16">
+      <h1 className="text-2xl font-semibold">Financial Guides</h1>
+      <p className="text-base text-muted-foreground mt-3 max-w-[640px]">
         Clear, jargon-free explanations of the financial topics that matter
         most. Written like a smart friend who happens to know money.
       </p>
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Button nativeButton={false} variant="outline" render={<Link href="/" />}>
-          Back to Home
-        </Button>
-      </div>
-      <div className="mt-8 border-t border-border pt-6">
-        <p className="text-sm text-muted-foreground">
-          Learn more about how we create content:{' '}
-          <Link
-            href="/about"
-            className="underline hover:text-foreground"
-          >
-            About Us
-          </Link>
-          {' | '}
-          <Link
-            href="/editorial-standards"
-            className="underline hover:text-foreground"
-          >
-            Editorial Standards
-          </Link>
-        </p>
-      </div>
+
+      {guides.length === 0 ? (
+        <div className="mt-12 text-center">
+          <p className="text-muted-foreground">
+            Guides are on the way. Check back soon.
+          </p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          {guides.map((guide) => (
+            <Link
+              key={guide.slug}
+              href={`/guides/${guide.slug}`}
+              className="block"
+            >
+              <Card className="h-full hover:border-accent/50 transition-colors">
+                <CardHeader>
+                  <CardTitle>{guide.title}</CardTitle>
+                  <CardDescription className="line-clamp-2">
+                    {guide.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter className="justify-between">
+                  <Badge variant="secondary">
+                    <Clock className="size-3" data-icon="inline-start" />
+                    {guide.metadata.readingTime} min read
+                  </Badge>
+                  <span className="inline-flex items-center gap-1 text-sm text-accent">
+                    Read this guide
+                    <ArrowRight className="size-3.5" />
+                  </span>
+                </CardFooter>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
