@@ -1,0 +1,200 @@
+category: credit-cards
+categoryTitle: "Best Credit Cards Compared"
+categoryDescription: "Find the right credit card based on rewards, fees, and your credit score. We rank by value to you, not by what pays us."
+lastVerified: "2026-03-26"
+
+products:
+  - id: chase-sapphire-preferred
+    name: "Chase Sapphire Preferred Card"
+    issuer: "Chase"
+    apr: "21.49%-28.49%"
+    annualFee: 95
+    rewardsType: travel
+    rewardsRate: "5X on travel through Chase, 3X on dining and streaming, 2X on other travel"
+    signupBonus: "60,000 points after $4,000 in 3 months"
+    creditScoreMin: 670
+    creditScoreRange: good
+    bestFor: "Best for Travel Rewards"
+    affiliateUrl: "https://www.walletwaypoint.com/go/chase-sapphire-preferred"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: citi-double-cash
+    name: "Citi Double Cash Card"
+    issuer: "Citi"
+    apr: "18.49%-28.49%"
+    annualFee: 0
+    rewardsType: cash-back
+    rewardsRate: "2% on every purchase (1% when you buy, 1% when you pay)"
+    signupBonus: "$200 cash back after $1,500 in 6 months"
+    creditScoreMin: 670
+    creditScoreRange: good
+    bestFor: "Best for Cash Back"
+    affiliateUrl: "https://www.walletwaypoint.com/go/citi-double-cash"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: capital-one-venture-x
+    name: "Capital One Venture X Rewards"
+    issuer: "Capital One"
+    apr: "21.99%-28.99%"
+    annualFee: 395
+    rewardsType: travel
+    rewardsRate: "10X on hotels and rental cars through Capital One Travel, 5X on flights, 2X on everything else"
+    signupBonus: "75,000 miles after $4,000 in 3 months"
+    creditScoreMin: 750
+    creditScoreRange: excellent
+    affiliateUrl: "https://www.walletwaypoint.com/go/capital-one-venture-x"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: discover-it-cash-back
+    name: "Discover it Cash Back"
+    issuer: "Discover"
+    apr: "17.24%-28.24%"
+    annualFee: 0
+    rewardsType: cash-back
+    rewardsRate: "5% rotating quarterly categories (up to $1,500), 1% everything else"
+    signupBonus: "Cashback Match: unlimited dollar-for-dollar match first year"
+    creditScoreMin: 670
+    creditScoreRange: good
+    bestFor: "Best No Annual Fee"
+    affiliateUrl: "https://www.walletwaypoint.com/go/discover-it-cash-back"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: chase-freedom-unlimited
+    name: "Chase Freedom Unlimited"
+    issuer: "Chase"
+    apr: "20.49%-29.24%"
+    annualFee: 0
+    rewardsType: cash-back
+    rewardsRate: "5% on travel through Chase, 3% on dining and drugstores, 1.5% on everything else"
+    signupBonus: "$200 bonus after $500 in 3 months"
+    creditScoreMin: 670
+    creditScoreRange: good
+    affiliateUrl: "https://www.walletwaypoint.com/go/chase-freedom-unlimited"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: amex-gold
+    name: "American Express Gold Card"
+    issuer: "American Express"
+    apr: "21.99%-29.99%"
+    annualFee: 250
+    rewardsType: points
+    rewardsRate: "4X at restaurants and U.S. supermarkets (up to $25K/yr), 3X on flights, 1X other"
+    signupBonus: "60,000 Membership Rewards points after $6,000 in 6 months"
+    creditScoreMin: 670
+    creditScoreRange: good
+    affiliateUrl: "https://www.walletwaypoint.com/go/amex-gold"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: capital-one-quicksilver
+    name: "Capital One Quicksilver Cash Rewards"
+    issuer: "Capital One"
+    apr: "19.99%-29.99%"
+    annualFee: 0
+    rewardsType: cash-back
+    rewardsRate: "1.5% unlimited cash back on every purchase"
+    signupBonus: "$200 cash bonus after $500 in 3 months"
+    creditScoreMin: 580
+    creditScoreRange: fair
+    affiliateUrl: "https://www.walletwaypoint.com/go/capital-one-quicksilver"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: amex-blue-cash-preferred
+    name: "Blue Cash Preferred Card from American Express"
+    issuer: "American Express"
+    apr: "19.49%-29.99%"
+    annualFee: 95
+    rewardsType: cash-back
+    rewardsRate: "6% at U.S. supermarkets (up to $6K/yr), 6% on streaming, 3% on transit and gas, 1% other"
+    signupBonus: "$250 statement credit after $3,000 in 6 months"
+    creditScoreMin: 670
+    creditScoreRange: good
+    affiliateUrl: "https://www.walletwaypoint.com/go/amex-blue-cash-preferred"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: wells-fargo-active-cash
+    name: "Wells Fargo Active Cash Card"
+    issuer: "Wells Fargo"
+    apr: "20.49%-29.99%"
+    annualFee: 0
+    rewardsType: cash-back
+    rewardsRate: "2% unlimited cash rewards on purchases"
+    signupBonus: "$200 cash rewards after $500 in 3 months"
+    creditScoreMin: 670
+    creditScoreRange: good
+    affiliateUrl: "https://www.walletwaypoint.com/go/wells-fargo-active-cash"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: citi-premier
+    name: "Citi Premier Card"
+    issuer: "Citi"
+    apr: "21.49%-29.49%"
+    annualFee: 95
+    rewardsType: points
+    rewardsRate: "3X on air travel, hotels, restaurants, supermarkets, and gas, 1X on everything else"
+    signupBonus: "60,000 ThankYou Points after $4,000 in 3 months"
+    creditScoreMin: 670
+    creditScoreRange: good
+    affiliateUrl: "https://www.walletwaypoint.com/go/citi-premier"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: capital-one-savor-one
+    name: "Capital One SavorOne Cash Rewards"
+    issuer: "Capital One"
+    apr: "19.99%-29.99%"
+    annualFee: 0
+    rewardsType: cash-back
+    rewardsRate: "3% on dining, entertainment, grocery stores, and streaming, 1% on everything else"
+    signupBonus: "$200 cash bonus after $500 in 3 months"
+    creditScoreMin: 670
+    creditScoreRange: good
+    affiliateUrl: "https://www.walletwaypoint.com/go/capital-one-savor-one"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true
+
+  - id: bankamericard
+    name: "BankAmericard Credit Card"
+    issuer: "Bank of America"
+    apr: "16.49%-26.49%"
+    annualFee: 0
+    rewardsType: balance-transfer
+    rewardsRate: "0% intro APR for 21 billing cycles on balance transfers"
+    signupBonus: "0% intro APR for 21 billing cycles on balance transfers"
+    creditScoreMin: 670
+    creditScoreRange: good
+    affiliateUrl: "https://www.walletwaypoint.com/go/bankamericard"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: credit-cards
+    hasAffiliate: true

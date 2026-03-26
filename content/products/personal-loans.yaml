@@ -1,0 +1,212 @@
+category: personal-loans
+categoryTitle: "Best Personal Loans Compared"
+categoryDescription: "Compare personal loan rates, terms, and eligibility side by side. Sorted by total cost to the borrower."
+lastVerified: "2026-03-26"
+
+products:
+  - id: sofi-personal-loan
+    name: "SoFi Personal Loan"
+    issuer: "SoFi"
+    aprLow: 8.99
+    aprHigh: 29.99
+    loanAmountMin: 5000
+    loanAmountMax: 100000
+    termMin: 24
+    termMax: 84
+    creditScoreRange: good
+    originationFee: "None"
+    bestFor: "Best for Large Loans"
+    affiliateUrl: "https://www.walletwaypoint.com/go/sofi-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: lightstream-personal-loan
+    name: "LightStream Personal Loan"
+    issuer: "LightStream"
+    aprLow: 7.49
+    aprHigh: 25.99
+    loanAmountMin: 5000
+    loanAmountMax: 100000
+    termMin: 24
+    termMax: 144
+    creditScoreRange: good
+    originationFee: "None"
+    bestFor: "Best for Low Rates"
+    affiliateUrl: "https://www.walletwaypoint.com/go/lightstream-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: marcus-personal-loan
+    name: "Marcus by Goldman Sachs Personal Loan"
+    issuer: "Marcus by Goldman Sachs"
+    aprLow: 6.99
+    aprHigh: 24.99
+    loanAmountMin: 3500
+    loanAmountMax: 40000
+    termMin: 36
+    termMax: 72
+    creditScoreRange: good
+    originationFee: "None"
+    affiliateUrl: "https://www.walletwaypoint.com/go/marcus-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: discover-personal-loan
+    name: "Discover Personal Loan"
+    issuer: "Discover"
+    aprLow: 7.99
+    aprHigh: 24.99
+    loanAmountMin: 2500
+    loanAmountMax: 35000
+    termMin: 36
+    termMax: 84
+    creditScoreRange: good
+    originationFee: "None"
+    affiliateUrl: "https://www.walletwaypoint.com/go/discover-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: best-egg-personal-loan
+    name: "Best Egg Personal Loan"
+    issuer: "Best Egg"
+    aprLow: 8.99
+    aprHigh: 35.99
+    loanAmountMin: 2000
+    loanAmountMax: 50000
+    termMin: 36
+    termMax: 60
+    creditScoreRange: fair
+    originationFee: "0.99%-8.99%"
+    bestFor: "Best for Bad Credit"
+    affiliateUrl: "https://www.walletwaypoint.com/go/best-egg-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: prosper-personal-loan
+    name: "Prosper Personal Loan"
+    issuer: "Prosper"
+    aprLow: 8.99
+    aprHigh: 35.99
+    loanAmountMin: 2000
+    loanAmountMax: 50000
+    termMin: 24
+    termMax: 60
+    creditScoreRange: fair
+    originationFee: "1.00%-9.99%"
+    affiliateUrl: "https://www.walletwaypoint.com/go/prosper-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: upgrade-personal-loan
+    name: "Upgrade Personal Loan"
+    issuer: "Upgrade"
+    aprLow: 8.49
+    aprHigh: 35.99
+    loanAmountMin: 1000
+    loanAmountMax: 50000
+    termMin: 24
+    termMax: 84
+    creditScoreRange: fair
+    originationFee: "1.85%-9.99%"
+    affiliateUrl: "https://www.walletwaypoint.com/go/upgrade-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: lending-club-personal-loan
+    name: "LendingClub Personal Loan"
+    issuer: "LendingClub"
+    aprLow: 9.57
+    aprHigh: 35.99
+    loanAmountMin: 1000
+    loanAmountMax: 40000
+    termMin: 24
+    termMax: 60
+    creditScoreRange: fair
+    originationFee: "2.00%-8.00%"
+    affiliateUrl: "https://www.walletwaypoint.com/go/lending-club-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: upstart-personal-loan
+    name: "Upstart Personal Loan"
+    issuer: "Upstart"
+    aprLow: 7.80
+    aprHigh: 35.99
+    loanAmountMin: 1000
+    loanAmountMax: 50000
+    termMin: 36
+    termMax: 60
+    creditScoreRange: fair
+    originationFee: "0%-12%"
+    affiliateUrl: "https://www.walletwaypoint.com/go/upstart-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: avant-personal-loan
+    name: "Avant Personal Loan"
+    issuer: "Avant"
+    aprLow: 9.95
+    aprHigh: 35.99
+    loanAmountMin: 2000
+    loanAmountMax: 35000
+    termMin: 24
+    termMax: 60
+    creditScoreRange: fair
+    originationFee: "1.50%-4.75%"
+    affiliateUrl: "https://www.walletwaypoint.com/go/avant-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: penfed-personal-loan
+    name: "PenFed Personal Loan"
+    issuer: "PenFed Credit Union"
+    aprLow: 7.74
+    aprHigh: 17.99
+    loanAmountMin: 600
+    loanAmountMax: 50000
+    termMin: 12
+    termMax: 60
+    creditScoreRange: good
+    originationFee: "None"
+    affiliateUrl: "https://www.walletwaypoint.com/go/penfed-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
+
+  - id: navy-federal-personal-loan
+    name: "Navy Federal Personal Loan"
+    issuer: "Navy Federal Credit Union"
+    aprLow: 8.99
+    aprHigh: 18.00
+    loanAmountMin: 250
+    loanAmountMax: 50000
+    termMin: 12
+    termMax: 60
+    creditScoreRange: excellent
+    originationFee: "None"
+    affiliateUrl: "https://www.walletwaypoint.com/go/navy-federal-personal-loan"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: personal-loans
+    hasAffiliate: true
