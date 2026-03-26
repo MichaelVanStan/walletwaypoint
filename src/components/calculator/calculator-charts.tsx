@@ -233,9 +233,20 @@ function findLastNonZeroIndex(
 }
 
 /**
+ * Check whether two series have identical data (e.g., extra payment = 0
+ * means "standard" and "withExtra" are the same line).
+ */
+function seriesAreIdentical(
+  data: Record<string, number | string | unknown>[],
+  keyA: string,
+  keyB: string
+): boolean {
+  return data.every((d) => d[keyA] === d[keyB]);
+}
+
+/**
  * Custom dot renderer that draws a leader line + label at the last data point.
- * For all other points, renders nothing. This gives us the pixel coordinates
- * from Recharts directly via the dot props.
+ * For all other points, renders nothing.
  */
 function LeaderDot({
   cx,
@@ -244,6 +255,7 @@ function LeaderDot({
   lastIndex,
   color,
   label,
+  yOffset = 0,
 }: {
   cx?: number;
   cy?: number;
@@ -251,9 +263,10 @@ function LeaderDot({
   lastIndex: number;
   color: string;
   label: string;
+  yOffset?: number;
 }) {
   if (index !== lastIndex || cx == null || cy == null) return <g />;
-  // Leader line extends 15px right, then dot + text
+  const labelY = cy + yOffset;
   const lineEndX = cx + 18;
   const dotX = lineEndX + 6;
   const textX = dotX + 10;
@@ -263,16 +276,16 @@ function LeaderDot({
         x1={cx}
         y1={cy}
         x2={lineEndX}
-        y2={cy}
+        y2={labelY}
         stroke={color}
         strokeWidth={1}
         strokeDasharray="3 3"
         opacity={0.6}
       />
-      <circle cx={dotX} cy={cy} r={3.5} fill={color} />
+      <circle cx={dotX} cy={labelY} r={3.5} fill={color} />
       <text
         x={textX}
-        y={cy + 4}
+        y={labelY + 4}
         fontSize={11}
         fontWeight={500}
         fill={color}
@@ -292,11 +305,19 @@ function AreaChartRenderer({
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
-  const hasMultipleSeries = seriesKeys.length > 1;
+
+  // Skip labels if only one series, or if all series have identical data
+  const showLabels =
+    seriesKeys.length > 1 &&
+    !seriesKeys.every((k) => seriesAreIdentical(data, seriesKeys[0], k));
+
+  // Precompute last indices and detect endpoint overlap for vertical offset
+  const lastIndices = seriesKeys.map((key) => findLastNonZeroIndex(data, key));
+  const endpointsSame = showLabels && lastIndices.every((idx) => idx === lastIndices[0]);
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <AreaChart data={data} margin={hasMultipleSeries ? { right: 130 } : undefined}>
+      <AreaChart data={data} margin={showLabels ? { right: 130 } : undefined}>
         <defs>
           {seriesKeys.map((key, i) => (
             <linearGradient
@@ -339,9 +360,9 @@ function AreaChartRenderer({
           }
         />
         {seriesKeys.map((key, i) => {
-          const lastIdx = hasMultipleSeries
-            ? findLastNonZeroIndex(data, key)
-            : -1;
+          const lastIdx = showLabels ? lastIndices[i] : -1;
+          // When endpoints overlap, offset labels vertically: first up, second down
+          const yOffset = endpointsSame ? (i === 0 ? -12 : 12) : 0;
           return (
             <Area
               key={key}
@@ -354,7 +375,7 @@ function AreaChartRenderer({
               animationDuration={reducedMotion ? 0 : 300}
               isAnimationActive={!reducedMotion}
               dot={
-                hasMultipleSeries
+                showLabels
                   ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     ((props: any) => (
                       <LeaderDot
@@ -364,6 +385,7 @@ function AreaChartRenderer({
                         lastIndex={lastIdx}
                         color={getColor(i)}
                         label={formatSeriesName(key)}
+                        yOffset={yOffset}
                       />
                     )) as any
                   : false
@@ -431,11 +453,17 @@ function LineChartRenderer({
   const { xKey, seriesKeys } = getSeriesKeys(data);
   const hasGoal = data.some((d) => "goal" in d && typeof d.goal === "number");
   const plotKeys = seriesKeys.filter((k) => k !== "goal");
-  const hasMultipleSeries = plotKeys.length > 1;
+
+  const showLabels =
+    plotKeys.length > 1 &&
+    !plotKeys.every((k) => seriesAreIdentical(data, plotKeys[0], k));
+
+  const lastIndices = plotKeys.map((key) => findLastNonZeroIndex(data, key));
+  const endpointsSame = showLabels && lastIndices.every((idx) => idx === lastIndices[0]);
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <LineChart data={data} margin={hasMultipleSeries ? { right: 130 } : undefined}>
+      <LineChart data={data} margin={showLabels ? { right: 130 } : undefined}>
         <XAxis
           dataKey={xKey}
           tick={{ fontSize: 14 }}
@@ -468,9 +496,8 @@ function LineChartRenderer({
           />
         )}
         {plotKeys.map((key, i) => {
-          const lastIdx = hasMultipleSeries
-            ? findLastNonZeroIndex(data, key)
-            : -1;
+          const lastIdx = showLabels ? lastIndices[i] : -1;
+          const yOffset = endpointsSame ? (i === 0 ? -12 : 12) : 0;
           return (
             <Line
               key={key}
@@ -480,7 +507,7 @@ function LineChartRenderer({
               stroke={getColor(i)}
               strokeWidth={2}
               dot={
-                hasMultipleSeries
+                showLabels
                   ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     ((props: any) => (
                       <LeaderDot
@@ -490,6 +517,7 @@ function LineChartRenderer({
                         lastIndex={lastIdx}
                         color={getColor(i)}
                         label={formatSeriesName(key)}
+                        yOffset={yOffset}
                       />
                     )) as any
                   : false
