@@ -52,11 +52,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Content & Guides
 
-- [ ] **CONT-01**: Educational guide page paired with each calculator (10 guides minimum)
+- [x] **CONT-01**: Educational guide page paired with each calculator (10 guides minimum)
 - [ ] **CONT-02**: Jargon-free "smart friend" tone across all content
 - [ ] **CONT-03**: Scannable layout with callout boxes, key takeaways, and definition highlights
 - [ ] **CONT-04**: Internal linking system (related calculators, related guides, next steps)
-- [ ] **CONT-05**: Inline financial glossary with hover tooltips for common terms (APR, DTI, amortization, etc.)
+- [x] **CONT-05**: Inline financial glossary with hover tooltips for common terms (APR, DTI, amortization, etc.)
 
 ### Life-Stage Hubs
 
@@ -151,11 +151,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TOOL-08 | Phase 2 | Complete |
 | TOOL-09 | Phase 2 | Complete |
 | TOOL-10 | Phase 2 | Complete |
-| CONT-01 | Phase 3 | Pending |
+| CONT-01 | Phase 3 | Complete |
 | CONT-02 | Phase 3 | Pending |
 | CONT-03 | Phase 3 | Pending |
 | CONT-04 | Phase 3 | Pending |
-| CONT-05 | Phase 3 | Pending |
+| CONT-05 | Phase 3 | Complete |
 | HUB-01 | Phase 3 | Pending |
 | HUB-02 | Phase 3 | Pending |
 | HUB-03 | Phase 3 | Pending |
