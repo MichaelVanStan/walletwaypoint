@@ -75,8 +75,8 @@ Plans:
 - [x] 03-03-PLAN.md -- Hub components (hero, section, tips, next steps), hub page architecture (index + [slug] route), 6 hub YAML configs
 - [x] 03-04-PLAN.md -- Guide content batch 1: mortgage-payment, rent-affordability, compound-interest, loan-repayment, savings-goal
 - [x] 03-05-PLAN.md -- Guide content batch 2: retirement, budget, tax-estimator, rent-vs-buy, student-loan
-- [ ] 03-06-PLAN.md -- Integration: glossary page, sitemap updates, navigation enablement
-- [ ] 03-07-PLAN.md -- Final verification and human checkpoint
+- [x] 03-06-PLAN.md -- Integration: glossary page, sitemap updates, navigation enablement
+- [x] 03-07-PLAN.md -- Final verification and human checkpoint
 **UI hint**: yes
 
 ### Phase 4: Comparison & Affiliate Infrastructure
