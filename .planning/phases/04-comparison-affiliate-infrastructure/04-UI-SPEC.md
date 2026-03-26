@@ -39,7 +39,7 @@ Declared values (multiples of 4, 8-point grid) -- inherited from Phases 1-3:
 |-------|-------|-------------------|
 | xs | 4px | Icon-to-label gaps in badge components, table cell inline padding between icon and text, filter dropdown icon gap |
 | sm | 8px | Table cell vertical padding, filter chip gaps, product card internal attribute-to-attribute spacing, affiliate disclosure internal padding (vertical) |
-| md | 16px | Table cell horizontal padding, product card internal padding, filter bar internal padding, comparison page horizontal padding (mobile), methodology page paragraph spacing |
+| md | 16px | Table cell horizontal padding, product card internal padding, filter bar internal padding, comparison page horizontal padding (mobile), methodology page paragraph spacing, mobile filter stacked layout gaps |
 | lg | 24px | Filter bar to table gap, product card grid gaps, comparison index card grid gaps, methodology page section heading margin-top |
 | xl | 32px | Comparison page top padding (below breadcrumb), gap between affiliate disclosure and comparison table, methodology page section spacing |
 | 2xl | 48px | Comparison category page top/bottom padding, methodology page top/bottom padding, comparison index page top padding |
@@ -73,10 +73,10 @@ Exceptions:
 
 **Responsive scaling:**
 - Heading: 24px on desktop, 20px on mobile (< md)
-- Subheading: 20px on desktop, 18px on mobile (< md)
+- Subheading: 20px on all breakpoints (no responsive change)
 - Body and Label: No responsive changes
 
-**Implementation:** 14px = `text-sm`. 16px = `text-base`. 20px = `text-xl`. 24px = `text-2xl`. 18px = `text-lg`.
+**Implementation:** 14px = `text-sm`. 16px = `text-base`. 20px = `text-xl`. 24px = `text-2xl`.
 
 **Source:** Phase 3 UI-SPEC typography. Body line height adjusted from 1.7 (guides) to 1.6 (shorter content blocks). Table typography inherited from shadcn Table component.
 
@@ -85,6 +85,8 @@ Exceptions:
 ## Color
 
 All colors use the existing OKLCH CSS custom properties from Phase 1 `globals.css`. No new global color definitions needed for Phase 4.
+
+**Color distribution:** Approximately 60% background (dominant surface), 30% secondary surfaces (cards, filter bar, table header, muted areas), 10% accent and primary (CTA links, sort indicators, editorial badges).
 
 ### Light Mode
 
@@ -339,7 +341,7 @@ None. All required primitives exist from Phases 1-3.
 [Sort Dropdown - px-4, mb-4]
   [Select: "Sort by" with column options]
 [Filter Dropdowns - px-4, mb-4]
-  [Stacked Select dropdowns, gap-3]
+  [Stacked Select dropdowns, gap-4]
   [Product count]
 [Product Cards - stacked, gap-4, px-4]
   [Each Card:]
@@ -417,7 +419,7 @@ None. All required primitives exist from Phases 1-3.
 | Multiple filters applied | Filters combine with AND logic. Each filter narrows the result set. |
 | Clear individual filter | Select the "All" / default option in the dropdown. |
 | Clear all filters | "Clear filters" button resets all filter params. Only visible when at least one filter is active. |
-| Mobile filter layout | Filters stack vertically. Sort dropdown appears first, then category filters. |
+| Mobile filter layout | Filters stack vertically with `gap-4` (16px). Sort dropdown appears first, then category filters. |
 | URL state | All filter values stored in URL via nuqs (`?rewards=travel&score=750`). Shareable and bookmarkable. |
 | Zero results after filtering | Table/cards replaced with empty state: "No matching products" message with "clear all filters" link. |
 
