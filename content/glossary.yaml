@@ -1,0 +1,78 @@
+terms:
+  - term: APR
+    slug: apr
+    definition: "Annual Percentage Rate -- the total yearly cost of borrowing, including interest and fees, expressed as a percentage."
+    longDefinition: "APR includes the interest rate plus any additional fees charged by the lender (origination fees, closing costs, etc.), giving you a more complete picture of what a loan actually costs compared to the interest rate alone."
+  - term: DTI
+    slug: dti
+    definition: "Debt-to-Income ratio -- the percentage of your gross monthly income that goes toward debt payments."
+    longDefinition: "Lenders use DTI to assess your ability to manage monthly payments. Most mortgage lenders prefer a DTI below 43%, with many preferring 36% or less."
+  - term: Amortization
+    slug: amortization
+    definition: "The process of spreading a loan into a series of fixed payments over time, where each payment covers both principal and interest."
+  - term: Principal
+    slug: principal
+    definition: "The original amount of money borrowed in a loan, not including interest."
+  - term: Interest
+    slug: interest
+    definition: "The cost of borrowing money, usually expressed as an annual percentage of the loan balance."
+  - term: Escrow
+    slug: escrow
+    definition: "A third-party account where funds are held during a transaction, commonly used for property taxes and insurance in mortgage payments."
+  - term: PMI
+    slug: pmi
+    definition: "Private Mortgage Insurance -- extra insurance you pay when your down payment is less than 20% of the home price. It protects the lender, not you."
+  - term: Equity
+    slug: equity
+    definition: "The portion of your home that you actually own -- the difference between your home's value and what you still owe on the mortgage."
+  - term: Pre-approval
+    slug: pre-approval
+    definition: "A lender's conditional commitment to lend you a specific amount, based on a review of your credit, income, and assets. Stronger than pre-qualification."
+  - term: Closing Costs
+    slug: closing-costs
+    definition: "Fees and expenses you pay when finalizing a real estate transaction, typically 2-5% of the home price. Includes appraisal, title insurance, and attorney fees."
+  - term: Credit Score
+    slug: credit-score
+    definition: "A three-digit number (300-850) that represents your creditworthiness. Higher scores get better loan rates and terms."
+  - term: Down Payment
+    slug: down-payment
+    definition: "The upfront cash you pay when purchasing a home or car, expressed as a percentage of the total price."
+  - term: Fixed Rate
+    slug: fixed-rate
+    definition: "An interest rate that stays the same for the entire life of the loan, making your monthly payments predictable."
+  - term: Variable Rate
+    slug: variable-rate
+    definition: "An interest rate that can change periodically based on market conditions, meaning your payments may go up or down over time."
+  - term: Compound Interest
+    slug: compound-interest
+    definition: "Interest calculated on both the initial principal and the accumulated interest from previous periods -- your money earning money on its money."
+  - term: Inflation
+    slug: inflation
+    definition: "The rate at which prices for goods and services increase over time, reducing the purchasing power of your money."
+  - term: Net Worth
+    slug: net-worth
+    definition: "The total value of everything you own (assets) minus everything you owe (liabilities). A snapshot of your financial health."
+  - term: Gross Income
+    slug: gross-income
+    definition: "Your total income before taxes and other deductions are taken out. This is the number lenders and landlords typically use."
+  - term: Deduction
+    slug: deduction
+    definition: "An expense that reduces your taxable income. Standard deduction is a flat amount; itemized deductions are specific expenses like mortgage interest or charitable donations."
+  - term: Filing Status
+    slug: filing-status
+    definition: "Your tax category based on marital and family status (single, married filing jointly, head of household, etc.) that determines your tax brackets and standard deduction."
+  - term: Tax Bracket
+    slug: tax-bracket
+    definition: "The range of income taxed at a particular rate. The US uses progressive brackets, so only the income within each range is taxed at that range's rate."
+  - term: Emergency Fund
+    slug: emergency-fund
+    definition: "Money set aside for unexpected expenses like medical bills, car repairs, or job loss. Most experts recommend 3-6 months of living expenses."
+  - term: Opportunity Cost
+    slug: opportunity-cost
+    definition: "The potential gain you miss out on when choosing one option over another. For example, money used for a down payment could have been invested in the stock market."
+  - term: Refinancing
+    slug: refinancing
+    definition: "Replacing an existing loan with a new one, usually to get a lower interest rate, reduce monthly payments, or change the loan term."
+  - term: Index Fund
+    slug: index-fund
+    definition: "A type of investment fund that tracks a market index like the S&P 500, offering broad diversification at low cost. A popular choice for long-term investing."
