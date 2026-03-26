@@ -1,0 +1,180 @@
+category: savings-accounts
+categoryTitle: "Best Savings Accounts & CDs Compared"
+categoryDescription: "Compare APY rates, minimum balances, and terms across high-yield savings accounts and certificates of deposit."
+lastVerified: "2026-03-26"
+
+products:
+  - id: marcus-high-yield-savings
+    name: "Marcus by Goldman Sachs High-Yield Savings"
+    issuer: "Marcus by Goldman Sachs"
+    apy: 4.40
+    minimumDeposit: 0
+    accountType: high-yield-savings
+    compounding: "Daily"
+    fdic: true
+    bestFor: "Best High-Yield Savings"
+    affiliateUrl: "https://www.walletwaypoint.com/go/marcus-high-yield-savings"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: ally-high-yield-savings
+    name: "Ally Bank High-Yield Savings"
+    issuer: "Ally Bank"
+    apy: 4.20
+    minimumDeposit: 0
+    accountType: high-yield-savings
+    compounding: "Daily"
+    fdic: true
+    bestFor: "Best No Minimum"
+    affiliateUrl: "https://www.walletwaypoint.com/go/ally-high-yield-savings"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: wealthfront-cash-account
+    name: "Wealthfront Cash Account"
+    issuer: "Wealthfront"
+    apy: 4.50
+    minimumDeposit: 0
+    accountType: high-yield-savings
+    compounding: "Daily"
+    fdic: true
+    affiliateUrl: "https://www.walletwaypoint.com/go/wealthfront-cash-account"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: capital-one-360-performance
+    name: "Capital One 360 Performance Savings"
+    issuer: "Capital One"
+    apy: 4.25
+    minimumDeposit: 0
+    accountType: high-yield-savings
+    compounding: "Daily"
+    fdic: true
+    affiliateUrl: "https://www.walletwaypoint.com/go/capital-one-360-performance"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: discover-online-savings
+    name: "Discover Online Savings"
+    issuer: "Discover"
+    apy: 4.25
+    minimumDeposit: 0
+    accountType: high-yield-savings
+    compounding: "Daily"
+    fdic: true
+    affiliateUrl: "https://www.walletwaypoint.com/go/discover-online-savings"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: amex-high-yield-savings
+    name: "American Express High-Yield Savings"
+    issuer: "American Express"
+    apy: 4.35
+    minimumDeposit: 0
+    accountType: high-yield-savings
+    compounding: "Daily"
+    fdic: true
+    affiliateUrl: "https://www.walletwaypoint.com/go/amex-high-yield-savings"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: barclays-online-savings
+    name: "Barclays Online Savings"
+    issuer: "Barclays"
+    apy: 4.35
+    minimumDeposit: 0
+    accountType: high-yield-savings
+    compounding: "Daily"
+    fdic: true
+    affiliateUrl: "https://www.walletwaypoint.com/go/barclays-online-savings"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: cit-bank-platinum-savings
+    name: "CIT Bank Platinum Savings"
+    issuer: "CIT Bank"
+    apy: 4.55
+    minimumDeposit: 5000
+    accountType: high-yield-savings
+    compounding: "Monthly"
+    fdic: true
+    affiliateUrl: "https://www.walletwaypoint.com/go/cit-bank-platinum-savings"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: marcus-12-month-cd
+    name: "Marcus 12-Month CD"
+    issuer: "Marcus by Goldman Sachs"
+    apy: 4.50
+    minimumDeposit: 500
+    accountType: cd
+    termMonths: 12
+    compounding: "Daily"
+    fdic: true
+    bestFor: "Best CD Rate"
+    affiliateUrl: "https://www.walletwaypoint.com/go/marcus-12-month-cd"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: ally-18-month-cd
+    name: "Ally 18-Month CD"
+    issuer: "Ally Bank"
+    apy: 4.25
+    minimumDeposit: 0
+    accountType: cd
+    termMonths: 18
+    compounding: "Daily"
+    fdic: true
+    affiliateUrl: "https://www.walletwaypoint.com/go/ally-18-month-cd"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: discover-12-month-cd
+    name: "Discover 12-Month CD"
+    issuer: "Discover"
+    apy: 4.30
+    minimumDeposit: 2500
+    accountType: cd
+    termMonths: 12
+    compounding: "Daily"
+    fdic: true
+    affiliateUrl: "https://www.walletwaypoint.com/go/discover-12-month-cd"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true
+
+  - id: capital-one-12-month-cd
+    name: "Capital One 12-Month CD"
+    issuer: "Capital One"
+    apy: 4.30
+    minimumDeposit: 0
+    accountType: cd
+    termMonths: 12
+    compounding: "Daily"
+    fdic: true
+    affiliateUrl: "https://www.walletwaypoint.com/go/capital-one-12-month-cd"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: savings-accounts
+    hasAffiliate: true

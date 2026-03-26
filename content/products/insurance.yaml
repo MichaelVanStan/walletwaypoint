@@ -1,0 +1,188 @@
+category: insurance
+categoryTitle: "Best Auto & Renters Insurance Compared"
+categoryDescription: "Compare coverage options, deductibles, and premiums for auto and renters insurance. Ranked by coverage value per dollar."
+lastVerified: "2026-03-26"
+
+products:
+  - id: geico-auto
+    name: "GEICO Auto Insurance"
+    issuer: "GEICO"
+    insuranceType: auto
+    monthlyPremium: "$45-$120"
+    coverageLevel: standard
+    deductibleMin: 250
+    deductibleMax: 1000
+    coverageHighlights: "Liability, collision, comprehensive, medical payments, uninsured motorist"
+    bestFor: "Best for Auto Insurance"
+    affiliateUrl: "https://www.walletwaypoint.com/go/geico-auto"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: progressive-auto
+    name: "Progressive Auto Insurance"
+    issuer: "Progressive"
+    insuranceType: auto
+    monthlyPremium: "$50-$140"
+    coverageLevel: standard
+    deductibleMin: 250
+    deductibleMax: 1000
+    coverageHighlights: "Liability, collision, comprehensive, Name Your Price tool, roadside assistance"
+    affiliateUrl: "https://www.walletwaypoint.com/go/progressive-auto"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: state-farm-auto
+    name: "State Farm Auto Insurance"
+    issuer: "State Farm"
+    insuranceType: auto
+    monthlyPremium: "$55-$150"
+    coverageLevel: premium
+    deductibleMin: 250
+    deductibleMax: 2000
+    coverageHighlights: "Liability, collision, comprehensive, rental reimbursement, rideshare coverage, emergency road service"
+    affiliateUrl: "https://www.walletwaypoint.com/go/state-farm-auto"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: usaa-auto
+    name: "USAA Auto Insurance"
+    issuer: "USAA"
+    insuranceType: auto
+    monthlyPremium: "$40-$100"
+    coverageLevel: premium
+    deductibleMin: 250
+    deductibleMax: 1500
+    coverageHighlights: "Liability, collision, comprehensive, accident forgiveness, new car replacement, military deployment discount"
+    bestFor: "Best Value Coverage"
+    affiliateUrl: "https://www.walletwaypoint.com/go/usaa-auto"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: allstate-auto
+    name: "Allstate Auto Insurance"
+    issuer: "Allstate"
+    insuranceType: auto
+    monthlyPremium: "$60-$160"
+    coverageLevel: standard
+    deductibleMin: 500
+    deductibleMax: 2000
+    coverageHighlights: "Liability, collision, comprehensive, Drivewise safe driving discount, new car replacement"
+    affiliateUrl: "https://www.walletwaypoint.com/go/allstate-auto"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: liberty-mutual-auto
+    name: "Liberty Mutual Auto Insurance"
+    issuer: "Liberty Mutual"
+    insuranceType: auto
+    monthlyPremium: "$55-$145"
+    coverageLevel: standard
+    deductibleMin: 500
+    deductibleMax: 1500
+    coverageHighlights: "Liability, collision, comprehensive, better car replacement, accident forgiveness, teachers discount"
+    affiliateUrl: "https://www.walletwaypoint.com/go/liberty-mutual-auto"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: nationwide-auto
+    name: "Nationwide Auto Insurance"
+    issuer: "Nationwide"
+    insuranceType: auto
+    monthlyPremium: "$50-$130"
+    coverageLevel: basic
+    deductibleMin: 500
+    deductibleMax: 1000
+    coverageHighlights: "Liability, collision, comprehensive, vanishing deductible, SmartRide usage-based discount"
+    affiliateUrl: "https://www.walletwaypoint.com/go/nationwide-auto"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: lemonade-renters
+    name: "Lemonade Renters Insurance"
+    issuer: "Lemonade"
+    insuranceType: renters
+    monthlyPremium: "$5-$20"
+    coverageLevel: standard
+    deductibleMin: 250
+    deductibleMax: 1000
+    coverageHighlights: "Personal property, liability, loss of use, instant claims via AI, zero-hassle signup"
+    bestFor: "Best for Renters Insurance"
+    affiliateUrl: "https://www.walletwaypoint.com/go/lemonade-renters"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: state-farm-renters
+    name: "State Farm Renters Insurance"
+    issuer: "State Farm"
+    insuranceType: renters
+    monthlyPremium: "$12-$30"
+    coverageLevel: premium
+    deductibleMin: 250
+    deductibleMax: 1500
+    coverageHighlights: "Personal property, liability, medical payments, identity restoration, personal articles coverage"
+    affiliateUrl: "https://www.walletwaypoint.com/go/state-farm-renters"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: allstate-renters
+    name: "Allstate Renters Insurance"
+    issuer: "Allstate"
+    insuranceType: renters
+    monthlyPremium: "$10-$25"
+    coverageLevel: standard
+    deductibleMin: 500
+    deductibleMax: 1000
+    coverageHighlights: "Personal property, liability, additional living expenses, electronic data recovery, identity theft restoration"
+    affiliateUrl: "https://www.walletwaypoint.com/go/allstate-renters"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: usaa-renters
+    name: "USAA Renters Insurance"
+    issuer: "USAA"
+    insuranceType: renters
+    monthlyPremium: "$8-$18"
+    coverageLevel: premium
+    deductibleMin: 250
+    deductibleMax: 1000
+    coverageHighlights: "Personal property, liability, military uniform coverage, worldwide coverage, replacement cost"
+    affiliateUrl: "https://www.walletwaypoint.com/go/usaa-renters"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
+
+  - id: progressive-renters
+    name: "Progressive Renters Insurance"
+    issuer: "Progressive"
+    insuranceType: renters
+    monthlyPremium: "$8-$22"
+    coverageLevel: basic
+    deductibleMin: 500
+    deductibleMax: 1000
+    coverageHighlights: "Personal property, liability, loss of use, bundle discount with auto, multi-policy savings"
+    affiliateUrl: "https://www.walletwaypoint.com/go/progressive-renters"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: insurance
+    hasAffiliate: true
