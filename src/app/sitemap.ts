@@ -1,10 +1,11 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/site-config';
+import { guides, hubs } from '#site/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -59,5 +60,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/glossary`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ];
+
+  const guideRoutes: MetadataRoute.Sitemap = guides.map((guide) => ({
+    url: `${baseUrl}/guides/${guide.slug}`,
+    lastModified: new Date(guide.lastUpdated),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  const hubRoutes: MetadataRoute.Sitemap = hubs.map((hub) => ({
+    url: `${baseUrl}/hubs/${hub.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...guideRoutes, ...hubRoutes];
 }

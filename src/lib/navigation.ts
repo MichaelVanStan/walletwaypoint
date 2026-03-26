@@ -31,13 +31,16 @@ export const mainNavigation: NavItem[] = [
     title: 'Guides',
     href: '/guides',
     description: 'Educational financial guides',
-    disabled: true,
   },
   {
     title: 'Life Stage Hubs',
     href: '/hubs',
     description: 'Financial tools organized by life stage',
-    disabled: true,
+  },
+  {
+    title: 'Glossary',
+    href: '/glossary',
+    description: 'Financial terms explained',
   },
   {
     title: 'Compare',
@@ -64,12 +67,14 @@ export const footerNavigation: FooterNavigation = {
     {
       title: 'Guides',
       href: '/guides',
-      disabled: true,
     },
     {
       title: 'Life Stage Hubs',
       href: '/hubs',
-      disabled: true,
+    },
+    {
+      title: 'Glossary',
+      href: '/glossary',
     },
   ],
   company: [
