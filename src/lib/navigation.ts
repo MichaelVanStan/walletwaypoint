@@ -46,7 +46,28 @@ export const mainNavigation: NavItem[] = [
     title: 'Compare',
     href: '/compare',
     description: 'Side-by-side product comparisons',
-    disabled: true,
+    children: [
+      {
+        title: 'Credit Cards',
+        href: '/compare/credit-cards',
+        description: 'Compare credit card rewards, fees, and rates',
+      },
+      {
+        title: 'Personal Loans',
+        href: '/compare/personal-loans',
+        description: 'Compare personal loan rates and terms',
+      },
+      {
+        title: 'Savings & CDs',
+        href: '/compare/savings-accounts',
+        description: 'Compare savings account and CD rates',
+      },
+      {
+        title: 'Insurance',
+        href: '/compare/insurance',
+        description: 'Compare auto and renters insurance',
+      },
+    ],
   },
 ];
 
@@ -60,7 +81,6 @@ export const footerNavigation: FooterNavigation = {
     {
       title: 'Comparisons',
       href: '/compare',
-      disabled: true,
     },
   ],
   learn: [
@@ -85,6 +105,10 @@ export const footerNavigation: FooterNavigation = {
     {
       title: 'Editorial Standards',
       href: '/editorial-standards',
+    },
+    {
+      title: 'How We Rank',
+      href: '/how-we-rank',
     },
   ],
   legal: [

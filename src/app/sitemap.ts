@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/site-config';
-import { guides, hubs } from '#site/content';
+import { guides, hubs, products } from '#site/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
@@ -66,6 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/how-we-rank`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ];
 
   const guideRoutes: MetadataRoute.Sitemap = guides.map((guide) => ({
@@ -82,5 +88,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...guideRoutes, ...hubRoutes];
+  const comparisonRoutes: MetadataRoute.Sitemap = products.map((p) => ({
+    url: `${baseUrl}/compare/${p.category}`,
+    lastModified: new Date(p.lastVerified),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...guideRoutes, ...hubRoutes, ...comparisonRoutes];
 }
