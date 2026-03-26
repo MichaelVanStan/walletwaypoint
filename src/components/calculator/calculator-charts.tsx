@@ -16,7 +16,6 @@ import {
   Tooltip,
   Legend,
   ReferenceLine,
-  Customized,
 } from "recharts";
 import type { ChartConfig } from "@/lib/calculators/types";
 import { formatCurrency, formatNumber } from "@/lib/calculators/formatters";
@@ -218,91 +217,38 @@ export function CalculatorCharts({
   );
 }
 
-/**
- * Right-margin labels with dotted leader lines.
- * Uses formattedGraphicalItems from Recharts Customized to get actual pixel coordinates.
- */
-function RightMarginLabels({
+/** HTML-based right-margin labels for multi-series charts */
+function ChartWithLabels({
+  children,
   seriesKeys,
-  formattedGraphicalItems,
 }: {
+  children: React.ReactNode;
   seriesKeys: string[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  formattedGraphicalItems?: any[];
 }) {
-  if (seriesKeys.length < 2 || !formattedGraphicalItems?.length) return null;
-
-  // Extract the last visible point's pixel coordinates from each rendered series
-  const labelData = formattedGraphicalItems.map((item: any, i: number) => {
-    const points: Array<{ x: number; y: number; value: number }> = item?.props?.points ?? [];
-    // Find the last point with a non-zero value
-    let lastPoint = points[points.length - 1];
-    for (let j = points.length - 1; j >= 0; j--) {
-      if (points[j] && points[j].value > 0) {
-        lastPoint = points[j];
-        break;
-      }
-    }
-    const dataKey = item?.props?.dataKey ?? seriesKeys[i] ?? `series-${i}`;
-    return {
-      key: dataKey,
-      label: formatSeriesName(dataKey),
-      color: getColor(i),
-      xPixel: lastPoint?.x ?? 0,
-      yPixel: lastPoint?.y ?? 0,
-    };
-  });
-
-  if (labelData.every((d) => d.xPixel === 0 && d.yPixel === 0)) return null;
-
-  // Right margin starts just past the rightmost data point
-  const maxX = Math.max(...labelData.map((d) => d.xPixel));
-  const marginX = maxX + 12;
-
-  // Space labels vertically to avoid overlap
-  const sortedLabels = [...labelData].sort((a, b) => a.yPixel - b.yPixel);
-  const minGap = 18;
-  for (let i = 1; i < sortedLabels.length; i++) {
-    if (sortedLabels[i].yPixel - sortedLabels[i - 1].yPixel < minGap) {
-      sortedLabels[i] = { ...sortedLabels[i], yPixel: sortedLabels[i - 1].yPixel + minGap };
-    }
+  if (seriesKeys.length < 2) {
+    return <>{children}</>;
   }
 
   return (
-    <g className="right-margin-labels">
-      {sortedLabels.map((item) => (
-        <g key={item.key}>
-          {/* Dotted leader line */}
-          <line
-            x1={item.xPixel}
-            y1={item.yPixel}
-            x2={marginX - 2}
-            y2={item.yPixel}
-            stroke={item.color}
-            strokeWidth={1}
-            strokeDasharray="3 3"
-            opacity={0.6}
-          />
-          {/* Color dot */}
-          <circle
-            cx={marginX + 2}
-            cy={item.yPixel}
-            r={3.5}
-            fill={item.color}
-          />
-          {/* Label text */}
-          <text
-            x={marginX + 10}
-            y={item.yPixel + 4}
-            fontSize={11}
-            fontWeight={500}
-            fill={item.color}
-          >
-            {item.label}
-          </text>
-        </g>
-      ))}
-    </g>
+    <div className="flex h-full items-stretch gap-0">
+      <div className="flex-1 min-w-0">{children}</div>
+      <div className="flex flex-col justify-center gap-3 pl-3 pr-1">
+        {seriesKeys.map((key, i) => (
+          <div key={key} className="flex items-center gap-2 whitespace-nowrap">
+            <div
+              className="h-2.5 w-2.5 rounded-full shrink-0"
+              style={{ backgroundColor: getColor(i) }}
+            />
+            <span
+              className="text-xs font-medium"
+              style={{ color: getColor(i) }}
+            >
+              {formatSeriesName(key)}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -318,74 +264,66 @@ function AreaChartRenderer({
   const hasMultipleSeries = seriesKeys.length > 1;
 
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <AreaChart data={data} margin={hasMultipleSeries ? { right: 120 } : undefined}>
-        <defs>
+    <ChartWithLabels seriesKeys={seriesKeys}>
+      <ResponsiveContainer width="100%" height="100%">
+        <AreaChart data={data}>
+          <defs>
+            {seriesKeys.map((key, i) => (
+              <linearGradient
+                key={key}
+                id={`gradient-${i}`}
+                x1="0"
+                y1="0"
+                x2="0"
+                y2="1"
+              >
+                <stop
+                  offset="5%"
+                  stopColor={getColor(i)}
+                  stopOpacity={0.3}
+                />
+                <stop
+                  offset="95%"
+                  stopColor={getColor(i)}
+                  stopOpacity={0}
+                />
+              </linearGradient>
+            ))}
+          </defs>
+          <XAxis
+            dataKey={xKey}
+            tick={{ fontSize: 14 }}
+            axisLine={false}
+            tickLine={false}
+          />
+          <YAxis
+            tickFormatter={formatAxisCurrency}
+            tick={{ fontSize: 14 }}
+            axisLine={false}
+            tickLine={false}
+            width={60}
+          />
+          <Tooltip
+            content={
+              <CustomTooltip formatter={(v) => formatCurrency(v)} />
+            }
+          />
           {seriesKeys.map((key, i) => (
-            <linearGradient
+            <Area
               key={key}
-              id={`gradient-${i}`}
-              x1="0"
-              y1="0"
-              x2="0"
-              y2="1"
-            >
-              <stop
-                offset="5%"
-                stopColor={getColor(i)}
-                stopOpacity={0.3}
-              />
-              <stop
-                offset="95%"
-                stopColor={getColor(i)}
-                stopOpacity={0}
-              />
-            </linearGradient>
+              type="monotone"
+              dataKey={key}
+              name={formatSeriesName(key)}
+              stroke={getColor(i)}
+              strokeWidth={2}
+              fill={`url(#gradient-${i})`}
+              animationDuration={reducedMotion ? 0 : 300}
+              isAnimationActive={!reducedMotion}
+            />
           ))}
-        </defs>
-        <XAxis
-          dataKey={xKey}
-          tick={{ fontSize: 14 }}
-          axisLine={false}
-          tickLine={false}
-        />
-        <YAxis
-          tickFormatter={formatAxisCurrency}
-          tick={{ fontSize: 14 }}
-          axisLine={false}
-          tickLine={false}
-          width={60}
-        />
-        <Tooltip
-          content={
-            <CustomTooltip formatter={(v) => formatCurrency(v)} />
-          }
-        />
-        {seriesKeys.map((key, i) => (
-          <Area
-            key={key}
-            type="monotone"
-            dataKey={key}
-            name={formatSeriesName(key)}
-            stroke={getColor(i)}
-            strokeWidth={2}
-            fill={`url(#gradient-${i})`}
-            animationDuration={reducedMotion ? 0 : 300}
-            isAnimationActive={!reducedMotion}
-          />
-        ))}
-        {hasMultipleSeries && (
-          <Customized
-            component={(props: Record<string, unknown>) => (
-              <RightMarginLabels
-                seriesKeys={seriesKeys}
-                formattedGraphicalItems={props.formattedGraphicalItems as unknown[]}
-              />
-            )}
-          />
-        )}
-      </AreaChart>
-    </ResponsiveContainer>
+        </AreaChart>
+      </ResponsiveContainer>
+    </ChartWithLabels>
   );
 }
 
@@ -447,64 +385,56 @@ function LineChartRenderer({
   const hasMultipleSeries = plotKeys.length > 1;
 
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <LineChart data={data} margin={hasMultipleSeries ? { right: 120 } : undefined}>
-        <XAxis
-          dataKey={xKey}
-          tick={{ fontSize: 14 }}
-          axisLine={false}
-          tickLine={false}
-        />
-        <YAxis
-          tickFormatter={formatAxisCurrency}
-          tick={{ fontSize: 14 }}
-          axisLine={false}
-          tickLine={false}
-          width={60}
-        />
-        <Tooltip
-          content={
-            <CustomTooltip formatter={(v) => formatCurrency(v)} />
-          }
-        />
-        {hasGoal && (
-          <ReferenceLine
-            y={Number(data[0]?.goal ?? 0)}
-            stroke={getColor(2)}
-            strokeDasharray="4 4"
-            label={{
-              value: "Goal",
-              position: "right",
-              fontSize: 12,
-              fill: getColor(2),
-            }}
+    <ChartWithLabels seriesKeys={plotKeys}>
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={data}>
+          <XAxis
+            dataKey={xKey}
+            tick={{ fontSize: 14 }}
+            axisLine={false}
+            tickLine={false}
           />
-        )}
-        {plotKeys.map((key, i) => (
-          <Line
-            key={key}
-            type="monotone"
-            dataKey={key}
-            name={formatSeriesName(key)}
-            stroke={getColor(i)}
-            strokeWidth={2}
-            dot={false}
-            animationDuration={reducedMotion ? 0 : 300}
-            isAnimationActive={!reducedMotion}
+          <YAxis
+            tickFormatter={formatAxisCurrency}
+            tick={{ fontSize: 14 }}
+            axisLine={false}
+            tickLine={false}
+            width={60}
           />
-        ))}
-        {hasMultipleSeries && (
-          <Customized
-            component={(props: Record<string, unknown>) => (
-              <RightMarginLabels
-                seriesKeys={plotKeys}
-                formattedGraphicalItems={props.formattedGraphicalItems as unknown[]}
-              />
-            )}
+          <Tooltip
+            content={
+              <CustomTooltip formatter={(v) => formatCurrency(v)} />
+            }
           />
-        )}
-      </LineChart>
-    </ResponsiveContainer>
+          {hasGoal && (
+            <ReferenceLine
+              y={Number(data[0]?.goal ?? 0)}
+              stroke={getColor(2)}
+              strokeDasharray="4 4"
+              label={{
+                value: "Goal",
+                position: "right",
+                fontSize: 12,
+                fill: getColor(2),
+              }}
+            />
+          )}
+          {plotKeys.map((key, i) => (
+            <Line
+              key={key}
+              type="monotone"
+              dataKey={key}
+              name={formatSeriesName(key)}
+              stroke={getColor(i)}
+              strokeWidth={2}
+              dot={false}
+              animationDuration={reducedMotion ? 0 : 300}
+              isAnimationActive={!reducedMotion}
+            />
+          ))}
+        </LineChart>
+      </ResponsiveContainer>
+    </ChartWithLabels>
   );
 }
 
