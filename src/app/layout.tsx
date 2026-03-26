@@ -37,7 +37,7 @@ export default function RootLayout({
         <NuqsAdapter>
           <OrganizationSchema />
           <Header />
-          <main id="main-content">
+          <main id="main-content" className="pb-16 md:pb-24">
             <Breadcrumbs />
             {children}
           </main>

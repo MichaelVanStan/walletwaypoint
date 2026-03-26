@@ -13,10 +13,10 @@ export const mdxComponents: Record<string, ComponentType<any>> = {
 
   // Override default HTML elements for consistent guide styling
   h2: (props: any) => (
-    <h2 id={props.id} className="mt-10 mb-4 text-xl font-semibold" {...props} />
+    <h2 id={props.id} className="mt-10 mb-4 scroll-mt-20 text-xl font-semibold" {...props} />
   ),
   h3: (props: any) => (
-    <h3 id={props.id} className="mt-8 mb-3 text-lg font-semibold" {...props} />
+    <h3 id={props.id} className="mt-8 mb-3 scroll-mt-20 text-lg font-semibold" {...props} />
   ),
   p: (props: any) => (
     <p className="mb-4 text-base leading-[1.7]" {...props} />
