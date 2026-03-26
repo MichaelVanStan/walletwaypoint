@@ -53,19 +53,19 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Content & Guides
 
 - [x] **CONT-01**: Educational guide page paired with each calculator (10 guides minimum)
-- [ ] **CONT-02**: Jargon-free "smart friend" tone across all content
-- [ ] **CONT-03**: Scannable layout with callout boxes, key takeaways, and definition highlights
-- [ ] **CONT-04**: Internal linking system (related calculators, related guides, next steps)
+- [x] **CONT-02**: Jargon-free "smart friend" tone across all content
+- [x] **CONT-03**: Scannable layout with callout boxes, key takeaways, and definition highlights
+- [x] **CONT-04**: Internal linking system (related calculators, related guides, next steps)
 - [x] **CONT-05**: Inline financial glossary with hover tooltips for common terms (APR, DTI, amortization, etc.)
 
 ### Life-Stage Hubs
 
-- [ ] **HUB-01**: Student/New Grad hub aggregating relevant calculators, guides, and product recommendations
-- [ ] **HUB-02**: First-Time Renter hub with rent affordability tools, cost breakdowns, and lease guidance
-- [ ] **HUB-03**: First Home Buyer hub with mortgage tools, down payment guides, and state-specific programs
-- [ ] **HUB-04**: Rent vs Buy / Buy-to-Rent hub with investment calculators and landlord cost analysis
-- [ ] **HUB-05**: Freelancer/Self-Employed hub with tax estimator, quarterly payment guide, and business credit info
-- [ ] **HUB-06**: Pre-Retirement hub with withdrawal calculator, Social Security guidance, and Medicare overview
+- [x] **HUB-01**: Student/New Grad hub aggregating relevant calculators, guides, and product recommendations
+- [x] **HUB-02**: First-Time Renter hub with rent affordability tools, cost breakdowns, and lease guidance
+- [x] **HUB-03**: First Home Buyer hub with mortgage tools, down payment guides, and state-specific programs
+- [x] **HUB-04**: Rent vs Buy / Buy-to-Rent hub with investment calculators and landlord cost analysis
+- [x] **HUB-05**: Freelancer/Self-Employed hub with tax estimator, quarterly payment guide, and business credit info
+- [x] **HUB-06**: Pre-Retirement hub with withdrawal calculator, Social Security guidance, and Medicare overview
 
 ### Comparison & Affiliate
 
@@ -152,16 +152,16 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TOOL-09 | Phase 2 | Complete |
 | TOOL-10 | Phase 2 | Complete |
 | CONT-01 | Phase 3 | Complete |
-| CONT-02 | Phase 3 | Pending |
-| CONT-03 | Phase 3 | Pending |
-| CONT-04 | Phase 3 | Pending |
+| CONT-02 | Phase 3 | Complete |
+| CONT-03 | Phase 3 | Complete |
+| CONT-04 | Phase 3 | Complete |
 | CONT-05 | Phase 3 | Complete |
-| HUB-01 | Phase 3 | Pending |
-| HUB-02 | Phase 3 | Pending |
-| HUB-03 | Phase 3 | Pending |
-| HUB-04 | Phase 3 | Pending |
-| HUB-05 | Phase 3 | Pending |
-| HUB-06 | Phase 3 | Pending |
+| HUB-01 | Phase 3 | Complete |
+| HUB-02 | Phase 3 | Complete |
+| HUB-03 | Phase 3 | Complete |
+| HUB-04 | Phase 3 | Complete |
+| HUB-05 | Phase 3 | Complete |
+| HUB-06 | Phase 3 | Complete |
 | AFFIL-01 | Phase 4 | Pending |
 | AFFIL-02 | Phase 4 | Pending |
 | AFFIL-03 | Phase 4 | Pending |
