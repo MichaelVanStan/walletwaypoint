@@ -218,46 +218,48 @@ export function CalculatorCharts({
   );
 }
 
-/** Right-margin labels with dotted leader lines from the last data point of each series */
+/**
+ * Right-margin labels with dotted leader lines.
+ * Uses formattedGraphicalItems from Recharts Customized to get actual pixel coordinates.
+ */
 function RightMarginLabels({
-  data,
   seriesKeys,
-  xAxisMap,
-  yAxisMap,
+  formattedGraphicalItems,
 }: {
-  data: Record<string, number | string | unknown>[];
   seriesKeys: string[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  xAxisMap?: Record<string, any>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  yAxisMap?: Record<string, any>;
+  formattedGraphicalItems?: any[];
 }) {
-  if (!xAxisMap || !yAxisMap || seriesKeys.length < 2) return null;
+  if (seriesKeys.length < 2 || !formattedGraphicalItems?.length) return null;
 
-  const xAxis = Object.values(xAxisMap)[0];
-  const yAxis = Object.values(yAxisMap)[0];
-  if (!xAxis || !yAxis) return null;
-
-  // For each series, find the last valid data point and compute its pixel position
-  const labelData = seriesKeys.map((key, i) => {
-    let lastIdx = data.length - 1;
-    for (let j = data.length - 1; j >= 0; j--) {
-      if (typeof data[j][key] === "number" && (data[j][key] as number) > 0) {
-        lastIdx = j;
+  // Extract the last visible point's pixel coordinates from each rendered series
+  const labelData = formattedGraphicalItems.map((item: any, i: number) => {
+    const points: Array<{ x: number; y: number; value: number }> = item?.props?.points ?? [];
+    // Find the last point with a non-zero value
+    let lastPoint = points[points.length - 1];
+    for (let j = points.length - 1; j >= 0; j--) {
+      if (points[j] && points[j].value > 0) {
+        lastPoint = points[j];
         break;
       }
     }
-    const value = Number(data[lastIdx]?.[key] ?? 0);
-    // Map data coordinates to pixel coordinates via axis scale
-    const xPixel = xAxis.scale(xAxis.niceTicks?.[xAxis.niceTicks.length - 1] ?? lastIdx) ?? xAxis.width + xAxis.x;
-    const yPixel = yAxis.scale(value) ?? yAxis.y;
-    return { key, label: formatSeriesName(key), color: getColor(i), xPixel, yPixel };
+    const dataKey = item?.props?.dataKey ?? seriesKeys[i] ?? `series-${i}`;
+    return {
+      key: dataKey,
+      label: formatSeriesName(dataKey),
+      color: getColor(i),
+      xPixel: lastPoint?.x ?? 0,
+      yPixel: lastPoint?.y ?? 0,
+    };
   });
 
-  // Right margin x position (just past the plot area)
-  const marginX = (xAxis.x ?? 0) + (xAxis.width ?? 0) + 8;
+  if (labelData.every((d) => d.xPixel === 0 && d.yPixel === 0)) return null;
 
-  // Space labels vertically in the margin to avoid overlap
+  // Right margin starts just past the rightmost data point
+  const maxX = Math.max(...labelData.map((d) => d.xPixel));
+  const marginX = maxX + 12;
+
+  // Space labels vertically to avoid overlap
   const sortedLabels = [...labelData].sort((a, b) => a.yPixel - b.yPixel);
   const minGap = 18;
   for (let i = 1; i < sortedLabels.length; i++) {
@@ -376,10 +378,8 @@ function AreaChartRenderer({
           <Customized
             component={(props: Record<string, unknown>) => (
               <RightMarginLabels
-                data={data}
                 seriesKeys={seriesKeys}
-                xAxisMap={props.xAxisMap as Record<string, unknown>}
-                yAxisMap={props.yAxisMap as Record<string, unknown>}
+                formattedGraphicalItems={props.formattedGraphicalItems as unknown[]}
               />
             )}
           />
@@ -497,10 +497,8 @@ function LineChartRenderer({
           <Customized
             component={(props: Record<string, unknown>) => (
               <RightMarginLabels
-                data={data}
                 seriesKeys={plotKeys}
-                xAxisMap={props.xAxisMap as Record<string, unknown>}
-                yAxisMap={props.yAxisMap as Record<string, unknown>}
+                formattedGraphicalItems={props.formattedGraphicalItems as unknown[]}
               />
             )}
           />
