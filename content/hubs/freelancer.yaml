@@ -1,0 +1,35 @@
+slug: freelancer
+name: "Freelancer / Self-Employed"
+tagline: "Master your taxes, budget, and savings on your own terms"
+description: "When you are your own boss, you are also your own HR, accountant, and financial planner. Get the tools to handle taxes, budgeting, savings, and retirement without an employer safety net."
+icon: Briefcase
+accentColor: "oklch(0.55 0.12 45)"
+intro: "No employer match. No automatic tax withholding. No benefits package. When you work for yourself, you handle it all -- but that also means you get to optimize it all. This hub gives you the calculators and guides to estimate your taxes, build a freelancer-friendly budget, save for retirement, and plan for the income ups and downs."
+
+calculatorSlugs:
+  - tax-estimator
+  - budget
+  - savings-goal
+  - retirement
+
+guideSlugs:
+  - tax-estimator
+  - budget
+  - savings-goal
+  - retirement
+
+tips:
+  - title: "Pay quarterly estimated taxes"
+    description: "The IRS expects self-employed people to pay taxes four times a year (April, June, September, January). Underpaying triggers penalties."
+  - title: "Separate business and personal finances"
+    description: "Open a dedicated business checking account. It makes tax time dramatically easier and protects you legally."
+  - title: "Save 25-30% of income for taxes"
+    description: "Self-employment tax (15.3%) plus income tax adds up fast. Set aside money from every payment you receive."
+  - title: "Build a bigger emergency fund"
+    description: "Without a steady paycheck, aim for 6-12 months of expenses (not the standard 3-6) to weather dry spells."
+
+nextSteps:
+  - hubSlug: pre-retirement
+    label: "Planning ahead? Retirement tools"
+  - hubSlug: student-new-grad
+    label: "Just starting out? Financial basics"

@@ -1,0 +1,33 @@
+slug: pre-retirement
+name: "Pre-Retirement"
+tagline: "Make your money last as long as you do"
+description: "Approaching retirement? Estimate how much you need, understand withdrawal strategies, and plan for the transition from saving to spending."
+icon: Landmark
+accentColor: "oklch(0.40 0.1 245)"
+intro: "You have spent decades saving. Now the question shifts from 'How much should I save?' to 'How much can I spend?' This hub helps you estimate your retirement needs, understand how compound interest works in your favor (and against you through inflation), and build a savings strategy for the final stretch."
+
+calculatorSlugs:
+  - retirement
+  - compound-interest
+  - savings-goal
+
+guideSlugs:
+  - retirement
+  - compound-interest
+  - savings-goal
+
+tips:
+  - title: "Know your number"
+    description: "Most financial planners suggest you will need 70-80% of your pre-retirement income annually. Use our calculator to get your specific target."
+  - title: "Understand the 4% rule"
+    description: "The classic guideline suggests withdrawing 4% of your portfolio in year one, then adjusting for inflation. It is a starting point, not a guarantee."
+  - title: "Delay Social Security if you can"
+    description: "Benefits increase roughly 8% for each year you delay past 62, up to age 70. That's a guaranteed return hard to beat."
+  - title: "Plan for healthcare costs"
+    description: "Medicare starts at 65, but it does not cover everything. Budget for supplemental insurance, dental, vision, and potential long-term care."
+
+nextSteps:
+  - hubSlug: freelancer
+    label: "Self-employed? Retirement planning is different"
+  - hubSlug: rent-vs-buy
+    label: "Considering downsizing? Rent vs buy analysis"

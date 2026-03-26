@@ -1,0 +1,33 @@
+slug: first-home-buyer
+name: "First Home Buyer"
+tagline: "Your roadmap from dreaming to closing day"
+description: "Everything you need to understand mortgages, save for a down payment, and make your first home purchase with confidence."
+icon: Home
+accentColor: "oklch(0.55 0.12 175)"
+intro: "Buying your first home is one of the biggest financial decisions you will ever make. This hub walks you through the mortgage math, helps you figure out how much to save, and gives you the tools to compare renting versus buying -- so you can make the call with confidence, not anxiety."
+
+calculatorSlugs:
+  - mortgage-payment
+  - savings-goal
+  - rent-vs-buy
+
+guideSlugs:
+  - mortgage-payment
+  - savings-goal
+  - rent-vs-buy
+
+tips:
+  - title: "Get pre-approved before house hunting"
+    description: "A pre-approval letter shows sellers you're serious and helps you know your real budget."
+  - title: "Budget for closing costs"
+    description: "Expect 2-5% of the home price in closing costs on top of your down payment."
+  - title: "Don't open new credit lines before closing"
+    description: "New credit inquiries can lower your score and jeopardize your mortgage approval."
+  - title: "Consider total cost of ownership"
+    description: "Your mortgage payment is just the start. Factor in property taxes, insurance, maintenance (1-2% of home value/year), and HOA fees."
+
+nextSteps:
+  - hubSlug: first-time-renter
+    label: "Still renting? Start here"
+  - hubSlug: freelancer
+    label: "Self-employed? Special mortgage considerations"
