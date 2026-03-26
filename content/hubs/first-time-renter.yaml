@@ -1,0 +1,31 @@
+slug: first-time-renter
+name: "First-Time Renter"
+tagline: "Smart renting starts with knowing your numbers"
+description: "Find out how much rent you can really afford, build a budget that works, and understand what to expect before signing your first lease."
+icon: Building
+accentColor: "oklch(0.55 0.1 200)"
+intro: "Apartment hunting is exciting -- until you see the prices. This hub helps you figure out what you can actually afford, build a budget around your rent, and avoid the common first-renter mistakes that cost real money."
+
+calculatorSlugs:
+  - rent-affordability
+  - budget
+
+guideSlugs:
+  - rent-affordability
+  - budget
+
+tips:
+  - title: "Follow the 30% rule (with caveats)"
+    description: "Spending no more than 30% of gross income on rent is a guideline, not a law. In expensive cities, adjust your other spending categories."
+  - title: "Budget for move-in costs"
+    description: "First month, last month, security deposit, and moving expenses can add up to 3-4 months of rent upfront."
+  - title: "Read the entire lease"
+    description: "Understand your obligations: early termination fees, maintenance responsibilities, and renewal terms before you sign."
+  - title: "Get renter's insurance"
+    description: "It's typically $15-30/month and covers your belongings against theft, fire, and water damage. Your landlord's insurance doesn't cover your stuff."
+
+nextSteps:
+  - hubSlug: first-home-buyer
+    label: "Ready to buy? Homebuyer guide"
+  - hubSlug: student-new-grad
+    label: "Still paying off loans? Student hub"

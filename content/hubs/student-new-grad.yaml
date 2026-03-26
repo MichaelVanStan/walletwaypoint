@@ -1,0 +1,33 @@
+slug: student-new-grad
+name: "Student / New Grad"
+tagline: "Your post-graduation money roadmap"
+description: "Just graduated? Here's everything you need to tackle student loans, build your first budget, and start saving -- even on an entry-level salary."
+icon: GraduationCap
+accentColor: "oklch(0.55 0.12 145)"
+intro: "Just graduated? Congrats -- and welcome to the real world of money. Whether you are staring down student loans, figuring out your first paycheck, or wondering how to start saving, this hub has the tools and guides to help you build a solid financial foundation from day one."
+
+calculatorSlugs:
+  - student-loan
+  - budget
+  - savings-goal
+
+guideSlugs:
+  - student-loan
+  - budget
+  - savings-goal
+
+tips:
+  - title: "Start with your student loans"
+    description: "Know your repayment options before your grace period ends. Income-driven plans can make payments manageable."
+  - title: "Build a simple budget"
+    description: "The 50/30/20 rule is a great starting point: 50% needs, 30% wants, 20% savings and debt repayment."
+  - title: "Open a high-yield savings account"
+    description: "Even $50/month adds up. Start building an emergency fund before you need one."
+  - title: "Take the employer 401(k) match"
+    description: "If your employer matches retirement contributions, that's free money. Contribute at least enough to get the full match."
+
+nextSteps:
+  - hubSlug: first-time-renter
+    label: "Moving out? Renting guide"
+  - hubSlug: freelancer
+    label: "Going freelance? Tax and budget tools"

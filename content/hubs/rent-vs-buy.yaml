@@ -1,0 +1,33 @@
+slug: rent-vs-buy
+name: "Rent vs Buy"
+tagline: "The real math behind the biggest financial decision"
+description: "Should you keep renting or take the leap into homeownership? Compare the true costs, factor in opportunity cost, and make the call based on your numbers."
+icon: Scale
+accentColor: "oklch(0.50 0.1 260)"
+intro: "Everyone has an opinion on renting versus buying. We have the math. This hub gives you the calculators and guides to compare the real costs -- including the opportunity cost of your down payment, closing costs, and the break-even timeline. The right answer depends on your situation, not conventional wisdom."
+
+calculatorSlugs:
+  - rent-vs-buy
+  - mortgage-payment
+  - compound-interest
+
+guideSlugs:
+  - rent-vs-buy
+  - mortgage-payment
+  - compound-interest
+
+tips:
+  - title: "Calculate your break-even point"
+    description: "The rent-vs-buy calculation changes dramatically based on how long you plan to stay. Buying typically wins after 5-7 years."
+  - title: "Don't forget opportunity cost"
+    description: "Money locked in a down payment could be invested elsewhere. Our calculator factors this in."
+  - title: "Factor in lifestyle flexibility"
+    description: "Renting offers mobility. If your career or life plans might shift in the next few years, that flexibility has real value."
+  - title: "Consider your local market"
+    description: "Price-to-rent ratios vary wildly by city. In some markets renting is clearly better; in others, buying wins easily."
+
+nextSteps:
+  - hubSlug: first-home-buyer
+    label: "Leaning toward buying? Start here"
+  - hubSlug: first-time-renter
+    label: "Prefer renting? Optimize your rent budget"
