@@ -68,7 +68,15 @@ Plans:
   2. All 6 life-stage hub pages (Student/New Grad, First-Time Renter, First Home Buyer, Rent vs Buy, Freelancer, Pre-Retirement) exist and aggregate relevant calculators, guides, and product recommendations for that life stage
   3. Internal linking connects related calculators to related guides and suggests logical next steps, creating a navigable content network
   4. Hovering over common financial terms (APR, DTI, amortization, etc.) shows a tooltip definition from the inline glossary
-**Plans**: TBD
+**Plans**: 7 plans
+Plans:
+- [ ] 03-01-PLAN.md -- Content infrastructure: Velite schema extensions, rehype plugins, MDX renderer, glossary YAML, Popover component
+- [ ] 03-02-PLAN.md -- MDX components (callout boxes, Term, TOC, CTA banner) and guide page architecture (index + [slug] route)
+- [ ] 03-03-PLAN.md -- Hub components (hero, section, tips, next steps), hub page architecture (index + [slug] route), 6 hub YAML configs
+- [ ] 03-04-PLAN.md -- Guide content batch 1: mortgage-payment, rent-affordability, compound-interest, loan-repayment, savings-goal
+- [ ] 03-05-PLAN.md -- Guide content batch 2: retirement, budget, tax-estimator, rent-vs-buy, student-loan
+- [ ] 03-06-PLAN.md -- Integration: glossary page, sitemap updates, navigation enablement
+- [ ] 03-07-PLAN.md -- Final verification and human checkpoint
 **UI hint**: yes
 
 ### Phase 4: Comparison & Affiliate Infrastructure
@@ -91,6 +99,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Trust | 4/5 | In progress | - |
-| 2. Calculator Engine & Core Tools | 0/7 | Planned | - |
-| 3. Content System & Life-Stage Hubs | 0/0 | Not started | - |
+| 2. Calculator Engine & Core Tools | 6/7 | In progress | - |
+| 3. Content System & Life-Stage Hubs | 0/7 | Planned | - |
 | 4. Comparison & Affiliate Infrastructure | 0/0 | Not started | - |
