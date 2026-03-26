@@ -90,7 +90,7 @@ Plans:
   4. Affiliate link clicks are tracked for revenue attribution
 **Plans**: 5 plans
 Plans:
-- [ ] 04-01-PLAN.md -- Data foundation: Velite product collection schema, TypeScript types, nuqs URL params, sort/filter utilities
+- [x] 04-01-PLAN.md -- Data foundation: Velite product collection schema, TypeScript types, nuqs URL params, sort/filter utilities
 - [ ] 04-02-PLAN.md -- How We Rank Products methodology page (CFPB-compliant ranking transparency)
 - [ ] 04-03-PLAN.md -- Product YAML data: 4 categories with real products (credit cards, loans, savings, insurance)
 - [ ] 04-04-PLAN.md -- Compare UI components: sortable table, product cards, filters, affiliate link with GA4 tracking
@@ -107,4 +107,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation & Trust | 4/5 | In progress | - |
 | 2. Calculator Engine & Core Tools | 6/7 | In progress | - |
 | 3. Content System & Life-Stage Hubs | 1/7 | In Progress|  |
-| 4. Comparison & Affiliate Infrastructure | 0/5 | Planning complete | - |
+| 4. Comparison & Affiliate Infrastructure | 1/5 | In progress | - |
