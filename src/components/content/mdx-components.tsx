@@ -1,8 +1,16 @@
 import type { ComponentType } from 'react';
-
-// Custom MDX components will be added in Plan 02 (KeyTakeaway, ProTip, Definition, Term)
+import { KeyTakeaway } from './key-takeaway';
+import { ProTip } from './pro-tip';
+import { Definition } from './definition';
+import { Term } from './term';
 
 export const mdxComponents: Record<string, ComponentType<any>> = {
+  // Custom MDX components
+  KeyTakeaway,
+  ProTip,
+  Definition,
+  Term,
+
   // Override default HTML elements for consistent guide styling
   h2: (props: any) => (
     <h2 id={props.id} className="mt-10 mb-4 text-xl font-semibold" {...props} />
