@@ -135,6 +135,60 @@ const glossary = defineCollection({
   }),
 });
 
+const productItemSchema = s.object({
+  id: s.string(),
+  name: s.string(),
+  issuer: s.string(),
+  bestFor: s.string().optional(),
+  affiliateUrl: s.string(),
+  utmSource: s.string().default('walletwaypoint'),
+  utmMedium: s.string().default('comparison_table'),
+  utmCampaign: s.string(),
+  hasAffiliate: s.boolean().default(true),
+  // Credit card fields
+  apr: s.string().optional(),
+  annualFee: s.number().optional(),
+  rewardsType: s.enum(['cash-back', 'travel', 'points', 'balance-transfer']).optional(),
+  rewardsRate: s.string().optional(),
+  signupBonus: s.string().optional(),
+  creditScoreMin: s.number().optional(),
+  creditScoreRange: s.enum(['excellent', 'good', 'fair']).optional(),
+  // Personal loan fields
+  aprLow: s.number().optional(),
+  aprHigh: s.number().optional(),
+  loanAmountMin: s.number().optional(),
+  loanAmountMax: s.number().optional(),
+  termMin: s.number().optional(),
+  termMax: s.number().optional(),
+  originationFee: s.string().optional(),
+  // Savings fields
+  apy: s.number().optional(),
+  minimumDeposit: s.number().optional(),
+  accountType: s.enum(['high-yield-savings', 'cd']).optional(),
+  termMonths: s.number().optional(),
+  compounding: s.string().optional(),
+  fdic: s.boolean().optional(),
+  // Insurance fields
+  insuranceType: s.enum(['auto', 'renters']).optional(),
+  monthlyPremium: s.string().optional(),
+  coverageLevel: s.enum(['basic', 'standard', 'premium']).optional(),
+  deductibleMin: s.number().optional(),
+  deductibleMax: s.number().optional(),
+  coverageHighlights: s.string().optional(),
+});
+
+const products = defineCollection({
+  name: 'Product',
+  pattern: 'products/*.yaml',
+  schema: s.object({
+    category: s.enum(['credit-cards', 'personal-loans', 'savings-accounts', 'insurance']),
+    categoryTitle: s.string(),
+    categoryDescription: s.string(),
+    lastVerified: s.isodate(),
+    products: s.array(productItemSchema),
+  }),
+});
+
 export default defineConfig({
   root: 'content',
   output: {
@@ -144,7 +198,7 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { calculators, guides, hubs, glossary },
+  collections: { calculators, guides, hubs, glossary, products },
   mdx: {
     rehypePlugins: [
       rehypeSlug,
