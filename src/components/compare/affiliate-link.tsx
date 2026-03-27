@@ -3,6 +3,7 @@
 import { sendGAEvent } from '@next/third-parties/google';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface AffiliateLinkProps {
   href: string;
@@ -50,6 +51,7 @@ export function AffiliateLink({
       category: category,
       position: position,
       product_name: productName,
+      click_element: 'cta_button',
     });
   };
 
@@ -71,5 +73,55 @@ export function AffiliateLink({
       <ExternalLink className="ml-1 h-3 w-3" aria-hidden="true" />
       <span className="sr-only">(opens in new tab)</span>
     </Button>
+  );
+}
+
+interface AffiliateLinkTextProps {
+  href: string;
+  productId: string;
+  category: string;
+  position: number;
+  productName: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  className?: string;
+  children: React.ReactNode;
+}
+
+export function AffiliateLinkText({
+  href,
+  productId,
+  category,
+  position,
+  productName,
+  utmSource = 'walletwaypoint',
+  utmMedium = 'comparison_table',
+  utmCampaign,
+  className,
+  children,
+}: AffiliateLinkTextProps) {
+  const fullUrl = buildAffiliateUrl(href, utmSource, utmMedium, utmCampaign ?? category);
+
+  const handleClick = () => {
+    sendGAEvent('event', 'affiliate_click', {
+      product_id: productId,
+      category: category,
+      position: position,
+      product_name: productName,
+      click_element: 'product_name',
+    });
+  };
+
+  return (
+    <a
+      href={fullUrl}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      onClick={handleClick}
+      className={cn('font-medium underline-offset-2 hover:underline', className)}
+    >
+      {children}
+    </a>
   );
 }

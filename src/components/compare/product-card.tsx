@@ -1,8 +1,9 @@
 'use client';
 
 import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card';
-import { AffiliateLink } from './affiliate-link';
+import { AffiliateLink, AffiliateLinkText } from './affiliate-link';
 import { BestForBadge } from './best-for-badge';
+import { ProductImage } from './product-image';
 import type { ProductCategory } from '@/lib/compare/product-types';
 import { ctaLabels } from '@/lib/compare/product-types';
 
@@ -21,10 +22,31 @@ export function ProductCard({ product, category, position, attributes }: Product
           {typeof product.bestFor === 'string' && (
             <BestForBadge label={product.bestFor} />
           )}
-          <h3 className="text-base font-semibold">{String(product.name)}</h3>
-          {typeof product.issuer === 'string' && (
-            <p className="text-sm text-muted-foreground">{product.issuer}</p>
-          )}
+          <div className="flex items-center gap-3">
+            <ProductImage
+              imageUrl={product.imageUrl as string | undefined}
+              name={product.name as string}
+              issuer={product.issuer as string}
+            />
+            <div className="flex flex-col">
+              <AffiliateLinkText
+                href={product.affiliateUrl as string}
+                productId={product.id as string}
+                category={category}
+                position={position}
+                productName={product.name as string}
+                utmSource={product.utmSource as string | undefined}
+                utmMedium={product.utmMedium as string | undefined}
+                utmCampaign={product.utmCampaign as string | undefined}
+                className="text-base font-semibold"
+              >
+                {String(product.name)}
+              </AffiliateLinkText>
+              {typeof product.issuer === 'string' && (
+                <p className="text-sm text-muted-foreground">{product.issuer}</p>
+              )}
+            </div>
+          </div>
         </CardHeader>
         <CardContent>
           <dl>

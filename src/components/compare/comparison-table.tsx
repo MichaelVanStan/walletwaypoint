@@ -11,8 +11,9 @@ import {
   TableCaption,
 } from '@/components/ui/table';
 import { SortHeader } from './sort-header';
-import { AffiliateLink } from './affiliate-link';
+import { AffiliateLink, AffiliateLinkText } from './affiliate-link';
 import { BestForBadge } from './best-for-badge';
+import { ProductImage } from './product-image';
 import type { ProductCategory } from '@/lib/compare/product-types';
 import { ctaLabels } from '@/lib/compare/product-types';
 
@@ -75,7 +76,7 @@ export function ComparisonTable({
                 aria-sort={col.sortable ? getAriaSortValue(col.key, sortColumn, sortDirection) : undefined}
                 className={
                   colIndex === 0
-                    ? 'sticky left-0 z-10 bg-background w-[200px] min-w-[200px]'
+                    ? 'sticky left-0 z-10 bg-background w-[280px] min-w-[280px]'
                     : undefined
                 }
               >
@@ -105,20 +106,36 @@ export function ComparisonTable({
                   key={col.key}
                   className={
                     colIndex === 0
-                      ? 'sticky left-0 z-10 bg-background w-[200px] min-w-[200px]'
+                      ? 'sticky left-0 z-10 bg-background w-[280px] min-w-[280px]'
                       : undefined
                   }
                 >
                   {colIndex === 0 ? (
-                    <div className="flex flex-col gap-1">
-                      {typeof product.bestFor === 'string' && (
-                        <BestForBadge label={product.bestFor} />
-                      )}
-                      <span className="font-medium">
-                        {col.render
-                          ? col.render(product[col.key], product)
-                          : (product[col.key] as React.ReactNode)}
-                      </span>
+                    <div className="flex items-center gap-3">
+                      <ProductImage
+                        imageUrl={product.imageUrl as string | undefined}
+                        name={product.name as string}
+                        issuer={product.issuer as string}
+                      />
+                      <div className="flex flex-col gap-1">
+                        {typeof product.bestFor === 'string' && (
+                          <BestForBadge label={product.bestFor} />
+                        )}
+                        <AffiliateLinkText
+                          href={product.affiliateUrl as string}
+                          productId={product.id as string}
+                          category={category}
+                          position={rowIndex}
+                          productName={product.name as string}
+                          utmSource={product.utmSource as string | undefined}
+                          utmMedium={product.utmMedium as string | undefined}
+                          utmCampaign={product.utmCampaign as string | undefined}
+                        >
+                          {col.render
+                            ? col.render(product[col.key], product)
+                            : (product[col.key] as React.ReactNode)}
+                        </AffiliateLinkText>
+                      </div>
                     </div>
                   ) : col.render ? (
                     col.render(product[col.key], product)
