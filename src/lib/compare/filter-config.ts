@@ -168,7 +168,7 @@ const filterMatchers: Record<string, FilterMatcher> = {
     if (v === 'all') return true;
     const fee = p.annualFee as number;
     if (v === 'no-fee') return fee === 0;
-    if (v === 'under-100') return fee > 0 && fee < 100;
+    if (v === 'under-100') return fee < 100;
     if (v === '100-plus') return fee >= 100;
     return true;
   },
