@@ -7,6 +7,7 @@ products:
   - id: geico-auto
     name: "GEICO Auto Insurance"
     issuer: "GEICO"
+    imageUrl: ""
     insuranceType: auto
     monthlyPremium: "$45-$120"
     coverageLevel: standard
@@ -23,6 +24,7 @@ products:
   - id: progressive-auto
     name: "Progressive Auto Insurance"
     issuer: "Progressive"
+    imageUrl: ""
     insuranceType: auto
     monthlyPremium: "$50-$140"
     coverageLevel: standard
@@ -38,6 +40,7 @@ products:
   - id: state-farm-auto
     name: "State Farm Auto Insurance"
     issuer: "State Farm"
+    imageUrl: ""
     insuranceType: auto
     monthlyPremium: "$55-$150"
     coverageLevel: premium
@@ -53,6 +56,7 @@ products:
   - id: usaa-auto
     name: "USAA Auto Insurance"
     issuer: "USAA"
+    imageUrl: ""
     insuranceType: auto
     monthlyPremium: "$40-$100"
     coverageLevel: premium
@@ -69,6 +73,7 @@ products:
   - id: allstate-auto
     name: "Allstate Auto Insurance"
     issuer: "Allstate"
+    imageUrl: ""
     insuranceType: auto
     monthlyPremium: "$60-$160"
     coverageLevel: standard
@@ -84,6 +89,7 @@ products:
   - id: liberty-mutual-auto
     name: "Liberty Mutual Auto Insurance"
     issuer: "Liberty Mutual"
+    imageUrl: ""
     insuranceType: auto
     monthlyPremium: "$55-$145"
     coverageLevel: standard
@@ -99,6 +105,7 @@ products:
   - id: nationwide-auto
     name: "Nationwide Auto Insurance"
     issuer: "Nationwide"
+    imageUrl: ""
     insuranceType: auto
     monthlyPremium: "$50-$130"
     coverageLevel: basic
@@ -114,6 +121,7 @@ products:
   - id: lemonade-renters
     name: "Lemonade Renters Insurance"
     issuer: "Lemonade"
+    imageUrl: ""
     insuranceType: renters
     monthlyPremium: "$5-$20"
     coverageLevel: standard
@@ -130,6 +138,7 @@ products:
   - id: state-farm-renters
     name: "State Farm Renters Insurance"
     issuer: "State Farm"
+    imageUrl: ""
     insuranceType: renters
     monthlyPremium: "$12-$30"
     coverageLevel: premium
@@ -145,6 +154,7 @@ products:
   - id: allstate-renters
     name: "Allstate Renters Insurance"
     issuer: "Allstate"
+    imageUrl: ""
     insuranceType: renters
     monthlyPremium: "$10-$25"
     coverageLevel: standard
@@ -160,6 +170,7 @@ products:
   - id: usaa-renters
     name: "USAA Renters Insurance"
     issuer: "USAA"
+    imageUrl: ""
     insuranceType: renters
     monthlyPremium: "$8-$18"
     coverageLevel: premium
@@ -175,6 +186,7 @@ products:
   - id: progressive-renters
     name: "Progressive Renters Insurance"
     issuer: "Progressive"
+    imageUrl: ""
     insuranceType: renters
     monthlyPremium: "$8-$22"
     coverageLevel: basic

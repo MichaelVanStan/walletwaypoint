@@ -145,6 +145,7 @@ const productItemSchema = s.object({
   utmMedium: s.string().default('comparison_table'),
   utmCampaign: s.string(),
   hasAffiliate: s.boolean().default(true),
+  imageUrl: s.string().optional(),
   // Credit card fields
   apr: s.string().optional(),
   annualFee: s.number().optional(),

@@ -7,6 +7,7 @@ products:
   - id: chase-sapphire-preferred
     name: "Chase Sapphire Preferred Card"
     issuer: "Chase"
+    imageUrl: ""
     apr: "21.49%-28.49%"
     annualFee: 95
     rewardsType: travel
@@ -24,6 +25,7 @@ products:
   - id: citi-double-cash
     name: "Citi Double Cash Card"
     issuer: "Citi"
+    imageUrl: ""
     apr: "18.49%-28.49%"
     annualFee: 0
     rewardsType: cash-back
@@ -41,6 +43,7 @@ products:
   - id: capital-one-venture-x
     name: "Capital One Venture X Rewards"
     issuer: "Capital One"
+    imageUrl: ""
     apr: "21.99%-28.99%"
     annualFee: 395
     rewardsType: travel
@@ -57,6 +60,7 @@ products:
   - id: discover-it-cash-back
     name: "Discover it Cash Back"
     issuer: "Discover"
+    imageUrl: ""
     apr: "17.24%-28.24%"
     annualFee: 0
     rewardsType: cash-back
@@ -74,6 +78,7 @@ products:
   - id: chase-freedom-unlimited
     name: "Chase Freedom Unlimited"
     issuer: "Chase"
+    imageUrl: ""
     apr: "20.49%-29.24%"
     annualFee: 0
     rewardsType: cash-back
@@ -90,6 +95,7 @@ products:
   - id: amex-gold
     name: "American Express Gold Card"
     issuer: "American Express"
+    imageUrl: ""
     apr: "21.99%-29.99%"
     annualFee: 250
     rewardsType: points
@@ -106,6 +112,7 @@ products:
   - id: capital-one-quicksilver
     name: "Capital One Quicksilver Cash Rewards"
     issuer: "Capital One"
+    imageUrl: ""
     apr: "19.99%-29.99%"
     annualFee: 0
     rewardsType: cash-back
@@ -122,6 +129,7 @@ products:
   - id: amex-blue-cash-preferred
     name: "Blue Cash Preferred Card from American Express"
     issuer: "American Express"
+    imageUrl: ""
     apr: "19.49%-29.99%"
     annualFee: 95
     rewardsType: cash-back
@@ -138,6 +146,7 @@ products:
   - id: wells-fargo-active-cash
     name: "Wells Fargo Active Cash Card"
     issuer: "Wells Fargo"
+    imageUrl: ""
     apr: "20.49%-29.99%"
     annualFee: 0
     rewardsType: cash-back
@@ -154,6 +163,7 @@ products:
   - id: citi-premier
     name: "Citi Premier Card"
     issuer: "Citi"
+    imageUrl: ""
     apr: "21.49%-29.49%"
     annualFee: 95
     rewardsType: points
@@ -170,6 +180,7 @@ products:
   - id: capital-one-savor-one
     name: "Capital One SavorOne Cash Rewards"
     issuer: "Capital One"
+    imageUrl: ""
     apr: "19.99%-29.99%"
     annualFee: 0
     rewardsType: cash-back
@@ -186,6 +197,7 @@ products:
   - id: bankamericard
     name: "BankAmericard Credit Card"
     issuer: "Bank of America"
+    imageUrl: ""
     apr: "16.49%-26.49%"
     annualFee: 0
     rewardsType: balance-transfer

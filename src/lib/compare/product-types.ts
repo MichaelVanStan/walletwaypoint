@@ -8,6 +8,7 @@ export interface ProductItemBase {
   name: string;
   issuer: string;
   bestFor?: string;
+  imageUrl?: string;
   affiliateUrl: string;
   utmSource: string;
   utmMedium: string;

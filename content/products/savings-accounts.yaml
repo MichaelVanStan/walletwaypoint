@@ -7,6 +7,7 @@ products:
   - id: marcus-high-yield-savings
     name: "Marcus by Goldman Sachs High-Yield Savings"
     issuer: "Marcus by Goldman Sachs"
+    imageUrl: ""
     apy: 4.40
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -22,6 +23,7 @@ products:
   - id: ally-high-yield-savings
     name: "Ally Bank High-Yield Savings"
     issuer: "Ally Bank"
+    imageUrl: ""
     apy: 4.20
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -37,6 +39,7 @@ products:
   - id: wealthfront-cash-account
     name: "Wealthfront Cash Account"
     issuer: "Wealthfront"
+    imageUrl: ""
     apy: 4.50
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -51,6 +54,7 @@ products:
   - id: capital-one-360-performance
     name: "Capital One 360 Performance Savings"
     issuer: "Capital One"
+    imageUrl: ""
     apy: 4.25
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -65,6 +69,7 @@ products:
   - id: discover-online-savings
     name: "Discover Online Savings"
     issuer: "Discover"
+    imageUrl: ""
     apy: 4.25
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -79,6 +84,7 @@ products:
   - id: amex-high-yield-savings
     name: "American Express High-Yield Savings"
     issuer: "American Express"
+    imageUrl: ""
     apy: 4.35
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -93,6 +99,7 @@ products:
   - id: barclays-online-savings
     name: "Barclays Online Savings"
     issuer: "Barclays"
+    imageUrl: ""
     apy: 4.35
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -107,6 +114,7 @@ products:
   - id: cit-bank-platinum-savings
     name: "CIT Bank Platinum Savings"
     issuer: "CIT Bank"
+    imageUrl: ""
     apy: 4.55
     minimumDeposit: 5000
     accountType: high-yield-savings
@@ -121,6 +129,7 @@ products:
   - id: marcus-12-month-cd
     name: "Marcus 12-Month CD"
     issuer: "Marcus by Goldman Sachs"
+    imageUrl: ""
     apy: 4.50
     minimumDeposit: 500
     accountType: cd
@@ -137,6 +146,7 @@ products:
   - id: ally-18-month-cd
     name: "Ally 18-Month CD"
     issuer: "Ally Bank"
+    imageUrl: ""
     apy: 4.25
     minimumDeposit: 0
     accountType: cd
@@ -152,6 +162,7 @@ products:
   - id: discover-12-month-cd
     name: "Discover 12-Month CD"
     issuer: "Discover"
+    imageUrl: ""
     apy: 4.30
     minimumDeposit: 2500
     accountType: cd
@@ -167,6 +178,7 @@ products:
   - id: capital-one-12-month-cd
     name: "Capital One 12-Month CD"
     issuer: "Capital One"
+    imageUrl: ""
     apy: 4.30
     minimumDeposit: 0
     accountType: cd
