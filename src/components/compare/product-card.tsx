@@ -30,14 +30,10 @@ export function ProductCard({ product, category, position, attributes }: Product
             />
             <div className="flex flex-col">
               <AffiliateLinkText
-                href={product.affiliateUrl as string}
                 productId={product.id as string}
                 category={category}
                 position={position}
                 productName={product.name as string}
-                utmSource={product.utmSource as string | undefined}
-                utmMedium={product.utmMedium as string | undefined}
-                utmCampaign={product.utmCampaign as string | undefined}
                 className="text-base font-semibold"
               >
                 {String(product.name)}
@@ -68,14 +64,10 @@ export function ProductCard({ product, category, position, attributes }: Product
         <CardFooter>
           <AffiliateLink
             className="w-full"
-            href={product.affiliateUrl as string}
             productId={product.id as string}
             category={category}
             position={position}
             productName={product.name as string}
-            utmSource={product.utmSource as string | undefined}
-            utmMedium={product.utmMedium as string | undefined}
-            utmCampaign={product.utmCampaign as string | undefined}
           >
             {ctaLabels[category]}
           </AffiliateLink>

@@ -122,14 +122,10 @@ export function ComparisonTable({
                           <BestForBadge label={product.bestFor} />
                         )}
                         <AffiliateLinkText
-                          href={product.affiliateUrl as string}
                           productId={product.id as string}
                           category={category}
                           position={rowIndex}
                           productName={product.name as string}
-                          utmSource={product.utmSource as string | undefined}
-                          utmMedium={product.utmMedium as string | undefined}
-                          utmCampaign={product.utmCampaign as string | undefined}
                         >
                           {col.render
                             ? col.render(product[col.key], product)
@@ -146,14 +142,10 @@ export function ComparisonTable({
               ))}
               <TableCell className="text-right">
                 <AffiliateLink
-                  href={product.affiliateUrl as string}
                   productId={product.id as string}
                   category={category}
                   position={rowIndex}
                   productName={product.name as string}
-                  utmSource={product.utmSource as string | undefined}
-                  utmMedium={product.utmMedium as string | undefined}
-                  utmCampaign={product.utmCampaign as string | undefined}
                 >
                   {ctaLabels[category]}
                 </AffiliateLink>
