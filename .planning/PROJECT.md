@@ -12,22 +12,24 @@ Users can find a trustworthy, interactive tool or guide that helps them make a c
 
 ### Validated
 
-- [x] SEO-optimized pages targeting long-tail financial keywords — Validated in Phase 01: Foundation & Trust (sitemap, robots, meta tags, canonical URLs, JSON-LD schemas)
-- [x] Schema markup and rich results for calculators and guides — Validated in Phase 01: Foundation & Trust (Organization, Article, FAQ, BreadcrumbList, WebApplication schemas)
-- [x] Responsive, fast, modern design that feels trustworthy — Validated in Phase 01: Foundation & Trust (Tailwind OKLCH blue palette, Inter font, shadcn/ui, static generation)
+- SEO infrastructure (sitemap, robots, meta tags, canonical URLs, JSON-LD) — v1.0
+- Schema markup (Organization, Article, FAQ, BreadcrumbList, WebApplication, FinancialProduct) — v1.0
+- Responsive design with Tailwind OKLCH, Inter font, shadcn/ui, SSG — v1.0
+- 10 interactive financial calculators with real-time UI, charts, URL state, precision math — v1.0
+- 6 life-stage hubs aggregating calculators, guides, and product recommendations — v1.0
+- 10 educational guides with jargon-free "smart friend" tone, callout boxes, glossary terms — v1.0
+- Product comparison pages with sortable strips, filter chips, side-by-side compare panel — v1.0
+- Affiliate link infrastructure with /go/ redirects, GA4 click tracking, FTC-compliant disclosure — v1.0
+- Trust pages (About, Editorial Standards, Privacy, Terms, How We Rank, Author Bios) — v1.0
+- Inline glossary with hover definitions for financial terms — v1.0
 
 ### Active
 
-- [ ] Interactive financial calculators (loan repayment, mortgage, compound interest, rent affordability, tax estimator, retirement withdrawal, etc.)
-- [ ] Life-stage content hubs (Student/New Grad, First-Time Renter, First Home Buyer, Rent vs Buy / Buy-to-Rent, Freelancer/Self-Employed, Pre-Retirement)
-- [ ] Comparison pages for financial products (credit cards, loans, insurance)
-- [ ] Educational guides with clear, jargon-free explanations
-- [ ] SEO-optimized pages targeting long-tail financial keywords
-- [ ] Schema markup and rich results for calculators and guides
-- [ ] Responsive, fast, modern design that feels trustworthy
 - [ ] Display ad integration (Mediavine/Raptiv-ready at 50k sessions/month)
-- [ ] Affiliate link infrastructure for credit card/loan/insurance recommendations
-- [ ] Programmatic content generation at scale (calculator engine parameterized for hundreds of scenarios)
+- [ ] Programmatic content generation at scale (city/state-specific calculator pages)
+- [ ] Dark mode toggle
+- [ ] PWA support (offline-capable calculators)
+- [ ] Email lead generation (save/email calculator results as PDF)
 
 ### Out of Scope
 
@@ -61,12 +63,16 @@ Users can find a trustworthy, interactive tool or guide that helps them make a c
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Name: WalletWaypoint | Survived 6 rounds of 200+ alternatives; W-W alliteration, journey metaphor, 4 syllables, trustworthy + warm | — Pending |
-| Life-stage hub architecture | Content organized by life milestones rather than product categories; differentiates from NerdWallet's product-first approach | — Pending |
-| Long-tail SEO strategy | Can't compete on head terms with DA 80+ incumbents; specific life situations are underserved and high-converting | — Pending |
-| Balanced revenue model | Display ads + affiliate + lead gen; not dependent on any single stream | — Pending |
-| Calculators as traffic moat | Interactive tools are hardest to replicate, earn backlinks, drive repeat visits, and get rich results | — Pending |
-| Friendly mentor tone | "Smart friend explaining money" — not corporate, not preachy, not scammy | — Pending |
+| Name: WalletWaypoint | W-W alliteration, journey metaphor, trustworthy + warm | Good |
+| Life-stage hub architecture | Content organized by life milestones, differentiates from NerdWallet | Good — 6 hubs shipped |
+| Long-tail SEO strategy | Specific life situations underserved and high-converting | Good — all pages SSG with rich schema |
+| Balanced revenue model | Display ads + affiliate + lead gen | Good — affiliate infra shipped, ads ready |
+| Calculators as traffic moat | Interactive tools hardest to replicate, earn backlinks | Good — 10 calculators with 1,332 unit tests |
+| Friendly mentor tone | Smart friend explaining money | Good — all guides follow tone guidelines |
+| nuqs over react-hook-form | Real-time URL state, no submit button, shareable results | Good — all calculators + comparison filters use nuqs |
+| Velite over Contentlayer | Actively maintained, Zod-native, 1000+ doc perf | Good — handles calculators, guides, hubs, products |
+| Hybrid comparison UI | Strips + compare panel + filter chips over data table | Good — validated by user testing |
+| /go/ redirect pattern | Server-side redirects for centralized affiliate link management | Good — UTM params server-side only |
 
 ## Evolution
 
@@ -85,5 +91,9 @@ This document evolves at phase transitions and milestone boundaries.
 3. Audit Out of Scope — reasons still valid?
 4. Update Context with current state
 
+## Current State
+
+**v1.0 MVP shipped 2026-03-27.** Full financial literacy platform with 10 calculators, 10 guides, 6 life-stage hubs, 4-category product comparison with affiliate infrastructure, and complete SEO/trust foundation. 12,135 LOC TypeScript, 140 source files, 31 content files, 1,332 unit tests, 10 E2E tests.
+
 ---
-*Last updated: 2026-03-24 after Phase 01 completion*
+*Last updated: 2026-03-27 after v1.0 milestone*
