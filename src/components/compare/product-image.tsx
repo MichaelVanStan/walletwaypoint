@@ -67,17 +67,17 @@ function getInitials(issuer: string): string {
 
 export function ProductImage({ imageUrl, name, issuer, category, className }: ProductImageProps) {
   if (imageUrl) {
-    // Credit cards with real images: card-shaped (80x50)
-    // Other categories with logos: small square container with fill
+    // Credit cards: card-shaped container (80x50)
+    // Other categories: wider container so logos with text stay readable
     const isCard = !category || category === 'credit-cards';
     return (
-      <div className={`relative ${isCard ? 'w-20 h-[50px]' : 'w-8 h-8'} flex-shrink-0 ${className ?? ''}`}>
+      <div className={`relative ${isCard ? 'w-20 h-[50px]' : 'w-16 h-8'} flex-shrink-0 ${className ?? ''}`}>
         <Image
           src={imageUrl}
           fill
-          sizes={isCard ? '80px' : '32px'}
+          sizes={isCard ? '80px' : '64px'}
           alt={`${issuer} logo`}
-          className={`object-contain ${isCard ? 'rounded-md' : 'rounded'}`}
+          className={`object-contain ${isCard ? 'rounded-md' : ''}`}
         />
       </div>
     );
