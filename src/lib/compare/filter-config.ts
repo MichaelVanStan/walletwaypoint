@@ -174,19 +174,23 @@ const filterMatchers: Record<string, FilterMatcher> = {
   },
   amount: (p, v) => {
     if (v === 'all') return true;
+    const min = p.loanAmountMin as number;
     const max = p.loanAmountMax as number;
-    if (v === 'under-5k') return max < 5000;
-    if (v === '5k-15k') return max >= 5000 && max <= 15000;
-    if (v === '15k-35k') return max > 15000 && max <= 35000;
-    if (v === '35k-plus') return max > 35000;
+    // Range overlap: lender offers loans in the filter range
+    if (v === 'under-5k') return min < 5000;
+    if (v === '5k-15k') return min <= 15000 && max >= 5000;
+    if (v === '15k-35k') return min <= 35000 && max >= 15000;
+    if (v === '35k-plus') return max >= 35000;
     return true;
   },
   term: (p, v) => {
     if (v === 'all') return true;
+    const min = p.termMin as number;
     const max = p.termMax as number;
-    if (v === '12-24') return max <= 24;
-    if (v === '36-60') return max >= 36 && max <= 60;
-    if (v === '60-plus') return max > 60;
+    // Range overlap: lender offers terms in the filter range
+    if (v === '12-24') return min <= 24 && max >= 12;
+    if (v === '36-60') return min <= 60 && max >= 36;
+    if (v === '60-plus') return max >= 60;
     return true;
   },
   type: (p, v) => v === 'all' || p.accountType === v,
@@ -194,7 +198,7 @@ const filterMatchers: Record<string, FilterMatcher> = {
     if (v === 'all') return true;
     const min = p.minimumDeposit as number;
     if (v === 'no-minimum') return min === 0;
-    if (v === 'under-1k') return min > 0 && min < 1000;
+    if (v === 'under-1k') return min < 1000;
     if (v === '1k-plus') return min >= 1000;
     return true;
   },
@@ -212,9 +216,11 @@ const filterMatchers: Record<string, FilterMatcher> = {
   deductible: (p, v) => {
     if (v === 'all') return true;
     const min = p.deductibleMin as number;
+    const max = p.deductibleMax as number;
+    // Range overlap: insurer offers deductibles in the filter range
     if (v === 'under-500') return min < 500;
-    if (v === '500-1000') return min >= 500 && min <= 1000;
-    if (v === '1000-plus') return min > 1000;
+    if (v === '500-1000') return min <= 1000 && max >= 500;
+    if (v === '1000-plus') return max >= 1000;
     return true;
   },
 };
