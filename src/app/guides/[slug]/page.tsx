@@ -72,29 +72,6 @@ export default async function GuidePage({
 
       {/* Guide header */}
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6 py-8 md:py-12">
-        <nav aria-label="Breadcrumb" className="mb-4">
-          <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
-            <li>
-              <Link href="/" className="hover:text-foreground transition-colors">
-                Home
-              </Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li>
-              <Link
-                href="/guides"
-                className="hover:text-foreground transition-colors"
-              >
-                Guides
-              </Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li className="text-foreground font-medium truncate">
-              {guide.title}
-            </li>
-          </ol>
-        </nav>
-
         <h1 className="text-2xl font-semibold">{guide.title}</h1>
 
         <div className="flex flex-wrap items-center gap-3 mt-3 text-sm text-muted-foreground">
