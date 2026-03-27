@@ -89,7 +89,7 @@ products:
   - id: amex-high-yield-savings
     name: "American Express High-Yield Savings"
     issuer: "American Express"
-    imageUrl: ""
+    imageUrl: "/images/logos/american-express.png"
     apy: 4.35
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -121,7 +121,7 @@ products:
   - id: cit-bank-platinum-savings
     name: "CIT Bank Platinum Savings"
     issuer: "CIT Bank"
-    imageUrl: ""
+    imageUrl: "/images/logos/cit-bank.png"
     apy: 4.55
     minimumDeposit: 5000
     accountType: high-yield-savings

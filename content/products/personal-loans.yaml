@@ -85,7 +85,7 @@ products:
   - id: best-egg-personal-loan
     name: "Best Egg Personal Loan"
     issuer: "Best Egg"
-    imageUrl: ""
+    imageUrl: "/images/logos/best-egg.png"
     aprLow: 8.99
     aprHigh: 35.99
     loanAmountMin: 2000
