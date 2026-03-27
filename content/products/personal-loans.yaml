@@ -7,7 +7,7 @@ products:
   - id: sofi-personal-loan
     name: "SoFi Personal Loan"
     issuer: "SoFi"
-    imageUrl: ""
+    imageUrl: "/images/logos/sofi.png"
     aprLow: 8.99
     aprHigh: 29.99
     loanAmountMin: 5000
@@ -27,7 +27,7 @@ products:
   - id: lightstream-personal-loan
     name: "LightStream Personal Loan"
     issuer: "LightStream"
-    imageUrl: ""
+    imageUrl: "/images/logos/lightstream.png"
     aprLow: 7.49
     aprHigh: 25.99
     loanAmountMin: 5000
@@ -47,7 +47,7 @@ products:
   - id: marcus-personal-loan
     name: "Marcus by Goldman Sachs Personal Loan"
     issuer: "Marcus by Goldman Sachs"
-    imageUrl: ""
+    imageUrl: "/images/logos/marcus.png"
     aprLow: 6.99
     aprHigh: 24.99
     loanAmountMin: 3500
@@ -66,7 +66,7 @@ products:
   - id: discover-personal-loan
     name: "Discover Personal Loan"
     issuer: "Discover"
-    imageUrl: ""
+    imageUrl: "/images/logos/discover.png"
     aprLow: 7.99
     aprHigh: 24.99
     loanAmountMin: 2500
@@ -85,7 +85,7 @@ products:
   - id: best-egg-personal-loan
     name: "Best Egg Personal Loan"
     issuer: "Best Egg"
-    imageUrl: ""
+    imageUrl: "/images/logos/best-egg.png"
     aprLow: 8.99
     aprHigh: 35.99
     loanAmountMin: 2000
@@ -105,7 +105,7 @@ products:
   - id: prosper-personal-loan
     name: "Prosper Personal Loan"
     issuer: "Prosper"
-    imageUrl: ""
+    imageUrl: "/images/logos/prosper.png"
     aprLow: 8.99
     aprHigh: 35.99
     loanAmountMin: 2000
@@ -124,7 +124,7 @@ products:
   - id: upgrade-personal-loan
     name: "Upgrade Personal Loan"
     issuer: "Upgrade"
-    imageUrl: ""
+    imageUrl: "/images/logos/upgrade.png"
     aprLow: 8.49
     aprHigh: 35.99
     loanAmountMin: 1000
@@ -143,7 +143,7 @@ products:
   - id: lending-club-personal-loan
     name: "LendingClub Personal Loan"
     issuer: "LendingClub"
-    imageUrl: ""
+    imageUrl: "/images/logos/lendingclub.png"
     aprLow: 9.57
     aprHigh: 35.99
     loanAmountMin: 1000
@@ -162,7 +162,7 @@ products:
   - id: upstart-personal-loan
     name: "Upstart Personal Loan"
     issuer: "Upstart"
-    imageUrl: ""
+    imageUrl: "/images/logos/upstart.png"
     aprLow: 7.80
     aprHigh: 35.99
     loanAmountMin: 1000
@@ -181,7 +181,7 @@ products:
   - id: avant-personal-loan
     name: "Avant Personal Loan"
     issuer: "Avant"
-    imageUrl: ""
+    imageUrl: "/images/logos/avant.png"
     aprLow: 9.95
     aprHigh: 35.99
     loanAmountMin: 2000
@@ -200,7 +200,7 @@ products:
   - id: penfed-personal-loan
     name: "PenFed Personal Loan"
     issuer: "PenFed Credit Union"
-    imageUrl: ""
+    imageUrl: "/images/logos/penfed.png"
     aprLow: 7.74
     aprHigh: 17.99
     loanAmountMin: 600
@@ -219,7 +219,7 @@ products:
   - id: navy-federal-personal-loan
     name: "Navy Federal Personal Loan"
     issuer: "Navy Federal Credit Union"
-    imageUrl: ""
+    imageUrl: "/images/logos/navy-federal.png"
     aprLow: 8.99
     aprHigh: 18.00
     loanAmountMin: 250
