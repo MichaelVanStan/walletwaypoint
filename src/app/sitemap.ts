@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/site-config';
-import { guides, hubs, products } from '#site/content';
+import { calculators, guides, hubs, products } from '#site/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
@@ -74,6 +74,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  const calculatorRoutes: MetadataRoute.Sitemap = calculators.map((calc) => ({
+    url: `${baseUrl}/calculators/${calc.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
   const guideRoutes: MetadataRoute.Sitemap = guides.map((guide) => ({
     url: `${baseUrl}/guides/${guide.slug}`,
     lastModified: new Date(guide.lastUpdated),
@@ -95,5 +102,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...guideRoutes, ...hubRoutes, ...comparisonRoutes];
+  return [...staticRoutes, ...calculatorRoutes, ...guideRoutes, ...hubRoutes, ...comparisonRoutes];
 }

@@ -5,25 +5,21 @@ export const mainNavigation: NavItem[] = [
     title: 'Calculators',
     href: '/calculators',
     description: 'Interactive financial calculators',
-    disabled: true,
     children: [
       {
         title: 'Mortgage Calculator',
         href: '/calculators/mortgage',
         description: 'Calculate monthly mortgage payments and amortization',
-        disabled: true,
       },
       {
         title: 'Rent Affordability',
         href: '/calculators/rent-affordability',
         description: 'Find out how much rent you can afford',
-        disabled: true,
       },
       {
         title: 'Compound Interest',
         href: '/calculators/compound-interest',
         description: 'See how your savings grow over time',
-        disabled: true,
       },
     ],
   },
@@ -76,7 +72,6 @@ export const footerNavigation: FooterNavigation = {
     {
       title: 'Calculators',
       href: '/calculators',
-      disabled: true,
     },
     {
       title: 'Comparisons',
