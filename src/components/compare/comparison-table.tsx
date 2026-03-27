@@ -116,6 +116,7 @@ export function ComparisonTable({
                         imageUrl={product.imageUrl as string | undefined}
                         name={product.name as string}
                         issuer={product.issuer as string}
+                        category={category}
                       />
                       <div className="flex flex-col gap-1">
                         {typeof product.bestFor === 'string' && (
