@@ -47,7 +47,7 @@ products:
   - id: marcus-personal-loan
     name: "Marcus by Goldman Sachs Personal Loan"
     issuer: "Marcus by Goldman Sachs"
-    imageUrl: "/images/logos/marcus.png"
+    imageUrl: ""
     aprLow: 6.99
     aprHigh: 24.99
     loanAmountMin: 3500
@@ -85,7 +85,7 @@ products:
   - id: best-egg-personal-loan
     name: "Best Egg Personal Loan"
     issuer: "Best Egg"
-    imageUrl: "/images/logos/best-egg.png"
+    imageUrl: ""
     aprLow: 8.99
     aprHigh: 35.99
     loanAmountMin: 2000

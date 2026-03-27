@@ -7,7 +7,7 @@ products:
   - id: marcus-high-yield-savings
     name: "Marcus by Goldman Sachs High-Yield Savings"
     issuer: "Marcus by Goldman Sachs"
-    imageUrl: "/images/logos/marcus.png"
+    imageUrl: ""
     apy: 4.40
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -89,7 +89,7 @@ products:
   - id: amex-high-yield-savings
     name: "American Express High-Yield Savings"
     issuer: "American Express"
-    imageUrl: "/images/logos/american-express.png"
+    imageUrl: ""
     apy: 4.35
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -121,7 +121,7 @@ products:
   - id: cit-bank-platinum-savings
     name: "CIT Bank Platinum Savings"
     issuer: "CIT Bank"
-    imageUrl: "/images/logos/cit-bank.png"
+    imageUrl: ""
     apy: 4.55
     minimumDeposit: 5000
     accountType: high-yield-savings
@@ -137,7 +137,7 @@ products:
   - id: marcus-12-month-cd
     name: "Marcus 12-Month CD"
     issuer: "Marcus by Goldman Sachs"
-    imageUrl: "/images/logos/marcus.png"
+    imageUrl: ""
     apy: 4.50
     minimumDeposit: 500
     accountType: cd
