@@ -40,11 +40,11 @@ outputs:
 
 callouts:
   - title: "Track your spending"
-    href: "/guides/spending-tracker"
+    href: "/guides/budget"
   - title: "Cut unnecessary subscriptions"
-    href: "/guides/subscription-audit"
+    href: "/guides/savings-goal"
   - title: "Build an emergency fund"
-    href: "/guides/emergency-fund"
+    href: "/guides/rent-affordability"
 
 interpretation:
   template: budget

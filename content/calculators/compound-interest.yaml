@@ -61,11 +61,11 @@ outputs:
 
 callouts:
   - title: "Start investing early"
-    href: "/guides/investing-basics"
+    href: "/guides/compound-interest"
   - title: "Increase contributions"
-    href: "/guides/boost-savings"
+    href: "/guides/savings-goal"
   - title: "Choose the right account"
-    href: "/guides/investment-accounts"
+    href: "/guides/retirement"
 
 interpretation:
   template: compound-interest

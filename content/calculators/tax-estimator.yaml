@@ -69,11 +69,11 @@ outputs:
 
 callouts:
   - title: "Maximize deductions"
-    href: "/guides/tax-deductions"
+    href: "/guides/tax-estimator"
   - title: "Adjust withholding"
-    href: "/guides/w4-withholding"
+    href: "/guides/budget"
   - title: "Plan quarterly payments"
-    href: "/guides/quarterly-tax-payments"
+    href: "/guides/retirement"
 
 interpretation:
   template: tax

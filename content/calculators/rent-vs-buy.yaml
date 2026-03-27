@@ -100,11 +100,11 @@ outputs:
 
 callouts:
   - title: "Calculate closing costs"
-    href: "/guides/closing-costs"
+    href: "/guides/rent-vs-buy"
   - title: "Understand opportunity cost"
-    href: "/guides/opportunity-cost"
+    href: "/guides/mortgage-payment"
   - title: "Check first-time buyer programs"
-    href: "/guides/first-time-buyer"
+    href: "/guides/rent-affordability"
 
 interpretation:
   template: rent-vs-buy

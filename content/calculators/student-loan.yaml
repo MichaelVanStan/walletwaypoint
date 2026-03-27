@@ -67,11 +67,11 @@ outputs:
 
 callouts:
   - title: "Apply for forgiveness"
-    href: "/guides/loan-forgiveness"
+    href: "/guides/student-loan"
   - title: "Refinance your loans"
-    href: "/guides/student-loan-refinance"
+    href: "/guides/loan-repayment"
   - title: "Income-driven plan details"
-    href: "/guides/idr-plans"
+    href: "/guides/budget"
 
 interpretation:
   template: student-loan

@@ -73,11 +73,11 @@ outputs:
 
 callouts:
   - title: "Make extra payments"
-    href: "/guides/extra-payments"
+    href: "/guides/loan-repayment"
   - title: "Refinance options"
-    href: "/guides/refinancing"
+    href: "/guides/student-loan"
   - title: "Debt payoff strategies"
-    href: "/guides/debt-payoff"
+    href: "/guides/budget"
 
 interpretation:
   template: loan-repayment

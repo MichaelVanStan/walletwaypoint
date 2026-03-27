@@ -77,11 +77,11 @@ outputs:
 
 callouts:
   - title: "Automate your savings"
-    href: "/guides/automated-savings"
+    href: "/guides/savings-goal"
   - title: "High-yield accounts"
-    href: "/guides/high-yield-savings"
+    href: "/guides/compound-interest"
   - title: "Set milestone rewards"
-    href: "/guides/savings-milestones"
+    href: "/guides/budget"
 
 interpretation:
   template: savings-goal

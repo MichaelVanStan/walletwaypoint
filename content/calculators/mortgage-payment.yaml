@@ -93,11 +93,11 @@ outputs:
 
 callouts:
   - title: "Lower your interest rate"
-    href: "/guides/mortgage-rate-tips"
+    href: "/guides/mortgage-payment"
   - title: "Increase your down payment"
-    href: "/guides/down-payment-strategies"
+    href: "/guides/rent-vs-buy"
   - title: "Compare lenders"
-    href: "/guides/mortgage-lender-comparison"
+    href: "/guides/budget"
 
 interpretation:
   template: mortgage

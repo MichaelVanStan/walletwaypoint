@@ -62,11 +62,11 @@ outputs:
 
 callouts:
   - title: "Reduce monthly expenses"
-    href: "/guides/reduce-expenses"
+    href: "/guides/rent-affordability"
   - title: "Negotiate your lease"
-    href: "/guides/lease-negotiation"
+    href: "/guides/budget"
   - title: "Find affordable areas"
-    href: "/guides/affordable-areas"
+    href: "/guides/rent-vs-buy"
 
 interpretation:
   template: rent-affordability

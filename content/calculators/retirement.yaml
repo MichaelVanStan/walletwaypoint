@@ -85,11 +85,11 @@ outputs:
 
 callouts:
   - title: "Maximize employer match"
-    href: "/guides/employer-match"
+    href: "/guides/retirement"
   - title: "Catch-up contributions"
-    href: "/guides/catch-up-contributions"
+    href: "/guides/compound-interest"
   - title: "Understand Social Security"
-    href: "/guides/social-security-basics"
+    href: "/guides/savings-goal"
 
 interpretation:
   template: retirement
