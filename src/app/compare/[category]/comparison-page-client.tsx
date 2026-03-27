@@ -1,11 +1,14 @@
 'use client';
 
+import { useState, useCallback } from 'react';
 import { useQueryStates } from 'nuqs';
 import Link from 'next/link';
-import { ComparisonTable } from '@/components/compare/comparison-table';
 import { ProductCard } from '@/components/compare/product-card';
-import { ComparisonFilters } from '@/components/compare/comparison-filters';
+import { ProductStrip } from '@/components/compare/product-strip';
+import { FilterChips } from '@/components/compare/filter-chips';
+import { ComparePanel } from '@/components/compare/compare-panel';
 import { ProductCount } from '@/components/compare/product-count';
+import { getStripStats, getDetailStats } from '@/components/compare/strip-stat-config';
 import { sortProducts } from '@/lib/compare/sort-utils';
 import { applyFilters, filterConfigs } from '@/lib/compare/filter-config';
 import { categoryParams } from '@/lib/compare/url-params';
@@ -23,132 +26,6 @@ const categoryDisplayNames: Record<ProductCategory, string> = {
   'savings-accounts': 'savings accounts',
   insurance: 'insurance products',
 };
-
-// Column definitions per category
-function getColumns(category: ProductCategory) {
-  switch (category) {
-    case 'credit-cards':
-      return [
-        { key: 'name', label: 'Card Name', sortable: true },
-        { key: 'apr', label: 'APR', sortable: false },
-        {
-          key: 'annualFee',
-          label: 'Annual Fee',
-          sortable: true,
-          render: (v: unknown) => (v === 0 ? '$0' : `$${v}`),
-        },
-        { key: 'rewardsRate', label: 'Rewards Rate', sortable: false },
-        { key: 'signupBonus', label: 'Signup Bonus', sortable: false },
-        {
-          key: 'creditScoreMin',
-          label: 'Credit Score',
-          sortable: true,
-          render: (v: unknown) => `${v}+`,
-        },
-      ];
-    case 'personal-loans':
-      return [
-        { key: 'name', label: 'Lender', sortable: true },
-        {
-          key: 'aprLow',
-          label: 'APR Range',
-          sortable: true,
-          render: (_v: unknown, p: Record<string, unknown>) =>
-            `${p.aprLow}%-${p.aprHigh}%`,
-        },
-        {
-          key: 'loanAmountMax',
-          label: 'Loan Amount',
-          sortable: true,
-          render: (_v: unknown, p: Record<string, unknown>) =>
-            `$${(p.loanAmountMin as number).toLocaleString()}-$${(p.loanAmountMax as number).toLocaleString()}`,
-        },
-        {
-          key: 'termMax',
-          label: 'Term',
-          sortable: true,
-          render: (_v: unknown, p: Record<string, unknown>) =>
-            `${p.termMin}-${p.termMax} mo`,
-        },
-        { key: 'originationFee', label: 'Origination Fee', sortable: false },
-        {
-          key: 'creditScoreRange',
-          label: 'Credit Score',
-          sortable: false,
-          render: (v: unknown) => {
-            const labels: Record<string, string> = {
-              excellent: 'Excellent (750+)',
-              good: 'Good (670+)',
-              fair: 'Fair (580+)',
-            };
-            return labels[v as string] || String(v);
-          },
-        },
-      ];
-    case 'savings-accounts':
-      return [
-        { key: 'name', label: 'Account', sortable: true },
-        {
-          key: 'apy',
-          label: 'APY',
-          sortable: true,
-          render: (v: unknown) => `${v}%`,
-        },
-        {
-          key: 'minimumDeposit',
-          label: 'Min. Deposit',
-          sortable: true,
-          render: (v: unknown) =>
-            (v as number) === 0 ? '$0' : `$${(v as number).toLocaleString()}`,
-        },
-        {
-          key: 'accountType',
-          label: 'Type',
-          sortable: false,
-          render: (v: unknown) =>
-            v === 'high-yield-savings' ? 'High-Yield Savings' : 'CD',
-        },
-        {
-          key: 'termMonths',
-          label: 'Term',
-          sortable: false,
-          render: (v: unknown) =>
-            v == null ? 'None' : `${v} months`,
-        },
-        { key: 'compounding', label: 'Compounding', sortable: false },
-      ];
-    case 'insurance':
-      return [
-        { key: 'name', label: 'Provider', sortable: true },
-        { key: 'monthlyPremium', label: 'Monthly Premium', sortable: false },
-        {
-          key: 'coverageLevel',
-          label: 'Coverage',
-          sortable: true,
-          render: (v: unknown) => {
-            const labels: Record<string, string> = {
-              basic: 'Basic',
-              standard: 'Standard',
-              premium: 'Premium',
-            };
-            return labels[v as string] || String(v);
-          },
-        },
-        {
-          key: 'deductibleMin',
-          label: 'Deductible',
-          sortable: true,
-          render: (_v: unknown, p: Record<string, unknown>) =>
-            `$${(p.deductibleMin as number).toLocaleString()}-$${(p.deductibleMax as number).toLocaleString()}`,
-        },
-        {
-          key: 'coverageHighlights',
-          label: 'Coverage Highlights',
-          sortable: false,
-        },
-      ];
-  }
-}
 
 // Attribute definitions for mobile product cards
 function getAttributes(category: ProductCategory) {
@@ -250,9 +127,36 @@ function getAttributes(category: ProductCategory) {
 export function ComparisonPageClient({
   products,
   category,
-  lastVerified,
+  lastVerified: _lastVerified,
 }: ComparisonPageClientProps) {
   const [state, setState] = useQueryStates(categoryParams[category]);
+
+  // Compare selection state (max 3 products)
+  const [compareIds, setCompareIds] = useState<Set<string>>(new Set());
+
+  const handleCompareToggle = useCallback((productId: string) => {
+    setCompareIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(productId)) {
+        next.delete(productId);
+      } else if (next.size < 3) {
+        next.add(productId);
+      }
+      return next;
+    });
+  }, []);
+
+  const handleCompareRemove = useCallback((productId: string) => {
+    setCompareIds((prev) => {
+      const next = new Set(prev);
+      next.delete(productId);
+      return next;
+    });
+  }, []);
+
+  const handleCompareClose = useCallback(() => {
+    setCompareIds(new Set());
+  }, []);
 
   const sortColumn = state.sort === 'name' ? null : (state.sort as string);
   const sortDirection = state.dir as 'asc' | 'desc';
@@ -273,21 +177,9 @@ export function ComparisonPageClient({
     sortDirection,
   );
 
-  const columns = getColumns(category);
   const attributes = getAttributes(category);
-
-  const handleSort = (column: string) => {
-    if (state.sort === column) {
-      if (state.dir === 'asc') {
-        setState({ sort: column as typeof state.sort, dir: 'desc' as typeof state.dir });
-      } else {
-        // Reset sort
-        setState({ sort: 'name' as typeof state.sort, dir: 'asc' as typeof state.dir });
-      }
-    } else {
-      setState({ sort: column as typeof state.sort, dir: 'asc' as typeof state.dir });
-    }
-  };
+  const stripStats = getStripStats(category);
+  const detailStats = getDetailStats(category);
 
   const handleFilterChange = (filterId: string, value: string | null) => {
     setState({ [filterId]: value ?? 'all' } as Partial<typeof state>);
@@ -303,7 +195,8 @@ export function ComparisonPageClient({
 
   return (
     <div className="mt-8">
-      <ComparisonFilters
+      {/* Filter chips */}
+      <FilterChips
         filters={filterConfigs[category]}
         activeFilters={activeFilters}
         onFilterChange={handleFilterChange}
@@ -328,18 +221,27 @@ export function ComparisonPageClient({
         </div>
       ) : (
         <>
-          <div className="mt-6">
-            <ComparisonTable
-              products={sortedProducts}
-              columns={columns}
-              category={category}
-              sortColumn={state.sort as string}
-              sortDirection={sortDirection}
-              onSort={handleSort}
-              lastVerified={lastVerified}
-            />
+          {/* Desktop: Product strips */}
+          <div className="mt-6 hidden lg:flex lg:flex-col lg:gap-3">
+            {sortedProducts.map((product, index) => (
+              <ProductStrip
+                key={product.id as string}
+                product={product}
+                category={category}
+                position={index}
+                stripStats={stripStats}
+                detailStats={detailStats}
+                isCompareSelected={compareIds.has(product.id as string)}
+                onCompareToggle={handleCompareToggle}
+                compareDisabled={
+                  compareIds.size >= 3 &&
+                  !compareIds.has(product.id as string)
+                }
+              />
+            ))}
           </div>
 
+          {/* Mobile: Product cards (unchanged) */}
           <div className="mt-6 flex flex-col gap-4 lg:hidden">
             {sortedProducts.map((product, index) => (
               <ProductCard
@@ -353,6 +255,17 @@ export function ComparisonPageClient({
           </div>
         </>
       )}
+
+      {/* Compare panel -- slides up when 2+ selected */}
+      <ComparePanel
+        products={sortedProducts.filter((p) =>
+          compareIds.has(p.id as string),
+        )}
+        category={category}
+        stripStats={stripStats}
+        onRemove={handleCompareRemove}
+        onClose={handleCompareClose}
+      />
 
       <div className="py-8">
         <Link
