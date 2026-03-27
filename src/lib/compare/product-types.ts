@@ -10,6 +10,7 @@ export interface ProductItemBase {
   bestFor?: string;
   imageUrl?: string;
   affiliateUrl: string;
+  destinationUrl: string;
   utmSource: string;
   utmMedium: string;
   utmCampaign: string;

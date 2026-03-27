@@ -16,7 +16,8 @@ products:
     creditScoreMin: 670
     creditScoreRange: good
     bestFor: "Best for Travel Rewards"
-    affiliateUrl: "https://www.walletwaypoint.com/go/chase-sapphire-preferred"
+    affiliateUrl: "/go/chase-sapphire-preferred"
+    destinationUrl: "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -34,7 +35,8 @@ products:
     creditScoreMin: 670
     creditScoreRange: good
     bestFor: "Best for Cash Back"
-    affiliateUrl: "https://www.walletwaypoint.com/go/citi-double-cash"
+    affiliateUrl: "/go/citi-double-cash"
+    destinationUrl: "https://www.citi.com/credit-cards/citi-double-cash-credit-card"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -51,7 +53,8 @@ products:
     signupBonus: "75,000 miles after $4,000 in 3 months"
     creditScoreMin: 750
     creditScoreRange: excellent
-    affiliateUrl: "https://www.walletwaypoint.com/go/capital-one-venture-x"
+    affiliateUrl: "/go/capital-one-venture-x"
+    destinationUrl: "https://www.capitalone.com/credit-cards/venture-x/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -69,7 +72,8 @@ products:
     creditScoreMin: 670
     creditScoreRange: good
     bestFor: "Best No Annual Fee"
-    affiliateUrl: "https://www.walletwaypoint.com/go/discover-it-cash-back"
+    affiliateUrl: "/go/discover-it-cash-back"
+    destinationUrl: "https://www.discover.com/credit-cards/cash-back/it-card.html"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -86,7 +90,8 @@ products:
     signupBonus: "$200 bonus after $500 in 3 months"
     creditScoreMin: 670
     creditScoreRange: good
-    affiliateUrl: "https://www.walletwaypoint.com/go/chase-freedom-unlimited"
+    affiliateUrl: "/go/chase-freedom-unlimited"
+    destinationUrl: "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -103,7 +108,8 @@ products:
     signupBonus: "60,000 Membership Rewards points after $6,000 in 6 months"
     creditScoreMin: 670
     creditScoreRange: good
-    affiliateUrl: "https://www.walletwaypoint.com/go/amex-gold"
+    affiliateUrl: "/go/amex-gold"
+    destinationUrl: "https://www.americanexpress.com/us/credit-cards/card/gold-card/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -120,7 +126,8 @@ products:
     signupBonus: "$200 cash bonus after $500 in 3 months"
     creditScoreMin: 580
     creditScoreRange: fair
-    affiliateUrl: "https://www.walletwaypoint.com/go/capital-one-quicksilver"
+    affiliateUrl: "/go/capital-one-quicksilver"
+    destinationUrl: "https://www.capitalone.com/credit-cards/quicksilver/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -137,7 +144,8 @@ products:
     signupBonus: "$250 statement credit after $3,000 in 6 months"
     creditScoreMin: 670
     creditScoreRange: good
-    affiliateUrl: "https://www.walletwaypoint.com/go/amex-blue-cash-preferred"
+    affiliateUrl: "/go/amex-blue-cash-preferred"
+    destinationUrl: "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -154,7 +162,8 @@ products:
     signupBonus: "$200 cash rewards after $500 in 3 months"
     creditScoreMin: 670
     creditScoreRange: good
-    affiliateUrl: "https://www.walletwaypoint.com/go/wells-fargo-active-cash"
+    affiliateUrl: "/go/wells-fargo-active-cash"
+    destinationUrl: "https://creditcards.wellsfargo.com/cards/active-cash-credit-card/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -171,7 +180,8 @@ products:
     signupBonus: "60,000 ThankYou Points after $4,000 in 3 months"
     creditScoreMin: 670
     creditScoreRange: good
-    affiliateUrl: "https://www.walletwaypoint.com/go/citi-premier"
+    affiliateUrl: "/go/citi-premier"
+    destinationUrl: "https://www.citi.com/credit-cards/citi-strata-premier-credit-card"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -188,7 +198,8 @@ products:
     signupBonus: "$200 cash bonus after $500 in 3 months"
     creditScoreMin: 670
     creditScoreRange: good
-    affiliateUrl: "https://www.walletwaypoint.com/go/capital-one-savor-one"
+    affiliateUrl: "/go/capital-one-savor-one"
+    destinationUrl: "https://www.capitalone.com/credit-cards/savorone/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards
@@ -205,7 +216,8 @@ products:
     signupBonus: "0% intro APR for 21 billing cycles on balance transfers"
     creditScoreMin: 670
     creditScoreRange: good
-    affiliateUrl: "https://www.walletwaypoint.com/go/bankamericard"
+    affiliateUrl: "/go/bankamericard"
+    destinationUrl: "https://www.bankofamerica.com/credit-cards/products/bankamericard-credit-card/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: credit-cards

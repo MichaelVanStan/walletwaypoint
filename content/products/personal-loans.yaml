@@ -17,7 +17,8 @@ products:
     creditScoreRange: good
     originationFee: "None"
     bestFor: "Best for Large Loans"
-    affiliateUrl: "https://www.walletwaypoint.com/go/sofi-personal-loan"
+    affiliateUrl: "/go/sofi-personal-loan"
+    destinationUrl: "https://www.sofi.com/personal-loans/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -36,7 +37,8 @@ products:
     creditScoreRange: good
     originationFee: "None"
     bestFor: "Best for Low Rates"
-    affiliateUrl: "https://www.walletwaypoint.com/go/lightstream-personal-loan"
+    affiliateUrl: "/go/lightstream-personal-loan"
+    destinationUrl: "https://www.lightstream.com/personal-loans"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -54,7 +56,8 @@ products:
     termMax: 72
     creditScoreRange: good
     originationFee: "None"
-    affiliateUrl: "https://www.walletwaypoint.com/go/marcus-personal-loan"
+    affiliateUrl: "/go/marcus-personal-loan"
+    destinationUrl: "https://www.marcus.com/us/en/personal-loans/acq/step1"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -72,7 +75,8 @@ products:
     termMax: 84
     creditScoreRange: good
     originationFee: "None"
-    affiliateUrl: "https://www.walletwaypoint.com/go/discover-personal-loan"
+    affiliateUrl: "/go/discover-personal-loan"
+    destinationUrl: "https://www.discover.com/personal-loans/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -91,7 +95,8 @@ products:
     creditScoreRange: fair
     originationFee: "0.99%-8.99%"
     bestFor: "Best for Bad Credit"
-    affiliateUrl: "https://www.walletwaypoint.com/go/best-egg-personal-loan"
+    affiliateUrl: "/go/best-egg-personal-loan"
+    destinationUrl: "https://www.bestegg.com/personal-loans/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -109,7 +114,8 @@ products:
     termMax: 60
     creditScoreRange: fair
     originationFee: "1.00%-9.99%"
-    affiliateUrl: "https://www.walletwaypoint.com/go/prosper-personal-loan"
+    affiliateUrl: "/go/prosper-personal-loan"
+    destinationUrl: "https://www.prosper.com/personal-loans"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -127,7 +133,8 @@ products:
     termMax: 84
     creditScoreRange: fair
     originationFee: "1.85%-9.99%"
-    affiliateUrl: "https://www.walletwaypoint.com/go/upgrade-personal-loan"
+    affiliateUrl: "/go/upgrade-personal-loan"
+    destinationUrl: "https://www.upgrade.com/personal-loans/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -145,7 +152,8 @@ products:
     termMax: 60
     creditScoreRange: fair
     originationFee: "2.00%-8.00%"
-    affiliateUrl: "https://www.walletwaypoint.com/go/lending-club-personal-loan"
+    affiliateUrl: "/go/lending-club-personal-loan"
+    destinationUrl: "https://www.lendingclub.com/personal-loan"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -163,7 +171,8 @@ products:
     termMax: 60
     creditScoreRange: fair
     originationFee: "0%-12%"
-    affiliateUrl: "https://www.walletwaypoint.com/go/upstart-personal-loan"
+    affiliateUrl: "/go/upstart-personal-loan"
+    destinationUrl: "https://www.upstart.com/personal-loans"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -181,7 +190,8 @@ products:
     termMax: 60
     creditScoreRange: fair
     originationFee: "1.50%-4.75%"
-    affiliateUrl: "https://www.walletwaypoint.com/go/avant-personal-loan"
+    affiliateUrl: "/go/avant-personal-loan"
+    destinationUrl: "https://www.avant.com/personal-loans/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -199,7 +209,8 @@ products:
     termMax: 60
     creditScoreRange: good
     originationFee: "None"
-    affiliateUrl: "https://www.walletwaypoint.com/go/penfed-personal-loan"
+    affiliateUrl: "/go/penfed-personal-loan"
+    destinationUrl: "https://www.penfed.org/personal-loans"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans
@@ -217,7 +228,8 @@ products:
     termMax: 60
     creditScoreRange: excellent
     originationFee: "None"
-    affiliateUrl: "https://www.walletwaypoint.com/go/navy-federal-personal-loan"
+    affiliateUrl: "/go/navy-federal-personal-loan"
+    destinationUrl: "https://www.navyfederal.org/loans-cards/personal-loans.html"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: personal-loans

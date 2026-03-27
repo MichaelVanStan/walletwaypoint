@@ -141,6 +141,7 @@ const productItemSchema = s.object({
   issuer: s.string(),
   bestFor: s.string().optional(),
   affiliateUrl: s.string(),
+  destinationUrl: s.string(),
   utmSource: s.string().default('walletwaypoint'),
   utmMedium: s.string().default('comparison_table'),
   utmCampaign: s.string(),

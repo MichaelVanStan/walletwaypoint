@@ -14,7 +14,8 @@ products:
     compounding: "Daily"
     fdic: true
     bestFor: "Best High-Yield Savings"
-    affiliateUrl: "https://www.walletwaypoint.com/go/marcus-high-yield-savings"
+    affiliateUrl: "/go/marcus-high-yield-savings"
+    destinationUrl: "https://www.marcus.com/us/en/savings/high-yield-savings"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -30,7 +31,8 @@ products:
     compounding: "Daily"
     fdic: true
     bestFor: "Best No Minimum"
-    affiliateUrl: "https://www.walletwaypoint.com/go/ally-high-yield-savings"
+    affiliateUrl: "/go/ally-high-yield-savings"
+    destinationUrl: "https://www.ally.com/bank/online-savings-account/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -45,7 +47,8 @@ products:
     accountType: high-yield-savings
     compounding: "Daily"
     fdic: true
-    affiliateUrl: "https://www.walletwaypoint.com/go/wealthfront-cash-account"
+    affiliateUrl: "/go/wealthfront-cash-account"
+    destinationUrl: "https://www.wealthfront.com/cash"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -60,7 +63,8 @@ products:
     accountType: high-yield-savings
     compounding: "Daily"
     fdic: true
-    affiliateUrl: "https://www.walletwaypoint.com/go/capital-one-360-performance"
+    affiliateUrl: "/go/capital-one-360-performance"
+    destinationUrl: "https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -75,7 +79,8 @@ products:
     accountType: high-yield-savings
     compounding: "Daily"
     fdic: true
-    affiliateUrl: "https://www.walletwaypoint.com/go/discover-online-savings"
+    affiliateUrl: "/go/discover-online-savings"
+    destinationUrl: "https://www.discover.com/online-banking/savings-account/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -90,7 +95,8 @@ products:
     accountType: high-yield-savings
     compounding: "Daily"
     fdic: true
-    affiliateUrl: "https://www.walletwaypoint.com/go/amex-high-yield-savings"
+    affiliateUrl: "/go/amex-high-yield-savings"
+    destinationUrl: "https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -105,7 +111,8 @@ products:
     accountType: high-yield-savings
     compounding: "Daily"
     fdic: true
-    affiliateUrl: "https://www.walletwaypoint.com/go/barclays-online-savings"
+    affiliateUrl: "/go/barclays-online-savings"
+    destinationUrl: "https://banking.us.barclays/online-savings.html"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -120,7 +127,8 @@ products:
     accountType: high-yield-savings
     compounding: "Monthly"
     fdic: true
-    affiliateUrl: "https://www.walletwaypoint.com/go/cit-bank-platinum-savings"
+    affiliateUrl: "/go/cit-bank-platinum-savings"
+    destinationUrl: "https://www.cit.com/cit-bank/bank/savings/platinum-savings-account"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -137,7 +145,8 @@ products:
     compounding: "Daily"
     fdic: true
     bestFor: "Best CD Rate"
-    affiliateUrl: "https://www.walletwaypoint.com/go/marcus-12-month-cd"
+    affiliateUrl: "/go/marcus-12-month-cd"
+    destinationUrl: "https://www.marcus.com/us/en/savings/high-yield-cds/12MCD"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -153,7 +162,8 @@ products:
     termMonths: 18
     compounding: "Daily"
     fdic: true
-    affiliateUrl: "https://www.walletwaypoint.com/go/ally-18-month-cd"
+    affiliateUrl: "/go/ally-18-month-cd"
+    destinationUrl: "https://www.ally.com/bank/high-yield-cd/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -169,7 +179,8 @@ products:
     termMonths: 12
     compounding: "Daily"
     fdic: true
-    affiliateUrl: "https://www.walletwaypoint.com/go/discover-12-month-cd"
+    affiliateUrl: "/go/discover-12-month-cd"
+    destinationUrl: "https://www.discover.com/online-banking/cd/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
@@ -185,7 +196,8 @@ products:
     termMonths: 12
     compounding: "Daily"
     fdic: true
-    affiliateUrl: "https://www.walletwaypoint.com/go/capital-one-12-month-cd"
+    affiliateUrl: "/go/capital-one-12-month-cd"
+    destinationUrl: "https://www.capitalone.com/bank/cds/online-cds/"
     utmSource: walletwaypoint
     utmMedium: comparison_table
     utmCampaign: savings-accounts
