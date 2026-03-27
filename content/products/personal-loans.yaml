@@ -47,7 +47,7 @@ products:
   - id: marcus-personal-loan
     name: "Marcus by Goldman Sachs Personal Loan"
     issuer: "Marcus by Goldman Sachs"
-    imageUrl: ""
+    imageUrl: "/images/logos/marcus.png"
     aprLow: 6.99
     aprHigh: 24.99
     loanAmountMin: 3500

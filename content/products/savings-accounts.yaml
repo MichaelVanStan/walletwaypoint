@@ -7,7 +7,7 @@ products:
   - id: marcus-high-yield-savings
     name: "Marcus by Goldman Sachs High-Yield Savings"
     issuer: "Marcus by Goldman Sachs"
-    imageUrl: ""
+    imageUrl: "/images/logos/marcus.png"
     apy: 4.40
     minimumDeposit: 0
     accountType: high-yield-savings
@@ -137,7 +137,7 @@ products:
   - id: marcus-12-month-cd
     name: "Marcus 12-Month CD"
     issuer: "Marcus by Goldman Sachs"
-    imageUrl: ""
+    imageUrl: "/images/logos/marcus.png"
     apy: 4.50
     minimumDeposit: 500
     accountType: cd
