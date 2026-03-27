@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/breadcrumb';
 import { BreadcrumbSchema } from '@/components/seo/breadcrumb-schema';
 import { siteConfig } from '@/lib/site-config';
+import { Home } from 'lucide-react';
 
 interface BreadcrumbsProps {
   items?: { name: string; href: string }[];
@@ -47,27 +48,38 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
     <>
       <BreadcrumbSchema items={schemaItems} />
-      <Breadcrumb aria-label="Breadcrumb">
-        <BreadcrumbList>
-          {breadcrumbItems.map((item, index) => {
-            const isLast = index === breadcrumbItems.length - 1;
-            return (
-              <React.Fragment key={item.href}>
-                {index > 0 && <BreadcrumbSeparator />}
-                <BreadcrumbItem>
-                  {isLast ? (
-                    <BreadcrumbPage>{item.name}</BreadcrumbPage>
-                  ) : (
-                    <BreadcrumbLink render={<Link href={item.href} />}>
-                      {item.name}
-                    </BreadcrumbLink>
-                  )}
-                </BreadcrumbItem>
-              </React.Fragment>
-            );
-          })}
-        </BreadcrumbList>
-      </Breadcrumb>
+      <div className="border-b border-border/60 bg-muted/30">
+        <div className="mx-auto max-w-6xl px-4 py-3">
+          <Breadcrumb aria-label="Breadcrumb">
+            <BreadcrumbList>
+              {breadcrumbItems.map((item, index) => {
+                const isLast = index === breadcrumbItems.length - 1;
+                return (
+                  <React.Fragment key={item.href}>
+                    {index > 0 && <BreadcrumbSeparator />}
+                    <BreadcrumbItem>
+                      {isLast ? (
+                        <BreadcrumbPage>{item.name}</BreadcrumbPage>
+                      ) : (
+                        <BreadcrumbLink render={<Link href={item.href} />}>
+                          {index === 0 ? (
+                            <span className="flex items-center gap-1.5">
+                              <Home className="h-3.5 w-3.5" />
+                              <span className="sr-only">{item.name}</span>
+                            </span>
+                          ) : (
+                            item.name
+                          )}
+                        </BreadcrumbLink>
+                      )}
+                    </BreadcrumbItem>
+                  </React.Fragment>
+                );
+              })}
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
     </>
   );
 }
