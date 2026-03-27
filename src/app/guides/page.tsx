@@ -42,8 +42,8 @@ export default function GuidesPage() {
               className="block"
             >
               <Card className="h-full hover:border-accent/50 transition-colors">
-                <CardHeader>
-                  <CardTitle>{guide.title}</CardTitle>
+                <CardHeader className="flex-1">
+                  <CardTitle className="line-clamp-2 min-h-[2lh]">{guide.title}</CardTitle>
                   <CardDescription className="line-clamp-2">
                     {guide.description}
                   </CardDescription>

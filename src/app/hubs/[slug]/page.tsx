@@ -4,12 +4,9 @@ import { hubs, calculators, guides } from '#site/content';
 import { createMetadata } from '@/lib/metadata';
 import { HubHero } from '@/components/content/hub-hero';
 import { HubSection } from '@/components/content/hub-section';
+import { HubToolkitRow } from '@/components/content/hub-toolkit-row';
 import { QuickTips } from '@/components/content/quick-tips';
 import { NextSteps } from '@/components/content/next-steps';
-import { HubIcon } from '@/components/content/hub-icon';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight } from 'lucide-react';
 
 export function generateStaticParams() {
   return hubs.map((h) => ({ slug: h.slug }));
@@ -60,91 +57,87 @@ export default async function HubPage({
       />
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
         <HubSection
-          title="Your Calculators"
-          intro="Interactive tools to run the numbers for your situation."
+          title={`Your ${hub.name} Toolkit`}
+          intro="Learn the concepts, then run the numbers — paired together for each topic."
         >
-          {hubCalculators.length > 0 ? (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {hubCalculators.map((calc) => (
-                <Link
-                  key={calc.slug}
-                  href={`/calculators/${calc.slug}`}
-                  className="block"
-                >
-                  <Card className="h-full p-4 transition-colors hover:border-accent/50">
-                    <CardContent className="flex flex-col gap-3 p-0">
-                      <HubIcon
-                        icon={calc.callouts?.[0]?.icon || 'Calculator'}
-                        className="size-6 text-accent"
-                      />
-                      <div>
-                        <p className="text-sm font-semibold text-foreground">
-                          {calc.title}
-                        </p>
-                        <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
-                          {calc.description}
-                        </p>
-                      </div>
-                      <span className="mt-auto flex items-center gap-1 text-sm text-accent">
-                        Try this calculator
-                        <ArrowRight className="size-3.5" />
-                      </span>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
+          {hubGuides.length > 0 || hubCalculators.length > 0 ? (
+            <div className="space-y-4">
+              {(() => {
+                const pairedSlugs = new Set<string>();
+                const items: Array<{
+                  key: string;
+                  guide?: (typeof hubGuides)[number];
+                  calculator?: (typeof hubCalculators)[number];
+                }> = [];
+
+                for (const guideSlug of hub.guideSlugs) {
+                  const guide = hubGuides.find((g) => g.slug === guideSlug);
+                  const calc = hubCalculators.find(
+                    (c) => c.slug === guideSlug
+                  );
+                  if (guide || calc) {
+                    items.push({
+                      key: guideSlug,
+                      guide: guide || undefined,
+                      calculator: calc || undefined,
+                    });
+                    pairedSlugs.add(guideSlug);
+                  }
+                }
+
+                for (const calc of hubCalculators) {
+                  if (!pairedSlugs.has(calc.slug)) {
+                    items.push({
+                      key: calc.slug,
+                      calculator: calc,
+                    });
+                  }
+                }
+
+                return items.map((item, i) => (
+                  <HubToolkitRow
+                    key={item.key}
+                    index={i}
+                    guide={
+                      item.guide
+                        ? {
+                            slug: item.guide.slug,
+                            title: item.guide.title,
+                            description: item.guide.description,
+                            readingTime: item.guide.metadata.readingTime,
+                          }
+                        : undefined
+                    }
+                    calculator={
+                      item.calculator
+                        ? {
+                            slug: item.calculator.slug,
+                            title: item.calculator.title,
+                            description: item.calculator.description,
+                            icon:
+                              item.calculator.callouts?.[0]?.icon ||
+                              'Calculator',
+                          }
+                        : undefined
+                    }
+                  />
+                ));
+              })()}
             </div>
           ) : (
             <p className="text-sm text-muted-foreground">
-              Calculators for this life stage are coming soon. Explore our other{' '}
-              <Link href="/calculators" className="underline hover:text-foreground">
+              Tools for this life stage are coming soon. Explore our{' '}
+              <Link
+                href="/calculators"
+                className="underline hover:text-foreground"
+              >
                 calculators
               </Link>{' '}
-              in the meantime.
-            </p>
-          )}
-        </HubSection>
-
-        <HubSection
-          title="Guides For You"
-          intro="Clear explanations to help you understand the concepts."
-        >
-          {hubGuides.length > 0 ? (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {hubGuides.map((guide) => (
-                <Link
-                  key={guide.slug}
-                  href={`/guides/${guide.slug}`}
-                  className="block"
-                >
-                  <Card className="h-full p-4 transition-colors hover:border-accent/50">
-                    <CardContent className="flex flex-col gap-3 p-0">
-                      <div>
-                        <p className="text-sm font-semibold text-foreground">
-                          {guide.title}
-                        </p>
-                        <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
-                          {guide.description}
-                        </p>
-                      </div>
-                      <div className="mt-auto flex items-center justify-between">
-                        <Badge variant="secondary">
-                          {guide.metadata.readingTime} min read
-                        </Badge>
-                        <span className="flex items-center gap-1 text-sm text-accent">
-                          Read guide
-                          <ArrowRight className="size-3.5" />
-                        </span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <p className="text-sm text-muted-foreground">
-              Guides for this life stage are coming soon. Check out our other{' '}
-              <Link href="/guides" className="underline hover:text-foreground">
+              and{' '}
+              <Link
+                href="/guides"
+                className="underline hover:text-foreground"
+              >
                 guides
               </Link>{' '}
               in the meantime.
