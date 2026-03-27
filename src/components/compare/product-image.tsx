@@ -68,14 +68,14 @@ function getInitials(issuer: string): string {
 export function ProductImage({ imageUrl, name, issuer, category, className }: ProductImageProps) {
   if (imageUrl) {
     // Credit cards with real images: card-shaped (80x50)
-    // Other categories with logos: small square (32x32)
+    // Other categories with logos: small square container with fill
     const isCard = !category || category === 'credit-cards';
     return (
-      <div className={`${isCard ? 'w-20 h-[50px]' : 'w-8 h-8'} flex-shrink-0 flex items-center justify-center ${className ?? ''}`}>
+      <div className={`relative ${isCard ? 'w-20 h-[50px]' : 'w-8 h-8'} flex-shrink-0 ${className ?? ''}`}>
         <Image
           src={imageUrl}
-          width={isCard ? 80 : 32}
-          height={isCard ? 50 : 32}
+          fill
+          sizes={isCard ? '80px' : '32px'}
           alt={`${issuer} logo`}
           className={`object-contain ${isCard ? 'rounded-md' : 'rounded'}`}
         />
