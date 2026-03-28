@@ -46,3 +46,7 @@ next-env.d.ts
 
 # velite (generated at build time)
 .velite
+/.claude/worktrees
+/.superpowers/brainstorm
+/.planning
+/mockups
