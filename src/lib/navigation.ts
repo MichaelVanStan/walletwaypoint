@@ -2,6 +2,11 @@ import type { NavItem, FooterNavigation } from '@/types';
 
 export const mainNavigation: NavItem[] = [
   {
+    title: 'Your Journey',
+    href: '/hubs',
+    description: 'Financial tools and guides for where you are in life',
+  },
+  {
     title: 'Calculators',
     href: '/calculators',
     description: 'Interactive financial calculators',
@@ -27,11 +32,6 @@ export const mainNavigation: NavItem[] = [
     title: 'Guides',
     href: '/guides',
     description: 'Educational financial guides',
-  },
-  {
-    title: 'Life Stage Hubs',
-    href: '/hubs',
-    description: 'Financial tools organized by life stage',
   },
   {
     title: 'Glossary',
@@ -84,7 +84,7 @@ export const footerNavigation: FooterNavigation = {
       href: '/guides',
     },
     {
-      title: 'Life Stage Hubs',
+      title: 'Your Journey',
       href: '/hubs',
     },
     {
