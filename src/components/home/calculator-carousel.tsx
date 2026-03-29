@@ -75,9 +75,9 @@ const CALCS: CarouselCalc[] = [
       { label: 'Interest Rate', value: formatPercent(6.5, 1) },
       { label: 'Time Horizon', value: '30 years' },
     ],
-    outputKey: 'buyTotalCost',
-    outputLabel: 'Buying total cost over 30 years',
-    formatOutput: (v) => formatCurrency(v),
+    outputKey: 'savingsAmount',
+    outputLabel: 'Potential savings over 30 years',
+    formatOutput: (v) => formatCurrency(Math.abs(v)),
   },
   {
     title: 'Budget Calculator',

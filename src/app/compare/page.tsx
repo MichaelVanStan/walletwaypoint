@@ -12,9 +12,9 @@ import {
 import { CreditCard, Landmark, PiggyBank, Shield } from 'lucide-react';
 
 export const metadata = createMetadata({
-  title: 'Product Comparisons',
+  title: 'Top Picks',
   description:
-    'Side-by-side comparisons of credit cards, loans, savings accounts, and insurance. Every comparison explains exactly how we rank products.',
+    'Our top picks for credit cards, loans, savings accounts, and insurance. Every pick explains exactly how we rank products.',
   path: '/compare',
 });
 
@@ -29,11 +29,11 @@ export default function ComparePage() {
   return (
     <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-6 md:py-12">
       <h1 className="text-2xl font-semibold text-foreground">
-        Product Comparisons
+        Top Picks
       </h1>
       <p className="mt-3 max-w-[640px] text-base leading-[1.6] text-muted-foreground">
-        Side-by-side comparisons of credit cards, loans, savings accounts, and
-        insurance. Every comparison explains exactly how we rank products.
+        Our top picks for credit cards, loans, savings accounts, and insurance.
+        Every pick explains exactly how we rank products.
       </p>
 
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -64,7 +64,7 @@ export default function ComparePage() {
                 </CardContent>
                 <CardFooter>
                   <span className="text-sm font-medium text-accent">
-                    Compare products &rarr;
+                    Browse picks &rarr;
                   </span>
                 </CardFooter>
               </Card>

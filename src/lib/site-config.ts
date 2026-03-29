@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'WalletWaypoint',
   tagline: 'Your next financial milestone starts here',
   description:
-    'Interactive calculators, comparison tools, and educational guides for every life stage.',
+    'Interactive calculators, top picks, and educational guides for every life stage.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://walletwaypoint.com',
   ogImage: '/og.png',
   gaId: process.env.NEXT_PUBLIC_GA_ID || '',

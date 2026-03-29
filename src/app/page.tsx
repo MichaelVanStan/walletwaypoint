@@ -17,11 +17,18 @@ import { CalculatorCarousel } from '@/components/home/calculator-carousel';
 export const metadata = createMetadata({
   title: 'WalletWaypoint - Your next financial milestone starts here',
   description:
-    'Interactive calculators, comparison tools, and educational guides for every life stage.',
+    'Interactive calculators, top picks, and educational guides for every life stage.',
   path: '/',
 });
 
 const sectionCards = [
+  {
+    icon: Compass,
+    title: '6 Journeys',
+    desc: 'Curated paths for where you are in life -- student, renter, buyer.',
+    cta: 'Find yours',
+    href: '/hubs',
+  },
   {
     icon: Calculator,
     title: '10 Calculators',
@@ -37,17 +44,10 @@ const sectionCards = [
     href: '/guides',
   },
   {
-    icon: Compass,
-    title: '6 Journeys',
-    desc: 'Curated paths for where you are in life -- student, renter, buyer.',
-    cta: 'Find yours',
-    href: '/hubs',
-  },
-  {
     icon: Scale,
-    title: '4 Comparisons',
+    title: '4 Top Picks',
     desc: 'Credit cards, loans, savings accounts, insurance -- side by side.',
-    cta: 'Compare',
+    cta: 'See picks',
     href: '/compare',
   },
 ];
@@ -104,8 +104,8 @@ export default function HomePage() {
                 Your next financial milestone starts here
               </h1>
               <p className="mt-4 text-sm text-muted-foreground">
-                Free calculators, expert guides, and comparison tools for every
-                stage -- from first paycheck to retirement.
+                Free calculators, expert guides, and top picks for every stage
+                -- from first paycheck to retirement.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Button

@@ -79,9 +79,9 @@ export const mainNavigation: NavItem[] = [
     description: 'Financial terms explained',
   },
   {
-    title: 'Compare',
+    title: 'Top Picks',
     href: '/compare',
-    description: 'Side-by-side product comparisons',
+    description: 'Our top picks for financial products',
     children: [
       {
         title: 'Credit Cards',
@@ -114,7 +114,7 @@ export const footerNavigation: FooterNavigation = {
       href: '/calculators',
     },
     {
-      title: 'Comparisons',
+      title: 'Top Picks',
       href: '/compare',
     },
   ],

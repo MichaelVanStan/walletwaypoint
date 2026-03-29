@@ -26,9 +26,10 @@ export function GuideCtaBanner({
           <Button
             nativeButton={false}
             size="sm"
+            className="w-full"
             render={<Link href={`/calculators/${calculatorSlug}`} />}
           >
-            Open {calculatorTitle}
+            Open Calculator
           </Button>
         </CardContent>
       </Card>
