@@ -67,14 +67,12 @@ export default function GuidesPage() {
                       {guide.metadata.readingTime} min read
                     </Badge>
                     {pairedCalc && (
-                      <Link
-                        href={`/calculators/${pairedCalc.slug}`}
-                        onClick={(e) => e.stopPropagation()}
-                        className="inline-flex items-center gap-1.5 rounded-md bg-accent/[0.08] px-2.5 py-1 text-xs font-medium text-accent transition-colors hover:bg-accent/[0.15]"
+                      <span
+                        className="inline-flex items-center gap-1.5 rounded-md bg-accent/[0.08] px-2.5 py-1 text-xs font-medium text-accent"
                       >
                         <Calculator className="size-3" />
                         {pairedCalc.title}
-                      </Link>
+                      </span>
                     )}
                   </div>
                 </div>
