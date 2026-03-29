@@ -6,7 +6,7 @@ import { createMetadata } from '@/lib/metadata';
 import { siteConfig } from '@/lib/site-config';
 import { notFound } from 'next/navigation';
 import { TableOfContents } from '@/components/content/table-of-contents';
-import { GuideCtaBanner } from '@/components/content/guide-cta-banner';
+import { CalculatorMiniPreview } from '@/components/content/calculator-mini-preview';
 import { RelatedContent } from '@/components/content/related-content';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -91,10 +91,7 @@ export default async function GuidePage({
             {/* Mobile-only CTA banner */}
             <div className="lg:hidden mb-6">
               {pairedCalculator && (
-                <GuideCtaBanner
-                  calculatorSlug={guide.calculator}
-                  calculatorTitle={pairedCalculator.title}
-                />
+                <CalculatorMiniPreview calculator={pairedCalculator} />
               )}
             </div>
 
@@ -136,10 +133,7 @@ export default async function GuidePage({
           <div className="hidden lg:block">
             <div className="sticky top-24 space-y-6">
               {pairedCalculator && (
-                <GuideCtaBanner
-                  calculatorSlug={guide.calculator}
-                  calculatorTitle={pairedCalculator.title}
-                />
+                <CalculatorMiniPreview calculator={pairedCalculator} />
               )}
               <TableOfContents />
             </div>
