@@ -53,7 +53,7 @@ export function Header() {
                       </NavigationMenuTrigger>
                       {!item.disabled && (
                         <NavigationMenuContent>
-                          <ul className="grid w-[400px] gap-1 p-2">
+                          <ul className={`grid gap-1 p-2 ${item.children && item.children.length > 5 ? 'w-[560px] grid-cols-2' : 'w-[400px]'}`}>
                             {item.children.map((child) => (
                               <li key={child.href}>
                                 <NavigationMenuLink

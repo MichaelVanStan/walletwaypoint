@@ -12,9 +12,29 @@ export const mainNavigation: NavItem[] = [
     description: 'Interactive financial calculators',
     children: [
       {
-        title: 'Mortgage Calculator',
-        href: '/calculators/mortgage',
-        description: 'Calculate monthly mortgage payments and amortization',
+        title: 'View All Calculators',
+        href: '/calculators',
+        description: 'Browse all 10 interactive financial calculators',
+      },
+      {
+        title: 'Budget Calculator',
+        href: '/calculators/budget',
+        description: 'Break down your income using the 50/30/20 rule',
+      },
+      {
+        title: 'Compound Interest',
+        href: '/calculators/compound-interest',
+        description: 'See how your savings grow over time',
+      },
+      {
+        title: 'Loan Repayment',
+        href: '/calculators/loan-repayment',
+        description: 'See your payoff timeline and how extra payments save you money',
+      },
+      {
+        title: 'Mortgage Payment',
+        href: '/calculators/mortgage-payment',
+        description: 'See your monthly payment, total interest, and amortization',
       },
       {
         title: 'Rent Affordability',
@@ -22,9 +42,29 @@ export const mainNavigation: NavItem[] = [
         description: 'Find out how much rent you can afford',
       },
       {
-        title: 'Compound Interest',
-        href: '/calculators/compound-interest',
-        description: 'See how your savings grow over time',
+        title: 'Rent vs. Buy',
+        href: '/calculators/rent-vs-buy',
+        description: 'Compare the total cost of renting versus buying',
+      },
+      {
+        title: 'Retirement',
+        href: '/calculators/retirement',
+        description: 'Project your retirement savings and see if you are on track',
+      },
+      {
+        title: 'Savings Goal',
+        href: '/calculators/savings-goal',
+        description: 'Find out how much to save each month to reach your target',
+      },
+      {
+        title: 'Student Loan',
+        href: '/calculators/student-loan',
+        description: 'Compare standard, graduated, and income-driven repayment plans',
+      },
+      {
+        title: 'Tax Estimator',
+        href: '/calculators/tax-estimator',
+        description: 'Estimate your federal tax liability by income and filing status',
       },
     ],
   },
