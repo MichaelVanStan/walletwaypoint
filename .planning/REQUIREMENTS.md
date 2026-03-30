@@ -22,9 +22,9 @@ Requirements for v2.0 release. Each maps to roadmap phases.
 
 ### State Tax Data
 
-- [ ] **TAX-01**: User can select any of 50 US states + DC and see accurate 2026 state income tax calculations
-- [ ] **TAX-02**: State tax data includes bracket tables, standard deductions, and personal exemptions per state
-- [ ] **TAX-03**: Each state tax data file includes lastVerified date, data source, and tax year metadata
+- [x] **TAX-01**: User can select any of 50 US states + DC and see accurate 2026 state income tax calculations
+- [x] **TAX-02**: State tax data includes bracket tables, standard deductions, and personal exemptions per state
+- [x] **TAX-03**: Each state tax data file includes lastVerified date, data source, and tax year metadata
 - [x] **TAX-04**: Existing federal tax module refactored to accept bracket data as a parameter (enabling state-specific calculations)
 
 ### Programmatic SEO
@@ -158,9 +158,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CALC-08 | Phase 7 | Pending |
 | CALC-09 | Phase 5 | Complete |
 | CALC-10 | Phase 5 | Complete |
-| TAX-01 | Phase 6 | Pending |
-| TAX-02 | Phase 6 | Pending |
-| TAX-03 | Phase 6 | Pending |
+| TAX-01 | Phase 6 | Complete |
+| TAX-02 | Phase 6 | Complete |
+| TAX-03 | Phase 6 | Complete |
 | TAX-04 | Phase 6 | Complete |
 | PSEO-01 | Phase 6 | Pending |
 | PSEO-02 | Phase 6 | Pending |

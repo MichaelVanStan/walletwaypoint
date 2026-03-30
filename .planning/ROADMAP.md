@@ -73,7 +73,7 @@ Plans:
 
 Plans:
 - [x] 06-01-PLAN.md — Tax engine refactor + state data types + Velite schema extensions
-- [ ] 06-02-PLAN.md — 51 state tax YAML data files (all 50 states + DC)
+- [x] 06-02-PLAN.md — 51 state tax YAML data files (all 50 states + DC)
 - [ ] 06-03-PLAN.md — Paycheck calculator math module + main page + state persistence hook
 - [ ] 06-04-PLAN.md — 51 state-specific paycheck calculator pages + BracketTable component
 - [ ] 06-05-PLAN.md — State indicator badge + home affordability comparison table redesign
@@ -109,5 +109,5 @@ Phases execute in numeric order: 5 -> 5.1 -> 5.2 -> 6 -> 6.1 -> 7
 | 3. Content System | v1.0 | 7/7 | Complete | 2026-03-26 |
 | 4. Comparison & Affiliate | v1.0 | 5/5 | Complete | 2026-03-27 |
 | 5. Content Volume & Revenue Foundation | v2.0 | 9/9 | Complete | 2026-03-30 |
-| 6. Programmatic SEO & Life-Stage Hubs | v2.0 | 1/10 | In progress | - |
+| 6. Programmatic SEO & Life-Stage Hubs | v2.0 | 2/10 | In Progress|  |
 | 7. Engagement Engine & Lead Generation | v2.0 | 0/TBD | Not started | - |
