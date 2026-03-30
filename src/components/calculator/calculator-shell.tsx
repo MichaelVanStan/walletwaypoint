@@ -378,6 +378,38 @@ export function CalculatorShell({
               hasPersistedState={!!userState}
               guidanceMessage="Lenders generally approve up to 43% total DTI. Below 36% gives you the most financial flexibility."
             />
+          ) : config.outputs.some((o) => o.row != null) ? (
+            /* Row-grouped layout */
+            <div className="space-y-3">
+              {Object.entries(
+                config.outputs.reduce<Record<number, typeof config.outputs>>((acc, output) => {
+                  const row = output.row ?? 0;
+                  (acc[row] ??= []).push(output);
+                  return acc;
+                }, {})
+              )
+                .sort(([a], [b]) => Number(a) - Number(b))
+                .map(([row, outputs]) => (
+                  <div key={row} className={`grid gap-3 ${
+                    outputs.length === 3 ? 'grid-cols-1 sm:grid-cols-3' :
+                    outputs.length === 2 ? 'grid-cols-1 sm:grid-cols-2' :
+                    'grid-cols-1'
+                  }`}>
+                    {outputs.map((output) => (
+                      <ResultCard
+                        key={output.key}
+                        label={output.label}
+                        value={formatByType(
+                          results.outputs[output.key] ?? 0,
+                          output.format
+                        )}
+                        primary={output.primary}
+                        variant={output.variant}
+                      />
+                    ))}
+                  </div>
+                ))}
+            </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[...config.outputs]
@@ -395,6 +427,7 @@ export function CalculatorShell({
                       output.format
                     )}
                     primary={output.primary}
+                    variant={output.variant}
                     className={output.primary ? "sm:col-span-2 lg:col-span-1" : undefined}
                   />
                 ))}

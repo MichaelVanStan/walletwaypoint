@@ -1,13 +1,14 @@
 import { Suspense } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { calculators, cities } from '#site/content';
+import { calculators, cities, states } from '#site/content';
 import { CalculatorPageClient } from '@/components/calculator/calculator-page-client';
 import { WebAppSchema } from '@/components/seo/web-app-schema';
 import { FaqSchema } from '@/components/seo/faq-schema';
 import { createMetadata } from '@/lib/metadata';
 import { siteConfig } from '@/lib/site-config';
 import { AdBreak } from '@/components/ads/ad-break';
+import { AfterTaxRentContext } from '@/components/calculator/after-tax-rent-context';
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -82,6 +83,12 @@ export default async function CityRentPage({
 
   const relatedCities = getRelatedCities(city.slug);
 
+  // Look up state tax data for after-tax context
+  const stateSlug = city.stateName.toLowerCase().replace(/\s+/g, '-');
+  const stateData = states.find((s) => s.slug === stateSlug);
+  const hasIncomeTax = stateData?.hasIncomeTax ?? true;
+  const estimatedStateRate = stateData?.topRate ?? 5;
+
   const rentRows = [
     { type: 'Studio', rent: city.medianRents.studio },
     { type: '1-Bedroom', rent: city.medianRents.oneBed },
@@ -143,6 +150,20 @@ export default async function CityRentPage({
       >
         <CalculatorPageClient config={rentCalcConfig} />
       </Suspense>
+
+      {/* After-Tax Affordability Context */}
+      <section className="mx-auto max-w-[1080px] px-4 sm:px-6 py-6">
+        <Suspense fallback={null}>
+          <AfterTaxRentContext
+            stateAbbreviation={city.stateAbbreviation}
+            stateName={city.stateName}
+            estimatedStateRate={estimatedStateRate}
+            hasIncomeTax={hasIncomeTax}
+            median1BR={city.medianRents.oneBed}
+            cityName={city.cityName}
+          />
+        </Suspense>
+      </section>
 
       <AdBreak className="mx-auto max-w-[1080px] px-4 sm:px-6" />
 

@@ -136,10 +136,13 @@ const paycheckConfig: CalculatorConfig = {
     { type: 'bar', title: 'Monthly Breakdown', dataKey: 'monthlyBreakdown' },
   ],
   outputs: [
-    { key: 'netPayPerPaycheck', label: 'Net Pay Per Paycheck', format: 'currency', primary: true },
-    { key: 'annualNetPay', label: 'Annual Net Pay', format: 'currency' },
-    { key: 'totalTax', label: 'Total Tax', format: 'currency' },
-    { key: 'effectiveRate', label: 'Effective Tax Rate', format: 'percent' },
+    { key: 'netPayPerPaycheck', label: 'Net Pay Per Paycheck', format: 'currency', primary: true, row: 1 },
+    { key: 'annualNetPay', label: 'Annual Net Pay', format: 'currency', row: 1 },
+    { key: 'federalTax', label: 'Federal Tax', format: 'currency', variant: 'warning' as const, row: 2 },
+    { key: 'stateTax', label: 'State Tax', format: 'currency', variant: 'warning' as const, row: 2 },
+    { key: 'ficaTotal', label: 'FICA (SS + Medicare)', format: 'currency', variant: 'warning' as const, row: 2 },
+    { key: 'totalTax', label: 'Total Tax', format: 'currency', row: 3 },
+    { key: 'effectiveRate', label: 'Effective Tax Rate', format: 'percent', row: 3 },
   ],
   seo: {
     schemaType: 'WebApplication',

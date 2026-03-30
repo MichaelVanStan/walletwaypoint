@@ -33,6 +33,10 @@ export interface OutputConfig {
   label: string;
   format: 'currency' | 'percent' | 'number' | 'years';
   primary?: boolean;
+  /** Visual variant: 'warning' renders with orange accent */
+  variant?: 'default' | 'warning';
+  /** Row grouping — outputs with the same row render together */
+  row?: number;
   /** How to color-code deltas in comparison mode */
   deltaSemantic?: 'lower_is_better' | 'higher_is_better' | 'neutral';
 }
