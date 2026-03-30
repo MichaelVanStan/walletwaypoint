@@ -1,0 +1,47 @@
+slug: wyoming
+name: Wyoming
+abbreviation: WY
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Wyoming Department of Revenue"
+revenueAuthorityUrl: "https://revenue.wyo.gov"
+
+hasIncomeTax: false
+taxType: none
+
+topRate: 0
+numberOfBrackets: 0
+
+propertyTaxRate: 0.55
+salesTaxRate: 5.36
+costOfLivingIndex: 95.3
+
+editorialTitle: "Wyoming Paycheck Calculator 2026"
+editorialDescription: "Calculate your Wyoming take-home pay. WY has no income tax, low property taxes, and moderate sales tax. See how the state's mineral-funded budget benefits residents."
+editorialContent: |
+  Wyoming does not impose a state income tax on any form of personal income — wages, salaries, interest, dividends, capital gains, and retirement income are all exempt from state taxation. Like Alaska, Wyoming funds its state government largely through mineral extraction taxes (primarily on coal, oil, natural gas, and trona) rather than taxing its residents' earnings. This resource-based revenue model allows Wyoming to maintain one of the lowest overall tax burdens of any state.
+
+  Wyoming's sales tax is moderate compared to other no-income-tax states. The state rate is 4.00%, with local additions bringing the average combined rate to approximately 5.36%. Groceries (unprepared food) are exempt from sales tax, as are prescription medications. The relatively low sales tax rate is another advantage for Wyoming residents compared to states like Tennessee (9.55% average) or Washington (9.29% average).
+
+  Property taxes in Wyoming are among the lowest in the nation, with an average effective rate of approximately 0.55%. The state assesses residential property at 9.5% of fair market value, while mineral-producing property is assessed at 100%, which generates substantial revenue from the energy industry without burdening homeowners. Agricultural land is assessed at its productive value. There is no property tax cap, but the low assessment ratio keeps effective rates affordable.
+
+  Wyoming's cost-of-living index is approximately 95, about 5% below the national average. Housing is generally affordable, particularly in cities like Cheyenne, Casper, and Laramie. The Jackson Hole area is a notable exception, with housing costs among the highest in the Mountain West due to its proximity to Grand Teton and Yellowstone national parks and its status as a luxury resort destination.
+
+  Wyoming has no estate tax and no inheritance tax. Combined with no income tax and low property taxes, this makes Wyoming one of the most tax-friendly states in the nation for wealth preservation. Like South Dakota, Wyoming offers favorable trust laws including perpetual trusts and domestic asset protection trusts, attracting substantial trust administration activity from out-of-state residents.
+
+  For remote workers, Wyoming's combination of zero income tax, low cost of living, and high quality of life (abundant outdoor recreation, low crime rates) has made it increasingly attractive. However, the sparse population (roughly 580,000 residents) means limited urban amenities and healthcare access, particularly in rural areas.
+
+faqs:
+  - question: "Does Wyoming have a state income tax?"
+    answer: "No. Wyoming does not tax wages, salaries, interest, dividends, capital gains, or retirement income. The state funds its budget primarily through mineral extraction taxes."
+  - question: "What is Wyoming's sales tax rate?"
+    answer: "The state rate is 4.00%, with local additions bringing the average combined rate to about 5.36%. Groceries and prescriptions are exempt."
+  - question: "Are property taxes low in Wyoming?"
+    answer: "Yes. The average effective rate is about 0.55%, among the lowest nationally. Residential property is assessed at only 9.5% of fair market value."
+  - question: "Is Wyoming affordable to live in?"
+    answer: "Generally yes, with a cost-of-living index about 5% below the national average. Jackson Hole is the main exception, with luxury-level housing costs."
+
+tips:
+  - "If you work remotely for a company in a state with income tax, verify that your employer is not withholding state tax from your paycheck — Wyoming residents owe no state income tax"
+  - "Take advantage of Wyoming's favorable trust laws for estate planning, even if your primary motivation for residency is the income tax benefit"
+  - "Budget for higher energy costs in winter — heating bills in Wyoming's cold climate can be significant despite low overall cost of living"

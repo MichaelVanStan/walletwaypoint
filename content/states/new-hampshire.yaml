@@ -1,0 +1,47 @@
+slug: new-hampshire
+name: New Hampshire
+abbreviation: NH
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / New Hampshire Department of Revenue Administration"
+revenueAuthorityUrl: "https://www.revenue.nh.gov"
+
+hasIncomeTax: false
+taxType: none
+
+topRate: 0
+numberOfBrackets: 0
+
+propertyTaxRate: 1.93
+salesTaxRate: 0.00
+costOfLivingIndex: 112.5
+
+editorialTitle: "New Hampshire Paycheck Calculator 2026"
+editorialDescription: "Calculate your New Hampshire take-home pay. NH has no income tax or sales tax, but property taxes are among the highest in the nation. See how it all balances out."
+editorialContent: |
+  New Hampshire is now a true no-income-tax state for all types of income. The state historically taxed interest and dividend income at 5% through the Interest and Dividends Tax (commonly called the Hall Tax). This tax was phased out over several years and fully eliminated as of January 1, 2025. As of 2026, New Hampshire does not tax wages, salaries, interest, dividends, capital gains, or any other form of personal income.
+
+  New Hampshire is also one of only five states with no statewide sales tax. Combined with the zero income tax, this gives New Hampshire one of the lowest overall tax burdens on consumption and earnings in the country. The state motto, "Live Free or Die," extends meaningfully to its tax philosophy.
+
+  However, New Hampshire compensates with some of the highest property taxes in the nation. The average effective property tax rate is approximately 1.93%, nearly double the national average. For a median-value home, this translates to a significant annual property tax bill. Property taxes fund the majority of local services including schools, police, and infrastructure, since there is no broad-based sales or income tax to supplement revenue.
+
+  The cost-of-living index in New Hampshire is approximately 113, about 13% above the national average. Housing costs are the primary driver, particularly in the southern tier (Nashua, Manchester, and Salem) where many residents commute to Massachusetts for work. Northern New Hampshire and the Lakes Region tend to be more affordable but offer fewer employment opportunities.
+
+  For commuters working in Massachusetts, an important consideration is that Massachusetts generally cannot tax New Hampshire residents on their wages earned in Massachusetts, thanks to an interstate compact. However, if you work for a Massachusetts employer remotely from New Hampshire, tax treatment can become complicated — consulting a tax professional is advisable if your employer has Massachusetts nexus.
+
+  New Hampshire does levy a Business Profits Tax (7.50%) and a Business Enterprise Tax (0.55%) on businesses, which can affect self-employed individuals and small business owners. These taxes apply to net business income, not wages, so W-2 employees are not directly impacted.
+
+faqs:
+  - question: "Does New Hampshire tax wages or salaries?"
+    answer: "No. New Hampshire has no income tax on wages, salaries, or earned income. As of 2025, the Interest and Dividends Tax was also fully eliminated, so no form of personal income is taxed."
+  - question: "Did New Hampshire eliminate the Interest and Dividends Tax?"
+    answer: "Yes. The 5% tax on interest and dividend income was phased out and fully repealed effective January 1, 2025. It does not apply in 2026."
+  - question: "Why are New Hampshire property taxes so high?"
+    answer: "With no sales tax and no income tax, New Hampshire relies heavily on property taxes to fund local schools, police, and services. The average effective rate is about 1.93%."
+  - question: "Does New Hampshire have a sales tax?"
+    answer: "No. New Hampshire has no statewide sales tax on any goods or services. It is one of only five states without a general sales tax."
+
+tips:
+  - "Factor in property taxes when comparing take-home pay to other states — the savings from no income tax may be partially offset by higher property tax bills"
+  - "If you commute to Massachusetts for work, verify that your employer is correctly withholding zero NH state tax, not Massachusetts tax"
+  - "Self-employed residents should plan for the Business Profits Tax and Business Enterprise Tax on net business income"

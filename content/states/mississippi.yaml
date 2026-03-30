@@ -1,0 +1,62 @@
+slug: mississippi
+name: Mississippi
+abbreviation: MS
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Mississippi Department of Revenue"
+revenueAuthorityUrl: "https://www.dor.ms.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 4.70
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 4.70 }
+  married:
+    - { min: 0, max: 999999999, rate: 4.70 }
+  head:
+    - { min: 0, max: 999999999, rate: 4.70 }
+
+standardDeductions:
+  single: 2300
+  married: 4600
+  head: 3400
+
+personalExemptions:
+  single: 6000
+  married: 12000
+  dependent: 1500
+
+topRate: 4.70
+numberOfBrackets: 1
+
+editorialTitle: "Mississippi Paycheck Calculator 2026"
+editorialDescription: "Calculate your Mississippi take-home pay with the 4.70% flat tax. MS has generous personal exemptions and a very low cost of living."
+editorialContent: |
+  Mississippi levies a flat income tax rate of 4.70% for 2026 on taxable income above the exempt threshold. The state completed its transition from a graduated system (which had a 0% bracket on the first $5,000, 4% on $5,001-$10,000, and 5% above $10,000) to a simplified flat rate structure. The rate is scheduled to decrease to 4.40% in 2027, 4.00% in 2028, and potentially lower if revenue targets are met, with the legislature's goal of eventually eliminating the income tax.
+
+  Mississippi provides generous personal exemptions that effectively create a zero-bracket amount for lower-income filers. Single filers receive a $6,000 personal exemption, while married couples filing jointly receive $12,000. Each dependent adds a $1,500 exemption. The standard deduction is $2,300 for single filers and $4,600 for married filing jointly. Combined, a single filer's first $8,300 of income is effectively untaxed.
+
+  Mississippi fully exempts Social Security benefits from state income tax. The state also exempts the first $5,000 of income from each qualified retirement plan (such as pensions, 401(k)s, and IRAs) from state taxation. Military retirement pay is fully exempt from Mississippi income tax.
+
+  The state sales tax rate is 7.00% with no additional local taxes in most areas, providing a simple statewide rate. Groceries are taxed at the full 7% rate, which disproportionately affects lower-income households. Prescription drugs and some medical equipment are exempt.
+
+  Property taxes in Mississippi are among the lowest in the nation, with an average effective rate of approximately 0.65%. Homestead exemption reduces the assessed value by up to $7,500 for owner-occupied properties. The low property tax rate combined with very affordable housing makes Mississippi one of the cheapest states for homeownership.
+
+  Mississippi has the lowest cost-of-living index in the nation at approximately 84, meaning goods and services cost about 16% less than the national average. Housing is particularly affordable — the median home value is among the lowest in the country. Jackson, the capital and largest metro area, offers the most diverse job market, while the Gulf Coast and Oxford (home to Ole Miss) provide alternative lifestyle options.
+
+faqs:
+  - question: "What is Mississippi's income tax rate?"
+    answer: "Mississippi has a flat income tax rate of 4.70% for 2026. The rate is scheduled to decrease to 4.40% in 2027 and 4.00% in 2028."
+  - question: "Does Mississippi tax groceries?"
+    answer: "Yes. Mississippi taxes groceries at the full 7.00% sales tax rate with no reduced rate or exemption."
+  - question: "Does Mississippi tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt. The first $5,000 per qualified retirement plan is also exempt from state tax."
+  - question: "Is Mississippi affordable to live in?"
+    answer: "Yes. Mississippi has the lowest cost of living in the nation at about 84% of the national average. Housing is particularly affordable."
+
+tips:
+  - "Mississippi's income tax rate is on a scheduled decline — plan for increasing take-home pay over the next several years"
+  - "Budget for the 7% sales tax on groceries — this is one of the highest grocery tax rates in the country"
+  - "With the lowest cost of living in the nation, your dollar stretches further in Mississippi than almost anywhere else"

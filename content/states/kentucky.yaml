@@ -1,0 +1,64 @@
+slug: kentucky
+name: Kentucky
+abbreviation: KY
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Kentucky Department of Revenue"
+revenueAuthorityUrl: "https://revenue.ky.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 3.50
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 3.50 }
+  married:
+    - { min: 0, max: 999999999, rate: 3.50 }
+  head:
+    - { min: 0, max: 999999999, rate: 3.50 }
+
+standardDeductions:
+  single: 3160
+  married: 6320
+  head: 3160
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 0
+
+topRate: 3.50
+numberOfBrackets: 1
+
+editorialTitle: "Kentucky Paycheck Calculator 2026"
+editorialDescription: "Calculate your Kentucky take-home pay with the reduced 3.50% flat tax for 2026. Understand local taxes, the standard deduction, and retirement income treatment."
+editorialContent: |
+  Kentucky levies a flat income tax rate of 3.50% for 2026, reduced from 4.00% in 2025. The state has been on a gradual reduction path: the rate was 5.00% in 2022, dropped to 4.50% in 2023, 4.00% in 2024-2025, and now 3.50% for 2026. Further reductions to 3.00% are possible if revenue triggers are met. The ultimate goal under HB 8 (2022) is to eventually eliminate the state income tax entirely.
+
+  Kentucky has a notably small standard deduction compared to most states: $3,160 for single filers and $6,320 for married filing jointly in 2026. The state does not offer personal exemptions. Kentucky uses federal adjusted gross income as the starting point, with Kentucky-specific additions and subtractions applied before the flat rate is assessed.
+
+  Kentucky fully exempts Social Security benefits from state income tax. The state also provides an exclusion for government pensions (federal, state, and local government retirement income), while private pensions are generally taxable. Military retirement pay is fully exempt. Taxpayers 65 and older can exclude up to $31,110 of total income from state tax.
+
+  An important consideration for Kentucky residents is local occupational and net profits taxes. Many cities and counties in Kentucky impose their own occupational license taxes on wages, typically ranging from 0.50% to 2.50%. Louisville Metro's occupational tax is 2.20%, and Lexington-Fayette County's is 2.75%. These local taxes are in addition to the state income tax and can significantly affect take-home pay.
+
+  Kentucky's sales tax rate is a flat 6.00% with no local additions. Groceries and prescription drugs are exempt. The simplicity of a single statewide rate with no local variations makes sales tax straightforward for both consumers and businesses.
+
+  Property taxes in Kentucky are among the lowest in the nation, with an average effective rate of approximately 0.83%. The state offers a homestead exemption for homeowners 65 and older, exempting $46,350 of assessed value from property taxation. Kentucky also has a relatively low median home value, which keeps actual property tax bills affordable for most residents.
+
+  Kentucky's cost-of-living index is approximately 90, about 10% below the national average, making it one of the most affordable states in the nation. Louisville and Lexington offer urban amenities at costs well below comparable cities.
+
+faqs:
+  - question: "What is Kentucky's income tax rate for 2026?"
+    answer: "Kentucky has a flat income tax rate of 3.50% for 2026, reduced from 4.00% in 2025. Further reductions are possible under revenue triggers."
+  - question: "Does Kentucky have local income taxes?"
+    answer: "Yes. Many Kentucky cities and counties impose occupational taxes on wages, ranging from 0.50% to 2.75%. Louisville is 2.20% and Lexington is 2.75%. These are in addition to the state rate."
+  - question: "Does Kentucky tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt. Government pensions and military retirement pay are also exempt. Taxpayers 65+ can exclude up to $31,110 of total income."
+  - question: "What is the standard deduction in Kentucky?"
+    answer: "Kentucky's standard deduction is $3,160 for single filers and $6,320 for married filing jointly — significantly lower than the federal standard deduction."
+
+tips:
+  - "Do not forget to account for local occupational taxes — in Louisville or Lexington, they add 2%+ on top of the state rate"
+  - "Government retirees benefit from Kentucky's full exemption of government pension income from state tax"
+  - "Kentucky's income tax rate is on a downward trajectory toward potential elimination — plan for increasing take-home pay in coming years"

@@ -1,0 +1,62 @@
+slug: iowa
+name: Iowa
+abbreviation: IA
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Iowa Department of Revenue"
+revenueAuthorityUrl: "https://tax.iowa.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 3.80
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 3.80 }
+  married:
+    - { min: 0, max: 999999999, rate: 3.80 }
+  head:
+    - { min: 0, max: 999999999, rate: 3.80 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 40
+  married: 80
+  dependent: 40
+
+topRate: 3.80
+numberOfBrackets: 1
+
+editorialTitle: "Iowa Paycheck Calculator 2026"
+editorialDescription: "Calculate your Iowa take-home pay with the new 3.80% flat tax. Iowa converted from graduated rates to a flat rate in 2026. See how it affects your paycheck."
+editorialContent: |
+  Iowa completed its transition to a flat income tax rate of 3.80% effective January 1, 2026. This is a significant change from the graduated system that was in place through 2022, which had rates ranging from 0.33% to 8.53%. The phased transition began in 2023 under HF 2317, which set an aggressive schedule to reduce and flatten Iowa's income tax over four years. The 3.80% rate represents the final step of this reform.
+
+  Iowa now conforms to the federal standard deduction, providing $14,600 for single filers and $29,200 for married filing jointly. The state retains a small personal exemption credit of $40 per person. Iowa's income tax calculations start with federal adjusted gross income, with certain Iowa-specific adjustments.
+
+  One of the most notable features of Iowa's new tax system is the full exemption of retirement income. Beginning in 2023, Iowa fully exempts Social Security benefits, pension income, 401(k) and IRA distributions, annuity income, and deferred compensation from state income tax for taxpayers 55 and older. This retirement income exclusion is one of the most generous in the nation and makes Iowa particularly attractive for retirees.
+
+  Iowa's sales tax rate is 6.00% at the state level, with local option taxes of up to 1% bringing the average combined rate to approximately 6.94%. Most groceries are exempt from sales tax, though prepared food and certain beverages are taxable. Iowa also levies a use tax on purchases made out of state for use in Iowa.
+
+  Property taxes in Iowa average approximately 1.52%, above the national average. However, Iowa offers a homestead tax credit that provides a flat reduction to the taxable value of owner-occupied primary residences. Agricultural land is assessed at its productivity value rather than market value, which benefits Iowa's large farming community. Additionally, Iowa offers a property tax credit for low-income elderly and disabled homeowners.
+
+  Iowa's cost-of-living index is approximately 90, about 10% below the national average, making it one of the most affordable states in the country. Des Moines offers a metropolitan job market with housing costs well below the national median. The combination of the new flat tax rate, generous retirement income exclusions, and affordable living makes Iowa increasingly competitive for both working professionals and retirees.
+
+faqs:
+  - question: "What is Iowa's income tax rate for 2026?"
+    answer: "Iowa has a flat income tax rate of 3.80% for 2026, completing its transition from the previous graduated system that had rates up to 8.53%."
+  - question: "Does Iowa tax retirement income?"
+    answer: "No. Iowa fully exempts Social Security, pensions, 401(k) and IRA distributions, and other retirement income from state tax for taxpayers 55 and older."
+  - question: "Is Iowa's flat tax permanent?"
+    answer: "Yes. The 3.80% flat rate is the final rate under the 2022 tax reform. There is no further scheduled reduction, though future legislation could change it."
+  - question: "What is the standard deduction in Iowa?"
+    answer: "Iowa now uses federal standard deduction amounts: $14,600 for single filers and $29,200 for married filing jointly."
+
+tips:
+  - "If you are 55 or older, all retirement income is exempt from Iowa state tax — this includes Social Security, pensions, IRAs, and 401(k) distributions"
+  - "Iowa's flat tax transition reduced rates dramatically from a top of 8.53% to 3.80% — your effective rate dropped significantly if you were previously in the top brackets"
+  - "Apply for the homestead tax credit if you own your primary residence — it provides a direct reduction to your property tax bill"

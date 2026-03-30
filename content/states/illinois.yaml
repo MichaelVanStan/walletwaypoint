@@ -1,0 +1,62 @@
+slug: illinois
+name: Illinois
+abbreviation: IL
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Illinois Department of Revenue"
+revenueAuthorityUrl: "https://tax.illinois.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 4.95
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 4.95 }
+  married:
+    - { min: 0, max: 999999999, rate: 4.95 }
+  head:
+    - { min: 0, max: 999999999, rate: 4.95 }
+
+standardDeductions:
+  single: 0
+  married: 0
+  head: 0
+
+personalExemptions:
+  single: 2775
+  married: 5550
+  dependent: 2775
+
+topRate: 4.95
+numberOfBrackets: 1
+
+editorialTitle: "Illinois Paycheck Calculator 2026"
+editorialDescription: "Calculate your Illinois take-home pay with the 4.95% flat tax. Learn about IL's personal exemptions, property taxes, and unique tax structure."
+editorialContent: |
+  Illinois levies a flat income tax rate of 4.95% on all taxable income. The state constitution mandates that any income tax must be applied at a single flat rate — a graduated tax would require a constitutional amendment, which voters rejected in 2020. This means all Illinois taxpayers, regardless of income level, pay the same rate.
+
+  Unlike most states, Illinois does not offer a standard deduction. Instead, the state provides personal exemptions: $2,775 per person for the 2026 tax year. A single filer receives one exemption ($2,775), a married couple filing jointly receives two ($5,550), and each dependent adds another $2,775. These exemptions are subtracted from federal adjusted gross income to arrive at Illinois taxable income. The lack of a standard deduction means that even low-income filers have relatively limited deductions before the flat rate applies.
+
+  Illinois fully exempts retirement income from state taxation. Social Security benefits, pensions (both public and private), 401(k) and IRA distributions, and military retirement pay are all exempt from Illinois income tax. This makes Illinois one of the most generous states for retirees in terms of retirement income taxation, despite its otherwise moderate-to-high tax burden.
+
+  Property taxes in Illinois are among the highest in the nation, with an average effective rate of approximately 2.08%. Cook County (Chicago) and its surrounding collar counties have some of the highest rates, with some areas exceeding 3%. This is a critical consideration for Illinois residents — the high property tax burden often offsets or exceeds the relatively moderate income tax rate, especially for homeowners.
+
+  The state sales tax base rate is 6.25%, with local additions bringing the average combined rate to approximately 8.81%. Groceries are taxed at a reduced state rate of 1% (plus local taxes). Prescription drugs and most medical equipment are exempt. Chicago adds its own local taxes, pushing the combined rate to 10.25% in some parts of the city.
+
+  Illinois's cost-of-living index is approximately 94 statewide, but this masks significant variation. Chicago and its suburbs are above average, while downstate areas like Springfield, Peoria, and Champaign are well below the national average. The combination of high property taxes and above-average costs in the Chicago metro area contributes to Illinois's status as one of the highest outbound migration states in recent years.
+
+faqs:
+  - question: "What is Illinois's income tax rate?"
+    answer: "Illinois has a flat income tax rate of 4.95%. The state constitution requires a single flat rate, and voters rejected a graduated tax amendment in 2020."
+  - question: "Does Illinois have a standard deduction?"
+    answer: "No. Illinois does not offer a standard deduction. It provides personal exemptions of $2,775 per person instead."
+  - question: "Does Illinois tax retirement income?"
+    answer: "No. Illinois fully exempts Social Security, pensions, 401(k) and IRA distributions, and military retirement pay from state income tax."
+  - question: "Why are Illinois property taxes so high?"
+    answer: "Illinois relies heavily on property taxes to fund local services and schools. The average effective rate is about 2.08%, with some areas near Chicago exceeding 3%."
+
+tips:
+  - "All retirement income is exempt from Illinois income tax — if you receive a pension, Social Security, or IRA distributions, none of it is taxed at the state level"
+  - "Factor property taxes heavily into homebuying decisions — the effective rate in Cook County can exceed 2.5%, while downstate areas may be closer to 1.5%"
+  - "Illinois has no standard deduction, so your taxable income starts from federal AGI minus only personal exemptions ($2,775 per person)"

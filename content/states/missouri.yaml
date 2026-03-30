@@ -1,0 +1,62 @@
+slug: missouri
+name: Missouri
+abbreviation: MO
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Missouri Department of Revenue"
+revenueAuthorityUrl: "https://dor.mo.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 4.70
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 4.70 }
+  married:
+    - { min: 0, max: 999999999, rate: 4.70 }
+  head:
+    - { min: 0, max: 999999999, rate: 4.70 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 0
+
+topRate: 4.70
+numberOfBrackets: 1
+
+editorialTitle: "Missouri Paycheck Calculator 2026"
+editorialDescription: "Calculate your Missouri take-home pay with the 4.70% flat tax rate. See how federal deductions, local earnings taxes, and MO's tax structure shape your paycheck."
+editorialContent: |
+  Missouri levies a flat income tax rate of 4.70% for 2026. The state transitioned from a graduated system to a flat rate as part of recent tax reform legislation. Missouri previously had rates ranging from 2.0% to 4.95%, with the top rate declining by 0.10% annually. The 4.70% flat rate applies to all taxable income after the standard deduction.
+
+  Missouri conforms to the federal standard deduction ($14,600 single, $29,200 married filing jointly), simplifying the transition from federal to state tax calculations. The state does not provide additional personal exemptions. Missouri uses federal adjusted gross income as the starting point, with Missouri-specific modifications.
+
+  A notable feature of Missouri's tax landscape is that Kansas City and St. Louis both levy a 1.00% earnings tax on wages earned within city limits. Unlike a true income tax, this applies regardless of residency — if you work in Kansas City or St. Louis, you owe the 1% earnings tax even if you live in a suburb. Some other Missouri municipalities also levy smaller local taxes. These local taxes are deductible on your Missouri state return.
+
+  Missouri partially taxes Social Security benefits, following the federal inclusion rules with a state-level deduction that phases out at higher incomes. Taxpayers with adjusted gross income below $100,000 (single) or $100,000 (married filing jointly) can fully deduct Social Security benefits received. Above these thresholds, the deduction phases out. Public pension income from Missouri state and local government plans is fully exempt from state tax.
+
+  The state sales tax rate is 4.225% with local additions bringing the average combined rate to approximately 8.29%. Groceries are taxed at a reduced state rate of 1.225% (plus local taxes). Missouri also imposes an annual personal property tax on vehicles, boats, and other tangible personal property based on assessed value — a cost that surprises many new residents.
+
+  Property taxes in Missouri average approximately 0.93%, right around the national average. The state offers a homestead preservation credit for elderly homeowners to freeze their property taxes. Missouri's cost-of-living index is approximately 89, about 11% below the national average, with both Kansas City and St. Louis offering very affordable urban living by national standards.
+
+faqs:
+  - question: "What is Missouri's income tax rate?"
+    answer: "Missouri has a flat income tax rate of 4.70% for 2026, applied to all taxable income after the federal standard deduction."
+  - question: "Do Kansas City and St. Louis have earnings taxes?"
+    answer: "Yes. Both cities levy a 1.00% earnings tax on wages earned within city limits, regardless of where you live. This is in addition to the state income tax."
+  - question: "Does Missouri tax Social Security?"
+    answer: "Partially. Taxpayers with AGI below $100,000 can fully deduct Social Security. Above that threshold, the deduction phases out. Missouri public pensions are fully exempt."
+  - question: "What is Missouri's personal property tax?"
+    answer: "Missouri taxes vehicles, boats, and other personal property annually based on assessed value. This tax is billed by your county and is separate from real estate property tax."
+
+tips:
+  - "If you work in Kansas City or St. Louis, account for the 1% earnings tax on top of the state rate when budgeting"
+  - "Budget for the annual personal property tax on vehicles — this can be several hundred dollars per vehicle depending on its value"
+  - "Missouri offers a homestead preservation credit for seniors to freeze property taxes — apply if you are 62 or older"

@@ -1,0 +1,50 @@
+slug: florida
+name: Florida
+abbreviation: FL
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Florida Department of Revenue"
+revenueAuthorityUrl: "https://floridarevenue.com"
+
+hasIncomeTax: false
+taxType: none
+
+topRate: 0
+numberOfBrackets: 0
+
+propertyTaxRate: 0.86
+salesTaxRate: 7.02
+costOfLivingIndex: 102.8
+
+editorialTitle: "Florida Paycheck Calculator 2026"
+editorialDescription: "Calculate your Florida take-home pay. Florida has no state income tax, but learn how sales tax, property tax, and cost of living affect your total financial picture."
+editorialContent: |
+  Florida is one of the most popular no-income-tax states in the country, attracting millions of new residents each decade. With no state tax on wages, salaries, pensions, Social Security, or investment income, your Florida paycheck is subject only to federal income tax and FICA deductions. This makes Florida particularly attractive for retirees and high-income earners looking to maximize take-home pay.
+
+  The state generates revenue primarily through its sales tax system. Florida's base state sales tax rate is 6%, but when county-level discretionary surcharges are included, the average combined rate is approximately 7.02%. Most tangible goods are taxable, though groceries (unprepared food) and prescription medications are exempt. Services are generally not taxed, which is a notable distinction from states that tax a broader service base.
+
+  Property taxes in Florida average about 0.86% of assessed value, below the national average. Florida offers a generous homestead exemption: primary residents can exempt up to $50,000 of their home's assessed value from property tax ($25,000 on the first portion and $25,000 on value between $50,000 and $75,000). Additionally, the Save Our Homes amendment caps annual assessment increases at 3% or the CPI, whichever is lower, protecting long-term homeowners from large tax jumps even as property values rise.
+
+  Florida's cost-of-living index is approximately 103, roughly in line with the national average. However, costs vary dramatically by region. South Florida (Miami, Fort Lauderdale, Palm Beach) has housing costs well above the national median, while areas like Jacksonville, Tampa, and the Panhandle tend to be more affordable. Hurricane insurance is a significant additional expense that does not appear in standard cost-of-living indices — homeowners in coastal areas may pay $3,000 to $10,000 or more annually for windstorm coverage.
+
+  One important planning note for Florida residents: because there is no state income tax, you cannot deduct state income taxes on your federal return. However, you can still deduct state and local property taxes and sales taxes, subject to the $10,000 SALT deduction cap. Many Florida residents benefit from choosing to deduct sales tax instead of income tax, especially those with large purchases like vehicles or boats.
+
+  Florida does not tax estates or inheritances, making it a favorable state for wealth transfer planning. There is no intangibles tax on stocks or bonds, and no franchise tax on businesses organized as LLCs or S-corps beyond the minimum corporate filing fee.
+
+faqs:
+  - question: "Does Florida have a state income tax?"
+    answer: "No. Florida does not tax wages, salaries, pensions, Social Security, or investment income. Your paycheck faces only federal income tax and FICA deductions."
+  - question: "What is Florida's sales tax rate?"
+    answer: "Florida's state sales tax rate is 6%, with county surcharges bringing the average combined rate to about 7.02%. Groceries and prescriptions are exempt."
+  - question: "How does the Florida homestead exemption work?"
+    answer: "Primary residents can exempt up to $50,000 of assessed home value from property taxes. The Save Our Homes amendment also caps annual assessment increases at 3% or CPI."
+  - question: "Does Florida tax Social Security or retirement income?"
+    answer: "No. Florida does not tax any form of income, including Social Security benefits, pension distributions, or IRA withdrawals."
+  - question: "Is Florida a good state for retirees from a tax perspective?"
+    answer: "Yes. No income tax, no estate tax, no inheritance tax, and a generous homestead exemption make Florida one of the most tax-friendly states for retirees."
+
+tips:
+  - "Apply for the homestead exemption on your primary residence by March 1 to reduce your property tax bill"
+  - "Consider deducting sales tax instead of income tax on your federal return — Florida residents often benefit from the sales tax deduction, especially after large purchases"
+  - "Budget for hurricane insurance separately from your mortgage escrow — coastal premiums can be substantial"
+  - "If you are newly establishing Florida residency, file a Declaration of Domicile with your county clerk to formalize your tax residency"

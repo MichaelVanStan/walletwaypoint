@@ -1,0 +1,50 @@
+slug: texas
+name: Texas
+abbreviation: TX
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Texas Comptroller of Public Accounts"
+revenueAuthorityUrl: "https://comptroller.texas.gov"
+
+hasIncomeTax: false
+taxType: none
+
+topRate: 0
+numberOfBrackets: 0
+
+propertyTaxRate: 1.68
+salesTaxRate: 8.20
+costOfLivingIndex: 97.1
+
+editorialTitle: "Texas Paycheck Calculator 2026"
+editorialDescription: "Calculate your Texas take-home pay. Texas has no state income tax, but property taxes are among the highest nationally. See how your total tax picture works."
+editorialContent: |
+  Texas is the largest no-income-tax state by population, and its constitution explicitly prohibits a personal income tax unless approved by voters in a statewide referendum. This means your Texas paycheck is subject only to federal income tax and FICA deductions. For high-income earners, this can translate to thousands of dollars in annual savings compared to states like California or New York.
+
+  The trade-off for zero income tax is one of the highest property tax rates in the country. Texas's average effective property tax rate is approximately 1.68%, ranking among the top ten nationally. On a median-value home in Texas (roughly $240,000), this translates to about $4,032 per year. Property taxes fund local school districts, counties, cities, and special districts, and rates can vary substantially by location — some areas near Houston or Dallas exceed 2.5%.
+
+  Texas offers a homestead exemption for primary residences. School districts must offer a $100,000 homestead exemption, and taxpayers 65 and older (or disabled) receive an additional $10,000 school district exemption plus a tax ceiling freeze. Cities and counties may offer additional optional exemptions. Filing for your homestead exemption is critical — it is not automatic.
+
+  The state sales tax rate is 6.25%, with local jurisdictions adding up to 2%, bringing the maximum combined rate to 8.25% and the average combined rate to approximately 8.20%. Groceries (unprepared food) and prescription drugs are exempt from sales tax. Texas also has periodic sales tax holidays for back-to-school supplies, emergency preparation items, and energy-efficient products.
+
+  Texas's cost-of-living index is approximately 97, slightly below the national average. However, this varies enormously by metro area. Austin has seen rapid cost-of-living increases due to tech industry growth, while San Antonio, El Paso, and many smaller cities remain well below the national average. Houston and Dallas fall in between, with affordable suburbs and more expensive urban cores.
+
+  Texas has no estate tax or inheritance tax. The state does impose a franchise tax (often called the "margin tax") on businesses with revenue exceeding $2.47 million, but this does not affect W-2 employees directly. Self-employed individuals and small business owners with revenue below the threshold are exempt from the franchise tax.
+
+faqs:
+  - question: "Does Texas have a state income tax?"
+    answer: "No. Texas constitutionally prohibits a personal income tax. Your paycheck is subject only to federal income tax and FICA deductions."
+  - question: "Why are Texas property taxes so high?"
+    answer: "With no income tax, Texas relies heavily on property taxes to fund local services and schools. The average effective rate is about 1.68%, among the highest nationally."
+  - question: "How does the Texas homestead exemption work?"
+    answer: "Primary residences get a mandatory $100,000 school district exemption. Homeowners 65+ receive additional exemptions and a school tax ceiling freeze. You must file to receive it — it is not automatic."
+  - question: "Does Texas tax Social Security or retirement income?"
+    answer: "No. Texas does not tax any form of income, including Social Security, pensions, or IRA withdrawals."
+  - question: "Is the cost of living in Texas affordable?"
+    answer: "Overall yes, at about 97% of the national average. But it varies: Austin is above average while San Antonio and El Paso are well below. Property taxes are a significant expense everywhere."
+
+tips:
+  - "File for your homestead exemption immediately after purchasing your home — you must apply through your county appraisal district"
+  - "If you are 65 or older, apply for the senior exemption and tax ceiling freeze to lock your school district taxes"
+  - "Protest your property tax appraisal annually — Texas appraisal districts frequently overvalue properties, and informal hearings often result in reductions"
+  - "Watch for sales tax holiday weekends to save on back-to-school supplies and emergency preparation items"

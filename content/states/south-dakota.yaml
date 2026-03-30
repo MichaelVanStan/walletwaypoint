@@ -1,0 +1,47 @@
+slug: south-dakota
+name: South Dakota
+abbreviation: SD
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / South Dakota Department of Revenue"
+revenueAuthorityUrl: "https://dor.sd.gov"
+
+hasIncomeTax: false
+taxType: none
+
+topRate: 0
+numberOfBrackets: 0
+
+propertyTaxRate: 1.08
+salesTaxRate: 6.40
+costOfLivingIndex: 92.7
+
+editorialTitle: "South Dakota Paycheck Calculator 2026"
+editorialDescription: "Calculate your South Dakota take-home pay. SD has no income tax and a below-average cost of living. Understand sales tax, property tax, and what makes SD unique."
+editorialContent: |
+  South Dakota does not impose a state income tax on any form of personal income — wages, salaries, interest, dividends, capital gains, and retirement income are all tax-free at the state level. Your South Dakota paycheck is subject only to federal income tax and FICA deductions, giving you a larger take-home pay compared to most other states.
+
+  The state generates revenue primarily through sales taxes. South Dakota's state sales tax rate is 4.20%, but with municipal add-ons the average combined rate is approximately 6.40%. Notably, South Dakota is one of the few states that taxes groceries (food for home consumption) at the full sales tax rate, which disproportionately affects lower-income households. There have been ongoing legislative discussions about exempting groceries, but as of 2026 the full rate still applies.
+
+  Property taxes in South Dakota are slightly above the national average, with an effective rate of approximately 1.08%. Agricultural land, which makes up a large portion of the state's real estate, is assessed at its productivity value rather than market value, which benefits farmers and ranchers. Residential property in cities like Sioux Falls and Rapid City is assessed at market value.
+
+  South Dakota's cost-of-living index is approximately 93, about 7% below the national average. Housing, groceries, and utilities are all below-average cost, making it one of the most affordable states in the country. Sioux Falls, the largest city, offers a metropolitan job market with housing costs well below comparable mid-size cities. Rapid City and the Black Hills region attract retirees and remote workers with affordable living and outdoor recreation.
+
+  South Dakota has become a notable destination for trust and estate planning. The state has no estate tax, no inheritance tax, and some of the most favorable trust laws in the country. Dynasty trusts (trusts with no rule against perpetuities), domestic asset protection trusts, and special purpose trusts are all available under South Dakota law, attracting significant out-of-state wealth management activity.
+
+  For remote workers and freelancers, South Dakota's zero income tax combined with its low cost of living creates an attractive financial combination. Self-employed individuals face no state income tax on business profits, though they must still register with the Department of Revenue if they sell taxable goods or services within the state.
+
+faqs:
+  - question: "Does South Dakota have a state income tax?"
+    answer: "No. South Dakota does not tax wages, salaries, capital gains, interest, dividends, or retirement income. Your paycheck is only subject to federal tax and FICA."
+  - question: "Does South Dakota tax groceries?"
+    answer: "Yes. South Dakota is one of the few states that applies sales tax to groceries at the full rate. The average combined sales tax rate is about 6.40%."
+  - question: "What is South Dakota's property tax rate?"
+    answer: "The average effective property tax rate is about 1.08%, slightly above the national average. Agricultural land is assessed at productivity value, not market value."
+  - question: "Is South Dakota a good state for retirement?"
+    answer: "Yes. No income tax, no estate tax, no inheritance tax, and a cost of living about 7% below the national average make it very attractive for retirees."
+
+tips:
+  - "Budget for sales tax on groceries — unlike most states, South Dakota taxes food for home consumption at the full rate"
+  - "If you own agricultural land, verify that it is assessed at productivity value rather than market value for property tax purposes"
+  - "Consider South Dakota's favorable trust laws for long-term estate planning, even if you establish residency primarily for the tax benefits"

@@ -1,0 +1,62 @@
+slug: arizona
+name: Arizona
+abbreviation: AZ
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Arizona Department of Revenue"
+revenueAuthorityUrl: "https://azdor.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 2.50
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 2.50 }
+  married:
+    - { min: 0, max: 999999999, rate: 2.50 }
+  head:
+    - { min: 0, max: 999999999, rate: 2.50 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 100
+
+topRate: 2.50
+numberOfBrackets: 1
+
+editorialTitle: "Arizona Paycheck Calculator 2026"
+editorialDescription: "Calculate your Arizona take-home pay with the 2.50% flat income tax rate. See how federal taxes, FICA, and Arizona's low tax burden affect your paycheck."
+editorialContent: |
+  Arizona adopted a flat income tax rate of 2.50% effective in 2023, replacing a graduated system that previously topped out at 4.50%. This makes Arizona one of the lowest flat-rate income tax states in the country, trailing only North Dakota (1.95%) and Pennsylvania (3.07%) among flat-tax states without zero-bracket floors.
+
+  The 2.50% rate applies to all taxable income regardless of filing status. Arizona conforms substantially to the federal definition of adjusted gross income (AGI) as the starting point for state taxable income. Arizona uses the same standard deduction amounts as the federal system ($14,600 single, $29,200 married filing jointly for 2026), which simplifies filing for most taxpayers.
+
+  Arizona does not tax Social Security benefits. Taxpayers 65 and older can also exclude up to $2,500 of certain retirement income from state taxation. Arizona allows a subtraction for contributions to the state's 529 college savings plan (up to $2,000 single, $4,000 married) and provides tax credits for charitable contributions to qualifying organizations.
+
+  The state's sales tax (Transaction Privilege Tax) has a base rate of 5.60%, with city and county additions bringing the average combined rate to approximately 8.37%. Groceries are exempt from state TPT but may be subject to some municipal taxes depending on the city. Phoenix, for instance, exempts groceries while some smaller municipalities do not.
+
+  Property taxes in Arizona average about 0.62% of assessed value, well below the national average. Arizona uses a two-tier assessment system: full cash value and limited property value. The limited property value cap (5% annual increase) protects homeowners from sharp increases in assessed value, similar to California's Proposition 13 but less restrictive.
+
+  Arizona's cost-of-living index is approximately 105, slightly above the national average. The Phoenix metro area has seen significant housing cost increases in recent years but remains notably more affordable than California coastal cities. Tucson offers a lower cost of living than Phoenix with access to a major university and healthcare hub.
+
+faqs:
+  - question: "What is Arizona's income tax rate?"
+    answer: "Arizona has a flat income tax rate of 2.50% on all taxable income, regardless of filing status or income level."
+  - question: "Does Arizona tax Social Security benefits?"
+    answer: "No. Arizona fully exempts Social Security benefits from state income tax."
+  - question: "What is the standard deduction in Arizona?"
+    answer: "Arizona uses federal standard deduction amounts: $14,600 for single filers and $29,200 for married filing jointly in 2026."
+  - question: "Does Arizona have a sales tax?"
+    answer: "Yes. Arizona's Transaction Privilege Tax has a 5.60% base rate, with local additions averaging about 8.37% combined. Grocery exemptions vary by city."
+
+tips:
+  - "Take advantage of Arizona's tax credit for charitable contributions to qualifying organizations — it directly reduces your tax bill, not just your taxable income"
+  - "If you contribute to an Arizona 529 plan, you can deduct up to $2,000 (single) or $4,000 (married) from state taxable income"
+  - "Arizona's property tax limited value cap (5% annual increase) protects homeowners even in rapidly appreciating markets like Phoenix"

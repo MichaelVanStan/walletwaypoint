@@ -1,0 +1,62 @@
+slug: north-carolina
+name: North Carolina
+abbreviation: NC
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / North Carolina Department of Revenue"
+revenueAuthorityUrl: "https://www.ncdor.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 3.99
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 3.99 }
+  married:
+    - { min: 0, max: 999999999, rate: 3.99 }
+  head:
+    - { min: 0, max: 999999999, rate: 3.99 }
+
+standardDeductions:
+  single: 12750
+  married: 25500
+  head: 19125
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 0
+
+topRate: 3.99
+numberOfBrackets: 1
+
+editorialTitle: "North Carolina Paycheck Calculator 2026"
+editorialDescription: "Calculate your North Carolina take-home pay with the reduced 3.99% flat tax for 2026. See how NC's declining rate and deductions affect your paycheck."
+editorialContent: |
+  North Carolina levies a flat income tax rate of 3.99% for 2026, reduced from 4.25% in 2025. The state has been on a deliberate downward trajectory since adopting a flat tax in 2014 (originally at 5.25%). The rate is scheduled to continue declining under current law, with projections reaching 2.49% by 2030 if revenue targets are met. North Carolina's flat tax transformation is one of the most aggressive state tax reform programs in recent history.
+
+  North Carolina has its own standard deduction amounts: $12,750 for single filers, $25,500 for married filing jointly, and $19,125 for head of household. The state does not provide personal exemptions. Taxable income is calculated starting from federal adjusted gross income, then applying North Carolina-specific adjustments and the standard deduction.
+
+  North Carolina does not tax Social Security benefits, aligning with the majority of states. However, the state does tax other retirement income — 401(k) distributions, IRA withdrawals, and private pensions are all subject to the 3.99% flat rate after the standard deduction. Government pensions from the state of North Carolina (Bailey Settlement) are exempt for retirees who had five years of service as of August 12, 1989.
+
+  The state sales tax rate is 4.75% with local additions typically bringing the combined rate to approximately 6.99%. Groceries are exempt from the state sales tax but may be subject to local sales taxes of up to 2%. Prescription drugs are exempt. North Carolina also imposes a highway use tax (3% of vehicle purchase price, capped at $250) instead of the regular sales tax on motor vehicles.
+
+  Property taxes in North Carolina average about 0.80%, below the national average. Rates vary significantly by county — urban counties like Mecklenburg (Charlotte) and Wake (Raleigh) tend to have higher rates than rural areas. The state offers a homestead circuit breaker for elderly and disabled homeowners with income below $36,500, which defers property taxes exceeding 4% of income.
+
+  North Carolina's cost-of-living index is approximately 96, slightly below the national average. The Research Triangle (Raleigh-Durham) and Charlotte have become major technology and banking hubs, driving cost increases in those metros, but they remain notably more affordable than comparable East Coast cities like Boston, New York, or Washington, D.C.
+
+faqs:
+  - question: "What is North Carolina's income tax rate for 2026?"
+    answer: "North Carolina has a flat rate of 3.99% for 2026, reduced from 4.25% in 2025. The rate is projected to continue declining toward 2.49% by 2030."
+  - question: "Does North Carolina tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt from North Carolina income tax. Other retirement income (401(k), IRA) is taxable at the flat rate."
+  - question: "What is the standard deduction in North Carolina?"
+    answer: "North Carolina uses its own amounts: $12,750 for single filers, $25,500 for married filing jointly, and $19,125 for head of household."
+  - question: "Does North Carolina have a vehicle sales tax?"
+    answer: "North Carolina charges a 3% highway use tax on vehicle purchases, capped at $250, instead of the regular sales tax rate."
+
+tips:
+  - "NC's declining tax rate means your take-home pay should increase slightly each year — adjust your withholding accordingly"
+  - "Take advantage of the $250 cap on vehicle highway use tax — buying a car in NC can save you significant sales tax compared to other states"
+  - "If you are eligible for the Bailey Settlement (NC government pension with 5+ years of service by 1989), your pension is fully exempt from state tax"

@@ -1,0 +1,62 @@
+slug: colorado
+name: Colorado
+abbreviation: CO
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Colorado Department of Revenue"
+revenueAuthorityUrl: "https://tax.colorado.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 4.40
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 4.40 }
+  married:
+    - { min: 0, max: 999999999, rate: 4.40 }
+  head:
+    - { min: 0, max: 999999999, rate: 4.40 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 0
+
+topRate: 4.40
+numberOfBrackets: 1
+
+editorialTitle: "Colorado Paycheck Calculator 2026"
+editorialDescription: "Calculate your Colorado take-home pay with the 4.40% flat tax rate. See how TABOR-driven refunds, federal taxes, and FICA shape your paycheck."
+editorialContent: |
+  Colorado levies a flat income tax rate of 4.40% on all taxable income. The state uses federal taxable income as its starting point, which means Colorado piggybacks on the federal standard deduction ($14,600 single, $29,200 married filing jointly) and federal adjusted gross income calculations. This simplifies filing considerably — if you can calculate your federal taxable income, your Colorado tax is simply 4.40% of that amount, adjusted for Colorado-specific additions and subtractions.
+
+  Colorado's rate has been declining over the past several years. Voter-approved initiatives reduced the rate from 4.63% to 4.55% in 2020, then to 4.40% in 2024. Further reductions are possible depending on revenue triggers under the state's TABOR (Taxpayer's Bill of Rights) amendment.
+
+  TABOR is unique to Colorado and significantly affects the state's tax landscape. It limits revenue growth to the rate of inflation plus population growth. When revenue exceeds the TABOR cap, the excess must be refunded to taxpayers. These TABOR refunds are distributed through various mechanisms, including equal per-filer refunds and temporary sales tax rate reductions. Colorado residents regularly receive TABOR refund checks, typically ranging from $200 to $800 per filer.
+
+  Colorado does not fully exempt Social Security benefits from state tax, but it provides a substantial subtraction for qualifying taxpayers. Taxpayers under 65 can subtract up to $20,000 of Social Security benefits, and taxpayers 65 and older can subtract up to $24,000 of all retirement income including Social Security. This effectively eliminates state tax on Social Security for most recipients.
+
+  The state sales tax rate is 2.90%, one of the lowest base rates in the nation. However, county, city, and special district taxes can push the combined rate considerably higher — Denver's combined rate is approximately 8.81%. Colorado also has a complex system of home-rule cities that collect their own sales taxes, meaning some businesses must file with multiple jurisdictions.
+
+  Property taxes in Colorado average about 0.51%, among the lowest nationally due to the Gallagher Amendment (replaced by Proposition 120 in 2020), which limited residential property assessment rates. However, recent legislation has adjusted assessment rates, and effective rates are gradually increasing in some areas.
+
+faqs:
+  - question: "What is Colorado's income tax rate?"
+    answer: "Colorado has a flat income tax rate of 4.40% on all taxable income, using federal taxable income as the starting point."
+  - question: "What are TABOR refunds?"
+    answer: "Colorado's TABOR amendment caps state revenue growth. When revenue exceeds the cap, the excess is refunded to taxpayers, typically $200-$800 per filer."
+  - question: "Does Colorado tax Social Security?"
+    answer: "Partially. Taxpayers under 65 can subtract up to $20,000 of Social Security from taxable income. Taxpayers 65+ can subtract up to $24,000 of all retirement income."
+  - question: "What is the standard deduction in Colorado?"
+    answer: "Colorado uses federal standard deduction amounts: $14,600 for single filers and $29,200 for married filing jointly."
+
+tips:
+  - "Watch for your annual TABOR refund — it arrives as a check or direct deposit and is separate from your regular tax refund"
+  - "If you are 65 or older, claim the retirement income subtraction of up to $24,000 to significantly reduce your Colorado tax bill"
+  - "Colorado's sales tax is complex — home-rule cities like Denver collect their own sales tax, so online purchases may have different rates than in-store purchases"

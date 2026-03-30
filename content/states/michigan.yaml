@@ -1,0 +1,62 @@
+slug: michigan
+name: Michigan
+abbreviation: MI
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Michigan Department of Treasury"
+revenueAuthorityUrl: "https://www.michigan.gov/treasury"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 4.25
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 4.25 }
+  married:
+    - { min: 0, max: 999999999, rate: 4.25 }
+  head:
+    - { min: 0, max: 999999999, rate: 4.25 }
+
+standardDeductions:
+  single: 0
+  married: 0
+  head: 0
+
+personalExemptions:
+  single: 5600
+  married: 11200
+  dependent: 5600
+
+topRate: 4.25
+numberOfBrackets: 1
+
+editorialTitle: "Michigan Paycheck Calculator 2026"
+editorialDescription: "Calculate your Michigan take-home pay with the 4.25% flat tax. See how personal exemptions, city income taxes, and property tax credits shape your finances."
+editorialContent: |
+  Michigan levies a flat income tax rate of 4.25% on all taxable income. The state uses federal adjusted gross income as the starting point, with Michigan-specific adjustments. Unlike most states, Michigan does not offer a standard deduction. Instead, it provides generous personal exemptions of $5,600 per person for 2026 (indexed for inflation). A family of four would receive $22,400 in personal exemptions before the flat rate applies.
+
+  A distinctive feature of Michigan's tax landscape is that some cities levy their own income taxes on top of the state tax. Detroit has the highest city income tax at 2.40% for residents (1.20% for non-residents working in the city). Grand Rapids charges 1.50% for residents and 0.75% for non-residents. In total, 24 Michigan cities impose local income taxes, though most residents live outside these cities. This makes Michigan similar to Ohio and Pennsylvania in having a layered local income tax system.
+
+  Michigan provides favorable treatment of retirement income, but the rules depend on when you were born. Taxpayers born before 1946 can exempt all pension and retirement income from state tax. Those born between 1946 and 1952 can exempt up to $56,961 (single) of public pension income. Taxpayers born after 1952 receive a smaller exemption. Social Security benefits are not taxed by Michigan.
+
+  The state sales tax rate is 6.00% with no local additions, providing a simple, uniform rate statewide. Groceries and prescription drugs are exempt. Michigan also exempts clothing from sales tax, which is less common — most states tax clothing.
+
+  Property taxes in Michigan average approximately 1.38%, above the national average. However, the state offers several property tax relief programs. The Homestead Property Tax Credit provides a refund of up to $1,700 for qualifying homeowners and renters whose property taxes exceed 3.2% of household income. This credit is particularly valuable for lower-income homeowners and is claimed on the state income tax return.
+
+  Michigan's cost-of-living index is approximately 91, about 9% below the national average. Detroit, Grand Rapids, and Ann Arbor are the major urban centers, with Ann Arbor being notably more expensive due to the University of Michigan. The affordable cost of living, combined with access to manufacturing, healthcare, and automotive industry jobs, makes Michigan competitive for working families.
+
+faqs:
+  - question: "What is Michigan's income tax rate?"
+    answer: "Michigan has a flat income tax rate of 4.25%. There is no standard deduction, but personal exemptions of $5,600 per person are available."
+  - question: "Do any Michigan cities have their own income tax?"
+    answer: "Yes. 24 Michigan cities levy their own income taxes. Detroit charges 2.40% for residents, Grand Rapids charges 1.50%. Most other Michigan residents are not subject to city taxes."
+  - question: "Does Michigan tax Social Security?"
+    answer: "No. Social Security is exempt. Pension taxation depends on birth year: born before 1946 (full exemption), 1946-1952 (partial), after 1952 (limited exemption)."
+  - question: "What is the Homestead Property Tax Credit?"
+    answer: "Michigan refunds property taxes exceeding 3.2% of household income, up to $1,700. Both homeowners and renters can claim this credit on their state tax return."
+
+tips:
+  - "Claim the Homestead Property Tax Credit if your property taxes exceed 3.2% of your household income — renters can claim it too, based on 20% of rent paid"
+  - "If you work in Detroit, Grand Rapids, or another city with a local income tax, factor in the additional 1.5% to 2.4% when planning your budget"
+  - "Michigan does not tax clothing — large clothing purchases can save you 6% compared to most other states"

@@ -1,0 +1,63 @@
+slug: indiana
+name: Indiana
+abbreviation: IN
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Indiana Department of Revenue"
+revenueAuthorityUrl: "https://www.in.gov/dor"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 2.95
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 2.95 }
+  married:
+    - { min: 0, max: 999999999, rate: 2.95 }
+  head:
+    - { min: 0, max: 999999999, rate: 2.95 }
+
+standardDeductions:
+  single: 0
+  married: 0
+  head: 0
+
+personalExemptions:
+  single: 1000
+  married: 2000
+  dependent: 1500
+
+topRate: 2.95
+numberOfBrackets: 1
+
+editorialTitle: "Indiana Paycheck Calculator 2026"
+editorialDescription: "Calculate your Indiana take-home pay with the reduced 2.95% flat tax for 2026. Plus understand county taxes, which add 0.5% to 3% on top of the state rate."
+editorialContent: |
+  Indiana levies a flat state income tax rate of 2.95% for 2026, reduced from 3.05% in 2025. The rate has been on a scheduled decline: it was 3.23% in 2023, 3.15% in 2024, and is set to continue dropping by 0.10% per year until it reaches 2.90% in 2027, subject to revenue triggers. This ongoing reduction makes Indiana one of the lowest flat-rate income tax states in the country.
+
+  A unique feature of Indiana's tax system is the county income tax. In addition to the state rate, nearly every Indiana county levies its own income tax, typically ranging from 0.50% to 3.00%. These county taxes are based on the county where you live (not where you work) and are withheld from your paycheck by your employer. For example, Marion County (Indianapolis) has a county rate of 2.02%, so Indianapolis residents pay an effective combined rate of 4.97%. Allen County (Fort Wayne) is 1.48% combined with the state rate for 4.43%.
+
+  Indiana does not offer a standard deduction in the traditional sense. Instead, the state provides a $1,000 personal exemption for each taxpayer and spouse, plus $1,500 per dependent. Indiana also offers various credits and deductions, including a renter's deduction of up to $3,000 of rent paid (which reduces taxable income, not a dollar-for-dollar credit) and a $500 additional exemption for taxpayers 65 and older.
+
+  Indiana taxes Social Security benefits only to the extent they are included in federal adjusted gross income — since most recipients pay little or no federal tax on Social Security, the practical impact is minimal. Military retirement pay is fully exempt from Indiana income tax.
+
+  The state sales tax is a flat 7.00% with no local additions, making it one of the simplest sales tax structures in the country. Groceries (unprepared food) and prescription drugs are exempt. The 7% rate is relatively high compared to the national average.
+
+  Property taxes in Indiana average about 0.81%, right around the national average. Indiana caps property taxes as a percentage of assessed value: 1% for homesteads, 2% for other residential and agricultural, and 3% for commercial. These caps provide predictable limits on property tax bills regardless of assessment changes.
+
+faqs:
+  - question: "What is Indiana's income tax rate for 2026?"
+    answer: "Indiana's state flat rate is 2.95% for 2026, reduced from 3.05% in 2025. County taxes add an additional 0.50% to 3.00% depending on where you live."
+  - question: "What is the county income tax in Indiana?"
+    answer: "Nearly every Indiana county has its own income tax, based on where you live. Rates range from about 0.50% to 3.00%. Marion County (Indianapolis) is 2.02%. These are withheld from your paycheck."
+  - question: "Does Indiana have a standard deduction?"
+    answer: "No. Indiana provides personal exemptions of $1,000 per taxpayer/spouse and $1,500 per dependent, plus a renter's deduction and other specific credits."
+  - question: "Does Indiana tax Social Security?"
+    answer: "Only to the extent it is included in federal AGI. Most Indiana Social Security recipients pay little or no state tax on benefits. Military retirement pay is fully exempt."
+
+tips:
+  - "Check your county's income tax rate — it can add up to 3% on top of the state rate, significantly affecting your take-home pay"
+  - "If you rent in Indiana, claim the renter's deduction of up to $3,000 of rent paid on your state return"
+  - "Indiana's state rate is scheduled to drop to 2.90% in 2027 — plan for slightly more take-home pay each year"
+  - "Property tax caps (1% for homesteads) provide predictable limits on your property tax bill"

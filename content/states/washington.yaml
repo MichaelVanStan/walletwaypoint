@@ -1,0 +1,48 @@
+slug: washington
+name: Washington
+abbreviation: WA
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Washington State Department of Revenue"
+revenueAuthorityUrl: "https://dor.wa.gov"
+
+hasIncomeTax: false
+taxType: none
+
+topRate: 0
+numberOfBrackets: 0
+
+propertyTaxRate: 0.87
+salesTaxRate: 9.29
+costOfLivingIndex: 110.7
+
+editorialTitle: "Washington Paycheck Calculator 2026"
+editorialDescription: "Calculate your Washington take-home pay. WA has no income tax on wages, but does tax capital gains at 7%. Learn about sales tax, property tax, and cost of living."
+editorialContent: |
+  Washington state does not impose an income tax on wages, salaries, or most forms of personal income. Your paycheck is subject only to federal income tax and FICA deductions. However, Washington is unique among no-income-tax states because it does levy a 7% tax on capital gains exceeding $270,000 for individuals ($540,000 for joint filers). This tax, upheld by the state Supreme Court in 2023, applies to gains from the sale of stocks, bonds, and other capital assets — but not real estate, retirement accounts, or small business interests.
+
+  Washington has one of the highest sales tax rates in the nation. The state rate is 6.50%, but with local add-ons the average combined rate is approximately 9.29%. Seattle's combined rate reaches 10.25%, one of the highest in the country. Groceries are exempt from sales tax, but prepared food, restaurant meals, and most services are taxable. This high sales tax rate is a significant factor in Washington's cost of living.
+
+  Property taxes in Washington average about 0.87% of assessed value, slightly below the national average. The state limits regular property tax levies to 1% of assessed value, with an annual growth cap of 1% plus new construction. Voters can approve special levies for schools, fire districts, and other services that are not subject to the 1% cap. King County (Seattle) tends to have higher effective rates due to voter-approved levies.
+
+  Washington's cost-of-living index is approximately 111, about 11% above the national average. The Seattle metro area drives most of this premium, with housing costs well above average. East of the Cascades, cities like Spokane and the Tri-Cities offer significantly more affordable living. Tacoma and Olympia fall in between, offering proximity to Seattle at lower housing costs.
+
+  Washington is home to major employers like Amazon, Microsoft, Boeing, and Starbucks. The combination of no income tax and a strong tech job market has made the Seattle metro area one of the highest-earning regions in the country. However, the high cost of housing and sales tax partially offset the income tax savings.
+
+  The state has no estate tax exemption below $2.193 million (indexed for inflation), with rates ranging from 10% to 20%. This is a notable consideration for higher-net-worth residents, as the exemption threshold is significantly lower than the federal exemption. Washington is one of only 12 states that imposes its own estate tax.
+
+faqs:
+  - question: "Does Washington have a state income tax?"
+    answer: "Washington does not tax wages or salaries. However, it does impose a 7% tax on long-term capital gains exceeding $270,000 per year (stocks, bonds — not real estate or retirement accounts)."
+  - question: "What is the capital gains tax in Washington?"
+    answer: "Washington taxes capital gains at 7% on gains exceeding $270,000 for individuals ($540,000 joint). Real estate sales, retirement account distributions, and small business dispositions are exempt."
+  - question: "What is Washington's sales tax rate?"
+    answer: "The state rate is 6.50%, with local additions bringing the average combined rate to about 9.29%. Seattle's rate is 10.25%. Groceries are exempt."
+  - question: "Does Washington have an estate tax?"
+    answer: "Yes. Washington imposes an estate tax on estates exceeding $2.193 million, with rates from 10% to 20%. This threshold is lower than the federal exemption."
+
+tips:
+  - "If you live near the Oregon border, purchasing big-ticket items in Oregon (which has no sales tax) can save significant money"
+  - "Plan for the 7% capital gains tax on stock sales exceeding $270,000 — consider tax-loss harvesting and timing of asset sales"
+  - "Shoppers in Seattle face a 10.25% combined sales tax — factor this into large purchases"
+  - "Washington's estate tax threshold is much lower than the federal exemption; consider estate planning if your assets exceed $2 million"

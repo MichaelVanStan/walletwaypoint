@@ -1,0 +1,47 @@
+slug: nevada
+name: Nevada
+abbreviation: NV
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Nevada Department of Taxation"
+revenueAuthorityUrl: "https://tax.nv.gov"
+
+hasIncomeTax: false
+taxType: none
+
+topRate: 0
+numberOfBrackets: 0
+
+propertyTaxRate: 0.55
+salesTaxRate: 8.23
+costOfLivingIndex: 104.2
+
+editorialTitle: "Nevada Paycheck Calculator 2026"
+editorialDescription: "Calculate your Nevada take-home pay. Nevada has no state income tax. Learn how sales taxes, property taxes, and gaming-funded services shape your finances."
+editorialContent: |
+  Nevada does not impose a state income tax on wages, salaries, or any form of personal income. Whether you earn a salary on the Las Vegas Strip, work remotely from Reno, or draw retirement income in Henderson, your paycheck is subject only to federal income tax and FICA deductions. Nevada's constitution explicitly prohibits a personal income tax, making this status especially durable compared to states where it could be changed through legislation alone.
+
+  The state funds its operations largely through gaming taxes, sales taxes, and a Commerce Tax on businesses with gross revenue exceeding $4 million. For individuals, the most noticeable tax is the sales tax. Nevada's statewide base rate is 6.85%, but with county-level add-ons the average combined rate reaches approximately 8.23%. Clark County (Las Vegas) has one of the highest combined rates at 8.375%. Groceries are exempt from sales tax, but most other tangible goods and some services are taxable.
+
+  Property taxes in Nevada are among the lowest in the nation. The average effective property tax rate is roughly 0.55%, well below the national average. Nevada law caps the annual increase in property tax bills: 3% for owner-occupied primary residences and 8% for all other property. This cap applies to the tax bill, not the assessed value, providing meaningful protection for homeowners even in rapidly appreciating housing markets like Las Vegas.
+
+  Nevada's cost-of-living index is approximately 104, slightly above the national average. Housing in the Las Vegas metro area saw significant price increases through 2024 and 2025, though it remains more affordable than California coastal cities. Reno and the Lake Tahoe corridor tend to be more expensive due to limited housing supply and proximity to California markets.
+
+  For remote workers considering Nevada, the state's lack of income tax can produce meaningful savings compared to neighboring California (which has a top rate of 13.30%). However, Nevada does impose a Modified Business Tax on employers based on payroll, which indirectly affects the labor market. Self-employed individuals and freelancers benefit fully from the zero income tax rate with no additional business income taxes at the state level.
+
+  Nevada has no estate tax and no inheritance tax, which combined with the absence of income tax makes it an attractive state for wealth preservation and retirement planning.
+
+faqs:
+  - question: "Does Nevada have a state income tax?"
+    answer: "No. Nevada's constitution prohibits a personal income tax. Your paycheck is subject only to federal income tax and FICA."
+  - question: "What is Nevada's sales tax rate?"
+    answer: "The statewide base rate is 6.85%, with county add-ons bringing the average combined rate to about 8.23%. Clark County (Las Vegas) is 8.375%. Groceries are exempt."
+  - question: "Are Nevada property taxes high?"
+    answer: "No. Nevada has one of the lowest effective property tax rates in the nation at about 0.55%, with a 3% annual cap on tax bill increases for primary residences."
+  - question: "Does Nevada tax retirement income?"
+    answer: "No. Nevada does not tax Social Security, pensions, IRA withdrawals, or any other form of retirement income."
+
+tips:
+  - "Nevada's 3% property tax cap applies to your tax bill, not assessed value — long-term homeowners benefit significantly from this protection"
+  - "If you moved from California, ensure your employer updated withholding to reflect zero state income tax"
+  - "Take advantage of Nevada's lack of income tax to maximize Roth IRA conversions, since there is no state tax on the converted amount"

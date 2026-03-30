@@ -1,0 +1,47 @@
+slug: alaska
+name: Alaska
+abbreviation: AK
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Alaska Department of Revenue"
+revenueAuthorityUrl: "https://tax.alaska.gov"
+
+hasIncomeTax: false
+taxType: none
+
+topRate: 0
+numberOfBrackets: 0
+
+propertyTaxRate: 1.04
+salesTaxRate: 1.76
+costOfLivingIndex: 125.1
+
+editorialTitle: "Alaska Paycheck Calculator 2026"
+editorialDescription: "Calculate your Alaska take-home pay. Alaska has no state income tax, letting you keep more of every paycheck. Learn about the PFD dividend, property taxes, and cost of living."
+editorialContent: |
+  Alaska is one of nine states that does not levy a state income tax on wages, salaries, or investment income. For workers earning a typical salary, this means your state withholding line will always read zero. Your Alaska paycheck only faces federal income tax and FICA deductions (Social Security at 6.2% and Medicare at 1.45%).
+
+  One financial benefit unique to Alaska is the Permanent Fund Dividend (PFD). Every year, eligible residents receive a share of the state's oil wealth through the Alaska Permanent Fund. In recent years the PFD has ranged from roughly $1,100 to $3,200 per person. This dividend is taxable at the federal level but not at the state level, since Alaska has no income tax. Families with multiple eligible members can receive a meaningful boost to annual household income.
+
+  While you avoid state income tax, Alaska residents should plan for a higher cost of living compared to the national average. The cost-of-living index is approximately 125, meaning goods and services cost about 25% more than the U.S. average. Groceries, utilities, and housing in particular tend to be significantly more expensive, especially in remote areas outside Anchorage or Fairbanks.
+
+  Alaska does not have a statewide sales tax, but many local jurisdictions impose their own sales taxes. The average combined local sales tax rate is about 1.76%, though some boroughs charge nothing while others approach 7%. This patchwork of local taxes means your actual sales tax burden depends heavily on where you live and shop.
+
+  Property taxes in Alaska average about 1.04% of assessed home value, close to the national average. However, certain boroughs and municipalities offer senior citizen and disabled veteran property tax exemptions that can substantially reduce or eliminate property tax bills. Anchorage, for example, offers a senior exemption on the first $150,000 of assessed value.
+
+  Because Alaska generates revenue primarily from oil royalties and severance taxes rather than income or statewide sales taxes, residents enjoy a relatively low overall tax burden. However, budget fluctuations tied to oil prices can affect state services. Financial planners recommend that Alaska residents maintain larger emergency funds to account for the higher cost of living and potential service disruptions in remote areas.
+
+faqs:
+  - question: "Does Alaska have a state income tax?"
+    answer: "No. Alaska is one of nine states with no state income tax on wages, salaries, or investment income. Your paycheck is only subject to federal income tax and FICA."
+  - question: "What is the Alaska Permanent Fund Dividend?"
+    answer: "The PFD is an annual payment to eligible Alaska residents from the state's oil wealth fund. Recent dividends have ranged from $1,100 to $3,200 per person. It is taxable at the federal level."
+  - question: "Does Alaska have a sales tax?"
+    answer: "Alaska has no statewide sales tax, but local jurisdictions can impose their own. The average combined local rate is about 1.76%, varying by borough."
+  - question: "Is the cost of living high in Alaska?"
+    answer: "Yes. Alaska's cost-of-living index is roughly 125, meaning expenses are about 25% above the national average, especially for groceries, housing, and utilities."
+
+tips:
+  - "File for your PFD every year — it is free money but requires an annual application by March 31"
+  - "Check whether your borough offers a senior or veteran property tax exemption to reduce housing costs"
+  - "Budget for higher grocery and utility costs, especially if you live outside Anchorage or Fairbanks"

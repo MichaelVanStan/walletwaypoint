@@ -1,0 +1,62 @@
+slug: utah
+name: Utah
+abbreviation: UT
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Utah State Tax Commission"
+revenueAuthorityUrl: "https://tax.utah.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 4.65
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 4.65 }
+  married:
+    - { min: 0, max: 999999999, rate: 4.65 }
+  head:
+    - { min: 0, max: 999999999, rate: 4.65 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 1911
+  married: 1911
+  dependent: 1911
+
+topRate: 4.65
+numberOfBrackets: 1
+
+editorialTitle: "Utah Paycheck Calculator 2026"
+editorialDescription: "Calculate your Utah take-home pay with the 4.65% flat tax. See how Utah's taxpayer tax credit, earmarked income tax, and cost of living affect your paycheck."
+editorialContent: |
+  Utah levies a flat income tax rate of 4.65% on all taxable income. The state uses federal taxable income as the starting point, conforming to the federal standard deduction of $14,600 for single filers and $29,200 for married filing jointly. Utah is unique in that its entire income tax revenue is constitutionally earmarked for public education and children's services — every dollar of state income tax you pay goes directly to schools.
+
+  Utah provides a nonrefundable taxpayer tax credit that functions similarly to a personal exemption. Each taxpayer, spouse, and dependent receives a credit of approximately $1,911 (6% of the federal personal exemption equivalent). This credit phases out at higher incomes, beginning at $16,296 for single filers and $32,591 for married couples. The phase-out means that higher-income taxpayers effectively pay the full 4.65% on all income with no exemption benefit.
+
+  Social Security benefits are partially taxed in Utah, following the federal inclusion rules. However, Utah provides a Social Security benefit credit that effectively offsets state tax on Social Security for taxpayers with modified adjusted gross income below $45,000 (single) or $75,000 (married filing jointly). Above these thresholds, the credit phases out, and benefits become partially taxable.
+
+  Utah's sales tax has a state rate of 4.85% with local additions bringing the average combined rate to approximately 7.19%. Groceries are taxed at a reduced combined rate of approximately 3.00% (1.75% state rate plus local taxes). This reduced grocery rate is a partial exemption — still higher than most states that fully exempt groceries.
+
+  Property taxes in Utah average approximately 0.57%, among the lowest in the nation. The state offers a circuit breaker tax credit for low-income homeowners and renters, as well as a property tax exemption for the primary residence of certain qualifying individuals (blind, disabled, or veteran). Utah's property tax rate, combined with the moderate income tax rate, contributes to a relatively moderate overall tax burden.
+
+  Utah's cost-of-living index is approximately 105, slightly above the national average. The Salt Lake City metro area has seen significant housing cost increases driven by the tech industry (known locally as the "Silicon Slopes"). Provo-Orem and Ogden offer more affordable options within commuting distance of the Wasatch Front job market.
+
+faqs:
+  - question: "What is Utah's income tax rate?"
+    answer: "Utah has a flat income tax rate of 4.65%. All income tax revenue is constitutionally earmarked for public education and children's services."
+  - question: "Does Utah tax Social Security?"
+    answer: "Partially. Utah provides a credit that offsets Social Security tax for incomes below $45,000 (single) or $75,000 (married). Above these thresholds, the credit phases out."
+  - question: "What is the taxpayer tax credit in Utah?"
+    answer: "Each person receives approximately $1,911 as a nonrefundable credit. It phases out at higher incomes, starting at $16,296 (single) or $32,591 (married)."
+  - question: "Does Utah tax groceries?"
+    answer: "Yes, but at a reduced rate. Groceries are taxed at approximately 3.00% combined (1.75% state rate plus local taxes), lower than the full sales tax rate."
+
+tips:
+  - "Utah's income tax goes directly to education — there is no general fund component, which can inform how you think about your tax contribution"
+  - "If your income is below $45,000 (single) or $75,000 (married), claim the Social Security benefit credit to offset state tax on your benefits"
+  - "Housing costs along the Wasatch Front (Salt Lake City, Provo) have risen sharply — consider Ogden or more distant suburbs for affordability"

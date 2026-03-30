@@ -1,0 +1,62 @@
+slug: georgia
+name: Georgia
+abbreviation: GA
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Georgia Department of Revenue"
+revenueAuthorityUrl: "https://dor.georgia.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 5.39
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 5.39 }
+  married:
+    - { min: 0, max: 999999999, rate: 5.39 }
+  head:
+    - { min: 0, max: 999999999, rate: 5.39 }
+
+standardDeductions:
+  single: 12000
+  married: 24000
+  head: 18000
+
+personalExemptions:
+  single: 2700
+  married: 7400
+  dependent: 3000
+
+topRate: 5.39
+numberOfBrackets: 1
+
+editorialTitle: "Georgia Paycheck Calculator 2026"
+editorialDescription: "Calculate your Georgia take-home pay with the 5.39% flat tax. See how personal exemptions, federal taxes, and FICA affect your Georgia paycheck."
+editorialContent: |
+  Georgia transitioned to a flat income tax rate of 5.39% beginning in 2026, replacing the previous graduated system that had rates from 1% to 5.49%. The state legislature passed HB 1015 in 2024, establishing a flat tax with a schedule to gradually reduce the rate by 0.10% per year until it reaches 4.99%, contingent on revenue triggers being met.
+
+  Georgia uses its own standard deduction and personal exemption amounts rather than conforming to federal figures. For 2026, the standard deduction is $12,000 for single filers and $24,000 for married filing jointly. Personal exemptions are $2,700 for single filers, $7,400 for married filers, and $3,000 per dependent. These exemptions provide meaningful tax relief for families with children.
+
+  The state does not tax Social Security benefits. Georgia also allows a retirement income exclusion for taxpayers 62 and older: up to $35,000 per person ($70,000 for married couples filing jointly) of retirement income, including pensions, interest, dividends, capital gains, and rental income, can be excluded from taxable income. Taxpayers 65 and older receive an increased exclusion of up to $65,000 per person.
+
+  Georgia's sales tax has a 4.00% state rate with local additions typically ranging from 3% to 4%, bringing the average combined rate to approximately 7.37%. Most groceries are exempt from the state portion of the sales tax but remain subject to local sales taxes. The distinction matters for budgeting, as a family's grocery bill may still face 3% to 4% in local taxes.
+
+  Property taxes vary significantly by county. The statewide average effective rate is approximately 0.89%. Fulton County (Atlanta) has notably higher effective rates than many rural counties. Georgia offers a homestead exemption that varies by county — typically $2,000 to $10,000 of assessed value is exempt for primary residences, with additional exemptions for seniors.
+
+  Georgia's economy is anchored by Atlanta, which is home to major employers including Delta Air Lines, Coca-Cola, Home Depot, UPS, and a growing tech and film industry. The cost-of-living index is approximately 92, about 8% below the national average, making it one of the more affordable states with access to a major metropolitan job market.
+
+faqs:
+  - question: "What is Georgia's income tax rate in 2026?"
+    answer: "Georgia has a flat income tax rate of 5.39% on all taxable income, effective 2026. This will gradually decrease by 0.10% per year toward a target of 4.99%."
+  - question: "Does Georgia tax Social Security?"
+    answer: "No. Georgia fully excludes Social Security benefits from state income tax."
+  - question: "What is Georgia's retirement income exclusion?"
+    answer: "Taxpayers 62-64 can exclude up to $35,000 per person of retirement income. Taxpayers 65+ can exclude up to $65,000 per person. This includes pensions, interest, dividends, and capital gains."
+  - question: "What is the standard deduction in Georgia?"
+    answer: "Georgia has its own standard deduction: $12,000 for single filers, $24,000 for married filing jointly, and $18,000 for head of household."
+
+tips:
+  - "The flat tax rate is scheduled to decrease by 0.10% per year — plan for slightly lower state withholding in future years"
+  - "If you are 62 or older, claim the retirement income exclusion — it can eliminate state tax on up to $35,000 ($65,000 if 65+) of retirement income"
+  - "Georgia's personal exemptions ($2,700 single, $3,000 per dependent) provide additional savings beyond the standard deduction"

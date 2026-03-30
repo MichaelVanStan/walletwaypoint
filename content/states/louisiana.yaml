@@ -1,0 +1,62 @@
+slug: louisiana
+name: Louisiana
+abbreviation: LA
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Louisiana Department of Revenue"
+revenueAuthorityUrl: "https://revenue.louisiana.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 3.00
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 3.00 }
+  married:
+    - { min: 0, max: 999999999, rate: 3.00 }
+  head:
+    - { min: 0, max: 999999999, rate: 3.00 }
+
+standardDeductions:
+  single: 12500
+  married: 25000
+  head: 12500
+
+personalExemptions:
+  single: 4500
+  married: 9000
+  dependent: 1000
+
+topRate: 3.00
+numberOfBrackets: 1
+
+editorialTitle: "Louisiana Paycheck Calculator 2026"
+editorialDescription: "Calculate your Louisiana take-home pay with the new 3.00% flat tax. LA recently converted from graduated rates. See how exemptions and deductions affect your pay."
+editorialContent: |
+  Louisiana adopted a flat income tax rate of 3.00% effective January 1, 2025, replacing a graduated system with rates of 1.85%, 3.50%, and 4.25%. This reform, passed in the 2024 legislative session alongside a broader tax overhaul, simplified Louisiana's income tax structure while broadening the sales tax base. The 3.00% flat rate is among the lowest in the nation for states with an income tax.
+
+  Louisiana's reformed system includes a standard deduction of $12,500 for single filers and $25,000 for married filing jointly. The state also provides generous personal exemptions: $4,500 per taxpayer ($9,000 for married couples) plus $1,000 per dependent. Combined, a married couple with two children would deduct $25,000 (standard deduction) plus $9,000 (personal exemptions) plus $2,000 (dependents), sheltering $36,000 from the 3.00% rate.
+
+  Louisiana fully exempts Social Security benefits from state income tax. The state also provides an exclusion for federal retirement income and exempts the first $6,000 of annual income from other retirement sources for taxpayers 65 and older. Military retirement pay has been fully exempt from Louisiana income tax since 2022.
+
+  Louisiana's sales tax system is one of the most complex in the nation. The state rate was increased from 4.45% to 5.00% as part of the 2024 tax reform. Parish (county) and city taxes add substantially, with average combined rates reaching approximately 9.56% — among the highest in the country. The tax reform expanded the sales tax base to include more services and digital goods while reducing the income tax rate. Groceries remain exempt from the state portion.
+
+  Property taxes in Louisiana are among the lowest in the nation, with an average effective rate of approximately 0.56%. The homestead exemption shields the first $75,000 of a primary residence's assessed value from parish taxes. With a 10% assessment ratio for residential property, this effectively exempts homes valued up to $750,000 from parish property taxes (though school district and special levies may still apply).
+
+  Louisiana's cost-of-living index is approximately 91, about 9% below the national average. Baton Rouge and New Orleans offer affordable urban living compared to similarly sized cities, though flood insurance and hurricane-related costs are important budget considerations that do not appear in standard cost-of-living measures.
+
+faqs:
+  - question: "What is Louisiana's income tax rate for 2026?"
+    answer: "Louisiana has a flat income tax rate of 3.00%, adopted in 2025 as part of a comprehensive tax reform replacing graduated rates of 1.85% to 4.25%."
+  - question: "Does Louisiana have a high sales tax?"
+    answer: "Yes. Louisiana has one of the highest combined sales tax rates in the nation, averaging about 9.56% when parish and city taxes are included."
+  - question: "Does Louisiana tax Social Security?"
+    answer: "No. Louisiana fully exempts Social Security benefits from state income tax. Taxpayers 65+ also receive an exclusion for the first $6,000 of other retirement income."
+  - question: "What is the homestead exemption in Louisiana?"
+    answer: "Louisiana exempts the first $75,000 of assessed value (which translates to roughly $750,000 in market value due to the 10% assessment ratio) from parish property taxes."
+
+tips:
+  - "Louisiana's tax reform increased sales tax but decreased income tax — adjust your budget for higher costs on purchases but more take-home pay"
+  - "The generous homestead exemption effectively eliminates parish property taxes on most primary residences under $750,000"
+  - "Budget for flood insurance and hurricane insurance — these are essential in many parts of Louisiana and can cost $1,500 to $5,000+ annually"

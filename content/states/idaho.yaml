@@ -1,0 +1,62 @@
+slug: idaho
+name: Idaho
+abbreviation: ID
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Idaho State Tax Commission"
+revenueAuthorityUrl: "https://tax.idaho.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 5.695
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 5.695 }
+  married:
+    - { min: 0, max: 999999999, rate: 5.695 }
+  head:
+    - { min: 0, max: 999999999, rate: 5.695 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 0
+
+topRate: 5.695
+numberOfBrackets: 1
+
+editorialTitle: "Idaho Paycheck Calculator 2026"
+editorialDescription: "Calculate your Idaho take-home pay with the 5.695% flat tax rate. Learn about Idaho's tax structure, grocery tax credit, and cost of living."
+editorialContent: |
+  Idaho levies a flat income tax rate of 5.695% on all taxable income, regardless of filing status. The state moved to a flat tax structure in 2023, replacing a graduated system that previously had rates ranging from 1% to 6.5%. Idaho uses federal taxable income as the starting point for state tax calculations, conforming to the federal standard deduction of $14,600 for single filers and $29,200 for married filing jointly.
+
+  One notable feature of Idaho's tax system is the grocery tax credit. Idaho is one of the few states that taxes groceries (at the full income tax rate through the sales tax), but it offsets this with an annual grocery tax credit. For 2026, the credit is $120 per person for those under 65 and $140 per person for those 65 and older. This credit is available regardless of whether you itemize deductions, and it is refundable — meaning you receive the full credit even if it exceeds your tax liability.
+
+  Idaho does not tax Social Security benefits at the state level. The state also allows a subtraction for certain retirement benefits, including up to $44,316 of qualifying retirement income for taxpayers who meet specific age and income thresholds. This includes military retirement pay, which Idaho fully exempts from state income tax.
+
+  The state sales tax rate is 6.00% with no local additions, making Idaho one of the few states with a uniform statewide sales tax rate. This simplicity is unusual — most states allow local jurisdictions to add their own sales taxes. The 6% rate applies to most goods and services including groceries, offset by the grocery tax credit described above.
+
+  Property taxes in Idaho average approximately 0.63%, below the national average. The state offers a homeowner's property tax exemption that exempts 50% of the value of an owner-occupied residence (up to a maximum amount that adjusts annually). Idaho also offers a property tax reduction program (Circuit Breaker) for qualified low-income homeowners and renters.
+
+  Idaho's cost-of-living index is approximately 97, slightly below the national average. Boise, the state capital and largest city, has seen rapid growth and rising housing costs, though it remains more affordable than Pacific Northwest competitors like Seattle or Portland.
+
+faqs:
+  - question: "What is Idaho's income tax rate?"
+    answer: "Idaho has a flat income tax rate of 5.695% on all taxable income, using federal taxable income as the starting point."
+  - question: "Does Idaho tax groceries?"
+    answer: "Yes. Idaho applies sales tax to groceries at the full 6% rate, but offsets this with an annual grocery tax credit of $120 per person ($140 for those 65+)."
+  - question: "Does Idaho tax Social Security?"
+    answer: "No. Idaho fully exempts Social Security benefits from state income tax. Military retirement pay is also fully exempt."
+  - question: "What is Idaho's standard deduction?"
+    answer: "Idaho uses federal standard deduction amounts: $14,600 for single filers and $29,200 for married filing jointly."
+
+tips:
+  - "Claim the Idaho grocery tax credit on your state return — it is refundable and provides $120 per person ($140 if 65+) regardless of your tax liability"
+  - "Military retirees benefit from Idaho's full exemption of military retirement pay from state income tax"
+  - "Apply for the homeowner's property tax exemption to reduce your property tax bill by up to 50% of your home's assessed value"

@@ -1,0 +1,65 @@
+slug: pennsylvania
+name: Pennsylvania
+abbreviation: PA
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Pennsylvania Department of Revenue"
+revenueAuthorityUrl: "https://www.revenue.pa.gov"
+
+hasIncomeTax: true
+taxType: flat
+flatRate: 3.07
+
+brackets:
+  single:
+    - { min: 0, max: 999999999, rate: 3.07 }
+  married:
+    - { min: 0, max: 999999999, rate: 3.07 }
+  head:
+    - { min: 0, max: 999999999, rate: 3.07 }
+
+standardDeductions:
+  single: 0
+  married: 0
+  head: 0
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 0
+
+topRate: 3.07
+numberOfBrackets: 1
+
+editorialTitle: "Pennsylvania Paycheck Calculator 2026"
+editorialDescription: "Calculate your PA take-home pay with the 3.07% flat tax. PA has no standard deduction but also no tax on retirement income. Plus learn about local earned income taxes."
+editorialContent: |
+  Pennsylvania levies a flat income tax rate of 3.07% on all taxable income, one of the lowest state income tax rates in the nation. The rate has remained at 3.07% since 2004. Pennsylvania is unique in that it offers no standard deduction and no personal exemptions — the 3.07% rate applies to virtually all earned income from dollar one.
+
+  Pennsylvania defines taxable income through eight specific classes of income (compensation, interest, dividends, net business income, net gains from property, rents/royalties/patents, estate/trust income, and gambling/lottery winnings), rather than using federal adjusted gross income as a starting point. This means your Pennsylvania tax calculation can differ significantly from a simple percentage of your federal AGI. Notably, Pennsylvania does not allow deductions for 401(k) contributions on the state return — contributions to employer retirement plans are taxed at the state level, though distributions are not.
+
+  Pennsylvania is exceptionally friendly to retirees. All retirement income is exempt from state income tax, including Social Security, pensions, 401(k) and IRA distributions, and annuity payments. This applies regardless of age or income level. Combined with the low 3.07% rate on earned income, Pennsylvania is one of the most tax-advantaged states for retirees in the country.
+
+  The most significant tax consideration for Pennsylvania workers is the local earned income tax (EIT). Nearly every municipality in Pennsylvania levies an EIT, typically ranging from 1.00% to 3.10%. Philadelphia has the highest local wage tax at 3.75% for residents (3.44% for non-residents working in the city). Pittsburgh's EIT is 3.00%. Combined with the state rate, Philadelphia residents pay 6.82% on wages. Local taxes are often the largest line item on a Pennsylvania paycheck after federal tax.
+
+  Pennsylvania's sales tax rate is 6.00% statewide, with an additional 2% in Philadelphia and 1% in Allegheny County (Pittsburgh). Groceries, clothing, and prescription drugs are exempt — Pennsylvania's clothing exemption is one of the broadest in the nation, making it a destination for retail shopping.
+
+  Property taxes in Pennsylvania average approximately 1.49%, above the national average. Rates vary dramatically by school district — some suburban Philadelphia school districts have effective rates exceeding 2%. The state offers property tax relief through the Property Tax/Rent Rebate Program for seniors, widows/widowers, and people with disabilities.
+
+faqs:
+  - question: "What is Pennsylvania's income tax rate?"
+    answer: "Pennsylvania has a flat income tax rate of 3.07% with no standard deduction and no personal exemptions. The rate applies to all earned income from dollar one."
+  - question: "Does Pennsylvania have local income taxes?"
+    answer: "Yes. Nearly every municipality levies an earned income tax (EIT). Philadelphia charges 3.75% for residents, Pittsburgh charges 3.00%. These are in addition to the state rate."
+  - question: "Does Pennsylvania tax retirement income?"
+    answer: "No. All retirement income — Social Security, pensions, 401(k), IRA distributions — is fully exempt from Pennsylvania state income tax, regardless of age or income."
+  - question: "Are 401(k) contributions deductible on PA state taxes?"
+    answer: "No. Pennsylvania taxes 401(k) contributions in the year they are made, but does not tax the distributions in retirement. This is the opposite of the federal treatment."
+  - question: "Does Pennsylvania tax clothing?"
+    answer: "No. Clothing is exempt from Pennsylvania sales tax, making it one of the best states for retail shopping."
+
+tips:
+  - "Factor local earned income tax heavily into your budget — in Philadelphia, the combined state + local rate is 6.82%"
+  - "Understand that PA taxes 401(k) contributions now but not distributions later — this is the reverse of federal treatment and can affect your retirement planning"
+  - "Pennsylvania exempts clothing from sales tax — large clothing purchases save you 6% (8% in Philadelphia) compared to most states"
+  - "Retirees pay zero state income tax on all retirement income — this is one of PA's most overlooked financial advantages"

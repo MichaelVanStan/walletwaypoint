@@ -1,0 +1,47 @@
+slug: tennessee
+name: Tennessee
+abbreviation: TN
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Tennessee Department of Revenue"
+revenueAuthorityUrl: "https://www.tn.gov/revenue"
+
+hasIncomeTax: false
+taxType: none
+
+topRate: 0
+numberOfBrackets: 0
+
+propertyTaxRate: 0.66
+salesTaxRate: 9.548
+costOfLivingIndex: 93.3
+
+editorialTitle: "Tennessee Paycheck Calculator 2026"
+editorialDescription: "Calculate your Tennessee take-home pay. TN has no income tax but one of the highest sales tax rates. See how property tax and cost of living affect your finances."
+editorialContent: |
+  Tennessee does not levy a state income tax on wages, salaries, or earned income of any kind. The state previously taxed interest and dividend income through the Hall Income Tax at a rate of 1% (after being reduced from 6% over several years), but this tax was fully repealed effective January 1, 2021. As of 2026, Tennessee is a complete no-income-tax state — no wages, no investment income, no capital gains, and no retirement income face state taxation.
+
+  While Tennessee residents enjoy zero income tax, the state has one of the highest sales tax burdens in the country. Tennessee's state sales tax rate is 7.00%, and with local add-ons the average combined rate is approximately 9.55%. This makes it one of the top three highest sales tax states nationally. Groceries are taxed at a reduced state rate of 4.00% (plus local taxes), which still adds a noticeable cost to food budgets compared to states that exempt groceries entirely.
+
+  Property taxes in Tennessee are notably low. The average effective property tax rate is approximately 0.66%, well below the national average. Tennessee uses a classification system for property assessment: residential property is assessed at 25% of appraised value, while commercial and industrial property is assessed at 40%. This classification results in lower effective tax rates for homeowners compared to business properties.
+
+  Tennessee's cost-of-living index is approximately 93, about 7% below the national average. Nashville has seen significant cost increases as the city grew into a major tech and healthcare hub, but it remains more affordable than comparable cities like Austin or Denver. Memphis, Knoxville, and Chattanooga offer even more affordable options with growing job markets.
+
+  For retirees, Tennessee is exceptionally attractive. No tax on Social Security, pensions, 401(k) withdrawals, or IRA distributions, combined with low property taxes and below-average cost of living, makes it one of the top retirement destinations in the Southeast. The state also has no estate tax or inheritance tax.
+
+  Tennessee levies a franchise and excise tax on businesses (6.5% excise on net earnings, 0.25% franchise on net worth), but this does not directly affect W-2 employees. Self-employed individuals operating as sole proprietors are generally not subject to the excise tax, though those organized as LLCs or corporations may be.
+
+faqs:
+  - question: "Does Tennessee have an income tax?"
+    answer: "No. Tennessee fully repealed its last income tax (the Hall Tax on interest and dividends) in 2021. No wages, investment income, or retirement income is taxed at the state level."
+  - question: "What is Tennessee's sales tax rate?"
+    answer: "Tennessee's state rate is 7.00%, with local additions bringing the average combined rate to about 9.55% — one of the highest in the nation. Groceries are taxed at a reduced 4.00% state rate."
+  - question: "Are Tennessee property taxes low?"
+    answer: "Yes. The average effective rate is about 0.66%, well below the national average. Residential property is assessed at 25% of appraised value."
+  - question: "Does Tennessee tax Social Security or pensions?"
+    answer: "No. Tennessee does not tax Social Security, pensions, 401(k) withdrawals, IRA distributions, or any other form of income."
+
+tips:
+  - "Be prepared for high sales tax on purchases — at nearly 9.55% combined, large purchases like appliances or vehicles carry a significant tax cost"
+  - "Groceries are taxed at a reduced rate (4% state) but still add up — factor this into your food budget"
+  - "Nashville's cost of living is rising faster than the state average; consider Knoxville or Chattanooga for more affordable urban living"
