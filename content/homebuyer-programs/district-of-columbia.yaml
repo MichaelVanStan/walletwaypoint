@@ -1,0 +1,65 @@
+slug: district-of-columbia
+stateName: District of Columbia
+stateAbbreviation: DC
+programs:
+  - name: "DC Open Doors Program"
+    adminAgency: "DC Housing Finance Agency (DCHFA)"
+    assistanceType: "Down payment and closing cost assistance"
+    amount: "Up to 3.5% of the purchase price as a deferred second mortgage"
+    incomeLimits: "Must not exceed DC income limits (varies by household size, up to $190,000+)"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.dchfa.org/homebuyers/"
+  - name: "Home Purchase Assistance Program (HPAP)"
+    adminAgency: "DC Housing Finance Agency (DCHFA)"
+    assistanceType: "Interest-free loan and closing cost assistance"
+    amount: "Up to $202,000 in interest-free loan based on income and household size"
+    incomeLimits: "Must not exceed 80% of area median income for maximum benefit"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.dchfa.org/homebuyers/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "District of Columbia First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore District of Columbia's homebuyer assistance programs including DC Open Doors Program and Home Purchase Assistance Program (HPAP). Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  District of Columbia's housing market offers opportunities for first-time buyers, with a median home price of approximately $650,000. The DC Housing Finance Agency (DCHFA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The DC Open Doors Program is a dc housing finance agency's key offering for first-time buyers, providing up to 3.5% of the purchase price as a deferred second mortgage. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Home Purchase Assistance Program (HPAP) extends additional support through up to $202,000 in interest-free loan based on income and household size. DC has a graduated income tax up to 10.75%. Property taxes are relatively moderate for the area at about 0.56%. The HPAP program is one of the most generous in the nation, with up to $202,000 for very low income buyers.
+
+  Federal programs complement state offerings in District of Columbia. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near multiple military installations. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of District of Columbia.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in District of Columbia?"
+    answer: "District of Columbia offers programs through the DC Housing Finance Agency (DCHFA), including the DC Open Doors Program and Home Purchase Assistance Program (HPAP). Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for District of Columbia homebuyer assistance?"
+    answer: "Income limits vary by program and county. The DC Open Doors Program requires must not exceed dc income limits (varies by household size, up to $190,000+). Check the DC Housing Finance Agency website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in District of Columbia?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

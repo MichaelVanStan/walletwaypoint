@@ -1,0 +1,65 @@
+slug: washington
+stateName: Washington
+stateAbbreviation: WA
+programs:
+  - name: "Home Advantage DPA"
+    adminAgency: "Washington State Housing Finance Commission (WSHFC)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to 5% of the loan amount as a 0% deferred second mortgage (due on sale or refinance)"
+    incomeLimits: "Must not exceed WSHFC income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.wshfc.org/buyers/"
+  - name: "House Key Opportunity Program"
+    adminAgency: "Washington State Housing Finance Commission (WSHFC)"
+    assistanceType: "Below-market rate mortgage with DPA"
+    amount: "Below-market rate first mortgage with up to 4% in DPA"
+    incomeLimits: "Income limits apply; first-time buyers only"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.wshfc.org/buyers/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Washington First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Washington's homebuyer assistance programs including Home Advantage DPA and House Key Opportunity Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Washington's housing market offers opportunities for first-time buyers, with a median home price of approximately $570,000. The Washington State Housing Finance Commission (WSHFC) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Home Advantage DPA is a washington state housing finance commission's key offering for first-time buyers, providing up to 5% of the loan amount as a 0% deferred second mortgage (due on sale or refinance). This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The House Key Opportunity Program extends additional support through below-market rate first mortgage with up to 4% in dpa. Washington has no state income tax (though a 7% capital gains tax on gains over $270K was enacted). Property taxes average about 0.93%. WSHFC programs are essential in the high-cost Seattle metro area.
+
+  Federal programs complement state offerings in Washington. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Joint Base Lewis-McChord, Naval Base Kitsap. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Washington.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Washington?"
+    answer: "Washington offers programs through the Washington State Housing Finance Commission (WSHFC), including the Home Advantage DPA and House Key Opportunity Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Washington homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Home Advantage DPA requires must not exceed wshfc income limits. Check the Washington State Housing Finance Commission website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Washington?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

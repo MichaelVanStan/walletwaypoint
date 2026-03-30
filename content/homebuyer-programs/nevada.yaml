@@ -1,0 +1,65 @@
+slug: nevada
+stateName: Nevada
+stateAbbreviation: NV
+programs:
+  - name: "Home Is Possible (HIP) DPA"
+    adminAgency: "Nevada Housing Division (NHD)"
+    assistanceType: "Forgivable down payment assistance"
+    amount: "Up to 4% of the loan amount as a forgivable second mortgage (3-year forgiveness)"
+    incomeLimits: "Must not exceed $105,000 for most areas"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://housing.nv.gov/programs/Home_Is_Possible/"
+  - name: "Home Is Possible for Teachers"
+    adminAgency: "Nevada Housing Division (NHD)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to $7,500 as a forgivable second mortgage for licensed educators"
+    incomeLimits: "Must be a licensed teacher in Nevada"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://housing.nv.gov/programs/Home_Is_Possible/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Nevada First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Nevada's homebuyer assistance programs including Home Is Possible (HIP) DPA and Home Is Possible for Teachers. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Nevada's housing market offers opportunities for first-time buyers, with a median home price of approximately $450,000. The Nevada Housing Division (NHD) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Home Is Possible (HIP) DPA is a nevada housing division's key offering for first-time buyers, providing up to 4% of the loan amount as a forgivable second mortgage (3-year forgiveness). This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Home Is Possible for Teachers extends additional support through up to $7,500 as a forgivable second mortgage for licensed educators. Nevada has no state income tax, keeping more take-home pay available for housing costs. Property taxes average about 0.59%. The Home Is Possible program provides essential assistance in the Las Vegas and Reno markets.
+
+  Federal programs complement state offerings in Nevada. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Nellis Air Force Base, Creech Air Force Base. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Nevada.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Nevada?"
+    answer: "Nevada offers programs through the Nevada Housing Division (NHD), including the Home Is Possible (HIP) DPA and Home Is Possible for Teachers. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Nevada homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Home Is Possible (HIP) DPA requires must not exceed $105,000 for most areas. Check the Nevada Housing Division website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Nevada?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

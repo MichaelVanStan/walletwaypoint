@@ -1,0 +1,65 @@
+slug: louisiana
+stateName: Louisiana
+stateAbbreviation: LA
+programs:
+  - name: "Market Rate GNMA Program"
+    adminAgency: "Louisiana Housing Corporation (LHC)"
+    assistanceType: "Below-market rate mortgage with DPA"
+    amount: "Below-market rate 30-year fixed mortgage with up to 4% in DPA as a soft second"
+    incomeLimits: "Must not exceed LHC income limits by parish"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.lhc.la.gov/homebuyer-programs"
+  - name: "LHC Mortgage Revenue Bond Program"
+    adminAgency: "Louisiana Housing Corporation (LHC)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to $6,000 as a forgivable soft second mortgage"
+    incomeLimits: "Income limits apply"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.lhc.la.gov/homebuyer-programs"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Louisiana First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Louisiana's homebuyer assistance programs including Market Rate GNMA Program and LHC Mortgage Revenue Bond Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Louisiana's housing market offers opportunities for first-time buyers, with a median home price of approximately $200,000. The Louisiana Housing Corporation (LHC) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Market Rate GNMA Program is a louisiana housing corporation's key offering for first-time buyers, providing below-market rate 30-year fixed mortgage with up to 4% in dpa as a soft second. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The LHC Mortgage Revenue Bond Program extends additional support through up to $6,000 as a forgivable soft second mortgage. Louisiana has a graduated income tax from 1.85% to 4.25%. Property taxes average about 0.56%, among the lowest in the South. Low property taxes combined with affordable home prices make Louisiana one of the most accessible markets.
+
+  Federal programs complement state offerings in Louisiana. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Barksdale Air Force Base, Fort Johnson. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Louisiana.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Louisiana?"
+    answer: "Louisiana offers programs through the Louisiana Housing Corporation (LHC), including the Market Rate GNMA Program and LHC Mortgage Revenue Bond Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Louisiana homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Market Rate GNMA Program requires must not exceed lhc income limits by parish. Check the Louisiana Housing Corporation website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Louisiana?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

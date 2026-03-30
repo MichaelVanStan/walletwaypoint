@@ -1,0 +1,65 @@
+slug: texas
+stateName: Texas
+stateAbbreviation: TX
+programs:
+  - name: "My First Texas Home Program"
+    adminAgency: "Texas Department of Housing and Community Affairs (TDHCA)"
+    assistanceType: "Below-market rate mortgage with DPA"
+    amount: "Below-market rate 30-year fixed mortgage with up to 5% of loan amount in DPA as a forgivable second lien"
+    incomeLimits: "Must not exceed TDHCA income limits (varies by county)"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.tdhca.state.tx.us/homeownership/"
+  - name: "My Choice Texas Home"
+    adminAgency: "Texas Department of Housing and Community Affairs (TDHCA)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to 5% of the loan amount as DPA (available to repeat buyers)"
+    incomeLimits: "Income limits apply"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.tdhca.state.tx.us/homeownership/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Texas First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Texas's homebuyer assistance programs including My First Texas Home Program and My Choice Texas Home. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Texas's housing market offers opportunities for first-time buyers, with a median home price of approximately $300,000. The Texas Department of Housing and Community Affairs (TDHCA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The My First Texas Home Program is a texas department of housing and community affairs's key offering for first-time buyers, providing below-market rate 30-year fixed mortgage with up to 5% of loan amount in dpa as a forgivable second lien. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The My Choice Texas Home extends additional support through up to 5% of the loan amount as dpa (available to repeat buyers). Texas has no state income tax. However, property taxes are among the highest nationally at about 1.68%. TDHCA programs with up to 5% forgivable DPA help offset high property tax burdens.
+
+  Federal programs complement state offerings in Texas. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Fort Cavazos, Joint Base San Antonio, Fort Bliss. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Texas.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Texas?"
+    answer: "Texas offers programs through the Texas Department of Housing and Community Affairs (TDHCA), including the My First Texas Home Program and My Choice Texas Home. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Texas homebuyer assistance?"
+    answer: "Income limits vary by program and county. The My First Texas Home Program requires must not exceed tdhca income limits (varies by county). Check the Texas Department of Housing and Community Affairs website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Texas?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

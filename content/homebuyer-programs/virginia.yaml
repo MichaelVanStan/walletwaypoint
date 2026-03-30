@@ -1,0 +1,65 @@
+slug: virginia
+stateName: Virginia
+stateAbbreviation: VA
+programs:
+  - name: "Virginia Housing Down Payment Assistance Grant"
+    adminAgency: "Virginia Housing"
+    assistanceType: "Grant"
+    amount: "Up to 2.5% of the purchase price as a non-repayable grant"
+    incomeLimits: "Must not exceed Virginia Housing income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.virginiahousing.com/homebuyers"
+  - name: "Closing Cost Assistance Grant"
+    adminAgency: "Virginia Housing"
+    assistanceType: "Grant"
+    amount: "Up to 2% of the purchase price as a non-repayable grant for closing costs"
+    incomeLimits: "Income limits apply; available with Virginia Housing first mortgage"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.virginiahousing.com/homebuyers"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Virginia First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Virginia's homebuyer assistance programs including Virginia Housing Down Payment Assistance Grant and Closing Cost Assistance Grant. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Virginia's housing market offers opportunities for first-time buyers, with a median home price of approximately $380,000. The Virginia Housing provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Virginia Housing Down Payment Assistance Grant is a virginia housing's key offering for first-time buyers, providing up to 2.5% of the purchase price as a non-repayable grant. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Closing Cost Assistance Grant extends additional support through up to 2% of the purchase price as a non-repayable grant for closing costs. Virginia has a graduated income tax from 2% to 5.75%. Property taxes average about 0.82%. Virginia Housing offers unique stacking of DPA and closing cost grants.
+
+  Federal programs complement state offerings in Virginia. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Joint Base Langley-Eustis, Naval Station Norfolk, Fort Barfoot. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Virginia.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Virginia?"
+    answer: "Virginia offers programs through the Virginia Housing, including the Virginia Housing Down Payment Assistance Grant and Closing Cost Assistance Grant. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Virginia homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Virginia Housing Down Payment Assistance Grant requires must not exceed virginia housing income limits. Check the Virginia Housing website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Virginia?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

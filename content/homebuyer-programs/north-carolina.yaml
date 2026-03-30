@@ -1,0 +1,65 @@
+slug: north-carolina
+stateName: North Carolina
+stateAbbreviation: NC
+programs:
+  - name: "NC Home Advantage Mortgage"
+    adminAgency: "North Carolina Housing Finance Agency (NCHFA)"
+    assistanceType: "Below-market rate mortgage with DPA"
+    amount: "Below-market rate 30-year fixed mortgage with up to 5% of loan amount in DPA"
+    incomeLimits: "Must not exceed $125,000"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.nchfa.com/homebuyers"
+  - name: "NC 1st Home Advantage Down Payment"
+    adminAgency: "North Carolina Housing Finance Agency (NCHFA)"
+    assistanceType: "Forgivable down payment assistance"
+    amount: "Up to $15,000 as a forgivable second mortgage (forgiven after 15 years)"
+    incomeLimits: "Must not exceed $125,000; first-time buyers only"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.nchfa.com/homebuyers"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "North Carolina First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore North Carolina's homebuyer assistance programs including NC Home Advantage Mortgage and NC 1st Home Advantage Down Payment. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  North Carolina's housing market offers opportunities for first-time buyers, with a median home price of approximately $340,000. The North Carolina Housing Finance Agency (NCHFA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The NC Home Advantage Mortgage is a north carolina housing finance agency's key offering for first-time buyers, providing below-market rate 30-year fixed mortgage with up to 5% of loan amount in dpa. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The NC 1st Home Advantage Down Payment extends additional support through up to $15,000 as a forgivable second mortgage (forgiven after 15 years). North Carolina has a flat income tax of 3.99% (2026). Property taxes average about 0.80%. NCHFA offers generous DPA up to $15,000 for first-time buyers.
+
+  Federal programs complement state offerings in North Carolina. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Fort Liberty (formerly Bragg), Camp Lejeune, multiple bases. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of North Carolina.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in North Carolina?"
+    answer: "North Carolina offers programs through the North Carolina Housing Finance Agency (NCHFA), including the NC Home Advantage Mortgage and NC 1st Home Advantage Down Payment. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for North Carolina homebuyer assistance?"
+    answer: "Income limits vary by program and county. The NC Home Advantage Mortgage requires must not exceed $125,000. Check the North Carolina Housing Finance Agency website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in North Carolina?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

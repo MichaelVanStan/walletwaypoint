@@ -1,0 +1,65 @@
+slug: utah
+stateName: Utah
+stateAbbreviation: UT
+programs:
+  - name: "FirstHome Loan Program"
+    adminAgency: "Utah Housing Corporation (UHC)"
+    assistanceType: "Below-market rate mortgage with DPA"
+    amount: "Below-market rate first mortgage with up to $10,000 in DPA as a second mortgage"
+    incomeLimits: "Must not exceed UHC income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://utahhousingcorp.org/homebuyers/"
+  - name: "Score Loan Program"
+    adminAgency: "Utah Housing Corporation (UHC)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to 4% of the loan amount as a second mortgage"
+    incomeLimits: "Income limits apply; available to buyers with credit scores 620+"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://utahhousingcorp.org/homebuyers/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Utah First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Utah's homebuyer assistance programs including FirstHome Loan Program and Score Loan Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Utah's housing market offers opportunities for first-time buyers, with a median home price of approximately $500,000. The Utah Housing Corporation (UHC) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The FirstHome Loan Program is an utah housing corporation's key offering for first-time buyers, providing below-market rate first mortgage with up to $10,000 in dpa as a second mortgage. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Score Loan Program extends additional support through up to 4% of the loan amount as a second mortgage. Utah has a flat income tax of 4.55%. Property taxes average about 0.58%. Despite rising home prices, UHC programs provide essential DPA up to $10,000.
+
+  Federal programs complement state offerings in Utah. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Hill Air Force Base, Dugway Proving Ground. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Utah.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Utah?"
+    answer: "Utah offers programs through the Utah Housing Corporation (UHC), including the FirstHome Loan Program and Score Loan Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Utah homebuyer assistance?"
+    answer: "Income limits vary by program and county. The FirstHome Loan Program requires must not exceed uhc income limits. Check the Utah Housing Corporation website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Utah?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"
