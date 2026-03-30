@@ -38,7 +38,7 @@ Requirements for v2.0 release. Each maps to roadmap phases.
 - [ ] **PSEO-07**: User can access city-specific rent affordability calculators for top 25 metro areas at /calculators/rent-affordability/[city]
 - [ ] **PSEO-08**: Each city rent page includes city-specific median rent data and local cost context
 - [ ] **PSEO-09**: Sitemap is split into multiple sitemaps to handle 200+ URLs efficiently
-- [ ] **PSEO-10**: Programmatic pages use ISR with revalidation to manage build times at scale
+- [x] **PSEO-10**: Programmatic pages use ISR with revalidation to manage build times at scale
 
 ### Life-Stage Hubs
 
@@ -171,7 +171,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PSEO-07 | Phase 6 | Pending |
 | PSEO-08 | Phase 6 | Pending |
 | PSEO-09 | Phase 6 | Pending |
-| PSEO-10 | Phase 6 | Pending |
+| PSEO-10 | Phase 6 | Complete |
 | HUB-01 | Phase 6 | Pending |
 | HUB-02 | Phase 6 | Pending |
 | HUB-03 | Phase 6 | Pending |
