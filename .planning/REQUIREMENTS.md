@@ -29,8 +29,8 @@ Requirements for v2.0 release. Each maps to roadmap phases.
 
 ### Programmatic SEO
 
-- [ ] **PSEO-01**: User can access a state-specific paycheck calculator page for each of 51 states/DC at /calculators/paycheck/[state]
-- [ ] **PSEO-02**: Each state paycheck page has unique bracket tables, 300+ words of state-specific editorial content, unique FAQs, and state-specific tips
+- [x] **PSEO-01**: User can access a state-specific paycheck calculator page for each of 51 states/DC at /calculators/paycheck/[state]
+- [x] **PSEO-02**: Each state paycheck page has unique bracket tables, 300+ words of state-specific editorial content, unique FAQs, and state-specific tips
 - [ ] **PSEO-03**: User can access state-by-state income tax rate guide pages at /guides/state-taxes/[state]
 - [ ] **PSEO-04**: Each state tax guide has state-specific brackets, rates, deduction rules, and links to state revenue authority
 - [ ] **PSEO-05**: User can access first-time homebuyer program guides by state at /guides/first-time-buyer-programs/[state]
@@ -162,8 +162,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TAX-02 | Phase 6 | Complete |
 | TAX-03 | Phase 6 | Complete |
 | TAX-04 | Phase 6 | Complete |
-| PSEO-01 | Phase 6 | Pending |
-| PSEO-02 | Phase 6 | Pending |
+| PSEO-01 | Phase 6 | Complete |
+| PSEO-02 | Phase 6 | Complete |
 | PSEO-03 | Phase 6 | Pending |
 | PSEO-04 | Phase 6 | Pending |
 | PSEO-05 | Phase 6 | Pending |

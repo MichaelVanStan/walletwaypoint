@@ -73,14 +73,14 @@ Plans:
 
 Plans:
 - [x] 06-01-PLAN.md — Tax engine refactor + state data types + Velite schema extensions
-- [ ] 06-02-PLAN.md — 51 state tax YAML data files (all 50 states + DC)
+- [x] 06-02-PLAN.md — 51 state tax YAML data files (all 50 states + DC)
 - [x] 06-03-PLAN.md — Paycheck calculator math module + main page + state persistence hook
-- [ ] 06-04-PLAN.md — 51 state-specific paycheck calculator pages + BracketTable component
+- [x] 06-04-PLAN.md — 51 state-specific paycheck calculator pages + BracketTable component
 - [ ] 06-05-PLAN.md — State indicator badge + home affordability comparison table redesign
 - [ ] 06-06-PLAN.md — State tax guides + homebuyer program guides (102 programmatic pages)
 - [ ] 06-07-PLAN.md — 25 city rent calculator pages + city YAML data
-- [ ] 06-08-PLAN.md — 4 new life-stage hubs + 8 hub guides + navigation update
-- [ ] 06-09-PLAN.md — 4 calculator-paired educational guides
+- [x] 06-08-PLAN.md — 4 new life-stage hubs + 8 hub guides + navigation update
+- [x] 06-09-PLAN.md — 4 calculator-paired educational guides
 - [ ] 06-10-PLAN.md — Sitemap split + listicle index page + route conflict resolution
 
 **UI hint**: yes
@@ -109,5 +109,5 @@ Phases execute in numeric order: 5 -> 5.1 -> 5.2 -> 6 -> 6.1 -> 7
 | 3. Content System | v1.0 | 7/7 | Complete | 2026-03-26 |
 | 4. Comparison & Affiliate | v1.0 | 5/5 | Complete | 2026-03-27 |
 | 5. Content Volume & Revenue Foundation | v2.0 | 9/9 | Complete | 2026-03-30 |
-| 6. Programmatic SEO & Life-Stage Hubs | v2.0 | 2/10 | In Progress|  |
+| 6. Programmatic SEO & Life-Stage Hubs | v2.0 | 6/10 | In Progress|  |
 | 7. Engagement Engine & Lead Generation | v2.0 | 0/TBD | Not started | - |
