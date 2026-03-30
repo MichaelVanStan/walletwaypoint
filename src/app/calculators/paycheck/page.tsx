@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import Link from 'next/link';
 import { CalculatorPageClient } from '@/components/calculator/calculator-page-client';
 import { WebAppSchema } from '@/components/seo/web-app-schema';
 import { FaqSchema } from '@/components/seo/faq-schema';
@@ -203,6 +204,26 @@ export default function PaycheckCalculatorPage() {
             </AccordionItem>
           ))}
         </Accordion>
+      </section>
+      {/* Browse by State */}
+      <section className="mx-auto max-w-[1080px] px-4 sm:px-6 py-8">
+        <h2 className="text-xl font-semibold mb-2">Paycheck Calculator by State</h2>
+        <p className="text-muted-foreground mb-6 text-sm">
+          Select your state for a dedicated page with local tax brackets, deductions, tips, and a
+          pre-configured calculator.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          {STATES.map((state) => (
+            <Link
+              key={state.slug}
+              href={`/calculators/paycheck/${state.slug}`}
+              className="rounded-lg border border-border p-3 text-sm hover:bg-muted/50 transition-colors"
+            >
+              <span className="font-semibold">{state.name}</span>
+              <span className="text-muted-foreground ml-1">{state.abbreviation}</span>
+            </Link>
+          ))}
+        </div>
       </section>
       <section className="mx-auto max-w-[1080px] px-4 sm:px-6 pb-8">
         <p className="text-xs text-muted-foreground">
