@@ -1,0 +1,100 @@
+slug: paycheck
+title: "Paycheck Calculator"
+description: "Calculate your net take-home pay after federal taxes, state taxes, FICA, and deductions for all 50 states."
+category: tax
+
+inputs:
+  primary:
+    - name: salary
+      label: "Annual Salary"
+      type: currency
+      min: 15000
+      max: 500000
+      step: 1000
+      default: 65000
+      urlKey: salary
+      hint: "Your total yearly salary before taxes"
+    - name: state
+      label: "State"
+      type: select
+      min: 0
+      max: 0
+      step: 0
+      default: 0
+      urlKey: state
+      options:
+        - { value: "california", label: "California" }
+        - { value: "texas", label: "Texas" }
+        - { value: "new-york", label: "New York" }
+        - { value: "florida", label: "Florida" }
+      hint: "Select your state for accurate tax calculation"
+    - name: filing
+      label: "Filing Status"
+      type: select
+      min: 0
+      max: 0
+      step: 0
+      default: 0
+      urlKey: filing
+      options:
+        - { value: "single", label: "Single" }
+        - { value: "married", label: "Married Filing Jointly" }
+        - { value: "head", label: "Head of Household" }
+    - name: frequency
+      label: "Pay Frequency"
+      type: select
+      min: 0
+      max: 0
+      step: 0
+      default: 0
+      urlKey: frequency
+      options:
+        - { value: "weekly", label: "Weekly (52 paychecks)" }
+        - { value: "biweekly", label: "Biweekly (26 paychecks)" }
+        - { value: "semimonthly", label: "Semi-monthly (24 paychecks)" }
+        - { value: "monthly", label: "Monthly (12 paychecks)" }
+
+charts:
+  - type: pie
+    title: "Tax Breakdown"
+    dataKey: breakdown
+  - type: bar
+    title: "Monthly Breakdown"
+    dataKey: monthlyBreakdown
+
+outputs:
+  - key: netPayPerPaycheck
+    label: "Net Pay Per Paycheck"
+    format: currency
+    primary: true
+  - key: annualNetPay
+    label: "Annual Net Pay"
+    format: currency
+  - key: totalTax
+    label: "Total Tax"
+    format: currency
+  - key: effectiveRate
+    label: "Effective Tax Rate"
+    format: percent
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication
+
+callouts:
+  - title: "Find your state's tax details"
+    href: "/guides/state-taxes"
+
+interpretation:
+  template: ""
+  contextLabel: paycheck
+
+mathModule: paycheck
+
+faqs:
+  - question: "How is federal income tax calculated on my paycheck?"
+    answer: "Federal income tax uses a progressive bracket system. Your income is taxed at increasing rates as it moves through brackets."
+  - question: "What is FICA and how much is deducted from my pay?"
+    answer: "FICA funds Social Security (6.2% up to $176,100) and Medicare (1.45% on all income, plus 0.9% surcharge above $200,000)."
+  - question: "Why does my take-home pay vary by state?"
+    answer: "Each state has its own income tax structure. Nine states have no state income tax, others use flat rates or progressive brackets."

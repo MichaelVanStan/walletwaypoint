@@ -119,6 +119,11 @@ export const mainNavigation: NavItem[] = [
         description: 'Compare standard, graduated, and income-driven repayment plans',
       },
       {
+        title: 'Paycheck Calculator',
+        href: '/calculators/paycheck',
+        description: 'Net take-home pay after federal, state, and FICA taxes',
+      },
+      {
         title: 'Tax Estimator',
         href: '/calculators/tax-estimator',
         description: 'Estimate your federal tax liability by income and filing status',

@@ -165,6 +165,16 @@ export default async function CityRentPage({
         </Suspense>
       </section>
 
+      {/* Paycheck CTA */}
+      <section className="mx-auto max-w-[1080px] px-4 sm:px-6 pb-2">
+        <Link
+          href={`/calculators/paycheck?state=${stateSlug}`}
+          className="inline-flex items-center gap-2 text-sm text-[oklch(0.55_0.12_175)] hover:text-[oklch(0.45_0.12_175)] underline underline-offset-2 transition-colors"
+        >
+          See your full {city.stateName} paycheck breakdown →
+        </Link>
+      </section>
+
       <AdBreak className="mx-auto max-w-[1080px] px-4 sm:px-6" />
 
       {/* Median Rent Table */}
