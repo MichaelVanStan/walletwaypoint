@@ -73,8 +73,8 @@ Plans:
 
 Plans:
 - [x] 06-01-PLAN.md — Tax engine refactor + state data types + Velite schema extensions
-- [x] 06-02-PLAN.md — 51 state tax YAML data files (all 50 states + DC)
-- [ ] 06-03-PLAN.md — Paycheck calculator math module + main page + state persistence hook
+- [ ] 06-02-PLAN.md — 51 state tax YAML data files (all 50 states + DC)
+- [x] 06-03-PLAN.md — Paycheck calculator math module + main page + state persistence hook
 - [ ] 06-04-PLAN.md — 51 state-specific paycheck calculator pages + BracketTable component
 - [ ] 06-05-PLAN.md — State indicator badge + home affordability comparison table redesign
 - [ ] 06-06-PLAN.md — State tax guides + homebuyer program guides (102 programmatic pages)

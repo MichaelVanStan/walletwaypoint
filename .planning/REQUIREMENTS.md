@@ -9,8 +9,8 @@ Requirements for v2.0 release. Each maps to roadmap phases.
 
 ### Calculators
 
-- [ ] **CALC-01**: User can calculate net take-home pay by entering salary, state, filing status, and deductions (paycheck calculator)
-- [ ] **CALC-02**: User can see federal, state, FICA, and deduction breakdowns in the paycheck calculator with pie and bar charts
+- [x] **CALC-01**: User can calculate net take-home pay by entering salary, state, filing status, and deductions (paycheck calculator)
+- [x] **CALC-02**: User can see federal, state, FICA, and deduction breakdowns in the paycheck calculator with pie and bar charts
 - [x] **CALC-03**: User can determine maximum affordable home price based on income, debts, down payment, and interest rate (home affordability calculator)
 - [x] **CALC-04**: User can see conservative (28/36), moderate (30/43), and aggressive (35/50) DTI-based affordability levels
 - [x] **CALC-05**: User can calculate credit card payoff timeline with minimum payments and optional extra payments
@@ -148,8 +148,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CALC-01 | Phase 6 | Pending |
-| CALC-02 | Phase 6 | Pending |
+| CALC-01 | Phase 6 | Complete |
+| CALC-02 | Phase 6 | Complete |
 | CALC-03 | Phase 5 | Complete |
 | CALC-04 | Phase 5 | Complete |
 | CALC-05 | Phase 5 | Complete |
