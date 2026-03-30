@@ -1,0 +1,88 @@
+slug: home-affordability
+title: "Home Affordability Calculator"
+description: "Find out how much house you can afford based on your income, debts, and down payment."
+category: home
+
+inputs:
+  primary:
+    - name: annualIncome
+      label: "Annual Gross Income"
+      type: currency
+      min: 20000
+      max: 500000
+      step: 5000
+      default: 75000
+      urlKey: income
+      hint: "Before taxes"
+    - name: monthlyDebts
+      label: "Monthly Debt Payments"
+      type: currency
+      min: 0
+      max: 10000
+      step: 50
+      default: 500
+      urlKey: debts
+      hint: "Car loans, student loans, credit cards"
+      tooltip: "Include all recurring monthly debt payments: car loans, student loans, credit card minimums, personal loans. Do not include rent or utilities."
+    - name: downPayment
+      label: "Down Payment"
+      type: percent
+      min: 0
+      max: 50
+      step: 1
+      default: 20
+      urlKey: dp
+      hint: "Typical: 10-20%"
+    - name: interestRate
+      label: "Interest Rate"
+      type: percent
+      min: 1
+      max: 15
+      step: 0.125
+      default: 6.5
+      urlKey: rate
+      hint: "Current avg: ~6.5%"
+
+charts:
+  - type: bar
+    title: "Affordability by Tier"
+    dataKey: tierComparison
+
+outputs:
+  - key: conservativePrice
+    label: "Conservative (28/36)"
+    format: currency
+    primary: true
+  - key: conservativePayment
+    label: "Monthly Payment"
+    format: currency
+  - key: moderatePrice
+    label: "Moderate (30/43)"
+    format: currency
+  - key: moderatePayment
+    label: "Monthly Payment"
+    format: currency
+  - key: aggressivePrice
+    label: "Aggressive (35/50)"
+    format: currency
+  - key: aggressivePayment
+    label: "Monthly Payment"
+    format: currency
+
+callouts:
+  - title: "Get pre-approved for a mortgage"
+    href: "/guides/mortgage-payment"
+  - title: "Compare rent vs buying"
+    href: "/calculators/rent-vs-buy"
+  - title: "Compare mortgage lenders"
+    href: "/compare/personal-loans"
+
+interpretation:
+  template: home-affordability
+  contextLabel: "of your gross income"
+
+mathModule: home-affordability
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication
