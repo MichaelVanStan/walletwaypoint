@@ -1,0 +1,36 @@
+slug: denver
+cityName: "Denver"
+stateName: "Colorado"
+stateAbbreviation: "CO"
+medianRents:
+  studio: 1195
+  oneBed: 1385
+  twoBed: 1698
+  threeBed: 2240
+  fourBed: 2580
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Denver, CO 2026"
+editorialDescription: "Calculate how much rent you can afford in Denver with median rent data and insights on the Mile High City's evolving rental market."
+editorialContent: |
+  Denver has transformed from a mid-sized mountain-adjacent city into a major tech and outdoor lifestyle hub, attracting young professionals from both coasts. The city's rental market experienced rapid price increases from 2015 to 2022, but significant new construction has helped moderate growth. Denver now ranks as a mid-priced option among popular Sun Belt and mountain-West metros, more expensive than Phoenix or Salt Lake City but cheaper than Seattle or San Francisco.
+
+  RiNo (River North Art District) and LoDo (Lower Downtown) are the most expensive neighborhoods, with one-bedroom rents from $1,600 to $2,400. Capitol Hill and Cheesman Park remain popular for their walkability and nightlife, with one-bedrooms from $1,300 to $1,800. Highlands and Sloan's Lake have become trendy with a mix of renovated and new-build apartments. For value, neighborhoods like Montbello, Green Valley Ranch, and the Federal Boulevard corridor offer one-bedroom rents from $1,000 to $1,300, often with easy light rail access.
+
+  Colorado has a flat state income tax rate of 4.40%, which is moderate and predictable. Denver does not levy an additional city income tax. The combined tax burden is lower than California, Oregon, or the Northeast, making Denver competitive on an after-tax basis. Colorado's TABOR amendment limits state spending growth, which has historically kept tax rates from increasing significantly.
+
+  RTD's light rail and bus system provides reasonable coverage, with lines connecting downtown to the airport, the Tech Center employment hub in the southeast, and suburban communities like Lakewood, Aurora, and Westminster. Living near a light rail station can reduce car dependence for downtown commuters. However, accessing the mountains for skiing and hiking requires a car, and the I-70 corridor congestion on weekends is a lifestyle consideration. Budget for a car if outdoor recreation is a priority.
+faqs:
+  - question: "What is the average rent in Denver?"
+    answer: "The median rent in Denver for a one-bedroom apartment is approximately $1,385 per month based on HUD Fair Market Rent data for 2026. Denver rents have moderated from their peak growth period but remain above the national median due to continued demand from in-migration."
+  - question: "Is Denver affordable for renters?"
+    answer: "Denver is moderately affordable among popular relocation destinations. To afford the median one-bedroom at $1,385 without exceeding 30% of gross income, you need about $4,617 per month or $55,400 annually. Denver's tech sector offers salaries that typically support this level, though the city is less affordable for service and hospitality workers."
+  - question: "What percentage of income should go to rent in Denver?"
+    answer: "Aim for 28-30% of gross income. Denver's 4.40% flat state income tax is moderate, and there is no city income tax. Budget for car expenses ($350-$500/month) unless you live and work along light rail corridors. Winter heating costs run $100-$200/month from November to March due to cold, dry winters."
+  - question: "What are the most affordable neighborhoods in Denver?"
+    answer: "Montbello, Green Valley Ranch, and Northeast Park Hill offer the lowest rents within Denver city limits, with one-bedrooms from $1,000 to $1,300. The Federal Boulevard corridor from north to south also provides budget options. For suburban value, Aurora, Thornton, and Commerce City offer rents 15-25% below central Denver."
+costContext: |
+  Denver occupies a middle ground in the national cost-of-living spectrum. The overall cost of living is approximately 10% above the national average, with housing as the primary driver. Colorado's 4.40% flat income tax is predictable and moderate, and Denver does not add a local income tax.
+
+  Unique Denver costs include higher grocery prices (5-8% above national average), winter heating bills ($100-$200/month November-March), and the costs associated with mountain recreation (ski passes, gear, and I-70 fuel/tolls). On the positive side, Denver has over 300 days of sunshine per year, reducing seasonal depression-related spending, and the dry climate keeps cooling costs low in summer ($50-$100/month). Car ownership is typically necessary ($350-$500/month), though light rail commuting reduces this for some residents.

@@ -1,0 +1,36 @@
+slug: columbus
+cityName: "Columbus"
+stateName: "Ohio"
+stateAbbreviation: "OH"
+medianRents:
+  studio: 768
+  oneBed: 908
+  twoBed: 1115
+  threeBed: 1475
+  fourBed: 1720
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Columbus, OH 2026"
+editorialDescription: "Calculate how much rent you can afford in Columbus with median rent data and cost-of-living insights for Ohio's largest and fastest-growing city."
+editorialContent: |
+  Columbus is Ohio's largest city and capital, and has emerged as one of the Midwest's most dynamic job markets. The city's economy is driven by Ohio State University (the largest university campus in the US by enrollment), a growing tech sector led by Intel's massive semiconductor fabrication plant in nearby New Albany, and major employers like Nationwide Insurance, JPMorgan Chase, and Cardinal Health. This economic diversity has kept Columbus's rental market healthy while remaining affordable.
+
+  The Short North and German Village neighborhoods are the most expensive, with trendy dining and walkability pushing one-bedroom rents from $1,200 to $1,800. The Arena District and Grandview Heights offer urban living near downtown. The University District near Ohio State provides student-oriented rentals at various price points. For the best value, Hilltop, Linden, and Franklinton (being redeveloped as Franklinton Creative District) offer one-bedroom rents from $650 to $900. Suburban areas like Westerville, Gahanna, and Grove City provide family-friendly options at moderate prices.
+
+  Columbus has a moderate cost of living and benefits from Ohio's relatively low state income tax. The Ohio income tax has been reduced in recent years and the top rate is now 3.50%, well below neighboring Pennsylvania or western New York. The city does not levy a separate city income tax on top of the state rate, unlike Cleveland or Cincinnati. These tax advantages stretch rental budgets further.
+
+  The COTA bus system provides basic coverage, but Columbus is primarily a car-dependent city. The planned LinkUS rapid transit project will eventually add bus rapid transit (BRT) corridors, but current public transit options are limited. Budget $300-$400 per month for vehicle costs. Utility costs are moderate, with natural gas heating averaging $80-$150 per month in winter and electricity for cooling averaging $80-$130 in summer.
+faqs:
+  - question: "What is the average rent in Columbus?"
+    answer: "The median rent in Columbus for a one-bedroom apartment is approximately $908 per month based on HUD Fair Market Rent data for 2026. Columbus is one of the most affordable state capitals in the US and offers strong value compared to other Midwest cities like Chicago or Minneapolis."
+  - question: "Is Columbus affordable for renters?"
+    answer: "Columbus is very affordable. To afford the median one-bedroom at $908 without exceeding 30% of gross income, you need about $3,027 per month or $36,300 annually. With the city's median household income well above this threshold, most working residents can find affordable housing."
+  - question: "What percentage of income should go to rent in Columbus?"
+    answer: "The 28-30% guideline is easily achievable in Columbus. With moderate rents and Ohio's reduced income tax rate (top rate 3.50%), most renters have comfortable budget margins. Budget for car expenses ($300-$400/month) and seasonal heating ($80-$150/month winter) and cooling ($80-$130/month summer)."
+  - question: "Is Columbus a good city for young professionals?"
+    answer: "Columbus is excellent for young professionals. Ohio State University creates a pipeline of talent and social life, the Short North and German Village offer vibrant dining and nightlife, and the tech sector is growing rapidly with Intel's semiconductor plant. Affordable rents mean more disposable income for entertainment and savings compared to coastal cities."
+costContext: |
+  Columbus offers outstanding affordability for a growing metro area. The overall cost of living is approximately 8% below the national average, with housing costs about 15% below the national median. Ohio's top income tax rate of 3.50% is moderate, and Columbus does not add a municipal income tax.
+
+  Key budget items beyond rent include car ownership ($300-$400/month), utilities that vary seasonally ($80-$150/month for heating in winter, $80-$130/month for cooling in summer), and renter's insurance ($15-$25/month). The Intel investment is expected to bring 3,000 direct jobs and up to 10,000 indirect jobs, which may put upward pressure on rents in the coming years, particularly in the northeast suburb corridor near the plant.

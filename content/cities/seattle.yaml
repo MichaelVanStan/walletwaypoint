@@ -1,0 +1,36 @@
+slug: seattle
+cityName: "Seattle"
+stateName: "Washington"
+stateAbbreviation: "WA"
+medianRents:
+  studio: 1475
+  oneBed: 1695
+  twoBed: 2058
+  threeBed: 2710
+  fourBed: 3090
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Seattle, WA 2026"
+editorialDescription: "Calculate how much rent you can afford in Seattle with local median rent data and insights on the Pacific Northwest's tech-driven rental market."
+editorialContent: |
+  Seattle combines a world-class tech job market with Pacific Northwest natural beauty, but these attractions come with premium rents. The city is home to Amazon, Microsoft (in nearby Redmond), and hundreds of tech startups, creating strong demand from high-earning professionals. Post-pandemic, the market has stabilized after several years of volatility driven by remote work shifts and Amazon's return-to-office policies.
+
+  Capitol Hill and South Lake Union are the most expensive neighborhoods, with one-bedroom rents ranging from $1,800 to $2,800. Belltown and Pioneer Square offer urban living in the downtown core at similar price points. The University District near UW and Fremont provide a mix of student and professional housing from $1,400 to $2,000. For value, neighborhoods like Columbia City, Beacon Hill, and Rainier Beach in South Seattle offer one-bedroom rents from $1,200 to $1,600, with light rail access to downtown.
+
+  Washington state has no income tax, which provides a significant take-home pay boost for Seattle renters, especially those earning tech-level salaries. A software engineer earning $150,000 saves roughly $8,000-$12,000 per year compared to the same salary in California. However, Washington has a 7% state sales tax plus local additions (10.25% total in Seattle), and a 7% capital gains tax on gains over $270,000. The no-income-tax advantage is the primary financial differentiator for Seattle versus San Francisco or Los Angeles.
+
+  Seattle's Link Light Rail and King County Metro bus system provide excellent public transit, especially along the light rail corridor from the University of Washington through downtown to SeaTac Airport. Living near a light rail station can eliminate the need for a car, saving $500-$700 per month. Seattle's walkability and bike infrastructure are also among the best in the western US, with protected bike lanes and the Burke-Gilman Trail connecting many neighborhoods.
+faqs:
+  - question: "What is the average rent in Seattle?"
+    answer: "The median rent in Seattle for a one-bedroom apartment is approximately $1,695 per month based on HUD Fair Market Rent data for 2026. Seattle is less expensive than San Francisco but more expensive than Portland, offering a middle ground for Pacific Northwest renters."
+  - question: "Is Seattle affordable for renters?"
+    answer: "Seattle is expensive relative to national averages but more affordable than San Francisco or San Jose. To afford the median one-bedroom at $1,695 without exceeding 30% of gross income, you need about $5,650 per month or $67,800 annually. Washington's zero state income tax significantly boosts take-home pay."
+  - question: "What percentage of income should go to rent in Seattle?"
+    answer: "Aim for 28-30% of gross income. Washington's lack of state income tax gives you more take-home pay than in California or Oregon, which should be factored into your affordability calculation. Living near Link Light Rail stations can eliminate car costs ($500-$700/month savings). Budget for higher food and entertainment costs, which run 10-15% above national averages."
+  - question: "Does no state income tax make Seattle cheaper than San Francisco?"
+    answer: "For most tech workers, yes. A $150,000 salary in Seattle yields roughly $8,000-$12,000 more in after-tax income than the same salary in California. Combined with lower median rents ($1,695 vs $2,345 for one-bedrooms), Seattle offers substantially better affordability. However, Seattle's higher sales tax (10.25%) and rainier climate are trade-offs."
+costContext: |
+  Seattle offers a compelling financial proposition for tech workers: competitive salaries with no state income tax. The overall cost of living is approximately 50% above the national average, driven primarily by housing. However, the tax advantage can offset $8,000-$12,000 per year in housing premium compared to California tech hubs.
+
+  Key cost factors include higher grocery and dining prices (10-15% above national average), significant rain requiring indoor entertainment options, and car costs if you do not live near Link Light Rail ($500-$700/month). Utility costs are moderate due to mild summers and abundant hydroelectric power keeping electricity rates low ($80-$150/month). Renter's insurance runs $20-$35/month, and the city's earthquake risk warrants adequate coverage.

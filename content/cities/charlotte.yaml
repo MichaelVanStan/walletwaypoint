@@ -1,0 +1,36 @@
+slug: charlotte
+cityName: "Charlotte"
+stateName: "North Carolina"
+stateAbbreviation: "NC"
+medianRents:
+  studio: 1028
+  oneBed: 1185
+  twoBed: 1395
+  threeBed: 1815
+  fourBed: 2125
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Charlotte, NC 2026"
+editorialDescription: "Calculate how much rent you can afford in Charlotte with median rent data and insights on the Queen City's banking-driven rental market."
+editorialContent: |
+  Charlotte is the second-largest banking center in the United States after New York, home to Bank of America's headquarters and Truist Financial's co-headquarters. The city's financial sector, combined with a growing tech and healthcare industry, has driven rapid population growth and a competitive rental market. Despite rising rents, Charlotte remains more affordable than most comparably sized Sun Belt cities.
+
+  South End is the hottest rental market, with luxury apartments near the Lynx Blue Line light rail commanding $1,500 to $2,200 for one-bedrooms. Uptown Charlotte (the downtown core) offers high-rise living from $1,400 to $2,500. NoDa (North Davidson) and Plaza Midwood have become popular for their arts and dining scenes, with rents from $1,200 to $1,700. For better value, University City near UNC Charlotte, Steele Creek in the south, and areas along the I-85 corridor in the northeast offer one-bedroom rents from $900 to $1,200.
+
+  Charlotte's LYNX Blue Line light rail is a standout transit option for a Sun Belt city. The line connects Uptown to South End, the medical district, and UNC Charlotte, with additional extensions planned. Living along the Blue Line allows some residents to reduce car dependence, and transit-accessible apartments often command a 5-10% premium that is offset by lower transportation costs. For most Charlotte residents, however, a car remains necessary.
+
+  North Carolina has a flat state income tax rate of 3.99% (reduced from 4.25% in 2025), one of the lowest in the Southeast. The city does not levy an additional local income tax. These moderate tax rates, combined with rents below the national average for a major banking and tech hub, make Charlotte financially attractive for professional workers relocating from higher-tax states.
+faqs:
+  - question: "What is the average rent in Charlotte?"
+    answer: "The median rent in Charlotte for a one-bedroom apartment is approximately $1,185 per month based on HUD Fair Market Rent data for 2026. Charlotte is competitively priced compared to other Sun Belt tech and banking hubs like Austin, Nashville, and Denver."
+  - question: "Is Charlotte affordable for renters?"
+    answer: "Charlotte offers moderate affordability for a rapidly growing city. To afford the median one-bedroom at $1,185 without exceeding 30% of gross income, you need about $3,950 per month or $47,400 annually. The financial sector pays above-average salaries that generally keep housing costs manageable."
+  - question: "What percentage of income should go to rent in Charlotte?"
+    answer: "The 28-30% guideline works well in Charlotte. Budget for car expenses ($300-$450/month) unless you live along the LYNX Blue Line. North Carolina's 3.99% flat income tax is moderate, leaving more take-home pay than in states like California or New York. Summer cooling costs run $80-$180/month from May to September."
+  - question: "What are the best neighborhoods for young professionals in Charlotte?"
+    answer: "South End is the most popular for young professionals, with walkability, Blue Line access, breweries, and restaurants. NoDa offers an artsy, more affordable alternative. Plaza Midwood provides character homes and eclectic dining. For budget-conscious professionals, University City and Lower South End (LoSo) offer newer apartments at 15-25% less than core South End."
+costContext: |
+  Charlotte offers a favorable cost-of-living profile for a major financial and tech hub. The overall cost of living is approximately 2% below the national average, with housing costs near the national median. North Carolina's 3.99% flat income tax rate is competitive, and Charlotte levies no additional local income tax.
+
+  Key cost considerations include car ownership for most neighborhoods ($300-$450/month), moderate summer cooling costs ($80-$180/month), and relatively affordable healthcare costs compared to northeastern cities. The LYNX Blue Line provides a car-free option along its corridor, and several neighborhoods along the line offer strong value when factoring in reduced transportation costs.

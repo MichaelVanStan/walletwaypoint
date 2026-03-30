@@ -1,0 +1,36 @@
+slug: fort-worth
+cityName: "Fort Worth"
+stateName: "Texas"
+stateAbbreviation: "TX"
+medianRents:
+  studio: 935
+  oneBed: 1085
+  twoBed: 1340
+  threeBed: 1795
+  fourBed: 2145
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Fort Worth, TX 2026"
+editorialDescription: "Calculate how much rent you can afford in Fort Worth with median rent data and cost insights for the western half of the DFW metroplex."
+editorialContent: |
+  Fort Worth is the quieter, more affordable half of the Dallas-Fort Worth metroplex, offering a distinct identity centered on its Western heritage, cultural district, and growing economic base. While often overshadowed by Dallas, Fort Worth has its own thriving job market in aerospace (Lockheed Martin), healthcare (JPS Health Network, Cook Children's), and energy. Rents are consistently 10-15% lower than comparable Dallas neighborhoods.
+
+  The Near Southside and downtown areas have seen significant investment, with new loft-style apartments and mixed-use developments driving rents from $1,200 to $1,800 for one-bedrooms. The Cultural District and Fairmount neighborhoods attract renters who want walkability and proximity to world-class museums. The Alliance/North Fort Worth corridor has boomed with corporate relocations and logistics centers, bringing new apartment construction. For value, East Fort Worth, the Stop Six area, and parts of Haltom City offer one-bedroom rents below $900.
+
+  Fort Worth shares the DFW metroplex infrastructure, including DFW International Airport and a growing network of TEXRail and TRE commuter rail connecting to Dallas. However, the city is still primarily car-dependent. The Fort Worth Transportation Authority (Trinity Metro) provides bus and rail service, but coverage is limited compared to DART in Dallas. Budget $300-$450 per month for vehicle expenses.
+
+  One of Fort Worth's financial advantages is its lower cost of living compared to Dallas, combined with easy access to DFW-area employers. Many workers commute from Fort Worth to mid-cities employers in Arlington, Irving, or Las Colinas, where salaries reflect the broader DFW market. This commute arbitrage, earning DFW salaries while paying Fort Worth rents, is a common strategy. The city's revitalized Stockyards district and vibrant local dining scene provide entertainment value without the premium pricing of Dallas's Uptown.
+faqs:
+  - question: "What is the average rent in Fort Worth?"
+    answer: "The median rent in Fort Worth for a one-bedroom apartment is approximately $1,085 per month based on HUD Fair Market Rent data for 2026. Fort Worth is consistently 10-15% cheaper than Dallas while offering easy access to the entire DFW metroplex."
+  - question: "Is Fort Worth affordable for renters?"
+    answer: "Fort Worth is one of the more affordable major cities in Texas. To afford the median one-bedroom at $1,085 without exceeding 30% of gross income, you need about $3,617 per month or $43,400 annually. With no state income tax, Fort Worth offers strong value for DFW workers."
+  - question: "What percentage of income should go to rent in Fort Worth?"
+    answer: "The 28-30% guideline is achievable for many Fort Worth residents. The city's lower rents compared to Dallas allow more budget flexibility. Factor in car expenses ($300-$450/month) and summer electricity ($100-$200/month). Living in Fort Worth while working in the mid-cities can offer the best balance of rent and salary."
+  - question: "Is it cheaper to live in Fort Worth or Dallas?"
+    answer: "Fort Worth is cheaper. One-bedroom rents average about $90 less per month, and the overall cost of living is 5-8% lower. Fort Worth also has lower sales tax rates in some areas. The trade-off is fewer nightlife and dining options compared to Dallas, though Fort Worth's scene has grown significantly."
+costContext: |
+  Fort Worth offers some of the best rental value in the DFW metroplex. The cost of living is approximately 4% below the national average, with housing costs about 8% below the national median. Combined with Texas's zero state income tax, Fort Worth renters retain a larger share of their income than in most similarly sized cities.
+
+  The main additional costs are car ownership ($300-$450/month), summer electricity ($100-$200/month), and the high Texas property tax rate factored into rents. Fort Worth's lower base rents compared to Dallas mean that a DFW worker choosing Fort Worth can save $1,000-$1,500 per year on housing while maintaining access to the same job market via the I-30 and I-20 corridors.

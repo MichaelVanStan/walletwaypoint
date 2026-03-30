@@ -1,0 +1,36 @@
+slug: phoenix
+cityName: "Phoenix"
+stateName: "Arizona"
+stateAbbreviation: "AZ"
+medianRents:
+  studio: 1008
+  oneBed: 1148
+  twoBed: 1390
+  threeBed: 1925
+  fourBed: 2268
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Phoenix, AZ 2026"
+editorialDescription: "Calculate how much rent you can afford in Phoenix with local median rent data and insights on the Valley's rapidly changing rental market."
+editorialContent: |
+  Phoenix has experienced one of the fastest rent increases of any major US city over the past five years, driven by massive population growth and an influx of remote workers from higher-cost California and Pacific Northwest markets. Despite recent moderation, the Phoenix metro area remains one of the fastest-growing in the nation, with rental demand staying strong across the Valley.
+
+  The Phoenix rental market is spread across a vast metro area that includes Scottsdale, Tempe, Mesa, Chandler, and Gilbert. Scottsdale commands the highest rents, with one-bedroom apartments starting around $1,500 in the Old Town and Fashion Square areas. Tempe, home to Arizona State University, offers a mix of student-friendly and upscale rentals. Central Phoenix neighborhoods like Arcadia, Biltmore, and downtown have seen new luxury developments push prices higher. For value, South Phoenix, Maryvale, and the far West Valley (Avondale, Goodyear) offer one-bedroom rents well below the metro median.
+
+  Summer cooling costs are the defining expense for Phoenix renters. Air conditioning is essential from May through October, with electricity bills commonly reaching $200-$400 per month during peak summer. Many newer apartment complexes include features like double-pane windows and efficient HVAC systems that can reduce these costs. Ask about average utility costs before signing a lease, and consider the building's age and insulation quality as significant cost factors.
+
+  Arizona has a flat income tax rate of 2.50%, one of the lowest in the nation, which boosts take-home pay compared to neighboring California. The Valley's extensive freeway system keeps commutes relatively manageable, but car ownership is essential as the Valley Metro light rail and bus system covers limited corridors. Phoenix offers an excellent quality of life for the cost, with over 300 sunny days per year and abundant outdoor recreation.
+faqs:
+  - question: "What is the average rent in Phoenix?"
+    answer: "The median rent in Phoenix for a one-bedroom apartment is approximately $1,148 per month based on HUD Fair Market Rent data for 2026. Rents vary significantly across the Valley, from under $900 in South Phoenix and the far West Valley to over $1,800 in Scottsdale and Arcadia."
+  - question: "Is Phoenix affordable for renters?"
+    answer: "Phoenix is moderately affordable compared to coastal cities. To afford the median one-bedroom at $1,148 without exceeding 30% of gross income, you need about $3,827 per month or $46,000 annually. Arizona's low 2.50% flat income tax helps stretch take-home pay further."
+  - question: "What percentage of income should go to rent in Phoenix?"
+    answer: "Aim for the standard 28-30% of gross income. In Phoenix, also budget for summer electricity costs ($200-$400/month from May-October) and car-related expenses ($350-$500/month). Your total housing-plus-transportation-plus-utilities budget should ideally stay below 50% of gross income."
+  - question: "How much does air conditioning cost in Phoenix?"
+    answer: "Summer electricity bills in Phoenix typically range from $200-$400 per month from May through October due to air conditioning. Newer apartments with efficient HVAC systems and good insulation can reduce this to $150-$250. Winter months are much cheaper, averaging $50-$100. Annual electricity costs average $2,000-$3,000 for a typical apartment."
+costContext: |
+  Phoenix offers a middle ground between coastal affordability and Sun Belt value. The overall cost of living is approximately 5% above the national average, with housing as the primary driver after several years of rapid rent increases. Arizona's 2.50% flat income tax rate is among the lowest for states that levy income tax, providing meaningful take-home pay advantages.
+
+  The unique cost factor for Phoenix renters is summer cooling. Budget $200-$400 per month for electricity from May through October. Car ownership is also essential, adding $350-$500 monthly. However, the absence of heating costs in winter and generally lower food and entertainment costs help balance the annual budget. Water costs, while modest in apartments, are increasing as the Southwest faces long-term drought conditions.

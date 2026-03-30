@@ -1,0 +1,36 @@
+slug: las-vegas
+cityName: "Las Vegas"
+stateName: "Nevada"
+stateAbbreviation: "NV"
+medianRents:
+  studio: 968
+  oneBed: 1118
+  twoBed: 1355
+  threeBed: 1825
+  fourBed: 2148
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Las Vegas, NV 2026"
+editorialDescription: "Calculate how much rent you can afford in Las Vegas with median rent data and cost insights for Nevada's no-income-tax entertainment capital."
+editorialContent: |
+  Las Vegas has evolved far beyond the Strip, growing into a major metropolitan area with a diversified economy in healthcare, logistics, tech, and professional services alongside its tourism and hospitality foundation. The city experienced one of the sharpest rent increases in the nation from 2020 to 2022 as remote workers from California flooded the market. Rents have since stabilized, but remain well above pre-pandemic levels.
+
+  Summerlin in the west is the most sought-after residential area, with one-bedroom apartments from $1,300 to $1,900 in newer communities. Henderson to the south offers similar quality at slightly lower prices. The Arts District and downtown Las Vegas have seen a revival with loft-style developments from $1,000 to $1,500. For the most affordable options, North Las Vegas and areas along the Boulder Highway corridor offer one-bedroom rents from $800 to $1,100.
+
+  Nevada has no state income tax, which is the biggest financial advantage for Las Vegas renters. Combined with moderate rents relative to California and a cost of living near the national average, Las Vegas offers strong purchasing power. The state relies on gaming taxes and sales tax (8.375% in Clark County) for revenue instead. For California transplants, the income tax savings alone can equal $5,000-$15,000 per year, depending on salary.
+
+  Las Vegas is car-dependent, with the RTC bus system and a short monorail on the Strip providing limited transit options. Most residents drive everywhere, and car insurance rates are higher than national averages due to tourist traffic and accident rates. Budget $350-$500 per month for car expenses. Summer electricity is a major cost, as air conditioning runs nearly continuously from June through September, with monthly bills commonly reaching $200-$400. Pool-equipped apartment complexes are popular for cooling off but may come with higher rent or amenity fees.
+faqs:
+  - question: "What is the average rent in Las Vegas?"
+    answer: "The median rent in Las Vegas for a one-bedroom apartment is approximately $1,118 per month based on HUD Fair Market Rent data for 2026. Las Vegas rents have stabilized after sharp pandemic-era increases but remain about 40% higher than pre-2020 levels."
+  - question: "Is Las Vegas affordable for renters?"
+    answer: "Las Vegas is moderately affordable, especially when factoring in Nevada's zero state income tax. To afford the median one-bedroom at $1,118 without exceeding 30% of gross income, you need about $3,727 per month or $44,700 annually. The no-income-tax advantage makes take-home pay stretch further than in most states."
+  - question: "What percentage of income should go to rent in Las Vegas?"
+    answer: "Follow the 28-30% guideline. With no state income tax, your take-home pay is higher than in tax states, so you may have more room in your budget. However, budget carefully for summer electricity ($200-$400/month June-September), car expenses ($350-$500/month), and the higher sales tax (8.375%). Some hospitality workers may earn variable income from tips, making the 30% calculation more complex."
+  - question: "How much does electricity cost in Las Vegas?"
+    answer: "Summer electricity in Las Vegas is a significant expense due to extreme heat. Monthly bills from June through September typically range from $200-$400 for air conditioning. Spring and fall are more moderate at $80-$150, and winter heating costs are minimal. Annual electricity costs average $2,200-$3,200. Choosing an apartment with good insulation and efficient HVAC can save $50-$100 per month."
+costContext: |
+  Las Vegas offers strong value for renters, particularly those relocating from income-tax states like California. The overall cost of living is approximately at the national average, with housing costs near the national median. Nevada's zero state income tax provides the primary financial advantage, saving residents $3,000-$15,000+ per year compared to California or other high-tax states.
+
+  The main cost challenges are summer electricity ($200-$400/month for air conditioning), car dependency ($350-$500/month), and the 8.375% sales tax rate. Water costs are also rising as the Las Vegas Valley implements conservation-driven pricing. On the positive side, entertainment and dining are competitively priced due to casino and resort competition, and many locals benefit from hospitality industry employee discounts.

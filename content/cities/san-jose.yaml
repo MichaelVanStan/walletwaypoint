@@ -1,0 +1,36 @@
+slug: san-jose
+cityName: "San Jose"
+stateName: "California"
+stateAbbreviation: "CA"
+medianRents:
+  studio: 1862
+  oneBed: 2120
+  twoBed: 2622
+  threeBed: 3460
+  fourBed: 3815
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for San Jose, CA 2026"
+editorialDescription: "Calculate how much rent you can afford in San Jose, the heart of Silicon Valley, with local median rent data and tech-hub cost insights."
+editorialContent: |
+  San Jose sits at the heart of Silicon Valley and ranks among the most expensive rental markets in the United States. The concentration of major tech companies including Apple, Google, Adobe, and Cisco in the surrounding area creates intense demand for housing from high-earning professionals. Despite significant new construction, supply has not kept pace with job growth, keeping rents elevated.
+
+  Downtown San Jose and the Santana Row area command the highest rents, with luxury one-bedrooms from $2,500 to $3,500. Willow Glen and the Rose Garden neighborhoods offer charming older homes and apartments at slightly lower but still premium prices. North San Jose near Milpitas and Alviso has seen dense apartment development near tech campuses. For more affordable options, East San Jose, the Alum Rock area, and neighborhoods along Story Road offer one-bedroom rents from $1,600 to $2,000.
+
+  The South Bay rental market is heavily influenced by tech industry cycles. During hiring booms, rents climb rapidly and vacancies drop near zero. During slowdowns or layoffs, rents can moderate and landlords may offer concessions. This volatility means that timing your apartment search can save or cost hundreds per month. Generally, the November through February period offers the best leverage for tenants.
+
+  San Jose benefits from VTA light rail and bus service, plus Caltrain for commuting north to San Francisco or south to Gilroy. However, most residents still drive, and traffic congestion can add significant time and fuel costs to commutes. Silicon Valley salaries are among the highest in the nation, which helps offset the extreme housing costs, but workers in service, education, or government sectors may find San Jose unaffordable without roommates or subsidized housing.
+faqs:
+  - question: "What is the average rent in San Jose?"
+    answer: "The median rent in San Jose for a one-bedroom apartment is approximately $2,120 per month based on HUD Fair Market Rent data for 2026. San Jose is one of the most expensive rental markets in the country, second only to San Francisco in the Bay Area."
+  - question: "Is San Jose affordable for renters?"
+    answer: "San Jose is one of the least affordable cities for renters nationally. To afford the median one-bedroom at $2,120 without exceeding 30% of gross income, you need about $7,067 per month or $85,000 annually. Silicon Valley tech salaries often exceed this threshold, but workers in other industries may struggle."
+  - question: "What percentage of income should go to rent in San Jose?"
+    answer: "The standard 28-30% guideline is difficult to achieve for many San Jose renters. Tech workers earning $120,000+ can typically stay within range. For others, consider East San Jose, roommate arrangements, or nearby cities like Milpitas, Santa Clara, or Campbell for slightly lower rents while maintaining South Bay access."
+  - question: "Is it cheaper to rent in San Jose or San Francisco?"
+    answer: "San Jose is slightly cheaper than San Francisco for comparable apartments, typically 5-15% lower depending on the neighborhood. However, if your job is in San Francisco, the commute from San Jose (1-1.5 hours by Caltrain) adds significant time costs. If working in Silicon Valley, San Jose offers better value and shorter commutes than San Francisco."
+costContext: |
+  San Jose is one of the most expensive rental markets in the United States, driven by Silicon Valley's tech economy. The overall cost of living is approximately 80% above the national average, with housing as the overwhelming driver. California's top marginal income tax rate of 13.3% further reduces take-home pay for high earners.
+
+  Despite extreme housing costs, San Jose offers some offsetting factors: mild year-round weather keeps utility costs moderate ($100-$180/month), and tech sector salaries are calibrated to the local cost of living. The critical calculation for San Jose renters is whether the salary premium of Silicon Valley jobs outweighs the housing premium. For many tech workers, the answer is yes; for workers in other sectors, exploring more affordable South Bay suburbs or East Bay alternatives may be necessary.

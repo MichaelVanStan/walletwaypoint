@@ -1,0 +1,38 @@
+slug: houston
+cityName: "Houston"
+stateName: "Texas"
+stateAbbreviation: "TX"
+medianRents:
+  studio: 943
+  oneBed: 1103
+  twoBed: 1368
+  threeBed: 1836
+  fourBed: 2232
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Houston, TX 2026"
+editorialDescription: "Calculate how much rent you can afford in Houston based on your income. Includes median rent data by apartment size and Houston-specific cost insights."
+editorialContent: |
+  Houston is the fourth-largest city in the United States and one of the most affordable major metros for renters. The city's lack of traditional zoning laws has allowed extensive development, keeping supply relatively high and rents moderate compared to coastal cities. Combined with Texas's absence of state income tax, Houston offers a compelling financial picture for renters.
+
+  The Inner Loop neighborhoods around downtown command the highest rents. Midtown, Montrose, and the Heights are popular among young professionals, with one-bedroom apartments typically ranging from $1,200 to $1,800. The Museum District and River Oaks area cater to higher budgets. Moving outside the 610 Loop, prices drop considerably. The Energy Corridor, Katy, and Sugar Land to the west offer newer apartment complexes at lower per-square-foot rates. Northeast Houston and parts of southeast Houston provide the most budget-friendly options.
+
+  Houston is a car-dependent city with limited public transit, making vehicle costs a critical part of your rental budget. The average commute is 30 minutes, and most residents need a car for daily life. Budget $350-$500 per month for car payment, insurance, gas, and maintenance. The METRO bus and light rail system serves limited corridors, primarily downtown and the Medical Center area. If you work in one of these areas, living along a METRO line can reduce transportation costs significantly.
+
+  Texas has no state income tax, which effectively increases your take-home pay by 4-8% compared to states with income tax. However, property taxes are among the highest in the nation (averaging 1.8-2.2% of property value), which gets passed through to renters as higher base rents. The trade-off typically favors renters, as the income tax savings outweigh the property tax impact on rent. Houston also has no city income tax, unlike some Texas cities.
+faqs:
+  - question: "What is the average rent in Houston?"
+    answer: "The median rent in Houston for a one-bedroom apartment is approximately $1,103 per month based on HUD Fair Market Rent data for 2026. Houston remains one of the most affordable major US cities for renters, with rents roughly 45% below New York City and 35% below Los Angeles."
+  - question: "Is Houston affordable for renters?"
+    answer: "Houston is very affordable compared to other major US cities. To afford the median one-bedroom at $1,103 without exceeding 30% of gross income, you need to earn about $3,677 per month or $44,000 annually. With no state income tax, your take-home pay stretches further than in states like California or New York."
+  - question: "What percentage of income should go to rent in Houston?"
+    answer: "The standard 28-30% guideline is achievable for many Houston renters. With no state income tax boosting take-home pay, you may have more room in your budget. However, factor in car-related expenses ($350-$500/month) since Houston requires a car for most residents. Your combined housing-plus-transportation costs should ideally stay below 45% of gross income."
+  - question: "What are the cheapest areas to rent in Houston?"
+    answer: "The most affordable areas include northeast Houston (Greenspoint, Aldine), southeast Houston (South Belt, Pasadena), and parts of southwest Houston (Alief, Sharpstown). These areas offer one-bedroom apartments below $900/month. For slightly higher budgets with better amenities, consider Spring Branch, Garden Oaks, or the Third Ward."
+  - question: "Does no state income tax in Texas make Houston cheaper?"
+    answer: "Yes, the lack of state income tax effectively gives Houston renters 4-8% more take-home pay compared to residents of states like California (up to 13.3%) or New York (up to 10.9%). However, Texas has high property taxes that partially offset this advantage through higher base rents. The net effect still favors renters in Texas."
+costContext: |
+  Houston offers one of the best cost-of-living-to-income ratios among major US cities. The overall cost of living is about 4% below the national average, with housing costs approximately 15% below average. Combined with no state income tax, Houston renters retain more of their earnings than counterparts in most large metros.
+
+  The main financial consideration unique to Houston is the near-mandatory car ownership. Budget $350-$500 per month for a vehicle, which partially offsets the housing savings. Summer electricity bills are another factor, as air conditioning is essential from May through September, often adding $150-$300 per month to utility costs. Flood insurance or renter's insurance with flood coverage is also advisable given Houston's history of flooding events.

@@ -1,0 +1,36 @@
+slug: san-antonio
+cityName: "San Antonio"
+stateName: "Texas"
+stateAbbreviation: "TX"
+medianRents:
+  studio: 858
+  oneBed: 1005
+  twoBed: 1266
+  threeBed: 1698
+  fourBed: 2054
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for San Antonio, TX 2026"
+editorialDescription: "Calculate how much rent you can afford in San Antonio with local median rent data and insights on one of Texas's most affordable major cities."
+editorialContent: |
+  San Antonio is one of the most affordable large cities in Texas and the nation, offering a lower cost of living than Austin, Dallas, or Houston while still providing a strong job market anchored by military bases, healthcare, and a growing tech sector. The city's rapid population growth has added new housing inventory, helping keep rents relatively stable.
+
+  The most expensive areas include the Pearl District and Southtown near downtown, where revitalized historic buildings and new developments have created trendy live-work-play neighborhoods with one-bedroom rents from $1,200 to $1,800. The Stone Oak and TPC areas in the far north attract families with newer complexes and top-rated schools. The medical center area near UTHSC offers convenient living for healthcare workers. For the best value, the West Side, East Side, and areas near Lackland and Randolph Air Force bases offer one-bedroom apartments below $800.
+
+  Texas has no state income tax, which gives San Antonio renters a significant take-home pay advantage over residents of income-tax states. Combined with rents that are 10-20% below the Texas metro average, San Antonio provides exceptional value. However, car ownership is essential as the VIA Metropolitan Transit bus system has limited coverage. Budget $300-$450 per month for transportation.
+
+  San Antonio summers are hot and humid, making air conditioning a year-round expense from April through October. Monthly electricity bills typically range from $100-$250 during summer months. The city's military presence creates a stable demand floor for rental housing, and several neighborhoods near bases offer military-friendly rentals with flexible lease terms.
+faqs:
+  - question: "What is the average rent in San Antonio?"
+    answer: "The median rent in San Antonio for a one-bedroom apartment is approximately $1,005 per month based on HUD Fair Market Rent data for 2026. San Antonio is consistently one of the most affordable major cities in Texas, with rents about 10% below Houston and 30% below Austin."
+  - question: "Is San Antonio affordable for renters?"
+    answer: "San Antonio is very affordable for a major US city. To afford the median one-bedroom at $1,005 without exceeding 30% of gross income, you need about $3,350 per month or $40,000 annually. With no state income tax, more of your paycheck goes directly to covering rent and living expenses."
+  - question: "What percentage of income should go to rent in San Antonio?"
+    answer: "The 28-30% guideline is easily achievable for many San Antonio residents given the affordable rents. Budget additional funds for summer electricity ($100-$250/month) and car expenses ($300-$450/month). Military members may qualify for BAH (Basic Allowance for Housing) which covers most local rents."
+  - question: "Is San Antonio or Austin cheaper to rent?"
+    answer: "San Antonio is significantly cheaper. The median one-bedroom in San Antonio ($1,005) is approximately 25-30% less than Austin ($1,388). San Antonio also has a lower overall cost of living, though Austin offers higher average salaries in the tech sector."
+costContext: |
+  San Antonio is one of the most affordable major cities in the United States, with a cost of living approximately 9% below the national average. Housing costs are particularly favorable, running about 20% below the national median. Combined with no state income tax in Texas, residents retain a larger share of their income than in most similarly sized metros.
+
+  Key cost considerations include essential car ownership ($300-$450/month), summer electricity for air conditioning ($100-$250/month), and the relatively high Texas property tax rate (approximately 1.9%) that landlords pass through in rent. Despite these factors, the total cost of living in San Antonio remains well below most comparably sized US cities.

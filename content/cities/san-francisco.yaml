@@ -1,0 +1,38 @@
+slug: san-francisco
+cityName: "San Francisco"
+stateName: "California"
+stateAbbreviation: "CA"
+medianRents:
+  studio: 2045
+  oneBed: 2345
+  twoBed: 2952
+  threeBed: 3810
+  fourBed: 4275
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for San Francisco, CA 2026"
+editorialDescription: "Calculate how much rent you can afford in San Francisco with median rent data and financial insights for one of America's most expensive cities."
+editorialContent: |
+  San Francisco remains one of the most expensive rental markets in the United States, despite post-pandemic adjustments that brought rents down from their 2019 peaks. The city's compact 47 square miles, strict building regulations, and concentration of tech wealth create a persistently supply-constrained market. However, the shift toward remote and hybrid work has created more opportunities for renters than at any point in the previous decade.
+
+  The most expensive neighborhoods include Pacific Heights, the Marina, and Nob Hill, where one-bedroom apartments start at $3,000 and easily exceed $4,000. SoMa and the Financial District offer newer high-rise living popular with tech workers, ranging from $2,500 to $3,500 for one-bedrooms. The Mission District and Hayes Valley have become increasingly expensive, rivaling traditional premium neighborhoods. For relative value, the Sunset, Richmond, and Excelsior districts on the western and southern sides of the city offer one-bedroom rents from $1,800 to $2,400, with easier parking and quieter residential character.
+
+  San Francisco's rent control ordinance covers buildings built before June 1979. If you find a rent-controlled unit, your annual rent increases are capped at 60% of the CPI increase (typically 1-3% per year). Rent-controlled units are highly sought after and often found through word-of-mouth or by walking neighborhoods and looking for "For Rent" signs rather than online listings. Understanding your rights under the San Francisco Rent Ordinance can save thousands per year.
+
+  The city's MUNI system, BART, and Caltrain provide comprehensive public transit, making car-free living entirely feasible. A monthly MUNI pass costs $81. Many tech companies also run private shuttle buses to Silicon Valley campuses. Eliminating car ownership saves $600-$900 per month in the city (parking alone averages $300-$500/month), which can partially offset higher rents compared to car-dependent cities.
+faqs:
+  - question: "What is the average rent in San Francisco?"
+    answer: "The median rent in San Francisco for a one-bedroom apartment is approximately $2,345 per month based on HUD Fair Market Rent data for 2026. While still among the highest in the nation, rents have moderated from pre-pandemic peaks of $3,500+ for one-bedrooms."
+  - question: "Is San Francisco affordable for renters?"
+    answer: "San Francisco is one of the least affordable cities for renters in the US. To afford the median one-bedroom at $2,345 without exceeding 30% of gross income, you need about $7,817 per month or $93,800 annually. Tech salaries often exceed this threshold, but workers in other sectors frequently need roommates or income-restricted housing."
+  - question: "What percentage of income should go to rent in San Francisco?"
+    answer: "The 28-30% guideline is aspirational for many SF renters. If you earn under $100,000, consider roommates, rent-controlled units, or neighborhoods in the Outer Sunset or Excelsior where rents are lower. The ability to live car-free ($600-$900/month savings) should be factored into your total housing budget calculation."
+  - question: "How does rent control work in San Francisco?"
+    answer: "San Francisco rent control covers most buildings built before June 1979. Annual rent increases are capped at 60% of the Bay Area CPI increase, typically 1-3%. Landlords cannot evict tenants without just cause. Rent-controlled units are not advertised widely, so walk neighborhoods, check building bulletin boards, and ask local contacts. New construction is exempt from rent control."
+  - question: "Is it worth moving to San Francisco for a tech job?"
+    answer: "It depends on the salary premium. Tech salaries in SF average 20-40% higher than national averages. If the salary increase exceeds the higher housing and tax costs (CA income tax up to 13.3%), the move is financially positive. Use this calculator with your actual SF offer salary to see if the numbers work. Many workers now negotiate remote or hybrid arrangements that allow living in cheaper areas."
+costContext: |
+  San Francisco is one of the most expensive rental markets in the nation. The overall cost of living is approximately 90% above the national average, with housing as the dominant driver. California's progressive income tax (top marginal rate 13.3%) further reduces take-home pay for higher earners.
+
+  The unique financial advantage of San Francisco is the ability to live without a car, saving $600-$900 per month compared to car-dependent cities. MUNI, BART, and employer shuttles provide comprehensive coverage. Low utility costs due to the mild climate ($80-$150/month) also help. Rent control, if you can find a controlled unit, provides long-term price stability. The critical calculation is whether SF's higher salaries justify the housing premium after taxes and cost adjustments.

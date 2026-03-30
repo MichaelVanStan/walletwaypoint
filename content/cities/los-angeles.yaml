@@ -1,0 +1,36 @@
+slug: los-angeles
+cityName: "Los Angeles"
+stateName: "California"
+stateAbbreviation: "CA"
+medianRents:
+  studio: 1547
+  oneBed: 1747
+  twoBed: 2223
+  threeBed: 2984
+  fourBed: 3311
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Los Angeles, CA 2026"
+editorialDescription: "Find out how much rent you can afford in Los Angeles with median rent data by bedroom count and local cost-of-living context for LA renters."
+editorialContent: |
+  Los Angeles is the second-largest city in the United States and one of the most competitive rental markets on the West Coast. The sprawling metro area covers over 500 square miles, and rent prices vary dramatically based on proximity to the coast, major employment centers, and neighborhood desirability. Understanding the LA rental landscape is essential for budgeting effectively.
+
+  Westside neighborhoods like Santa Monica, Venice, and Brentwood command premium rents, with one-bedroom apartments often starting above $2,500. Hollywood, Silver Lake, and Echo Park have seen significant rent increases as these areas have become cultural hotspots. The San Fernando Valley, including areas like North Hollywood, Van Nuys, and Burbank, offers more moderate pricing and has benefited from the Metro expansion. Downtown LA's Arts District and South Park have transformed with new luxury developments, but older buildings in the area remain more affordable.
+
+  Unlike New York, Los Angeles is a car-dependent city, and transportation costs must factor into your housing budget. The average LA resident spends $400-$600 per month on car payments, insurance, gas, and maintenance. When comparing LA rents to cities with better public transit, add these car costs to get the true housing burden. The Metro rail system continues to expand, and neighborhoods near Metro stations may offer the best value for commuters willing to reduce car dependence.
+
+  California's tenant protections are among the strongest in the nation. The Tenant Protection Act (AB 1482) caps annual rent increases at 5% plus local inflation (up to 10% total) for buildings over 15 years old. The city of Los Angeles has additional Rent Stabilization Ordinance protections for buildings built before October 1978. Understanding your rights as a tenant can save you thousands over a lease term.
+faqs:
+  - question: "What is the average rent in Los Angeles?"
+    answer: "The median rent in Los Angeles for a one-bedroom apartment is approximately $1,747 per month based on HUD Fair Market Rent data for 2026. Actual rents range widely, from under $1,400 in the San Fernando Valley and South LA to over $3,000 on the Westside and in beach communities."
+  - question: "Is Los Angeles affordable for renters?"
+    answer: "Los Angeles is one of the least affordable major cities for renters when measured by rent-to-income ratio. To afford the median one-bedroom at $1,747 without exceeding 30% of gross income, you need to earn at least $5,823 per month or about $70,000 annually. About 54% of LA renters are considered rent-burdened, spending more than 30% of income on housing."
+  - question: "What percentage of income should go to rent in LA?"
+    answer: "The recommended guideline is 28-30% of gross income. In Los Angeles, many renters stretch to 35-40% due to high housing costs. If you are spending more than 30%, consider areas further from the Westside, look for rent-stabilized units, or explore roommate arrangements to bring costs down."
+  - question: "What are the cheapest neighborhoods in Los Angeles?"
+    answer: "The most affordable areas include parts of the San Fernando Valley (Panorama City, Arleta, Pacoima), South Los Angeles (Watts, Willowbrook), and the eastern suburbs (El Monte, Pomona in the broader metro). These neighborhoods offer rents 30-50% below the Westside and Hollywood."
+costContext: |
+  Los Angeles is one of the most expensive rental markets in California and the nation. The cost of living is approximately 50% above the national average, with housing as the primary driver. Unlike many expensive cities, LA also carries significant transportation costs due to its car-dependent layout, making the total housing-plus-transportation burden particularly heavy.
+
+  When budgeting for rent in LA, factor in car-related expenses ($400-$600/month), higher utility costs due to air conditioning needs ($100-$200/month), and California's state income tax (the highest marginal rate in the nation at 13.3%). On the positive side, LA's warm climate reduces heating costs, and the abundance of outdoor activities and public beaches provides free entertainment options that offset some cost-of-living pressures.
