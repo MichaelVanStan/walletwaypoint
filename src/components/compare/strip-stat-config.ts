@@ -181,6 +181,146 @@ const insuranceDetailStats: StatConfig[] = [
   },
 ];
 
+// --- Auto insurance stats ---
+
+const autoInsuranceStripStats: StatConfig[] = [
+  {
+    key: 'monthlyPremium',
+    label: 'Monthly Premium',
+  },
+  {
+    key: 'amBestRating',
+    label: 'AM Best Rating',
+  },
+  {
+    key: 'coverageTypes',
+    label: 'Coverage',
+  },
+];
+
+const autoInsuranceDetailStats: StatConfig[] = [
+  {
+    key: 'deductible',
+    label: 'Deductible',
+  },
+  {
+    key: 'discounts',
+    label: 'Discounts',
+  },
+  {
+    key: 'issuer',
+    label: 'Issuer',
+  },
+];
+
+// --- Life insurance stats ---
+
+const lifeInsuranceStripStats: StatConfig[] = [
+  {
+    key: 'policyType',
+    label: 'Policy Type',
+  },
+  {
+    key: 'monthlyPremium',
+    label: 'Monthly Premium',
+  },
+  {
+    key: 'amBestRating',
+    label: 'AM Best Rating',
+  },
+];
+
+const lifeInsuranceDetailStats: StatConfig[] = [
+  {
+    key: 'termLength',
+    label: 'Term Length',
+  },
+  {
+    key: 'coverageAmount',
+    label: 'Coverage Amount',
+  },
+  {
+    key: 'medicalExam',
+    label: 'Medical Exam',
+  },
+  {
+    key: 'issuer',
+    label: 'Issuer',
+  },
+];
+
+// --- Investment platforms stats ---
+
+const investmentPlatformsStripStats: StatConfig[] = [
+  {
+    key: 'commissions',
+    label: 'Commissions',
+  },
+  {
+    key: 'minimumInvestment',
+    label: 'Minimum',
+    render: (v) =>
+      (v as number) === 0 ? '$0' : `$${(v as number).toLocaleString()}`,
+  },
+  {
+    key: 'managementFee',
+    label: 'Mgmt Fee',
+  },
+];
+
+const investmentPlatformsDetailStats: StatConfig[] = [
+  {
+    key: 'accountTypes',
+    label: 'Account Types',
+  },
+  {
+    key: 'features',
+    label: 'Features',
+  },
+  {
+    key: 'issuer',
+    label: 'Issuer',
+  },
+];
+
+// --- Tax software stats ---
+
+const taxSoftwareStripStats: StatConfig[] = [
+  {
+    key: 'priceFree',
+    label: 'Free Tier',
+  },
+  {
+    key: 'pricePremium',
+    label: 'Premium Price',
+  },
+  {
+    key: 'selfEmployed',
+    label: 'Self-Employed',
+    render: (v) => (v ? 'Yes' : 'No'),
+  },
+];
+
+const taxSoftwareDetailStats: StatConfig[] = [
+  {
+    key: 'stateFiling',
+    label: 'State Filing',
+  },
+  {
+    key: 'auditDefense',
+    label: 'Audit Defense',
+    render: (v) => (v ? 'Yes' : 'No'),
+  },
+  {
+    key: 'importForms',
+    label: 'Import Forms',
+  },
+  {
+    key: 'issuer',
+    label: 'Issuer',
+  },
+];
+
 // --- Public API ---
 
 const stripStatsMap: Record<ProductCategory, StatConfig[]> = {
@@ -188,6 +328,10 @@ const stripStatsMap: Record<ProductCategory, StatConfig[]> = {
   'personal-loans': personalLoanStripStats,
   'savings-accounts': savingsStripStats,
   insurance: insuranceStripStats,
+  'auto-insurance': autoInsuranceStripStats,
+  'life-insurance': lifeInsuranceStripStats,
+  'investment-platforms': investmentPlatformsStripStats,
+  'tax-software': taxSoftwareStripStats,
 };
 
 const detailStatsMap: Record<ProductCategory, StatConfig[]> = {
@@ -195,6 +339,10 @@ const detailStatsMap: Record<ProductCategory, StatConfig[]> = {
   'personal-loans': personalLoanDetailStats,
   'savings-accounts': savingsDetailStats,
   insurance: insuranceDetailStats,
+  'auto-insurance': autoInsuranceDetailStats,
+  'life-insurance': lifeInsuranceDetailStats,
+  'investment-platforms': investmentPlatformsDetailStats,
+  'tax-software': taxSoftwareDetailStats,
 };
 
 export function getStripStats(category: ProductCategory): StatConfig[] {

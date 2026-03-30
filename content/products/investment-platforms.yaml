@@ -1,0 +1,172 @@
+category: investment-platforms
+categoryTitle: "Best Investment Platforms Compared"
+categoryDescription: "Compare investment platforms, fees, and account types from top brokerages and robo-advisors. Find the right platform for your investing goals."
+lastVerified: "2026-03-29"
+
+products:
+  - id: fidelity-investments
+    name: "Fidelity Investments"
+    issuer: "Fidelity"
+    imageUrl: ""
+    accountTypes: "Brokerage, IRA, Roth IRA, 401k Rollover, HSA, 529"
+    commissions: "$0 stock/ETF trades"
+    minimumInvestment: 0
+    managementFee: "0%"
+    features: "Fractional shares, zero-expense-ratio index funds, research tools, Fidelity Go robo-advisor"
+    bestFor: "Best Overall Platform"
+    affiliateUrl: "/go/fidelity-investments"
+    destinationUrl: "https://www.fidelity.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: investment-platforms
+    hasAffiliate: true
+
+  - id: vanguard
+    name: "Vanguard"
+    issuer: "Vanguard"
+    imageUrl: ""
+    accountTypes: "Brokerage, IRA, Roth IRA, 401k Rollover, 529"
+    commissions: "$0 stock/ETF trades"
+    minimumInvestment: 0
+    managementFee: "0%"
+    features: "Low-cost index funds, Personal Advisor Services, long-term investing focus, retirement planning tools"
+    bestFor: "Best for Index Fund Investing"
+    affiliateUrl: "/go/vanguard"
+    destinationUrl: "https://investor.vanguard.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: investment-platforms
+    hasAffiliate: true
+
+  - id: charles-schwab
+    name: "Charles Schwab"
+    issuer: "Charles Schwab"
+    imageUrl: ""
+    accountTypes: "Brokerage, IRA, Roth IRA, 401k Rollover, Trust, Custodial"
+    commissions: "$0 stock/ETF trades"
+    minimumInvestment: 0
+    managementFee: "0%"
+    features: "Schwab Intelligent Portfolios (robo), thinkorswim trading platform, research, banking integration"
+    bestFor: "Best for Full-Service Banking"
+    affiliateUrl: "/go/charles-schwab"
+    destinationUrl: "https://www.schwab.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: investment-platforms
+    hasAffiliate: true
+
+  - id: robinhood
+    name: "Robinhood"
+    issuer: "Robinhood"
+    imageUrl: ""
+    accountTypes: "Brokerage, IRA, Roth IRA, Crypto"
+    commissions: "$0 stock/ETF/options trades"
+    minimumInvestment: 0
+    managementFee: "0%"
+    features: "Fractional shares, crypto trading, cash card, Gold margin trading, IRA match"
+    bestFor: "Best for Beginners"
+    affiliateUrl: "/go/robinhood"
+    destinationUrl: "https://robinhood.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: investment-platforms
+    hasAffiliate: true
+
+  - id: betterment
+    name: "Betterment"
+    issuer: "Betterment"
+    imageUrl: ""
+    accountTypes: "Brokerage, IRA, Roth IRA, 401k, Trust, Joint"
+    commissions: "Included in management fee"
+    minimumInvestment: 0
+    managementFee: "0.25%"
+    features: "Robo-advisor, tax-loss harvesting, goal-based planning, socially responsible portfolios"
+    bestFor: "Best Robo-Advisor"
+    affiliateUrl: "/go/betterment"
+    destinationUrl: "https://www.betterment.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: investment-platforms
+    hasAffiliate: true
+
+  - id: wealthfront
+    name: "Wealthfront"
+    issuer: "Wealthfront"
+    imageUrl: ""
+    accountTypes: "Brokerage, IRA, Roth IRA, 529, Trust"
+    commissions: "Included in management fee"
+    minimumInvestment: 500
+    managementFee: "0.25%"
+    features: "Robo-advisor, tax-loss harvesting, direct indexing at $100K+, financial planning tools, high-yield cash account"
+    affiliateUrl: "/go/wealthfront"
+    destinationUrl: "https://www.wealthfront.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: investment-platforms
+    hasAffiliate: true
+
+  - id: m1-finance
+    name: "M1 Finance"
+    issuer: "M1 Finance"
+    imageUrl: ""
+    accountTypes: "Brokerage, IRA, Roth IRA, Trust, Joint"
+    commissions: "$0 stock/ETF trades"
+    minimumInvestment: 100
+    managementFee: "0%"
+    features: "Pie-based portfolio building, fractional shares, automated rebalancing, M1 Borrow margin, high-yield account"
+    bestFor: "Best for Custom Portfolios"
+    affiliateUrl: "/go/m1-finance"
+    destinationUrl: "https://m1.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: investment-platforms
+    hasAffiliate: true
+
+  - id: sofi-invest
+    name: "SoFi Invest"
+    issuer: "SoFi"
+    imageUrl: ""
+    accountTypes: "Brokerage, IRA, Roth IRA, Crypto"
+    commissions: "$0 stock/ETF trades"
+    minimumInvestment: 0
+    managementFee: "0%"
+    features: "Fractional shares, crypto trading, automated investing, financial advisors included, member perks"
+    affiliateUrl: "/go/sofi-invest"
+    destinationUrl: "https://www.sofi.com/invest/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: investment-platforms
+    hasAffiliate: true
+
+  - id: etrade
+    name: "E*TRADE"
+    issuer: "E*TRADE (Morgan Stanley)"
+    imageUrl: ""
+    accountTypes: "Brokerage, IRA, Roth IRA, 401k Rollover, Custodial"
+    commissions: "$0 stock/ETF trades"
+    minimumInvestment: 0
+    managementFee: "0%"
+    features: "Power E*TRADE platform, options analytics, managed portfolios, pre-built portfolios, banking integration"
+    affiliateUrl: "/go/etrade"
+    destinationUrl: "https://us.etrade.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: investment-platforms
+    hasAffiliate: true
+
+  - id: interactive-brokers
+    name: "Interactive Brokers"
+    issuer: "Interactive Brokers"
+    imageUrl: ""
+    accountTypes: "Brokerage, IRA, Roth IRA, Trust, International"
+    commissions: "$0 stock/ETF trades (IBKR Lite)"
+    minimumInvestment: 0
+    managementFee: "0%"
+    features: "Global market access, advanced trading tools, low margin rates, fractional shares, research tools"
+    bestFor: "Best for Advanced Traders"
+    affiliateUrl: "/go/interactive-brokers"
+    destinationUrl: "https://www.interactivebrokers.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: investment-platforms
+    hasAffiliate: true

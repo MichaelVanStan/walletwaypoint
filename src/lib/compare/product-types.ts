@@ -1,5 +1,5 @@
 // Product category slugs (used as YAML filenames and URL params)
-export const productCategories = ['credit-cards', 'personal-loans', 'savings-accounts', 'insurance'] as const;
+export const productCategories = ['credit-cards', 'personal-loans', 'savings-accounts', 'insurance', 'auto-insurance', 'life-insurance', 'investment-platforms', 'tax-software'] as const;
 export type ProductCategory = (typeof productCategories)[number];
 
 // Base fields shared by all product items
@@ -57,8 +57,42 @@ export interface InsuranceProduct extends ProductItemBase {
   coverageHighlights: string; // "Liability, collision, comprehensive"
 }
 
+export interface AutoInsuranceProduct extends ProductItemBase {
+  monthlyPremium: string;      // "$85-$150"
+  coverageTypes: string;       // "Liability, Collision, Comprehensive"
+  deductible: string;          // "$500-$2,000"
+  discounts: string;           // "Safe driver, bundling, student"
+  amBestRating: string;        // "A+", "A", "A-"
+}
+
+export interface LifeInsuranceProduct extends ProductItemBase {
+  policyType: string;          // "Term", "Whole", "Universal"
+  termLength: string;          // "10, 20, 30 years"
+  monthlyPremium: string;      // "$25-$50 for $500K"
+  coverageAmount: string;      // "$100K-$10M"
+  medicalExam: string;         // "Required", "No exam available"
+  amBestRating: string;
+}
+
+export interface InvestmentPlatformProduct extends ProductItemBase {
+  accountTypes: string;        // "Brokerage, IRA, Roth IRA, 401k rollover"
+  commissions: string;         // "$0 stock/ETF trades"
+  minimumInvestment: number;   // 0, 500, 3000
+  managementFee: string;       // "0.25%", "0%", "$0"
+  features: string;            // "Robo-advisor, fractional shares, crypto"
+}
+
+export interface TaxSoftwareProduct extends ProductItemBase {
+  priceFree: string;           // "Simple returns free"
+  pricePremium: string;        // "$89.99"
+  stateFiling: string;         // "$39.99/state" or "Included"
+  selfEmployed: boolean;
+  auditDefense: boolean;
+  importForms: string;         // "W-2, 1099, PDF import"
+}
+
 // Union type for any product
-export type ProductItem = CreditCardProduct | PersonalLoanProduct | SavingsProduct | InsuranceProduct;
+export type ProductItem = CreditCardProduct | PersonalLoanProduct | SavingsProduct | InsuranceProduct | AutoInsuranceProduct | LifeInsuranceProduct | InvestmentPlatformProduct | TaxSoftwareProduct;
 
 // Category-level data (one per YAML file)
 export interface ProductCategoryData {
@@ -78,6 +112,10 @@ export const creditCardSortColumns = ['name', 'annualFee', 'creditScoreMin'] as 
 export const personalLoanSortColumns = ['name', 'aprLow', 'loanAmountMax', 'termMax'] as const;
 export const savingsSortColumns = ['name', 'apy', 'minimumDeposit'] as const;
 export const insuranceSortColumns = ['name', 'coverageLevel', 'deductibleMin'] as const;
+export const autoInsuranceSortColumns = ['name', 'amBestRating'] as const;
+export const lifeInsuranceSortColumns = ['name', 'policyType', 'amBestRating'] as const;
+export const investmentPlatformsSortColumns = ['name', 'minimumInvestment'] as const;
+export const taxSoftwareSortColumns = ['name', 'pricePremium'] as const;
 
 // CTA labels per category (per UI-SPEC Copywriting Contract)
 export const ctaLabels: Record<ProductCategory, string> = {
@@ -85,4 +123,8 @@ export const ctaLabels: Record<ProductCategory, string> = {
   'personal-loans': 'Check Rates',
   'savings-accounts': 'Open Account',
   'insurance': 'Get Quote',
+  'auto-insurance': 'Get Quote',
+  'life-insurance': 'Get Quote',
+  'investment-platforms': 'Open Account',
+  'tax-software': 'Start Filing',
 };

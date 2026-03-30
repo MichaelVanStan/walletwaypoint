@@ -25,6 +25,10 @@ const categoryDisplayNames: Record<ProductCategory, string> = {
   'personal-loans': 'personal loans',
   'savings-accounts': 'savings accounts',
   insurance: 'insurance products',
+  'auto-insurance': 'auto insurance',
+  'life-insurance': 'life insurance',
+  'investment-platforms': 'investment platforms',
+  'tax-software': 'tax software',
 };
 
 // Attribute definitions for mobile product cards
@@ -120,6 +124,53 @@ function getAttributes(category: ProductCategory) {
               : String(_v),
         },
         { key: 'coverageHighlights', label: 'Coverage Highlights' },
+      ];
+    case 'auto-insurance':
+      return [
+        { key: 'monthlyPremium', label: 'Monthly Premium' },
+        { key: 'coverageTypes', label: 'Coverage Types' },
+        { key: 'deductible', label: 'Deductible' },
+        { key: 'discounts', label: 'Discounts' },
+        { key: 'amBestRating', label: 'AM Best Rating' },
+      ];
+    case 'life-insurance':
+      return [
+        { key: 'policyType', label: 'Policy Type' },
+        { key: 'termLength', label: 'Term Length' },
+        { key: 'monthlyPremium', label: 'Monthly Premium' },
+        { key: 'coverageAmount', label: 'Coverage' },
+        { key: 'medicalExam', label: 'Medical Exam' },
+        { key: 'amBestRating', label: 'AM Best Rating' },
+      ];
+    case 'investment-platforms':
+      return [
+        { key: 'commissions', label: 'Commissions' },
+        {
+          key: 'minimumInvestment',
+          label: 'Minimum',
+          render: (v: unknown) =>
+            (v as number) === 0 ? '$0' : `$${(v as number).toLocaleString()}`,
+        },
+        { key: 'managementFee', label: 'Mgmt Fee' },
+        { key: 'accountTypes', label: 'Account Types' },
+        { key: 'features', label: 'Features' },
+      ];
+    case 'tax-software':
+      return [
+        { key: 'priceFree', label: 'Free Tier' },
+        { key: 'pricePremium', label: 'Premium Price' },
+        { key: 'stateFiling', label: 'State Filing' },
+        {
+          key: 'selfEmployed',
+          label: 'Self-Employed',
+          render: (v: unknown) => (v ? 'Yes' : 'No'),
+        },
+        {
+          key: 'auditDefense',
+          label: 'Audit Defense',
+          render: (v: unknown) => (v ? 'Yes' : 'No'),
+        },
+        { key: 'importForms', label: 'Import Forms' },
       ];
   }
 }

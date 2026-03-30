@@ -177,13 +177,36 @@ const productItemSchema = s.object({
   deductibleMin: s.number().optional(),
   deductibleMax: s.number().optional(),
   coverageHighlights: s.string().optional(),
+  // Auto insurance fields
+  coverageTypes: s.string().optional(),
+  discounts: s.string().optional(),
+  amBestRating: s.string().optional(),
+  deductible: s.string().optional(),
+  // Life insurance fields
+  policyType: s.string().optional(),
+  termLength: s.string().optional(),
+  coverageAmount: s.string().optional(),
+  medicalExam: s.string().optional(),
+  // Investment platform fields
+  accountTypes: s.string().optional(),
+  commissions: s.string().optional(),
+  minimumInvestment: s.number().optional(),
+  managementFee: s.string().optional(),
+  features: s.string().optional(),
+  // Tax software fields
+  priceFree: s.string().optional(),
+  pricePremium: s.string().optional(),
+  stateFiling: s.string().optional(),
+  selfEmployed: s.boolean().optional(),
+  auditDefense: s.boolean().optional(),
+  importForms: s.string().optional(),
 });
 
 const products = defineCollection({
   name: 'Product',
   pattern: 'products/*.yaml',
   schema: s.object({
-    category: s.enum(['credit-cards', 'personal-loans', 'savings-accounts', 'insurance']),
+    category: s.enum(['credit-cards', 'personal-loans', 'savings-accounts', 'insurance', 'auto-insurance', 'life-insurance', 'investment-platforms', 'tax-software']),
     categoryTitle: s.string(),
     categoryDescription: s.string(),
     lastVerified: s.isodate(),

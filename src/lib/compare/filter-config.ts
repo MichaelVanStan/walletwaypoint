@@ -148,11 +148,98 @@ const insuranceFilters: FilterConfig[] = [
   },
 ];
 
+// Auto insurance filters
+const autoInsuranceFilters: FilterConfig[] = [
+  {
+    id: 'rating',
+    label: 'AM Best Rating',
+    options: [
+      { value: 'all', label: 'All Ratings' },
+      { value: 'A+', label: 'A+ (Superior)' },
+      { value: 'A', label: 'A (Excellent)' },
+      { value: 'A-', label: 'A- (Excellent)' },
+    ],
+  },
+];
+
+// Life insurance filters
+const lifeInsuranceFilters: FilterConfig[] = [
+  {
+    id: 'policy',
+    label: 'Policy Type',
+    options: [
+      { value: 'all', label: 'All Types' },
+      { value: 'term', label: 'Term Life' },
+      { value: 'whole', label: 'Whole Life' },
+      { value: 'universal', label: 'Universal Life' },
+    ],
+  },
+  {
+    id: 'exam',
+    label: 'Medical Exam',
+    options: [
+      { value: 'all', label: 'Any' },
+      { value: 'required', label: 'Exam Required' },
+      { value: 'no-exam', label: 'No Exam Available' },
+    ],
+  },
+];
+
+// Investment platform filters
+const investmentPlatformsFilters: FilterConfig[] = [
+  {
+    id: 'invmin',
+    label: 'Minimum Investment',
+    options: [
+      { value: 'all', label: 'Any Minimum' },
+      { value: 'no-minimum', label: 'No Minimum' },
+      { value: 'under-500', label: 'Under $500' },
+      { value: '500-plus', label: '$500+' },
+    ],
+  },
+  {
+    id: 'mgmtfee',
+    label: 'Management Fee',
+    options: [
+      { value: 'all', label: 'Any Fee' },
+      { value: 'no-fee', label: 'No Fee' },
+      { value: 'under-050', label: 'Under 0.50%' },
+      { value: '050-plus', label: '0.50%+' },
+    ],
+  },
+];
+
+// Tax software filters
+const taxSoftwareFilters: FilterConfig[] = [
+  {
+    id: 'selfemp',
+    label: 'Self-Employed',
+    options: [
+      { value: 'all', label: 'Any' },
+      { value: 'yes', label: 'Supports Self-Employed' },
+      { value: 'no', label: 'W-2 Only' },
+    ],
+  },
+  {
+    id: 'audit',
+    label: 'Audit Defense',
+    options: [
+      { value: 'all', label: 'Any' },
+      { value: 'yes', label: 'Includes Audit Defense' },
+      { value: 'no', label: 'No Audit Defense' },
+    ],
+  },
+];
+
 export const filterConfigs: Record<ProductCategory, FilterConfig[]> = {
   'credit-cards': creditCardFilters,
   'personal-loans': personalLoanFilters,
   'savings-accounts': savingsFilters,
   'insurance': insuranceFilters,
+  'auto-insurance': autoInsuranceFilters,
+  'life-insurance': lifeInsuranceFilters,
+  'investment-platforms': investmentPlatformsFilters,
+  'tax-software': taxSoftwareFilters,
 };
 
 // Filter match functions per filter ID
@@ -221,6 +308,52 @@ const filterMatchers: Record<string, FilterMatcher> = {
     if (v === 'under-500') return min < 500;
     if (v === '500-1000') return min <= 1000 && max >= 500;
     if (v === '1000-plus') return max >= 1000;
+    return true;
+  },
+  // Auto insurance
+  rating: (p, v) => v === 'all' || p.amBestRating === v,
+  // Life insurance
+  policy: (p, v) => {
+    if (v === 'all') return true;
+    const policyType = (p.policyType as string || '').toLowerCase();
+    return policyType.includes(v);
+  },
+  exam: (p, v) => {
+    if (v === 'all') return true;
+    const medicalExam = (p.medicalExam as string || '').toLowerCase();
+    if (v === 'required') return medicalExam.includes('required');
+    if (v === 'no-exam') return medicalExam.includes('no exam') || medicalExam.includes('no-exam');
+    return true;
+  },
+  // Investment platforms
+  invmin: (p, v) => {
+    if (v === 'all') return true;
+    const min = p.minimumInvestment as number;
+    if (v === 'no-minimum') return min === 0;
+    if (v === 'under-500') return min < 500;
+    if (v === '500-plus') return min >= 500;
+    return true;
+  },
+  mgmtfee: (p, v) => {
+    if (v === 'all') return true;
+    const fee = p.managementFee as string || '';
+    const feeNum = parseFloat(fee.replace(/[^0-9.]/g, ''));
+    if (v === 'no-fee') return fee === '0%' || fee === '$0' || feeNum === 0;
+    if (v === 'under-050') return !isNaN(feeNum) && feeNum < 0.5;
+    if (v === '050-plus') return !isNaN(feeNum) && feeNum >= 0.5;
+    return true;
+  },
+  // Tax software
+  selfemp: (p, v) => {
+    if (v === 'all') return true;
+    if (v === 'yes') return p.selfEmployed === true;
+    if (v === 'no') return p.selfEmployed === false;
+    return true;
+  },
+  audit: (p, v) => {
+    if (v === 'all') return true;
+    if (v === 'yes') return p.auditDefense === true;
+    if (v === 'no') return p.auditDefense === false;
     return true;
   },
 };

@@ -1,0 +1,139 @@
+category: auto-insurance
+categoryTitle: "Best Auto Insurance Companies Compared"
+categoryDescription: "Compare auto insurance rates, coverage options, and discounts from top providers. Ranked by coverage value, financial strength, and customer satisfaction."
+lastVerified: "2026-03-29"
+
+products:
+  - id: state-farm-auto-insurance
+    name: "State Farm Auto Insurance"
+    issuer: "State Farm"
+    imageUrl: ""
+    monthlyPremium: "$85-$180"
+    coverageTypes: "Liability, Collision, Comprehensive, Medical Payments, Uninsured Motorist"
+    deductible: "$250-$2,000"
+    discounts: "Safe driver, bundling, good student, Steer Clear program"
+    amBestRating: "A++"
+    bestFor: "Best Overall Auto Insurance"
+    affiliateUrl: "/go/state-farm-auto-insurance"
+    destinationUrl: "https://www.statefarm.com/insurance/auto"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: auto-insurance
+    hasAffiliate: true
+
+  - id: geico-auto-insurance
+    name: "GEICO Auto Insurance"
+    issuer: "GEICO"
+    imageUrl: ""
+    monthlyPremium: "$70-$150"
+    coverageTypes: "Liability, Collision, Comprehensive, Medical Payments, Uninsured Motorist, Roadside Assistance"
+    deductible: "$250-$1,000"
+    discounts: "Military, federal employee, good driver, multi-vehicle, anti-theft"
+    amBestRating: "A++"
+    bestFor: "Best for Low Rates"
+    affiliateUrl: "/go/geico-auto-insurance"
+    destinationUrl: "https://www.geico.com/auto-insurance/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: auto-insurance
+    hasAffiliate: true
+
+  - id: progressive-auto-insurance
+    name: "Progressive Auto Insurance"
+    issuer: "Progressive"
+    imageUrl: ""
+    monthlyPremium: "$80-$170"
+    coverageTypes: "Liability, Collision, Comprehensive, Medical Payments, Uninsured Motorist, Roadside Assistance"
+    deductible: "$250-$1,000"
+    discounts: "Snapshot safe driving, multi-policy, homeowner, online quote, continuous coverage"
+    amBestRating: "A+"
+    bestFor: "Best for Comparison Shopping"
+    affiliateUrl: "/go/progressive-auto-insurance"
+    destinationUrl: "https://www.progressive.com/auto/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: auto-insurance
+    hasAffiliate: true
+
+  - id: allstate-auto-insurance
+    name: "Allstate Auto Insurance"
+    issuer: "Allstate"
+    imageUrl: ""
+    monthlyPremium: "$95-$200"
+    coverageTypes: "Liability, Collision, Comprehensive, Medical Payments, Uninsured Motorist, Rental Reimbursement"
+    deductible: "$500-$2,000"
+    discounts: "Drivewise safe driving, multi-policy, new car, anti-theft, automatic payments"
+    amBestRating: "A+"
+    affiliateUrl: "/go/allstate-auto-insurance"
+    destinationUrl: "https://www.allstate.com/auto-insurance"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: auto-insurance
+    hasAffiliate: true
+
+  - id: usaa-auto-insurance
+    name: "USAA Auto Insurance"
+    issuer: "USAA"
+    imageUrl: ""
+    monthlyPremium: "$60-$130"
+    coverageTypes: "Liability, Collision, Comprehensive, Medical Payments, Uninsured Motorist, Accident Forgiveness"
+    deductible: "$250-$1,500"
+    discounts: "Safe driver, military deployment, family, good student, defensive driving"
+    amBestRating: "A++"
+    bestFor: "Best for Military Families"
+    affiliateUrl: "/go/usaa-auto-insurance"
+    destinationUrl: "https://www.usaa.com/inet/wc/insurance-products"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: auto-insurance
+    hasAffiliate: true
+
+  - id: liberty-mutual-auto-insurance
+    name: "Liberty Mutual Auto Insurance"
+    issuer: "Liberty Mutual"
+    imageUrl: ""
+    monthlyPremium: "$90-$190"
+    coverageTypes: "Liability, Collision, Comprehensive, Medical Payments, Uninsured Motorist, Better Car Replacement"
+    deductible: "$500-$2,000"
+    discounts: "RightTrack safe driving, multi-policy, early shopper, good student, teacher"
+    amBestRating: "A"
+    bestFor: "Best for New Driver Discounts"
+    affiliateUrl: "/go/liberty-mutual-auto-insurance"
+    destinationUrl: "https://www.libertymutual.com/vehicle/auto-insurance"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: auto-insurance
+    hasAffiliate: true
+
+  - id: nationwide-auto-insurance
+    name: "Nationwide Auto Insurance"
+    issuer: "Nationwide"
+    imageUrl: ""
+    monthlyPremium: "$80-$165"
+    coverageTypes: "Liability, Collision, Comprehensive, Medical Payments, Uninsured Motorist, Vanishing Deductible"
+    deductible: "$500-$1,500"
+    discounts: "SmartRide usage-based, multi-policy, good student, accident-free, anti-theft"
+    amBestRating: "A+"
+    affiliateUrl: "/go/nationwide-auto-insurance"
+    destinationUrl: "https://www.nationwide.com/personal/insurance/auto/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: auto-insurance
+    hasAffiliate: true
+
+  - id: the-hartford-auto-insurance
+    name: "The Hartford Auto Insurance"
+    issuer: "The Hartford"
+    imageUrl: ""
+    monthlyPremium: "$85-$175"
+    coverageTypes: "Liability, Collision, Comprehensive, Medical Payments, Uninsured Motorist, New Car Replacement"
+    deductible: "$500-$2,000"
+    discounts: "AARP member, multi-policy, anti-theft, defensive driving, hybrid vehicle"
+    amBestRating: "A+"
+    bestFor: "Best for AARP Members"
+    affiliateUrl: "/go/the-hartford-auto-insurance"
+    destinationUrl: "https://www.thehartford.com/aarp/auto-insurance"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: auto-insurance
+    hasAffiliate: true

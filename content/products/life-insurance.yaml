@@ -1,0 +1,146 @@
+category: life-insurance
+categoryTitle: "Best Life Insurance Companies Compared"
+categoryDescription: "Compare life insurance policies, premiums, and coverage amounts from top providers. Find the right term, whole, or universal life plan for your family."
+lastVerified: "2026-03-29"
+
+products:
+  - id: haven-life
+    name: "Haven Life Insurance"
+    issuer: "Haven Life (MassMutual)"
+    imageUrl: ""
+    policyType: "Term"
+    termLength: "10, 15, 20, 30 years"
+    monthlyPremium: "$15-$45 for $500K"
+    coverageAmount: "$100K-$3M"
+    medicalExam: "No exam up to $1M"
+    amBestRating: "A++"
+    bestFor: "Best Online Term Life"
+    affiliateUrl: "/go/haven-life"
+    destinationUrl: "https://havenlife.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: life-insurance
+    hasAffiliate: true
+
+  - id: ladder-life
+    name: "Ladder Life Insurance"
+    issuer: "Ladder"
+    imageUrl: ""
+    policyType: "Term"
+    termLength: "10, 15, 20, 25, 30 years"
+    monthlyPremium: "$12-$40 for $500K"
+    coverageAmount: "$100K-$8M"
+    medicalExam: "No exam up to $3M"
+    amBestRating: "A+"
+    bestFor: "Best for Flexibility"
+    affiliateUrl: "/go/ladder-life"
+    destinationUrl: "https://www.ladderlife.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: life-insurance
+    hasAffiliate: true
+
+  - id: bestow-life
+    name: "Bestow Life Insurance"
+    issuer: "Bestow"
+    imageUrl: ""
+    policyType: "Term"
+    termLength: "10, 15, 20, 25, 30 years"
+    monthlyPremium: "$10-$35 for $500K"
+    coverageAmount: "$50K-$1.5M"
+    medicalExam: "No exam required"
+    amBestRating: "A"
+    bestFor: "Best No-Exam Option"
+    affiliateUrl: "/go/bestow-life"
+    destinationUrl: "https://www.bestow.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: life-insurance
+    hasAffiliate: true
+
+  - id: state-farm-life
+    name: "State Farm Life Insurance"
+    issuer: "State Farm"
+    imageUrl: ""
+    policyType: "Term, Whole, Universal"
+    termLength: "10, 20, 30 years"
+    monthlyPremium: "$20-$55 for $500K"
+    coverageAmount: "$25K-$10M"
+    medicalExam: "Required for most policies"
+    amBestRating: "A++"
+    affiliateUrl: "/go/state-farm-life"
+    destinationUrl: "https://www.statefarm.com/insurance/life"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: life-insurance
+    hasAffiliate: true
+
+  - id: northwestern-mutual-life
+    name: "Northwestern Mutual Life Insurance"
+    issuer: "Northwestern Mutual"
+    imageUrl: ""
+    policyType: "Term, Whole, Universal"
+    termLength: "10, 15, 20 years"
+    monthlyPremium: "$25-$70 for $500K"
+    coverageAmount: "$50K-$10M+"
+    medicalExam: "Required"
+    amBestRating: "A++"
+    bestFor: "Best for Whole Life"
+    affiliateUrl: "/go/northwestern-mutual-life"
+    destinationUrl: "https://www.northwesternmutual.com/life-insurance/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: life-insurance
+    hasAffiliate: true
+
+  - id: new-york-life
+    name: "New York Life Insurance"
+    issuer: "New York Life"
+    imageUrl: ""
+    policyType: "Term, Whole, Universal"
+    termLength: "10, 15, 20, 30 years"
+    monthlyPremium: "$22-$60 for $500K"
+    coverageAmount: "$25K-$10M+"
+    medicalExam: "Required"
+    amBestRating: "A++"
+    affiliateUrl: "/go/new-york-life"
+    destinationUrl: "https://www.newyorklife.com/products/life-insurance"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: life-insurance
+    hasAffiliate: true
+
+  - id: prudential-life
+    name: "Prudential Life Insurance"
+    issuer: "Prudential"
+    imageUrl: ""
+    policyType: "Term, Universal"
+    termLength: "10, 15, 20, 30 years"
+    monthlyPremium: "$18-$50 for $500K"
+    coverageAmount: "$25K-$10M"
+    medicalExam: "No exam up to $500K"
+    amBestRating: "A+"
+    affiliateUrl: "/go/prudential-life"
+    destinationUrl: "https://www.prudential.com/personal/life-insurance"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: life-insurance
+    hasAffiliate: true
+
+  - id: massmutual-life
+    name: "MassMutual Life Insurance"
+    issuer: "MassMutual"
+    imageUrl: ""
+    policyType: "Term, Whole, Universal"
+    termLength: "10, 15, 20 years"
+    monthlyPremium: "$22-$65 for $500K"
+    coverageAmount: "$25K-$10M+"
+    medicalExam: "Required for most policies"
+    amBestRating: "A++"
+    bestFor: "Best for Dividends"
+    affiliateUrl: "/go/massmutual-life"
+    destinationUrl: "https://www.massmutual.com/insurance/life-insurance"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: life-insurance
+    hasAffiliate: true

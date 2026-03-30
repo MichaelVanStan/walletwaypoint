@@ -1,0 +1,113 @@
+category: tax-software
+categoryTitle: "Best Tax Software Compared"
+categoryDescription: "Compare tax filing software features, prices, and support options. Find the best tool for your tax situation, from simple W-2 returns to complex self-employment filings."
+lastVerified: "2026-03-29"
+
+products:
+  - id: turbotax
+    name: "TurboTax"
+    issuer: "Intuit"
+    imageUrl: ""
+    priceFree: "Simple returns free"
+    pricePremium: "$89"
+    stateFiling: "$49/state"
+    selfEmployed: true
+    auditDefense: true
+    importForms: "W-2, 1099, 1098, brokerage, PDF import, photo capture"
+    bestFor: "Best for Ease of Use"
+    affiliateUrl: "/go/turbotax"
+    destinationUrl: "https://turbotax.intuit.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: tax-software
+    hasAffiliate: true
+
+  - id: hr-block
+    name: "H&R Block"
+    issuer: "H&R Block"
+    imageUrl: ""
+    priceFree: "Simple returns free"
+    pricePremium: "$55"
+    stateFiling: "$37/state"
+    selfEmployed: true
+    auditDefense: true
+    importForms: "W-2, 1099, 1098, PDF import, prior year import"
+    bestFor: "Best for In-Person Support"
+    affiliateUrl: "/go/hr-block"
+    destinationUrl: "https://www.hrblock.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: tax-software
+    hasAffiliate: true
+
+  - id: taxact
+    name: "TaxAct"
+    issuer: "TaxAct"
+    imageUrl: ""
+    priceFree: "Simple returns free"
+    pricePremium: "$46"
+    stateFiling: "$40/state"
+    selfEmployed: true
+    auditDefense: false
+    importForms: "W-2, 1099, PDF import, prior year import"
+    bestFor: "Best Mid-Range Value"
+    affiliateUrl: "/go/taxact"
+    destinationUrl: "https://www.taxact.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: tax-software
+    hasAffiliate: true
+
+  - id: freetaxusa
+    name: "FreeTaxUSA"
+    issuer: "TaxHawk"
+    imageUrl: ""
+    priceFree: "Federal always free"
+    pricePremium: "$0"
+    stateFiling: "$14.99/state"
+    selfEmployed: true
+    auditDefense: true
+    importForms: "W-2, 1099, prior year import"
+    bestFor: "Best Free Option"
+    affiliateUrl: "/go/freetaxusa"
+    destinationUrl: "https://www.freetaxusa.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: tax-software
+    hasAffiliate: true
+
+  - id: cash-app-taxes
+    name: "Cash App Taxes"
+    issuer: "Cash App (Block)"
+    imageUrl: ""
+    priceFree: "100% free federal and state"
+    pricePremium: "$0"
+    stateFiling: "Included"
+    selfEmployed: false
+    auditDefense: false
+    importForms: "W-2, 1099, prior year import"
+    bestFor: "Best Completely Free"
+    affiliateUrl: "/go/cash-app-taxes"
+    destinationUrl: "https://cash.app/taxes"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: tax-software
+    hasAffiliate: true
+
+  - id: taxslayer
+    name: "TaxSlayer"
+    issuer: "TaxSlayer"
+    imageUrl: ""
+    priceFree: "Simple returns free"
+    pricePremium: "$42"
+    stateFiling: "$36/state"
+    selfEmployed: true
+    auditDefense: true
+    importForms: "W-2, 1099, PDF import, prior year import"
+    bestFor: "Best Budget Premium"
+    affiliateUrl: "/go/taxslayer"
+    destinationUrl: "https://www.taxslayer.com/"
+    utmSource: walletwaypoint
+    utmMedium: comparison_table
+    utmCampaign: tax-software
+    hasAffiliate: true
