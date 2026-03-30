@@ -61,7 +61,7 @@ export interface CalculatorConfig {
   slug: string;
   title: string;
   description: string;
-  category: 'home' | 'savings' | 'loans' | 'retirement' | 'budget' | 'tax';
+  category: 'home' | 'savings' | 'loans' | 'retirement' | 'budget' | 'tax' | 'auto';
   inputs: {
     primary: InputConfig[];
     advanced?: InputConfig[];
