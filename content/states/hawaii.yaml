@@ -1,0 +1,94 @@
+slug: hawaii
+name: Hawaii
+abbreviation: HI
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Hawaii Department of Taxation"
+revenueAuthorityUrl: "https://tax.hawaii.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 2400, rate: 1.40 }
+    - { min: 2401, max: 4800, rate: 3.20 }
+    - { min: 4801, max: 9600, rate: 5.50 }
+    - { min: 9601, max: 14400, rate: 6.40 }
+    - { min: 14401, max: 19200, rate: 6.80 }
+    - { min: 19201, max: 24000, rate: 7.20 }
+    - { min: 24001, max: 36000, rate: 7.60 }
+    - { min: 36001, max: 48000, rate: 7.90 }
+    - { min: 48001, max: 150000, rate: 8.25 }
+    - { min: 150001, max: 175000, rate: 9.00 }
+    - { min: 175001, max: 200000, rate: 10.00 }
+    - { min: 200001, max: 999999999, rate: 11.00 }
+  married:
+    - { min: 0, max: 4800, rate: 1.40 }
+    - { min: 4801, max: 9600, rate: 3.20 }
+    - { min: 9601, max: 19200, rate: 5.50 }
+    - { min: 19201, max: 28800, rate: 6.40 }
+    - { min: 28801, max: 38400, rate: 6.80 }
+    - { min: 38401, max: 48000, rate: 7.20 }
+    - { min: 48001, max: 72000, rate: 7.60 }
+    - { min: 72001, max: 96000, rate: 7.90 }
+    - { min: 96001, max: 300000, rate: 8.25 }
+    - { min: 300001, max: 350000, rate: 9.00 }
+    - { min: 350001, max: 400000, rate: 10.00 }
+    - { min: 400001, max: 999999999, rate: 11.00 }
+  head:
+    - { min: 0, max: 3600, rate: 1.40 }
+    - { min: 3601, max: 7200, rate: 3.20 }
+    - { min: 7201, max: 14400, rate: 5.50 }
+    - { min: 14401, max: 21600, rate: 6.40 }
+    - { min: 21601, max: 28800, rate: 6.80 }
+    - { min: 28801, max: 36000, rate: 7.20 }
+    - { min: 36001, max: 54000, rate: 7.60 }
+    - { min: 54001, max: 72000, rate: 7.90 }
+    - { min: 72001, max: 225000, rate: 8.25 }
+    - { min: 225001, max: 262500, rate: 9.00 }
+    - { min: 262501, max: 300000, rate: 10.00 }
+    - { min: 300001, max: 999999999, rate: 11.00 }
+
+standardDeductions:
+  single: 2200
+  married: 4400
+  head: 3212
+
+personalExemptions:
+  single: 1144
+  married: 2288
+  dependent: 1144
+
+topRate: 11.00
+numberOfBrackets: 12
+
+editorialTitle: "Hawaii Paycheck Calculator 2026"
+editorialDescription: "Calculate your Hawaii take-home pay. Hawaii has 12 brackets up to 11% — the second-highest top rate nationally — plus the nation's highest cost of living."
+editorialContent: |
+  Hawaii levies a graduated income tax with 12 brackets, the most of any state, with rates ranging from 1.40% to 11.00%. The top rate of 11% applies to income over $200,000 for single filers and $400,000 for married couples, making it the second-highest top marginal rate in the nation behind California. Even moderate-income earners face relatively high rates — the 8.25% bracket begins at just $48,000 for single filers.
+
+  Hawaii's standard deduction is notably low: $2,200 for single filers and $4,400 for married filing jointly. Personal exemptions are $1,144 per person. These low thresholds mean that Hawaii taxes a very large portion of income compared to states that conform to federal deduction levels. Combined with the high rates, Hawaii has one of the heaviest income tax burdens in the country.
+
+  Hawaii does not tax Social Security benefits or distributions from qualified employer retirement plans (pensions, 401(k)s). However, IRA distributions and other non-employer retirement income are generally taxable. Hawaii also fully exempts military retirement pay from state income tax.
+
+  Instead of a traditional sales tax, Hawaii levies a General Excise Tax (GET) of 4.00% (4.50% in Honolulu County) on virtually all business transactions. Unlike a sales tax, the GET applies to services, food, medical services, and even rent. The GET is technically imposed on businesses rather than consumers, but it is almost universally passed through to customers as a visible surcharge. Because it applies to a broader base than most sales taxes (including rent and services), the effective burden on consumers can be higher than the nominal rate suggests.
+
+  Property taxes in Hawaii average approximately 0.27%, the lowest effective rate in the nation. However, this is largely offset by extremely high home values — the median home price in Honolulu exceeds $800,000. Hawaii offers a homeowner exemption that varies by county, typically exempting $100,000 to $160,000 of assessed value for owner-occupied homes.
+
+  Hawaii has the highest cost of living of any state, with an index of approximately 190 — nearly double the national average. Food, housing, transportation, and utilities are all significantly more expensive due to the state's island geography and dependence on imported goods.
+
+faqs:
+  - question: "What is Hawaii's top income tax rate?"
+    answer: "11.00% on income over $200,000 (single) or $400,000 (married). Hawaii has 12 brackets — the most of any state. The 8.25% rate begins at $48,000 single."
+  - question: "What is Hawaii's General Excise Tax?"
+    answer: "Hawaii charges a 4.00% GET (4.50% in Honolulu) on almost all transactions including services, rent, and medical care — much broader than a typical sales tax."
+  - question: "Does Hawaii tax Social Security?"
+    answer: "No. Social Security and employer pension/401(k) distributions are exempt. IRA distributions are generally taxable."
+  - question: "Why are Hawaii property taxes so low?"
+    answer: "The effective rate is about 0.27%, but it applies to very high home values. Actual property tax bills are not as low as the rate suggests."
+
+tips:
+  - "Factor in Hawaii's GET on rent — unlike most states, your monthly rent includes a ~4.5% tax that is passed through by your landlord"
+  - "Hawaii's high tax rates and extreme cost of living mean your dollar buys about half what it would on the mainland — plan salary expectations accordingly"
+  - "Military members benefit from full exemption of retirement pay and may qualify for housing allowances that are not subject to state tax"

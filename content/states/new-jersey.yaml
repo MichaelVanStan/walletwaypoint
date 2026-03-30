@@ -1,0 +1,81 @@
+slug: new-jersey
+name: New Jersey
+abbreviation: NJ
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / New Jersey Division of Taxation"
+revenueAuthorityUrl: "https://www.nj.gov/treasury/taxation"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 20000, rate: 1.40 }
+    - { min: 20001, max: 35000, rate: 1.75 }
+    - { min: 35001, max: 40000, rate: 3.50 }
+    - { min: 40001, max: 75000, rate: 5.525 }
+    - { min: 75001, max: 500000, rate: 6.37 }
+    - { min: 500001, max: 1000000, rate: 8.97 }
+    - { min: 1000001, max: 999999999, rate: 10.75 }
+  married:
+    - { min: 0, max: 20000, rate: 1.40 }
+    - { min: 20001, max: 50000, rate: 1.75 }
+    - { min: 50001, max: 70000, rate: 2.45 }
+    - { min: 70001, max: 80000, rate: 3.50 }
+    - { min: 80001, max: 150000, rate: 5.525 }
+    - { min: 150001, max: 500000, rate: 6.37 }
+    - { min: 500001, max: 1000000, rate: 8.97 }
+    - { min: 1000001, max: 999999999, rate: 10.75 }
+  head:
+    - { min: 0, max: 20000, rate: 1.40 }
+    - { min: 20001, max: 50000, rate: 1.75 }
+    - { min: 50001, max: 70000, rate: 2.45 }
+    - { min: 70001, max: 80000, rate: 3.50 }
+    - { min: 80001, max: 150000, rate: 5.525 }
+    - { min: 150001, max: 500000, rate: 6.37 }
+    - { min: 500001, max: 1000000, rate: 8.97 }
+    - { min: 1000001, max: 999999999, rate: 10.75 }
+
+standardDeductions:
+  single: 0
+  married: 0
+  head: 0
+
+personalExemptions:
+  single: 1000
+  married: 2000
+  dependent: 1500
+
+topRate: 10.75
+numberOfBrackets: 7
+
+editorialTitle: "New Jersey Paycheck Calculator 2026"
+editorialDescription: "Calculate your NJ take-home pay with graduated rates up to 10.75%. NJ has no standard deduction and the highest property taxes nationally. Get the full picture."
+editorialContent: |
+  New Jersey levies a graduated income tax with seven brackets for single filers (eight for married), ranging from 1.40% to 10.75%. The top rate of 10.75% applies to income over $1 million. New Jersey's bracket structure features very low rates on the first $40,000 of income (1.40% to 3.50%), then jumps sharply to 5.525% and above. This structure provides meaningful relief for lower-income earners while taxing high earners at rates comparable to California.
+
+  New Jersey does not offer a standard deduction — the state provides only personal exemptions of $1,000 per filer and $1,500 per dependent. This means that almost all income is subject to tax from the first dollar (after the modest exemption). The absence of a standard deduction makes New Jersey's effective tax rate higher than the bracket rates might suggest for moderate-income taxpayers.
+
+  New Jersey fully exempts Social Security benefits from state income tax. The state also provides an exclusion for retirement income (pensions, annuities, IRA distributions) for taxpayers 62 and older with NJ gross income of $150,000 or less: up to $100,000 per couple ($75,000 single). This generous exclusion is one of New Jersey's best retirement tax benefits.
+
+  New Jersey has the highest property taxes in the nation, with an average effective rate of approximately 2.21%. Actual property tax bills in New Jersey are the highest in dollar terms of any state, with the median annual payment exceeding $9,000. The ANCHOR Property Tax Relief Program provides credits to homeowners and renters, and the Senior Freeze program locks property tax bills for qualifying seniors.
+
+  The state sales tax is 6.625% with no local additions. Groceries, clothing, and prescription drugs are all exempt. New Jersey's Urban Enterprise Zones in some cities offer a reduced 3.3125% rate. The broad exemptions on necessities help offset the high income and property tax burdens.
+
+  New Jersey's cost-of-living index is approximately 120, about 20% above the national average. Northern New Jersey (Bergen, Essex, Morris counties) is the most expensive due to proximity to New York City. Central and southern New Jersey offer more affordable options while still providing access to major employment centers in both New York and Philadelphia.
+
+faqs:
+  - question: "What is New Jersey's top income tax rate?"
+    answer: "10.75% on income over $1 million. Rates start very low at 1.40% on the first $20,000, making the first $40,000 lightly taxed."
+  - question: "Does New Jersey have a standard deduction?"
+    answer: "No. New Jersey offers only personal exemptions ($1,000 per filer, $1,500 per dependent). Almost all income is taxable from the first dollar."
+  - question: "Does New Jersey tax Social Security?"
+    answer: "No. Social Security is fully exempt. Taxpayers 62+ with NJ income under $150,000 can exclude up to $100,000 (couple) of retirement income."
+  - question: "Why are NJ property taxes the highest in the nation?"
+    answer: "New Jersey relies heavily on property taxes to fund one of the most expensive public school systems in the country. The average effective rate is 2.21% with median bills exceeding $9,000."
+
+tips:
+  - "If you are 62+ with NJ income under $150,000, the retirement income exclusion of up to $100,000 (married) is one of the most generous in the country — claim it"
+  - "Apply for the ANCHOR program for property tax relief credits — homeowners and renters both qualify"
+  - "Groceries, clothing, and prescriptions are all sales tax-free in New Jersey — take advantage for everyday shopping"

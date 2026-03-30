@@ -1,0 +1,93 @@
+slug: california
+name: California
+abbreviation: CA
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / California Franchise Tax Board"
+revenueAuthorityUrl: "https://www.ftb.ca.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 10756, rate: 1.00 }
+    - { min: 10757, max: 25499, rate: 2.00 }
+    - { min: 25500, max: 40245, rate: 4.00 }
+    - { min: 40246, max: 55866, rate: 6.00 }
+    - { min: 55867, max: 70606, rate: 8.00 }
+    - { min: 70607, max: 360659, rate: 9.30 }
+    - { min: 360660, max: 432787, rate: 10.30 }
+    - { min: 432788, max: 721314, rate: 11.30 }
+    - { min: 721315, max: 1000000, rate: 12.30 }
+    - { min: 1000001, max: 999999999, rate: 13.30 }
+  married:
+    - { min: 0, max: 21512, rate: 1.00 }
+    - { min: 21513, max: 50998, rate: 2.00 }
+    - { min: 50999, max: 80490, rate: 4.00 }
+    - { min: 80491, max: 111732, rate: 6.00 }
+    - { min: 111733, max: 141212, rate: 8.00 }
+    - { min: 141213, max: 721318, rate: 9.30 }
+    - { min: 721319, max: 865574, rate: 10.30 }
+    - { min: 865575, max: 1442628, rate: 11.30 }
+    - { min: 1442629, max: 2000000, rate: 12.30 }
+    - { min: 2000001, max: 999999999, rate: 13.30 }
+  head:
+    - { min: 0, max: 21527, rate: 1.00 }
+    - { min: 21528, max: 50998, rate: 2.00 }
+    - { min: 50999, max: 65744, rate: 4.00 }
+    - { min: 65745, max: 81364, rate: 6.00 }
+    - { min: 81365, max: 96107, rate: 8.00 }
+    - { min: 96108, max: 490493, rate: 9.30 }
+    - { min: 490494, max: 588593, rate: 10.30 }
+    - { min: 588594, max: 980987, rate: 11.30 }
+    - { min: 980988, max: 1000000, rate: 12.30 }
+    - { min: 1000001, max: 999999999, rate: 13.30 }
+
+standardDeductions:
+  single: 5540
+  married: 11080
+  head: 11080
+
+personalExemptions:
+  single: 144
+  married: 288
+  dependent: 446
+
+topRate: 13.30
+numberOfBrackets: 10
+
+editorialTitle: "California Paycheck Calculator 2026"
+editorialDescription: "Calculate your California take-home pay after the nation's highest state income tax. CA has 10 brackets up to 13.30% including the mental health surcharge."
+editorialContent: |
+  California has the highest state income tax rate in the nation at 13.30%, applied to income exceeding $1 million. The state uses a progressive system with 10 brackets (including the 1% Mental Health Services Act surcharge on income over $1 million, which brings the top bracket from 12.30% to 13.30%). For most California workers earning between $70,000 and $360,000, the marginal rate is 9.30%.
+
+  California's standard deduction is notably low compared to federal levels: $5,540 for single filers and $11,080 for married filing jointly. Personal exemptions are also minimal at $144 per single filer and $446 per dependent. These low deduction and exemption amounts mean that California taxes a larger share of income compared to states that conform to federal deduction levels.
+
+  California does not tax Social Security benefits at the state level. However, nearly all other forms of income are fully taxable, including pension distributions, 401(k) and IRA withdrawals, capital gains, and rental income. California taxes capital gains as ordinary income, meaning gains can be taxed at the full 13.30% rate for high-income taxpayers — unlike the federal system, which caps long-term capital gains at 20%.
+
+  California also imposes a State Disability Insurance (SDI) withholding of 1.1% on wages (with no wage base cap since 2024), which appears as a separate line item on your paycheck. Combined with the income tax and federal deductions, California employees can see 35-40% or more of their gross pay withheld.
+
+  The state sales tax base rate is 7.25%, the highest base rate in the nation, with local additions bringing the average combined rate to approximately 8.85%. Groceries (unprepared food) and prescription drugs are exempt. The combination of high income tax and high sales tax gives California one of the highest overall tax burdens in the country.
+
+  Property taxes in California average about 0.71%, kept relatively low by Proposition 13 (1978), which limits assessed value increases to 2% per year and sets the base tax rate at 1% of assessed value. New homeowners are assessed at purchase price, which can result in significantly higher property tax bills compared to long-term homeowners in the same neighborhood.
+
+  California's cost-of-living index is approximately 142, about 42% above the national average. The Bay Area and Los Angeles are the most expensive regions, while the Central Valley and Inland Empire offer more affordable alternatives.
+
+faqs:
+  - question: "What is California's top income tax rate?"
+    answer: "13.30%, applied to income over $1 million. This includes a 1% Mental Health Services Act surcharge. The rate for most workers earning $70K-$360K is 9.30%."
+  - question: "Does California tax Social Security?"
+    answer: "No. California does not tax Social Security benefits. However, pensions, 401(k)/IRA distributions, and capital gains are fully taxable at ordinary rates."
+  - question: "Does California tax capital gains differently than other income?"
+    answer: "No. California taxes capital gains as ordinary income, meaning they can face the full 13.30% rate. This is unlike the federal system which caps long-term gains at 20%."
+  - question: "What is the SDI withholding on my California paycheck?"
+    answer: "California withholds 1.1% of wages for State Disability Insurance (SDI), with no wage base cap. This is a mandatory payroll deduction separate from income tax."
+  - question: "How does Prop 13 affect California property taxes?"
+    answer: "Prop 13 limits base property tax to 1% of assessed value and caps assessment increases at 2% per year. New buyers are assessed at purchase price, which can be much higher than long-term owners' assessments."
+
+tips:
+  - "California taxes capital gains as ordinary income — consider tax-loss harvesting and timing asset sales to minimize state tax impact"
+  - "The 1% Mental Health Services surcharge applies to all income over $1 million, not just wage income — plan accordingly if you have a high-income year"
+  - "SDI withholding (1.1%) has no wage base cap — high earners pay SDI on all wages, unlike Social Security which caps at $176,100"
+  - "If buying a home, understand that Prop 13 assessments reset at purchase price — your property tax will be based on what you paid, not what the previous owner was assessed"

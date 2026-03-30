@@ -1,0 +1,79 @@
+slug: connecticut
+name: Connecticut
+abbreviation: CT
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Connecticut Department of Revenue Services"
+revenueAuthorityUrl: "https://portal.ct.gov/drs"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 10000, rate: 2.00 }
+    - { min: 10001, max: 50000, rate: 4.50 }
+    - { min: 50001, max: 100000, rate: 5.50 }
+    - { min: 100001, max: 200000, rate: 6.00 }
+    - { min: 200001, max: 250000, rate: 6.50 }
+    - { min: 250001, max: 500000, rate: 6.90 }
+    - { min: 500001, max: 999999999, rate: 6.99 }
+  married:
+    - { min: 0, max: 20000, rate: 2.00 }
+    - { min: 20001, max: 100000, rate: 4.50 }
+    - { min: 100001, max: 200000, rate: 5.50 }
+    - { min: 200001, max: 400000, rate: 6.00 }
+    - { min: 400001, max: 500000, rate: 6.50 }
+    - { min: 500001, max: 1000000, rate: 6.90 }
+    - { min: 1000001, max: 999999999, rate: 6.99 }
+  head:
+    - { min: 0, max: 16000, rate: 2.00 }
+    - { min: 16001, max: 80000, rate: 4.50 }
+    - { min: 80001, max: 160000, rate: 5.50 }
+    - { min: 160001, max: 320000, rate: 6.00 }
+    - { min: 320001, max: 400000, rate: 6.50 }
+    - { min: 400001, max: 800000, rate: 6.90 }
+    - { min: 800001, max: 999999999, rate: 6.99 }
+
+standardDeductions:
+  single: 0
+  married: 0
+  head: 0
+
+personalExemptions:
+  single: 15000
+  married: 24000
+  dependent: 0
+
+topRate: 6.99
+numberOfBrackets: 7
+
+editorialTitle: "Connecticut Paycheck Calculator 2026"
+editorialDescription: "Calculate your CT take-home pay. Connecticut has 7 brackets up to 6.99% with personal exemptions instead of a standard deduction. High cost of living state."
+editorialContent: |
+  Connecticut levies a graduated income tax with seven brackets, ranging from 2.00% to 6.99%. The top rate of 6.99% applies to income exceeding $500,000 for single filers and $1,000,000 for married couples. Connecticut does not offer a standard deduction — instead it provides personal exemptions that phase out at higher income levels.
+
+  The personal exemption is $15,000 for single filers and $24,000 for married couples filing jointly. However, these exemptions phase out completely for high-income taxpayers: the single filer exemption begins to phase out at $30,000 of AGI and is fully eliminated at $44,000. This creates an unusual situation where middle-income earners face a hidden marginal rate increase as their exemption shrinks.
+
+  Connecticut also imposes a 3% to 5% tax recapture on high-income taxpayers, effectively creating a tax cliff. The recapture adds a percentage of the tax calculated on lower brackets back as additional tax liability. This makes Connecticut's effective marginal rate structure more complex than its bracket tables suggest.
+
+  Connecticut does not tax Social Security benefits for most residents. Taxpayers with federal AGI below $75,000 (single) or $100,000 (married filing jointly) receive a full exemption. Above these thresholds, 25% of federally taxable Social Security becomes subject to state tax. This partial taxation means some retirees with substantial other income will see some Social Security taxed.
+
+  Connecticut's sales tax rate is 6.35% statewide with no local additions. Groceries and prescription drugs are exempt. The state also exempts clothing and footwear under $100 per item from sales tax, which benefits everyday shoppers.
+
+  Property taxes in Connecticut are among the highest in the nation, with an average effective rate of approximately 1.96%. Combined with the high income tax and one of the highest costs of living in the country (index approximately 120), Connecticut has one of the heaviest total tax burdens of any state. Hartford, New Haven, and Bridgeport tend to have the highest effective property tax rates, while affluent Fairfield County towns have higher home values but often lower mill rates.
+
+faqs:
+  - question: "What is Connecticut's top income tax rate?"
+    answer: "6.99% on income over $500,000 (single) or $1,000,000 (married). However, tax recapture provisions can increase the effective rate for high-income taxpayers."
+  - question: "Does Connecticut have a standard deduction?"
+    answer: "No. Connecticut provides personal exemptions ($15,000 single, $24,000 married) instead, but they phase out completely at higher income levels."
+  - question: "Does Connecticut tax Social Security?"
+    answer: "Partially. Benefits are fully exempt if AGI is below $75,000 (single) or $100,000 (married). Above those thresholds, 25% of federally taxable benefits are taxed."
+  - question: "Are Connecticut property taxes high?"
+    answer: "Yes. The average effective rate is about 1.96%, among the highest nationally, with some municipalities exceeding 3%."
+
+tips:
+  - "Be aware of the personal exemption phase-out — the effective marginal rate increases as your AGI rises from $30,000 to $44,000 (single)"
+  - "Connecticut exempts clothing under $100 per item from sales tax — this applies year-round, not just during sales tax holidays"
+  - "Property taxes vary dramatically by town — research mill rates before purchasing a home, as they can double your housing costs in some municipalities"

@@ -1,0 +1,86 @@
+slug: new-york
+name: New York
+abbreviation: NY
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / New York State Department of Taxation and Finance"
+revenueAuthorityUrl: "https://www.tax.ny.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 8500, rate: 4.00 }
+    - { min: 8501, max: 11700, rate: 4.50 }
+    - { min: 11701, max: 13900, rate: 5.25 }
+    - { min: 13901, max: 80650, rate: 5.50 }
+    - { min: 80651, max: 215400, rate: 6.00 }
+    - { min: 215401, max: 1077550, rate: 6.85 }
+    - { min: 1077551, max: 5000000, rate: 9.65 }
+    - { min: 5000001, max: 25000000, rate: 10.30 }
+    - { min: 25000001, max: 999999999, rate: 10.90 }
+  married:
+    - { min: 0, max: 17150, rate: 4.00 }
+    - { min: 17151, max: 23600, rate: 4.50 }
+    - { min: 23601, max: 27900, rate: 5.25 }
+    - { min: 27901, max: 161550, rate: 5.50 }
+    - { min: 161551, max: 323200, rate: 6.00 }
+    - { min: 323201, max: 2155350, rate: 6.85 }
+    - { min: 2155351, max: 5000000, rate: 9.65 }
+    - { min: 5000001, max: 25000000, rate: 10.30 }
+    - { min: 25000001, max: 999999999, rate: 10.90 }
+  head:
+    - { min: 0, max: 12800, rate: 4.00 }
+    - { min: 12801, max: 17650, rate: 4.50 }
+    - { min: 17651, max: 20900, rate: 5.25 }
+    - { min: 20901, max: 107650, rate: 5.50 }
+    - { min: 107651, max: 269300, rate: 6.00 }
+    - { min: 269301, max: 1616450, rate: 6.85 }
+    - { min: 1616451, max: 5000000, rate: 9.65 }
+    - { min: 5000001, max: 25000000, rate: 10.30 }
+    - { min: 25000001, max: 999999999, rate: 10.90 }
+
+standardDeductions:
+  single: 8000
+  married: 16050
+  head: 11200
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 1000
+
+topRate: 10.90
+numberOfBrackets: 9
+
+editorialTitle: "New York Paycheck Calculator 2026"
+editorialDescription: "Calculate your New York take-home pay. NY has 9 brackets up to 10.90%. NYC adds 3-3.9% more. See how state and city taxes combine to affect your pay."
+editorialContent: |
+  New York state levies a graduated income tax with nine brackets, ranging from 4.00% to 10.90%. The top rates of 9.65% to 10.90% apply to very high incomes (above $1,077,550 for single filers), while most New Yorkers earning between $80,000 and $215,000 fall in the 6.00% bracket. New York's bracket thresholds differ by filing status, with married couples receiving wider brackets.
+
+  New York has its own standard deduction of $8,000 for single filers and $16,050 for married filing jointly, lower than the federal amounts. Dependent exemptions are $1,000 per qualifying dependent. New York's taxable income calculation starts from federal AGI with New York-specific modifications.
+
+  A critical consideration for New York residents is that New York City and Yonkers impose their own additional income taxes. NYC has four brackets ranging from 3.078% to 3.876%. Combined with state rates, NYC residents can face a total state-plus-city marginal rate of 10.726% (on income around $80K-$215K) to 14.776% (at the top). Yonkers imposes a surcharge of 16.75% of the net state tax. These city taxes make New York City one of the most heavily taxed jurisdictions in the country for income earners.
+
+  New York fully exempts Social Security benefits and government pensions (federal, New York state, and local) from state income tax. Private pensions and 401(k)/IRA distributions are taxable, but taxpayers 59-1/2 and older can exclude up to $20,000 of private pension and annuity income. Military retirement pay is fully exempt.
+
+  The state sales tax rate is 4.00% with local additions bringing the average combined rate to approximately 8.52%. Groceries and prescription drugs are exempt. NYC's combined rate is 8.875%. Clothing and footwear under $110 per item are exempt from state and NYC sales tax.
+
+  Property taxes in New York vary enormously. Westchester, Nassau, and Rockland counties have effective rates exceeding 2%, while NYC's effective rate is lower at about 0.88% (though applied to very high property values). Upstate New York has moderate to high rates depending on the school district. The STAR program provides property tax relief for primary residences.
+
+faqs:
+  - question: "What is New York's top income tax rate?"
+    answer: "10.90% on income over $25 million. The 9.65% rate kicks in at $1,077,550 (single). Most workers earning $80K-$215K are in the 6.00% bracket."
+  - question: "Does NYC have its own income tax?"
+    answer: "Yes. NYC adds 3.078% to 3.876% on top of state rates. The combined state-plus-city top rate in NYC can reach 14.776%."
+  - question: "Does New York tax Social Security?"
+    answer: "No. Social Security and government pensions are fully exempt. Taxpayers 59-1/2+ can exclude up to $20,000 of private pension/annuity income."
+  - question: "Does New York tax clothing?"
+    answer: "Clothing and footwear under $110 per item are exempt from state and NYC sales tax."
+
+tips:
+  - "If you live in NYC, your combined state and city income tax can exceed 14% at the top — this is a critical factor in take-home pay calculations"
+  - "Taxpayers 59-1/2 and older should claim the $20,000 pension/annuity income exclusion on their NY return"
+  - "Clothing under $110 per item is sales tax-free in New York — take advantage for everyday purchases"
+  - "Apply for the STAR property tax exemption on your primary residence to reduce your property tax bill"

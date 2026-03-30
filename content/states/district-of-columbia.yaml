@@ -1,0 +1,79 @@
+slug: district-of-columbia
+name: District of Columbia
+abbreviation: DC
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / DC Office of Tax and Revenue"
+revenueAuthorityUrl: "https://otr.cfo.dc.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 10000, rate: 4.00 }
+    - { min: 10001, max: 40000, rate: 6.00 }
+    - { min: 40001, max: 60000, rate: 6.50 }
+    - { min: 60001, max: 250000, rate: 8.50 }
+    - { min: 250001, max: 500000, rate: 9.25 }
+    - { min: 500001, max: 1000000, rate: 9.75 }
+    - { min: 1000001, max: 999999999, rate: 10.75 }
+  married:
+    - { min: 0, max: 10000, rate: 4.00 }
+    - { min: 10001, max: 40000, rate: 6.00 }
+    - { min: 40001, max: 60000, rate: 6.50 }
+    - { min: 60001, max: 250000, rate: 8.50 }
+    - { min: 250001, max: 500000, rate: 9.25 }
+    - { min: 500001, max: 1000000, rate: 9.75 }
+    - { min: 1000001, max: 999999999, rate: 10.75 }
+  head:
+    - { min: 0, max: 10000, rate: 4.00 }
+    - { min: 10001, max: 40000, rate: 6.00 }
+    - { min: 40001, max: 60000, rate: 6.50 }
+    - { min: 60001, max: 250000, rate: 8.50 }
+    - { min: 250001, max: 500000, rate: 9.25 }
+    - { min: 500001, max: 1000000, rate: 9.75 }
+    - { min: 1000001, max: 999999999, rate: 10.75 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 4050
+  married: 8100
+  dependent: 4050
+
+topRate: 10.75
+numberOfBrackets: 7
+
+editorialTitle: "District of Columbia Paycheck Calculator 2026"
+editorialDescription: "Calculate your DC take-home pay. DC has 7 brackets up to 10.75% with one of the highest costs of living in the nation. See how taxes shape your paycheck."
+editorialContent: |
+  The District of Columbia levies a graduated income tax with seven brackets, ranging from 4.00% to 10.75%. The top rate of 10.75% applies to income over $1 million and is the third-highest top marginal rate in the country (behind California and Hawaii). DC uses the same bracket thresholds for all filing statuses, which means married couples filing jointly do not benefit from wider brackets as they do in many states.
+
+  DC conforms to the federal standard deduction ($14,600 single, $29,200 married filing jointly) and provides personal exemptions of $4,050 per person. DC residents who work in DC pay DC income tax as expected. However, DC residents who work in Virginia or Maryland also pay DC income tax (DC taxes residents on worldwide income regardless of where they work). Conversely, Virginia and Maryland residents who work in DC pay tax to their home state, not DC — DC does not have a commuter tax.
+
+  DC does not tax Social Security benefits at the state level. The District also provides an exclusion for government retirees: federal and DC government pension income is partially excludable. DC allows taxpayers 62+ to exempt up to $3,000 of retirement income from taxation.
+
+  DC's sales tax rate is 6.00%, with no local additions since DC has no separate municipalities. Groceries and prescription drugs are exempt. Prepared food and restaurant meals are taxed at 10.00%, and alcohol is taxed at 10.25%. Hotels face a 14.95% occupancy tax. These elevated rates on food service and hospitality are notable for DC residents who frequently dine out.
+
+  Property taxes in DC average approximately 0.56%, relatively low for an urban area. DC offers a homestead deduction that reduces the assessed value by $86,650 for owner-occupied primary residences. A senior/disabled homeowner tax credit is also available for qualifying residents. Real property tax rate is $0.85 per $100 of assessed value.
+
+  DC has one of the highest costs of living in the nation, with an index of approximately 150. Housing is the primary driver — median home prices in DC exceed $600,000, and average rents are among the highest in the country. However, DC also has one of the highest median household incomes in the nation, reflecting the concentration of federal government, legal, and consulting sector jobs.
+
+faqs:
+  - question: "What is DC's top income tax rate?"
+    answer: "10.75% on income over $1,000,000. The same brackets apply to all filing statuses. For income between $60K and $250K, the rate is 8.50%."
+  - question: "Do DC residents pay taxes to DC or their work state?"
+    answer: "DC residents pay DC income tax regardless of where they work. Virginia/Maryland residents working in DC pay tax to their home state, not DC."
+  - question: "Does DC tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt from DC income tax."
+  - question: "What is the restaurant tax in DC?"
+    answer: "Prepared food and restaurant meals are taxed at 10.00%, significantly higher than the 6.00% general sales tax rate."
+
+tips:
+  - "DC's 8.50% rate applies from $60K to $250K — this is the bracket most DC professionals fall into, making it a relatively high-tax jurisdiction for middle-to-upper-income earners"
+  - "Apply for the homestead deduction on your primary residence to reduce your assessed value by $86,650"
+  - "DC's 10% restaurant tax makes dining out noticeably more expensive — factor this into your food budget"

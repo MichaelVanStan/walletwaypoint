@@ -1,0 +1,70 @@
+slug: wisconsin
+name: Wisconsin
+abbreviation: WI
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Wisconsin Department of Revenue"
+revenueAuthorityUrl: "https://www.revenue.wi.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 14320, rate: 3.50 }
+    - { min: 14321, max: 28640, rate: 4.40 }
+    - { min: 28641, max: 315310, rate: 5.30 }
+    - { min: 315311, max: 999999999, rate: 7.65 }
+  married:
+    - { min: 0, max: 19090, rate: 3.50 }
+    - { min: 19091, max: 38190, rate: 4.40 }
+    - { min: 38191, max: 420420, rate: 5.30 }
+    - { min: 420421, max: 999999999, rate: 7.65 }
+  head:
+    - { min: 0, max: 14320, rate: 3.50 }
+    - { min: 14321, max: 28640, rate: 4.40 }
+    - { min: 28641, max: 315310, rate: 5.30 }
+    - { min: 315311, max: 999999999, rate: 7.65 }
+
+standardDeductions:
+  single: 13230
+  married: 24460
+  head: 16530
+
+personalExemptions:
+  single: 700
+  married: 1400
+  dependent: 700
+
+topRate: 7.65
+numberOfBrackets: 4
+
+editorialTitle: "Wisconsin Paycheck Calculator 2026"
+editorialDescription: "Calculate your Wisconsin take-home pay with graduated rates up to 7.65%. See how the standard deduction, property taxes, and credits affect your finances."
+editorialContent: |
+  Wisconsin levies a graduated income tax with four brackets, ranging from 3.50% to 7.65%. The top rate of 7.65% applies to income above $315,310 for single filers ($420,420 married). Most Wisconsin workers fall in the 5.30% bracket, which covers income from about $28,640 to $315,310 (single). Wisconsin's rates are moderate-to-high for the Midwest region.
+
+  Wisconsin has its own standard deduction of $13,230 for single filers and $24,460 for married filing jointly. The deduction phases out at higher income levels, which effectively increases the marginal rate for upper-middle-income taxpayers. Personal exemptions are $700 per person. Wisconsin uses federal adjusted gross income as the starting point with state-specific modifications.
+
+  Wisconsin does not tax Social Security benefits at the state level. The state provides a retirement income subtraction for qualifying military retirement pay and certain other retirement benefits. Wisconsin also offers a Homestead Credit for lower-income homeowners and renters, providing a refundable credit based on property taxes or rent paid relative to household income.
+
+  The state sales tax rate is 5.00% with county additions of up to 0.90%, bringing the average combined rate to approximately 5.44%. Groceries and prescription drugs are exempt. Wisconsin's combined sales tax rate is relatively moderate for the Midwest. The state also exempts most clothing from sales tax (though fur clothing and accessories are taxable).
+
+  Property taxes in Wisconsin are above the national average, with an effective rate of approximately 1.61%. Property taxes fund local schools and services, and rates vary significantly by municipality and school district. Wisconsin offers several property tax credits: the School Levy Tax Credit (applied directly to tax bills), the Lottery and Gaming Credit (for primary residences), and the First Dollar Credit.
+
+  Wisconsin's cost-of-living index is approximately 93, about 7% below the national average. Milwaukee, Madison (the state capital and home to UW-Madison), and Green Bay are the primary metro areas. Madison has a higher cost of living than other Wisconsin cities due to the university and state government presence, but remains affordable by national standards.
+
+faqs:
+  - question: "What are Wisconsin's income tax rates?"
+    answer: "Four brackets: 3.50%, 4.40%, 5.30%, and 7.65%. The 5.30% bracket covers most workers ($28,640-$315,310 single). The top rate applies above $315,310."
+  - question: "Does Wisconsin tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt from Wisconsin state income tax."
+  - question: "What is the Homestead Credit?"
+    answer: "A refundable credit for lower-income homeowners and renters based on property taxes or rent paid relative to income. Both homeowners and renters can qualify."
+  - question: "Are Wisconsin property taxes high?"
+    answer: "Yes, averaging about 1.61%. However, multiple credits (School Levy, Lottery and Gaming, First Dollar) help offset the burden."
+
+tips:
+  - "Wisconsin's standard deduction phases out at higher incomes — this creates a hidden marginal rate increase for upper-middle-income earners"
+  - "Claim the Homestead Credit if you are a lower-income homeowner or renter — it is refundable and based on your property taxes or rent"
+  - "Multiple property tax credits are applied automatically to your tax bill — verify that your School Levy and Lottery/Gaming credits are reflected"

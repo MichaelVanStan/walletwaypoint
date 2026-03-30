@@ -1,0 +1,73 @@
+slug: arkansas
+name: Arkansas
+abbreviation: AR
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Arkansas Department of Finance and Administration"
+revenueAuthorityUrl: "https://www.dfa.arkansas.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 4400, rate: 0.00 }
+    - { min: 4401, max: 8800, rate: 2.00 }
+    - { min: 8801, max: 13100, rate: 3.00 }
+    - { min: 13101, max: 24300, rate: 3.40 }
+    - { min: 24301, max: 999999999, rate: 3.90 }
+  married:
+    - { min: 0, max: 4400, rate: 0.00 }
+    - { min: 4401, max: 8800, rate: 2.00 }
+    - { min: 8801, max: 13100, rate: 3.00 }
+    - { min: 13101, max: 24300, rate: 3.40 }
+    - { min: 24301, max: 999999999, rate: 3.90 }
+  head:
+    - { min: 0, max: 4400, rate: 0.00 }
+    - { min: 4401, max: 8800, rate: 2.00 }
+    - { min: 8801, max: 13100, rate: 3.00 }
+    - { min: 13101, max: 24300, rate: 3.40 }
+    - { min: 24301, max: 999999999, rate: 3.90 }
+
+standardDeductions:
+  single: 2340
+  married: 4680
+  head: 2340
+
+personalExemptions:
+  single: 29
+  married: 58
+  dependent: 29
+
+topRate: 3.90
+numberOfBrackets: 5
+
+editorialTitle: "Arkansas Paycheck Calculator 2026"
+editorialDescription: "Calculate your Arkansas take-home pay. AR has graduated rates up to 3.90% with a zero-bracket floor. See how the declining top rate affects your paycheck."
+editorialContent: |
+  Arkansas uses a graduated income tax with rates ranging from 0% to 3.90% for 2026. The state's top rate has been declining steadily: it was 5.50% in 2022, 4.40% in 2024, and 3.90% for 2026, with plans to continue reducing it. Arkansas uses identical bracket thresholds for all filing statuses, with a zero-bracket floor of $4,400 that effectively exempts the first $4,400 of taxable income from any state tax.
+
+  Arkansas has its own standard deduction of $2,340 for single filers and $4,680 for married filing jointly. The state provides a small personal exemption credit of $29 per person. Arkansas uses federal adjusted gross income as the starting point for state tax calculations, with state-specific modifications.
+
+  Arkansas does not tax Social Security benefits at the state level. The state also provides an exclusion for retirement income: taxpayers can exclude up to $6,000 per year of retirement income from IRAs, 401(k)s, and other qualified plans. Military retirement pay is fully exempt from Arkansas income tax.
+
+  The state sales tax rate is 6.50% with local additions bringing the average combined rate to approximately 9.44%, one of the highest in the nation. Groceries are taxed at a reduced state rate of 0.125% (the regular food tax was eliminated in 2024, leaving only the minimum rate), though local sales taxes still apply to food purchases.
+
+  Property taxes in Arkansas are low, with an average effective rate of approximately 0.61%. The state offers a homestead property tax credit of up to $425 per year for homeowners, applied directly to the property tax bill. Arkansas also offers a property tax freeze for taxpayers 65 and older on their primary residence.
+
+  Arkansas's cost-of-living index is approximately 87, about 13% below the national average, making it one of the most affordable states. Little Rock, Fayetteville (home to the University of Arkansas and major Walmart operations), and Bentonville (Walmart headquarters) offer growing job markets with very affordable housing.
+
+faqs:
+  - question: "What are Arkansas's income tax rates for 2026?"
+    answer: "Arkansas has graduated rates from 0% to 3.90%. The first $4,400 is taxed at 0%, with rates of 2%, 3%, 3.40%, and 3.90% above that. All filing statuses use the same brackets."
+  - question: "Does Arkansas tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt from Arkansas income tax. Up to $6,000 of other retirement income is also excludable."
+  - question: "Is Arkansas reducing its income tax?"
+    answer: "Yes. The top rate has declined from 5.50% in 2022 to 3.90% in 2026, and further reductions are planned."
+  - question: "Does Arkansas tax groceries?"
+    answer: "Minimally. The state rate on groceries is only 0.125% (reduced from 2% in 2024), but local sales taxes still apply, so you may still pay 2-4% on food."
+
+tips:
+  - "Arkansas's declining top rate means your take-home pay should increase slightly each year — check your withholding annually"
+  - "Claim the $6,000 retirement income exclusion if you receive IRA or 401(k) distributions"
+  - "The homestead property tax credit provides up to $425 directly off your property tax bill — apply through your county assessor"

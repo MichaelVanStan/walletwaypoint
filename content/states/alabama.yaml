@@ -1,0 +1,69 @@
+slug: alabama
+name: Alabama
+abbreviation: AL
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Alabama Department of Revenue"
+revenueAuthorityUrl: "https://www.revenue.alabama.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 500, rate: 2.00 }
+    - { min: 501, max: 3000, rate: 4.00 }
+    - { min: 3001, max: 999999999, rate: 5.00 }
+  married:
+    - { min: 0, max: 1000, rate: 2.00 }
+    - { min: 1001, max: 6000, rate: 4.00 }
+    - { min: 6001, max: 999999999, rate: 5.00 }
+  head:
+    - { min: 0, max: 500, rate: 2.00 }
+    - { min: 501, max: 3000, rate: 4.00 }
+    - { min: 3001, max: 999999999, rate: 5.00 }
+
+standardDeductions:
+  single: 3000
+  married: 8500
+  head: 4700
+
+personalExemptions:
+  single: 1500
+  married: 3000
+  dependent: 1000
+
+topRate: 5.00
+numberOfBrackets: 3
+
+editorialTitle: "Alabama Paycheck Calculator 2026"
+editorialDescription: "Calculate your Alabama take-home pay. AL has a graduated income tax up to 5% with low brackets. Federal income tax is deductible on your state return."
+editorialContent: |
+  Alabama levies a graduated income tax with three brackets, topping out at 5.00% on taxable income above $3,000 for single filers ($6,000 for married filing jointly). Because the top bracket kicks in at such a low income level, most Alabama workers effectively pay close to the maximum 5% rate on the vast majority of their income.
+
+  Alabama is one of only three states (along with Iowa's former system and Oregon) that allows taxpayers to deduct their federal income tax paid on their state return. This is a significant benefit, particularly for higher-income taxpayers, because it effectively reduces the state's true tax burden. For example, a taxpayer in the 22% federal bracket who earns $60,000 can deduct several thousand dollars of federal tax from their Alabama taxable income.
+
+  Alabama's standard deduction varies by filing status: $3,000 for single filers, $8,500 for married filing jointly, and $4,700 for head of household. Personal exemptions are $1,500 per single filer, $3,000 for married couples, and $1,000 per dependent. These amounts have not been adjusted for inflation in many years and provide relatively modest shelter from taxation compared to federal levels.
+
+  Alabama does not tax Social Security benefits at the state level. The state also provides a full exemption for certain government pensions, including federal civil service retirement benefits and state/local government pensions. Military retirement pay is fully exempt from Alabama income tax. Private pensions and 401(k)/IRA distributions are generally taxable at the graduated rates.
+
+  Alabama's sales tax adds 4.00% at the state level with local additions averaging about 5.24% for a combined average of approximately 9.24%. Alabama is one of the few states that taxes groceries at the full sales tax rate, which has been a point of ongoing legislative debate. Some cities offer reduced local rates on groceries.
+
+  Property taxes in Alabama are among the lowest in the nation, with an average effective rate of approximately 0.39%. The homestead exemption shields the first $4,000 of assessed value for most homeowners, with enhanced exemptions for seniors 65+. Combined with low housing costs, Alabama offers some of the most affordable homeownership in the country.
+
+  Alabama's cost-of-living index is approximately 88, about 12% below the national average. Birmingham and Huntsville are the primary job markets, with Huntsville seeing rapid growth as a technology and defense industry hub.
+
+faqs:
+  - question: "What are Alabama's income tax rates?"
+    answer: "Alabama has three brackets: 2% on the first $500 ($1,000 married), 4% on $501-$3,000 ($1,001-$6,000 married), and 5% on income above $3,000 ($6,000 married)."
+  - question: "Can I deduct federal taxes on my Alabama return?"
+    answer: "Yes. Alabama is one of only three states that allows you to deduct federal income taxes paid on your state return, which can significantly reduce your state tax bill."
+  - question: "Does Alabama tax Social Security?"
+    answer: "No. Social Security, military retirement, and government pensions are fully exempt from Alabama income tax."
+  - question: "Does Alabama tax groceries?"
+    answer: "Yes. Alabama taxes groceries at the full sales tax rate (state 4% plus local taxes), with combined rates averaging about 9.24%."
+
+tips:
+  - "Deduct your federal income tax on your Alabama return — this is a unique benefit that reduces your effective state tax rate"
+  - "Alabama's property taxes are among the lowest in the nation at about 0.39% — homeownership costs are very affordable"
+  - "Huntsville is one of the fastest-growing cities in the Southeast with strong tech and defense job markets"

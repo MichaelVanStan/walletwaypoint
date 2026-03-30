@@ -1,0 +1,64 @@
+slug: massachusetts
+name: Massachusetts
+abbreviation: MA
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Massachusetts Department of Revenue"
+revenueAuthorityUrl: "https://www.mass.gov/orgs/massachusetts-department-of-revenue"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 1000000, rate: 5.00 }
+    - { min: 1000001, max: 999999999, rate: 9.00 }
+  married:
+    - { min: 0, max: 1000000, rate: 5.00 }
+    - { min: 1000001, max: 999999999, rate: 9.00 }
+  head:
+    - { min: 0, max: 1000000, rate: 5.00 }
+    - { min: 1000001, max: 999999999, rate: 9.00 }
+
+standardDeductions:
+  single: 0
+  married: 0
+  head: 0
+
+personalExemptions:
+  single: 4400
+  married: 8800
+  dependent: 1000
+
+topRate: 9.00
+numberOfBrackets: 2
+
+editorialTitle: "Massachusetts Paycheck Calculator 2026"
+editorialDescription: "Calculate your Massachusetts take-home pay. MA has a 5% flat rate plus a 4% millionaires surtax. No standard deduction. See how it affects your paycheck."
+editorialContent: |
+  Massachusetts has a distinctive two-tier income tax structure. Most income is taxed at a flat rate of 5.00%, but a 4% surtax (the "Fair Share Amendment" or "millionaires tax," approved by voters in November 2022) applies to income exceeding $1 million, bringing the effective top rate to 9.00%. The $1 million threshold is indexed for inflation. This makes Massachusetts technically a graduated-rate state, though for the vast majority of taxpayers it functions as a flat 5% tax.
+
+  Massachusetts does not provide a standard deduction. Instead, the state offers personal exemptions of $4,400 for single filers and $8,800 for married couples, plus $1,000 per dependent. Massachusetts uses its own definition of gross income (based on federal AGI with modifications), and the exemptions are subtracted to arrive at taxable income. The absence of a standard deduction means that moderate-income earners pay the 5% rate on a larger share of their income than in states that offer a federal-level standard deduction.
+
+  Massachusetts does not tax Social Security benefits. The state also provides a pension income exemption for government pensions (federal, state, and municipal employees) — these are fully exempt from state tax. However, private pension income, 401(k) distributions, and IRA withdrawals are taxable at the 5% rate.
+
+  Massachusetts has a 6.25% sales tax with no local additions. Groceries, clothing under $175 per item, and prescription drugs are exempt. The clothing exemption is particularly notable — items under $175 are fully exempt, while only the amount exceeding $175 is taxable on more expensive items.
+
+  Property taxes in Massachusetts average approximately 1.12%, above the national average. The state limits property tax levy increases to 2.5% per year under Proposition 2-1/2, but overrides can be approved by local voters. High home values in Greater Boston push actual tax bills well above the national median despite the moderate rate.
+
+  Massachusetts's cost-of-living index is approximately 135, significantly above the national average. Greater Boston is the most expensive region, driven by housing costs and the presence of world-class universities and hospitals. Western Massachusetts (Springfield, Northampton) offers more affordable options.
+
+faqs:
+  - question: "What is Massachusetts's income tax rate?"
+    answer: "5.00% on most income, plus a 4% surtax on income over $1 million (threshold indexed for inflation), bringing the top rate to 9.00%."
+  - question: "Does Massachusetts have a standard deduction?"
+    answer: "No. Massachusetts provides personal exemptions ($4,400 single, $8,800 married, $1,000 per dependent) but no standard deduction."
+  - question: "Does Massachusetts tax Social Security?"
+    answer: "No. Social Security is exempt. Government pensions (federal, state, municipal) are also fully exempt. Private pensions and 401(k)/IRA distributions are taxable at 5%."
+  - question: "Does Massachusetts tax clothing?"
+    answer: "Clothing items under $175 are exempt. Only the amount exceeding $175 per item is subject to the 6.25% sales tax."
+
+tips:
+  - "If your income approaches $1 million, be aware that the 4% surtax creates a significant marginal rate jump from 5% to 9% on income over $1M"
+  - "Government pension recipients (federal, state, municipal) pay zero state tax on their pension income — this is one of MA's best retirement benefits"
+  - "Massachusetts exempts clothing under $175 per item — shop in MA for everyday clothing to avoid the 6.25% tax"

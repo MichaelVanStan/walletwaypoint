@@ -1,0 +1,67 @@
+slug: kansas
+name: Kansas
+abbreviation: KS
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Kansas Department of Revenue"
+revenueAuthorityUrl: "https://www.ksrevenue.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 15000, rate: 3.10 }
+    - { min: 15001, max: 30000, rate: 5.25 }
+    - { min: 30001, max: 999999999, rate: 5.70 }
+  married:
+    - { min: 0, max: 30000, rate: 3.10 }
+    - { min: 30001, max: 60000, rate: 5.25 }
+    - { min: 60001, max: 999999999, rate: 5.70 }
+  head:
+    - { min: 0, max: 15000, rate: 3.10 }
+    - { min: 15001, max: 30000, rate: 5.25 }
+    - { min: 30001, max: 999999999, rate: 5.70 }
+
+standardDeductions:
+  single: 3500
+  married: 8000
+  head: 6000
+
+personalExemptions:
+  single: 2250
+  married: 4500
+  dependent: 2250
+
+topRate: 5.70
+numberOfBrackets: 3
+
+editorialTitle: "Kansas Paycheck Calculator 2026"
+editorialDescription: "Calculate your Kansas take-home pay with graduated rates up to 5.70%. See how the standard deduction, personal exemptions, and sales tax affect your finances."
+editorialContent: |
+  Kansas levies a graduated income tax with three brackets, ranging from 3.10% to 5.70%. The top rate applies to income above $30,000 for single filers and $60,000 for married couples. Kansas uses a relatively straightforward system with its own standard deduction of $3,500 for single filers, $8,000 for married filing jointly, and $6,000 for head of household, plus personal exemptions of $2,250 per person.
+
+  Kansas does not tax Social Security benefits at the state level for taxpayers with federal adjusted gross income of $75,000 or less (regardless of filing status). Above that threshold, Social Security is taxed to the extent it is included in federal AGI. Kansas fully exempts military retirement pay from state income tax, and also exempts railroad retirement benefits.
+
+  Kansas has experienced significant tax policy changes over the past decade. The state experimented with deep tax cuts under Governor Brownback (2012-2017), which were largely reversed after revenue shortfalls. The current rate structure represents a more moderate approach, balancing revenue needs with competitive rates for the region.
+
+  The state sales tax rate is 6.50% with local additions bringing the average combined rate to approximately 8.71%. Kansas eliminated state sales tax on groceries as of January 2025 (phased out from 2023-2025), though local sales taxes on groceries may still apply. This grocery tax elimination was a significant legislative accomplishment that benefits all Kansas families.
+
+  Property taxes in Kansas are above the national average, with an effective rate of approximately 1.33%. Property taxes fund local schools and services and vary significantly by county. Johnson County (suburbs of Kansas City) has high property values but moderate mill rates, while some rural counties have higher mill rates on lower values. Kansas offers a homestead property tax refund for low-income homeowners and renters.
+
+  Kansas's cost-of-living index is approximately 87, about 13% below the national average. Wichita and Topeka offer very affordable living, while the Kansas City metro (Johnson County, Overland Park) is slightly above the state average but still well below major coastal cities. The University of Kansas in Lawrence and Kansas State in Manhattan contribute to vibrant smaller city economies.
+
+faqs:
+  - question: "What are Kansas's income tax rates?"
+    answer: "Kansas has three brackets: 3.10% on the first $15,000 ($30,000 married), 5.25% on the next $15,000 ($30,000 married), and 5.70% above $30,000 ($60,000 married)."
+  - question: "Does Kansas tax Social Security?"
+    answer: "Not for most residents. Social Security is exempt if federal AGI is $75,000 or less. Above that threshold, benefits are taxed to the extent they are included in federal AGI."
+  - question: "Does Kansas tax groceries?"
+    answer: "Kansas eliminated the state sales tax on groceries as of 2025. Local grocery sales taxes may still apply depending on where you shop."
+  - question: "Is Kansas military-friendly for taxes?"
+    answer: "Yes. Military retirement pay is fully exempt from Kansas income tax."
+
+tips:
+  - "Kansas eliminated state grocery sales tax in 2025 — you should no longer see state tax on food purchases, though local taxes may still apply"
+  - "If your federal AGI is below $75,000, your Social Security benefits are fully exempt from Kansas tax"
+  - "Compare property tax rates across counties before buying a home — Johnson County and Sedgwick County rates can differ significantly"

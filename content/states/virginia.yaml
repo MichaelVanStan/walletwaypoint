@@ -1,0 +1,70 @@
+slug: virginia
+name: Virginia
+abbreviation: VA
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Virginia Department of Taxation"
+revenueAuthorityUrl: "https://www.tax.virginia.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 3000, rate: 2.00 }
+    - { min: 3001, max: 5000, rate: 3.00 }
+    - { min: 5001, max: 17000, rate: 5.00 }
+    - { min: 17001, max: 999999999, rate: 5.75 }
+  married:
+    - { min: 0, max: 3000, rate: 2.00 }
+    - { min: 3001, max: 5000, rate: 3.00 }
+    - { min: 5001, max: 17000, rate: 5.00 }
+    - { min: 17001, max: 999999999, rate: 5.75 }
+  head:
+    - { min: 0, max: 3000, rate: 2.00 }
+    - { min: 3001, max: 5000, rate: 3.00 }
+    - { min: 5001, max: 17000, rate: 5.00 }
+    - { min: 17001, max: 999999999, rate: 5.75 }
+
+standardDeductions:
+  single: 8500
+  married: 17000
+  head: 8500
+
+personalExemptions:
+  single: 930
+  married: 1860
+  dependent: 930
+
+topRate: 5.75
+numberOfBrackets: 4
+
+editorialTitle: "Virginia Paycheck Calculator 2026"
+editorialDescription: "Calculate your Virginia take-home pay with graduated rates up to 5.75%. VA's top bracket starts at just $17,000. See how deductions and exemptions work."
+editorialContent: |
+  Virginia levies a graduated income tax with four brackets, ranging from 2.00% to 5.75%. The top rate kicks in at just $17,000 of taxable income, meaning virtually all working Virginians are in the top bracket for the majority of their earnings. The bracket thresholds are the same for all filing statuses and have not been adjusted for inflation in decades, making Virginia's system function similarly to a flat 5.75% tax for most workers.
+
+  Virginia has its own standard deduction of $8,500 for single filers and $17,000 for married filing jointly. Personal exemptions are $930 per person. The relatively low standard deduction compared to federal levels means that Virginia taxes a larger portion of income. Virginia uses federal adjusted gross income as the starting point, with state-specific modifications.
+
+  Virginia does not tax Social Security benefits at the state level. The state provides a $12,000 age deduction for taxpayers 65 and older, which reduces Virginia taxable income. For high-income seniors (AGI above $75,000), the deduction phases out. Virginia also allows military service members to subtract up to $15,000 of military base pay from Virginia taxable income.
+
+  Virginia has a sales tax of 4.30% at the state level with a 1% local rate in most areas, bringing the combined rate to 5.30% in most of the state. The Hampton Roads and Northern Virginia regions have a slightly higher rate of 6.00% due to additional transportation taxes. Groceries are taxed at a reduced rate of 1.00%. Prescription drugs and certain medical items are exempt.
+
+  Property taxes in Virginia average approximately 0.80%, below the national average. However, Northern Virginia (Fairfax, Loudoun, Arlington counties) has very high home values, resulting in substantial dollar-amount property tax bills despite moderate rates. Virginia also levies a personal property tax on vehicles, assessed annually based on the vehicle's value — this is a significant cost that surprises many new Virginia residents.
+
+  Virginia's cost-of-living index is approximately 104, slightly above the national average. Northern Virginia (close to Washington, D.C.) has among the highest costs in the nation, while Hampton Roads, Richmond, and the Shenandoah Valley are much more affordable. The technology, defense, and government sectors drive the Northern Virginia economy, with major employers including Amazon (HQ2 in Arlington), government contractors, and military installations.
+
+faqs:
+  - question: "What is Virginia's top income tax rate?"
+    answer: "5.75% on income above $17,000. Because the top bracket starts so low, most working Virginians effectively pay 5.75% on almost all their income."
+  - question: "Does Virginia tax Social Security?"
+    answer: "No. Social Security is exempt. Taxpayers 65+ receive an additional $12,000 age deduction (phasing out at AGI above $75,000)."
+  - question: "Does Virginia have a car tax?"
+    answer: "Yes. Virginia levies an annual personal property tax on vehicles based on assessed value. This can cost several hundred dollars per vehicle per year."
+  - question: "What is the sales tax on groceries in Virginia?"
+    answer: "Groceries are taxed at a reduced rate of 1.00%, well below the general 5.30% rate."
+
+tips:
+  - "Budget for Virginia's personal property tax on vehicles — it is an annual tax based on your car's assessed value and can be several hundred dollars"
+  - "If you are 65+, claim the $12,000 age deduction to reduce your Virginia taxable income"
+  - "Northern Virginia has significantly higher costs than the rest of the state — consider Richmond or Hampton Roads for more affordable living with good job markets"

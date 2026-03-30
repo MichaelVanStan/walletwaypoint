@@ -1,0 +1,70 @@
+slug: nebraska
+name: Nebraska
+abbreviation: NE
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Nebraska Department of Revenue"
+revenueAuthorityUrl: "https://revenue.nebraska.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 3700, rate: 2.46 }
+    - { min: 3701, max: 22170, rate: 3.51 }
+    - { min: 22171, max: 35730, rate: 5.01 }
+    - { min: 35731, max: 999999999, rate: 5.84 }
+  married:
+    - { min: 0, max: 7390, rate: 2.46 }
+    - { min: 7391, max: 44350, rate: 3.51 }
+    - { min: 44351, max: 71460, rate: 5.01 }
+    - { min: 71461, max: 999999999, rate: 5.84 }
+  head:
+    - { min: 0, max: 5960, rate: 2.46 }
+    - { min: 5961, max: 32500, rate: 3.51 }
+    - { min: 32501, max: 52410, rate: 5.01 }
+    - { min: 52411, max: 999999999, rate: 5.84 }
+
+standardDeductions:
+  single: 8050
+  married: 16100
+  head: 11800
+
+personalExemptions:
+  single: 163
+  married: 326
+  dependent: 163
+
+topRate: 5.84
+numberOfBrackets: 4
+
+editorialTitle: "Nebraska Paycheck Calculator 2026"
+editorialDescription: "Calculate your Nebraska take-home pay with graduated rates up to 5.84%. NE has been reducing rates. See how Social Security exemption and property taxes affect you."
+editorialContent: |
+  Nebraska levies a graduated income tax with four brackets, ranging from 2.46% to 5.84%. The top rate has been declining — it was 6.84% as recently as 2023 and is scheduled to continue falling. The state's tax reform program aims to reduce rates further in coming years, contingent on revenue performance.
+
+  Nebraska has its own standard deduction of $8,050 for single filers and $16,100 for married filing jointly, which is lower than the federal standard deduction. Personal exemption credits are $163 per person. Nebraska uses federal adjusted gross income as the starting point, with state-specific modifications.
+
+  Nebraska fully exempts Social Security benefits from state income tax, a change phased in between 2022 and 2025. Previously, Nebraska was one of only a few states that taxed Social Security. This exemption benefits approximately 300,000 Nebraska Social Security recipients. Other retirement income (pensions, 401(k)s, IRAs) remains taxable at the graduated rates.
+
+  Nebraska's sales tax rate is 5.50% at the state level with local additions bringing the average combined rate to approximately 6.94%. Groceries are exempt from sales tax. Nebraska also exempts Social Security income from both income tax and does not tax it as part of AGI for sales tax purposes.
+
+  Property taxes in Nebraska are among the highest in the nation, with an average effective rate of approximately 1.61%. Property taxes primarily fund public schools and local government, and rates vary significantly by county. The high property tax rate is Nebraska's most-discussed tax issue, and the legislature has been working on relief measures including an income tax credit for property taxes paid. The Property Tax Credit is claimed on the state income tax return and provides a refund based on school district property taxes paid.
+
+  Nebraska's cost-of-living index is approximately 90, about 10% below the national average. Omaha is the largest metro area and offers a strong job market (home to Berkshire Hathaway, Mutual of Omaha, Union Pacific) with affordable housing. Lincoln (state capital and home to the University of Nebraska) is also very affordable.
+
+faqs:
+  - question: "What are Nebraska's income tax rates?"
+    answer: "Nebraska has four brackets: 2.46%, 3.51%, 5.01%, and 5.84%. The top rate applies above $35,730 (single) or $71,460 (married). Rates are declining."
+  - question: "Does Nebraska tax Social Security?"
+    answer: "No. Nebraska fully exempts Social Security benefits from state income tax as of 2025."
+  - question: "Why are Nebraska property taxes so high?"
+    answer: "Nebraska relies heavily on property taxes for school funding. The average effective rate is about 1.61%. The state offers a Property Tax Credit on income tax returns as partial relief."
+  - question: "What is Nebraska's Property Tax Credit?"
+    answer: "A credit claimed on your state income tax return that refunds a percentage of school district property taxes paid. The credit amount is set annually by the legislature."
+
+tips:
+  - "Claim the Nebraska Property Tax Credit on your state income tax return — it provides direct relief based on school district property taxes paid"
+  - "Nebraska's income tax rates are declining — check your withholding each year as rates drop"
+  - "Omaha offers a strong job market at a very affordable cost of living — one of the best value metros in the country"

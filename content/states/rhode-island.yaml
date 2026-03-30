@@ -1,0 +1,67 @@
+slug: rhode-island
+name: Rhode Island
+abbreviation: RI
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Rhode Island Division of Taxation"
+revenueAuthorityUrl: "https://tax.ri.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 77450, rate: 3.75 }
+    - { min: 77451, max: 176050, rate: 4.75 }
+    - { min: 176051, max: 999999999, rate: 5.99 }
+  married:
+    - { min: 0, max: 77450, rate: 3.75 }
+    - { min: 77451, max: 176050, rate: 4.75 }
+    - { min: 176051, max: 999999999, rate: 5.99 }
+  head:
+    - { min: 0, max: 77450, rate: 3.75 }
+    - { min: 77451, max: 176050, rate: 4.75 }
+    - { min: 176051, max: 999999999, rate: 5.99 }
+
+standardDeductions:
+  single: 10550
+  married: 21150
+  head: 15800
+
+personalExemptions:
+  single: 4700
+  married: 9400
+  dependent: 4700
+
+topRate: 5.99
+numberOfBrackets: 3
+
+editorialTitle: "Rhode Island Paycheck Calculator 2026"
+editorialDescription: "Calculate your Rhode Island take-home pay with graduated rates up to 5.99%. See how RI's moderate rates and property taxes affect your finances."
+editorialContent: |
+  Rhode Island levies a graduated income tax with three brackets, ranging from 3.75% to 5.99%. The top rate of 5.99% applies to income above $176,050, using the same bracket thresholds for all filing statuses. Rhode Island's rates are moderate compared to its New England neighbors — lower than Connecticut, Massachusetts (for most), and Vermont, but higher than New Hampshire (which has no income tax).
+
+  Rhode Island has its own standard deduction of $10,550 for single filers and $21,150 for married filing jointly, plus personal exemptions of $4,700 per person. These deduction amounts are lower than the federal levels. The exemptions phase out for high-income taxpayers, beginning at approximately $234,750 of AGI.
+
+  Rhode Island partially taxes Social Security benefits, following the federal inclusion rules. However, the state provides an exemption for Social Security income if modified AGI is below $107,950 (indexed for inflation). Above that threshold, benefits are taxed to the extent they are included in federal AGI. This means most lower-and-middle-income retirees pay no state tax on Social Security.
+
+  The state sales tax rate is 7.00% with no local additions. Groceries and prescription drugs are exempt. Clothing is also exempt from sales tax up to $250 per item. The uniform statewide rate and broad exemptions keep the sales tax burden moderate for most residents.
+
+  Property taxes in Rhode Island are above average, with an effective rate of approximately 1.40%. Rates vary by municipality, with some of the highest rates in New England found in urban areas like Providence, Warwick, and Cranston. Rhode Island offers a property tax exemption for veterans and a circuit breaker credit for low-income seniors.
+
+  Rhode Island's cost-of-living index is approximately 108, above the national average. Providence, the capital and largest city, offers more affordable housing than Boston (60 miles north) while providing access to Brown University, RISD, and a growing healthcare and education economy. Newport and the coastal communities are more expensive.
+
+faqs:
+  - question: "What are Rhode Island's income tax rates?"
+    answer: "Three brackets: 3.75% on the first $77,450, 4.75% up to $176,050, and 5.99% above that. Same thresholds for all filing statuses."
+  - question: "Does Rhode Island tax Social Security?"
+    answer: "Only for higher-income recipients. If your modified AGI is below $107,950, Social Security is fully exempt. Above that, federal inclusion rules apply."
+  - question: "Does Rhode Island tax clothing?"
+    answer: "Clothing under $250 per item is exempt from the 7.00% sales tax."
+  - question: "What are Rhode Island property taxes like?"
+    answer: "Above average at about 1.40%, with significant variation by municipality. Urban areas tend to have higher rates."
+
+tips:
+  - "If your modified AGI is below $107,950, your Social Security benefits are fully exempt from Rhode Island tax"
+  - "Rhode Island exempts clothing under $250 per item — shop in-state for everyday clothing to avoid sales tax"
+  - "Compare property tax rates across municipalities before purchasing a home — rates vary significantly even between adjacent towns"

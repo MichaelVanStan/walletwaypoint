@@ -1,0 +1,69 @@
+slug: ohio
+name: Ohio
+abbreviation: OH
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Ohio Department of Taxation"
+revenueAuthorityUrl: "https://tax.ohio.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 26050, rate: 0.00 }
+    - { min: 26051, max: 100000, rate: 2.75 }
+    - { min: 100001, max: 999999999, rate: 3.50 }
+  married:
+    - { min: 0, max: 26050, rate: 0.00 }
+    - { min: 26051, max: 100000, rate: 2.75 }
+    - { min: 100001, max: 999999999, rate: 3.50 }
+  head:
+    - { min: 0, max: 26050, rate: 0.00 }
+    - { min: 26051, max: 100000, rate: 2.75 }
+    - { min: 100001, max: 999999999, rate: 3.50 }
+
+standardDeductions:
+  single: 0
+  married: 0
+  head: 0
+
+personalExemptions:
+  single: 2400
+  married: 4800
+  dependent: 2400
+
+topRate: 3.50
+numberOfBrackets: 3
+
+editorialTitle: "Ohio Paycheck Calculator 2026"
+editorialDescription: "Calculate your Ohio take-home pay with graduated rates up to 3.50% and a zero-bracket floor. Plus understand Ohio's extensive municipal income tax system."
+editorialContent: |
+  Ohio levies a graduated income tax with three brackets, starting with a 0% rate on the first $26,050 of taxable income. The remaining brackets are 2.75% ($26,051-$100,000) and 3.50% (above $100,000). This zero-bracket floor effectively exempts a significant portion of income from state taxation — combined with personal exemptions ($2,400 per person), many lower-income Ohioans pay no state income tax at all.
+
+  Ohio does not offer a standard deduction — it uses personal exemptions of $2,400 per person, with the amount phasing out for higher incomes. Ohio's tax calculation starts with federal adjusted gross income, then applies Ohio-specific adjustments and the personal exemption deductions.
+
+  A distinctive and often significant feature of Ohio's tax system is municipal income taxes. Over 600 Ohio cities and villages levy their own income taxes, typically ranging from 1.00% to 3.00%. Cleveland's rate is 2.50%, Columbus is 2.50%, and Cincinnati is 1.80%. These local taxes are based on where you work (not where you live in most cases), though your home city may provide a credit for taxes paid to your work city. This system creates a complex web of local tax obligations for Ohio workers who live in one city and work in another.
+
+  Ohio does not tax Social Security benefits or military retirement pay at the state level. The state provides a retirement income credit for qualifying taxpayers, which provides modest tax relief on pension and other retirement income. Ohio also does not impose an estate or inheritance tax.
+
+  Ohio's sales tax rate is 5.75% at the state level with county additions bringing the average combined rate to approximately 7.24%. Groceries are exempt from sales tax. The state also exempts prescription drugs and most medical supplies.
+
+  Property taxes in Ohio average approximately 1.53%, above the national average. Ohio offers a Homestead Exemption for qualifying homeowners 65 and older (or permanently disabled) that reduces the taxable value of the home by $26,200. This exemption is available regardless of income.
+
+  Ohio's cost-of-living index is approximately 91, about 9% below the national average. Columbus, Cleveland, and Cincinnati each offer distinct urban amenities with affordable housing. Columbus has been one of the fastest-growing metro areas in the Midwest, driven by technology, healthcare, and education sectors.
+
+faqs:
+  - question: "What are Ohio's income tax rates?"
+    answer: "Three brackets: 0% on the first $26,050, 2.75% on $26,051-$100,000, and 3.50% above $100,000. The same thresholds apply to all filing statuses."
+  - question: "Do Ohio cities have their own income tax?"
+    answer: "Yes. Over 600 Ohio cities levy municipal income taxes of 1.00% to 3.00%. Cleveland and Columbus both charge 2.50%. The tax is based on where you work."
+  - question: "Does Ohio tax Social Security?"
+    answer: "No. Social Security and military retirement pay are both exempt from Ohio state income tax."
+  - question: "Does Ohio have a standard deduction?"
+    answer: "No. Ohio provides personal exemptions of $2,400 per person, which phase out at higher incomes."
+
+tips:
+  - "Check whether your home city provides a credit for municipal taxes paid to your work city — this can prevent double taxation on local income"
+  - "The $26,050 zero bracket means many part-time workers and lower-income earners owe no state income tax"
+  - "Homeowners 65+ should apply for the Homestead Exemption to reduce their property tax assessed value by $26,200"

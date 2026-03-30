@@ -1,0 +1,72 @@
+slug: oregon
+name: Oregon
+abbreviation: OR
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Oregon Department of Revenue"
+revenueAuthorityUrl: "https://www.oregon.gov/dor"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 4300, rate: 4.75 }
+    - { min: 4301, max: 10750, rate: 6.75 }
+    - { min: 10751, max: 125000, rate: 8.75 }
+    - { min: 125001, max: 999999999, rate: 9.90 }
+  married:
+    - { min: 0, max: 8600, rate: 4.75 }
+    - { min: 8601, max: 21500, rate: 6.75 }
+    - { min: 21501, max: 250000, rate: 8.75 }
+    - { min: 250001, max: 999999999, rate: 9.90 }
+  head:
+    - { min: 0, max: 4300, rate: 4.75 }
+    - { min: 4301, max: 10750, rate: 6.75 }
+    - { min: 10751, max: 125000, rate: 8.75 }
+    - { min: 125001, max: 999999999, rate: 9.90 }
+
+standardDeductions:
+  single: 2745
+  married: 5495
+  head: 4420
+
+personalExemptions:
+  single: 236
+  married: 472
+  dependent: 236
+
+topRate: 9.90
+numberOfBrackets: 4
+
+editorialTitle: "Oregon Paycheck Calculator 2026"
+editorialDescription: "Calculate your Oregon take-home pay with rates up to 9.90%. Oregon has no sales tax but high income tax. See the trade-off and how it affects your paycheck."
+editorialContent: |
+  Oregon levies a graduated income tax with four brackets, ranging from 4.75% to 9.90%. The top rate of 9.90% applies to income above $125,000 for single filers ($250,000 married). Even Oregon's lowest bracket rate of 4.75% is higher than many states' top rates. The 8.75% bracket covers most working-income earners ($10,750 to $125,000), making Oregon one of the highest-tax states for income.
+
+  Oregon's standard deduction is low: $2,745 for single filers and $5,495 for married filing jointly. Personal exemption credits are $236 per person. Oregon also allows a federal income tax deduction on the state return (up to $7,050 for 2026), which is a notable benefit that reduces the effective state tax rate. Oregon is one of only two states (along with Alabama) that currently offers this federal tax deduction.
+
+  Oregon has no sales tax — one of only five states without one. This is the most significant offset to Oregon's high income tax rates. The absence of sales tax means all purchases — including groceries, clothing, electronics, and vehicles — are tax-free at the point of sale. For consumers, especially those with moderate incomes, the sales tax savings can be substantial.
+
+  Oregon does not tax Social Security benefits at the state level. The state provides a retirement income credit for qualifying lower-income retirees, though the credit amount is modest. Military retirement pay received after October 1991 is not specifically exempt in Oregon, though a credit may offset some of the tax for qualifying veterans.
+
+  Property taxes in Oregon average approximately 0.87%, near the national average. Oregon's Measure 5 (1990) and Measure 50 (1997) limit property tax rates: $15 per $1,000 of real market value for education and $10 per $1,000 for general government. Assessed values are limited to 3% annual growth, similar to California's Proposition 13 but less extreme.
+
+  Oregon's cost-of-living index is approximately 113, about 13% above the national average. Portland is the most expensive metro, driven by housing costs, while Eugene, Salem, and Bend offer more moderate (though still above-average) costs. The state's natural beauty and lifestyle appeal continue to attract new residents despite the high income tax.
+
+  Oregon also levies a statewide Corporate Activity Tax (CAT) of 0.57% on business receipts over $1 million, which indirectly affects prices for consumers.
+
+faqs:
+  - question: "What is Oregon's top income tax rate?"
+    answer: "9.90% on income above $125,000 (single) or $250,000 (married). The 8.75% rate covers most working incomes from about $10,750 to $125,000."
+  - question: "Does Oregon have a sales tax?"
+    answer: "No. Oregon has no state or local sales tax. All purchases are tax-free at the point of sale."
+  - question: "Can I deduct federal taxes on my Oregon return?"
+    answer: "Yes. Oregon allows a deduction for federal income taxes paid, up to $7,050 for 2026. This is a significant benefit that lowers your effective state tax rate."
+  - question: "Does Oregon tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt from Oregon income tax."
+
+tips:
+  - "Deduct your federal income tax on your Oregon return — up to $7,050 — this can meaningfully reduce your state tax bill"
+  - "Oregon's no-sales-tax benefit is most valuable for large purchases — buy vehicles, electronics, and appliances in Oregon to avoid the 8-10% sales tax you would pay in neighboring states"
+  - "Residents near the Washington border can earn income tax-free in Washington and shop sales-tax-free in Oregon — a powerful combination"

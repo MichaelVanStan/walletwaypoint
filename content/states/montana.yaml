@@ -1,0 +1,64 @@
+slug: montana
+name: Montana
+abbreviation: MT
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Montana Department of Revenue"
+revenueAuthorityUrl: "https://mtrevenue.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 20500, rate: 4.70 }
+    - { min: 20501, max: 999999999, rate: 5.90 }
+  married:
+    - { min: 0, max: 41000, rate: 4.70 }
+    - { min: 41001, max: 999999999, rate: 5.90 }
+  head:
+    - { min: 0, max: 20500, rate: 4.70 }
+    - { min: 20501, max: 999999999, rate: 5.90 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 0
+
+topRate: 5.90
+numberOfBrackets: 2
+
+editorialTitle: "Montana Paycheck Calculator 2026"
+editorialDescription: "Calculate your Montana take-home pay with graduated rates up to 5.90%. MT has no sales tax. See how the income-property tax trade-off works."
+editorialContent: |
+  Montana levies a graduated income tax with two brackets: 4.70% on the first $20,500 of taxable income ($41,000 married) and 5.90% on income above that threshold. The state recently simplified from a seven-bracket system to this streamlined two-bracket structure. Montana conforms to the federal standard deduction ($14,600 single, $29,200 married filing jointly).
+
+  Montana is one of only five states with no statewide sales tax. This absence of sales tax is a significant financial advantage, effectively saving residents 6-10% on purchases compared to most other states. Combined with the moderate income tax rates, Montana offers a relatively balanced overall tax burden despite the higher income tax rates on paper.
+
+  Montana does not tax Social Security benefits at the state level. The state provides a pension and annuity income exclusion for taxpayers with AGI below $38,910 (2026, indexed for inflation). The maximum exclusion is $5,580 per person. This exclusion phases out at higher income levels. Military retirement pay is excluded from Montana income tax for retired service members.
+
+  Property taxes in Montana average approximately 0.74%, below the national average. Montana abolished its property tax on most business equipment in 2023, shifting more of the property tax burden to residential and agricultural property. The state offers a property tax assistance program for low-income residents, including seniors and disabled veterans.
+
+  Montana's cost-of-living index is approximately 100, right at the national average. However, this varies dramatically by location. Bozeman and the Flathead Valley (near Glacier National Park) have seen significant price increases driven by remote workers and retirees relocating from higher-cost states. Billings, Great Falls, and Helena offer more affordable options.
+
+  The state's economy is driven by agriculture, tourism, energy production, and a growing tech sector centered in Bozeman and Missoula. Montana's quality of life — access to public lands, fishing, skiing, and wide-open spaces — increasingly attracts remote workers who can take advantage of the no-sales-tax and moderate-income-tax environment.
+
+faqs:
+  - question: "What are Montana's income tax rates?"
+    answer: "Montana has two brackets: 4.70% on the first $20,500 ($41,000 married) and 5.90% above that. The state simplified from 7 brackets recently."
+  - question: "Does Montana have a sales tax?"
+    answer: "No. Montana has no statewide sales tax, making it one of only five states without one."
+  - question: "Does Montana tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt from Montana income tax."
+  - question: "Does Montana have a resort tax?"
+    answer: "Yes. Some resort communities (Big Sky, Whitefish, West Yellowstone, Red Lodge) levy a 3% resort tax on luxury goods and services, though this is not a general sales tax."
+
+tips:
+  - "Montana's lack of sales tax makes large purchases significantly cheaper — consider buying vehicles, appliances, and electronics in-state"
+  - "Be aware of resort area taxes if you live or shop in communities like Big Sky, Whitefish, or West Yellowstone"
+  - "Montana's housing market varies dramatically — Bozeman and Flathead Valley prices have surged while central Montana remains very affordable"

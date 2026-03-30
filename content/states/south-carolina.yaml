@@ -1,0 +1,67 @@
+slug: south-carolina
+name: South Carolina
+abbreviation: SC
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / South Carolina Department of Revenue"
+revenueAuthorityUrl: "https://dor.sc.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 3460, rate: 0.00 }
+    - { min: 3461, max: 17330, rate: 3.00 }
+    - { min: 17331, max: 999999999, rate: 6.20 }
+  married:
+    - { min: 0, max: 3460, rate: 0.00 }
+    - { min: 3461, max: 17330, rate: 3.00 }
+    - { min: 17331, max: 999999999, rate: 6.20 }
+  head:
+    - { min: 0, max: 3460, rate: 0.00 }
+    - { min: 3461, max: 17330, rate: 3.00 }
+    - { min: 17331, max: 999999999, rate: 6.20 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 4640
+
+topRate: 6.20
+numberOfBrackets: 3
+
+editorialTitle: "South Carolina Paycheck Calculator 2026"
+editorialDescription: "Calculate your SC take-home pay with graduated rates up to 6.20%. SC is one of the most tax-friendly states for retirees. See the details."
+editorialContent: |
+  South Carolina levies a graduated income tax with three brackets, ranging from 0% to 6.20% for 2026. The top rate has been declining — it was 6.50% in 2024 and is scheduled to continue decreasing by 0.10% annually until reaching 6.00% in 2027. The same bracket thresholds apply to all filing statuses: 0% on the first $3,460, 3.00% on $3,461-$17,330, and 6.20% above $17,330.
+
+  South Carolina conforms to the federal standard deduction ($14,600 single, $29,200 married filing jointly). The state provides a dependent exemption of $4,640 per qualifying dependent but does not offer a personal exemption for the taxpayer or spouse. South Carolina starts from federal taxable income with state-specific modifications.
+
+  South Carolina is one of the most tax-friendly states for retirees. Social Security benefits are fully exempt from state tax. Taxpayers 65 and older can deduct up to $15,000 of retirement income from state taxable income (including pensions, 401(k)s, IRAs, and annuities). Military retirement pay is 100% exempt, regardless of age. For married couples where both spouses are 65+, the combined retirement income deduction can reach $30,000.
+
+  The state sales tax rate is 6.00% with local additions bringing the average combined rate to approximately 7.43%. Groceries are taxed at a reduced rate, and the state provides a sales tax cap of $500 on motor vehicles. This cap means the maximum sales tax on any vehicle purchase is $500, regardless of the purchase price — a significant benefit for car buyers compared to most states.
+
+  Property taxes in South Carolina are among the lowest in the nation, with an average effective rate of approximately 0.55%. Owner-occupied residential property is assessed at 4% of fair market value (compared to 6% for other residential and up to 10.5% for commercial), and a homestead exemption of $50,000 of assessed value is available for homeowners 65 and older. The combination of low effective rates and the senior exemption makes South Carolina extremely affordable for retiree homeowners.
+
+  South Carolina's cost-of-living index is approximately 93, about 7% below the national average. Charleston, Greenville, and Columbia offer growing job markets. Charleston and the coastal areas are more expensive but benefit from tourism and a military presence. The Upstate (Greenville-Spartanburg) has seen significant manufacturing and tech growth.
+
+faqs:
+  - question: "What are South Carolina's income tax rates?"
+    answer: "Three brackets: 0% on the first $3,460, 3.00% on $3,461-$17,330, and 6.20% above that. The top rate is declining by 0.10% per year toward 6.00%."
+  - question: "Is South Carolina good for retirees?"
+    answer: "Excellent. Social Security is fully exempt, retirees 65+ can deduct $15,000 of retirement income per person, military retirement is 100% exempt, and property taxes are very low."
+  - question: "Does SC cap the sales tax on vehicles?"
+    answer: "Yes. The maximum sales tax on any motor vehicle purchase in South Carolina is $500, regardless of the vehicle's price."
+  - question: "Are property taxes low in South Carolina?"
+    answer: "Yes. Owner-occupied homes are assessed at only 4% of market value, with an average effective rate of about 0.55%. Homeowners 65+ get an additional $50,000 exemption."
+
+tips:
+  - "The $500 cap on vehicle sales tax makes buying a car in SC much cheaper than in most states — a $50,000 car saves you over $3,000 compared to a 7% tax"
+  - "Retirees 65+ should claim the $15,000 retirement income deduction and the $50,000 homestead property tax exemption"
+  - "SC's declining top rate means slightly more take-home pay each year — check your withholding annually"

@@ -1,0 +1,70 @@
+slug: minnesota
+name: Minnesota
+abbreviation: MN
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Minnesota Department of Revenue"
+revenueAuthorityUrl: "https://www.revenue.state.mn.us"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 31690, rate: 5.35 }
+    - { min: 31691, max: 104090, rate: 6.80 }
+    - { min: 104091, max: 193240, rate: 7.85 }
+    - { min: 193241, max: 999999999, rate: 9.85 }
+  married:
+    - { min: 0, max: 46330, rate: 5.35 }
+    - { min: 46331, max: 184040, rate: 6.80 }
+    - { min: 184041, max: 321450, rate: 7.85 }
+    - { min: 321451, max: 999999999, rate: 9.85 }
+  head:
+    - { min: 0, max: 38770, rate: 5.35 }
+    - { min: 38771, max: 155590, rate: 6.80 }
+    - { min: 155591, max: 256550, rate: 7.85 }
+    - { min: 256551, max: 999999999, rate: 9.85 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 4950
+  married: 9900
+  dependent: 4950
+
+topRate: 9.85
+numberOfBrackets: 4
+
+editorialTitle: "Minnesota Paycheck Calculator 2026"
+editorialDescription: "Calculate your Minnesota take-home pay with graduated rates up to 9.85%. MN has the 4th-highest top rate but also generous credits and exemptions."
+editorialContent: |
+  Minnesota levies a graduated income tax with four brackets, ranging from 5.35% to 9.85%. The top rate of 9.85% applies to income above $193,240 for single filers and $321,450 for married couples, making it the fourth-highest top marginal rate in the nation. Even Minnesota's lowest bracket rate of 5.35% is higher than the top rate in many states.
+
+  Minnesota conforms to the federal standard deduction ($14,600 single, $29,200 married filing jointly) and provides its own personal exemptions of $4,950 per person, which phase out at higher income levels. The state uses federal taxable income as the starting point, with Minnesota-specific adjustments.
+
+  Minnesota fully exempts Social Security benefits from state income tax, a change enacted in 2023. Previously, Minnesota was one of the few states that taxed Social Security. This exemption applies regardless of income level, benefiting all recipients. Other retirement income (pensions, 401(k)s, IRAs) is fully taxable at the graduated rates.
+
+  Minnesota's sales tax rate is 6.875% at the state level with local additions bringing the average combined rate to approximately 7.49%. Groceries and clothing are exempt from sales tax — Minnesota is one of only a handful of states that exempts all clothing regardless of price. Prescription drugs are also exempt. The broad exemptions on necessities partially offset the high income tax rates.
+
+  Property taxes in Minnesota average approximately 1.08%, slightly above the national average. The state offers a Property Tax Refund (circuit breaker) that provides relief based on income — renters can also claim this refund based on 19% of rent paid. The maximum refund is $3,310 for homeowners and $2,640 for renters. This is one of the most generous property tax relief programs in the country.
+
+  Minnesota's cost-of-living index is approximately 97, right near the national average. The Twin Cities (Minneapolis-St. Paul) metro area offers a diverse job market with major employers including Target, UnitedHealth Group, 3M, and General Mills. Housing costs in the Twin Cities are moderate by metro standards, though they have increased in recent years. Greater Minnesota (Rochester, Duluth, St. Cloud) offers more affordable alternatives.
+
+faqs:
+  - question: "What is Minnesota's top income tax rate?"
+    answer: "9.85% on income above $193,240 (single) or $321,450 (married). This is the 4th-highest top rate nationally."
+  - question: "Does Minnesota tax Social Security?"
+    answer: "No. As of 2023, Minnesota fully exempts Social Security benefits from state income tax, regardless of income level."
+  - question: "Does Minnesota tax clothing?"
+    answer: "No. All clothing is exempt from Minnesota sales tax, regardless of price — one of only a handful of states with this exemption."
+  - question: "What is the Property Tax Refund?"
+    answer: "A state refund program for homeowners and renters based on income. Maximum is $3,310 for homeowners and $2,640 for renters."
+
+tips:
+  - "Claim the Minnesota Property Tax Refund even if you rent — renters qualify based on 19% of rent paid, with refunds up to $2,640"
+  - "Minnesota's Social Security exemption is now permanent — retirees no longer need to worry about state tax on benefits"
+  - "All clothing is sales tax-free in Minnesota — this includes everything from basic clothing to winter coats and work attire"

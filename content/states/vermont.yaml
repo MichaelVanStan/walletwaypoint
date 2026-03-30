@@ -1,0 +1,70 @@
+slug: vermont
+name: Vermont
+abbreviation: VT
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Vermont Department of Taxes"
+revenueAuthorityUrl: "https://tax.vermont.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 45400, rate: 3.35 }
+    - { min: 45401, max: 110050, rate: 6.60 }
+    - { min: 110051, max: 229550, rate: 7.60 }
+    - { min: 229551, max: 999999999, rate: 8.75 }
+  married:
+    - { min: 0, max: 75850, rate: 3.35 }
+    - { min: 75851, max: 183400, rate: 6.60 }
+    - { min: 183401, max: 279450, rate: 7.60 }
+    - { min: 279451, max: 999999999, rate: 8.75 }
+  head:
+    - { min: 0, max: 60700, rate: 3.35 }
+    - { min: 60701, max: 146700, rate: 6.60 }
+    - { min: 146701, max: 254650, rate: 7.60 }
+    - { min: 254651, max: 999999999, rate: 8.75 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 4850
+  married: 9700
+  dependent: 4850
+
+topRate: 8.75
+numberOfBrackets: 4
+
+editorialTitle: "Vermont Paycheck Calculator 2026"
+editorialDescription: "Calculate your Vermont take-home pay with graduated rates up to 8.75%. VT has one of the highest tax burdens but also strong public services."
+editorialContent: |
+  Vermont levies a graduated income tax with four brackets, ranging from 3.35% to 8.75%. The top rate of 8.75% applies to income above $229,550 for single filers and $279,450 for married couples. Vermont's rates are tied to federal bracket thresholds (using percentages of the federal bracket cutoffs), so they adjust automatically with inflation.
+
+  Vermont conforms to the federal standard deduction ($14,600 single, $29,200 married filing jointly) and provides personal exemptions of $4,850 per person. These exemptions phase out for higher-income taxpayers. Vermont uses federal taxable income as the starting point with state-specific adjustments.
+
+  Vermont partially taxes Social Security benefits. The state exempts Social Security for taxpayers with AGI below $50,000 (single) or $65,000 (married filing jointly). Above these thresholds, benefits are taxable to the extent they are included in federal AGI. Vermont does not provide a general retirement income exclusion, making it less favorable for retirees than many other states in the region.
+
+  Vermont's sales tax rate is 6.00% with a 1% local option tax in some municipalities, bringing rates up to 7.00% in certain areas. Groceries, clothing, and prescription drugs are exempt from sales tax. The clothing exemption applies to all items regardless of price.
+
+  Property taxes in Vermont are among the highest in the nation, with an average effective rate of approximately 1.83%. The state's education funding system relies heavily on property taxes, which are split into homestead and non-residential rates. Vermont offers an income-based property tax adjustment (circuit breaker) that provides relief to homeowners whose property taxes exceed a percentage of their household income. This program is one of the most progressive property tax relief systems in the country.
+
+  Vermont's cost-of-living index is approximately 109, above the national average. Burlington (the largest city with about 45,000 residents) has relatively high housing costs for its size, driven by the University of Vermont, healthcare sector, and lifestyle appeal. Rural Vermont offers more affordable housing but limited employment opportunities. Year-round heating costs are significant, as winters are long and cold.
+
+faqs:
+  - question: "What is Vermont's top income tax rate?"
+    answer: "8.75% on income above $229,550 (single) or $279,450 (married). Brackets are tied to federal thresholds and adjust with inflation."
+  - question: "Does Vermont tax Social Security?"
+    answer: "Only for higher-income recipients. AGI below $50,000 (single) or $65,000 (married) = fully exempt. Above that, federal inclusion rules apply."
+  - question: "Are Vermont property taxes high?"
+    answer: "Yes, among the highest nationally at about 1.83%. However, Vermont's income-based adjustment program provides significant relief for homeowners."
+  - question: "Does Vermont tax clothing?"
+    answer: "No. All clothing is exempt from Vermont sales tax, regardless of price."
+
+tips:
+  - "Apply for Vermont's income-based property tax adjustment if your property taxes feel disproportionate to your income — the program can provide substantial relief"
+  - "If your AGI is below $50,000 (single) or $65,000 (married), your Social Security is fully exempt from VT tax"
+  - "Budget for heating costs — Vermont winters require significant heating expenditure, often $3,000-$5,000 per year"

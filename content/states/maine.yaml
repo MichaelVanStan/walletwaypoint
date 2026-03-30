@@ -1,0 +1,67 @@
+slug: maine
+name: Maine
+abbreviation: ME
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Maine Revenue Services"
+revenueAuthorityUrl: "https://www.maine.gov/revenue"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 26050, rate: 5.80 }
+    - { min: 26051, max: 61600, rate: 6.75 }
+    - { min: 61601, max: 999999999, rate: 7.15 }
+  married:
+    - { min: 0, max: 52100, rate: 5.80 }
+    - { min: 52101, max: 123100, rate: 6.75 }
+    - { min: 123101, max: 999999999, rate: 7.15 }
+  head:
+    - { min: 0, max: 39100, rate: 5.80 }
+    - { min: 39101, max: 92350, rate: 6.75 }
+    - { min: 92351, max: 999999999, rate: 7.15 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 4700
+  married: 9400
+  dependent: 4700
+
+topRate: 7.15
+numberOfBrackets: 3
+
+editorialTitle: "Maine Paycheck Calculator 2026"
+editorialDescription: "Calculate your Maine take-home pay with graduated rates up to 7.15%. Learn about Maine's tax credits, property tax relief, and cost considerations."
+editorialContent: |
+  Maine levies a graduated income tax with three brackets, ranging from 5.80% to 7.15%. The top rate of 7.15% applies to income above $61,600 for single filers and $123,100 for married filing jointly. Even the lowest bracket rate of 5.80% is relatively high compared to many states, giving Maine one of the higher overall income tax burdens in New England.
+
+  Maine conforms to the federal standard deduction ($14,600 single, $29,200 married filing jointly) and provides personal exemptions of $4,700 per person. These exemptions phase out for high-income taxpayers, beginning at $298,500 of AGI. Maine's starting point is federal adjusted gross income with state-specific additions and subtractions.
+
+  Maine does not tax Social Security benefits at the state level, following the federal exclusion. The state provides a pension income deduction of up to $35,000 per year for qualifying retirees, reduced by any Social Security benefits received. Military retirement pay is eligible for this deduction. Maine also offers a Property Tax Fairness Credit for residents who pay property tax or rent, with a maximum credit of $1,000 ($1,500 for seniors 65+).
+
+  Maine's sales tax rate is 5.50% with no local additions. Groceries and prescription drugs are exempt. The uniform statewide rate keeps the sales tax simple. Maine also has a 9.00% tax on restaurant meals and a 9.00% lodging tax, which are higher than the general rate and reflect Maine's tourism-heavy economy.
+
+  Property taxes in Maine average approximately 1.24%, above the national average. The state's property tax burden is a significant concern for residents, particularly in coastal towns with high property values. Maine's Homestead Exemption reduces the assessed value of a primary residence by $25,000. The Property Tax Fairness Credit provides additional relief through the income tax system for those whose property taxes or rent are disproportionate to their income.
+
+  Maine's cost-of-living index is approximately 108, slightly above the national average. Portland and its suburbs are the most expensive area, with housing costs driven by a tight market and growing appeal to remote workers. Northern and western Maine offer much more affordable living but with fewer employment opportunities. Year-round heating costs (typically oil or wood) are a significant household expense that is often underestimated by newcomers.
+
+faqs:
+  - question: "What are Maine's income tax rates?"
+    answer: "Maine has three brackets: 5.80% on the first $26,050 ($52,100 married), 6.75% up to $61,600 ($123,100 married), and 7.15% above that."
+  - question: "Does Maine tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt from Maine income tax."
+  - question: "What is Maine's Property Tax Fairness Credit?"
+    answer: "A refundable credit of up to $1,000 ($1,500 for seniors) for residents whose property tax or rent is disproportionate to their income. Claimed on the state tax return."
+  - question: "Does Maine offer a pension income deduction?"
+    answer: "Yes. Up to $35,000 per year of pension income can be deducted, reduced by Social Security benefits received."
+
+tips:
+  - "Claim the Property Tax Fairness Credit on your Maine return even if you rent — renters qualify based on rent paid"
+  - "Budget for heating costs — Maine winters are long and heating oil or wood costs can add $2,000-$4,000+ per year to household expenses"
+  - "The $25,000 Homestead Exemption applies automatically after 12 months of residency — file with your municipality"

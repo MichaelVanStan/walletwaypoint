@@ -1,0 +1,76 @@
+slug: oklahoma
+name: Oklahoma
+abbreviation: OK
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Oklahoma Tax Commission"
+revenueAuthorityUrl: "https://oklahoma.gov/tax"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 1000, rate: 0.25 }
+    - { min: 1001, max: 2500, rate: 0.75 }
+    - { min: 2501, max: 3750, rate: 1.75 }
+    - { min: 3751, max: 4900, rate: 2.75 }
+    - { min: 4901, max: 7200, rate: 3.75 }
+    - { min: 7201, max: 999999999, rate: 4.75 }
+  married:
+    - { min: 0, max: 2000, rate: 0.25 }
+    - { min: 2001, max: 5000, rate: 0.75 }
+    - { min: 5001, max: 7500, rate: 1.75 }
+    - { min: 7501, max: 9800, rate: 2.75 }
+    - { min: 9801, max: 12200, rate: 3.75 }
+    - { min: 12201, max: 999999999, rate: 4.75 }
+  head:
+    - { min: 0, max: 2000, rate: 0.25 }
+    - { min: 2001, max: 5000, rate: 0.75 }
+    - { min: 5001, max: 7500, rate: 1.75 }
+    - { min: 7501, max: 9800, rate: 2.75 }
+    - { min: 9801, max: 12200, rate: 3.75 }
+    - { min: 12201, max: 999999999, rate: 4.75 }
+
+standardDeductions:
+  single: 6350
+  married: 12700
+  head: 9350
+
+personalExemptions:
+  single: 1000
+  married: 2000
+  dependent: 1000
+
+topRate: 4.75
+numberOfBrackets: 6
+
+editorialTitle: "Oklahoma Paycheck Calculator 2026"
+editorialDescription: "Calculate your Oklahoma take-home pay with graduated rates up to 4.75%. OK has a low cost of living and generous retirement exemptions."
+editorialContent: |
+  Oklahoma levies a graduated income tax with six brackets, ranging from 0.25% to 4.75%. While the state has six brackets, the top rate kicks in very quickly — at just $7,200 for single filers ($12,200 married). This means most Oklahoma workers effectively pay the flat 4.75% rate on the majority of their taxable income. The low bracket thresholds make Oklahoma's system function more like a flat tax with a small graduated discount on the first few thousand dollars.
+
+  Oklahoma has its own standard deduction of $6,350 for single filers, $12,700 for married filing jointly, and $9,350 for head of household. Personal exemptions are $1,000 per person. Oklahoma's calculations start from federal adjusted gross income with state-specific adjustments.
+
+  Oklahoma provides generous retirement income treatment. Social Security benefits are fully exempt from state tax. The state also allows an exclusion of up to $10,000 per person ($20,000 married) of other retirement income including pensions, 401(k)s, and IRAs for qualifying individuals. Military retirement pay is 100% exempt from Oklahoma income tax.
+
+  Oklahoma's sales tax rate is 4.50% at the state level with local additions bringing the average combined rate to approximately 8.98%, one of the higher combined rates nationally. Groceries are taxed at the full combined rate, which has been an ongoing concern for low-income households. Prescription drugs are exempt.
+
+  Property taxes in Oklahoma are low, with an average effective rate of approximately 0.87%. The state caps annual assessment increases at 3% for homestead properties, providing protection against rapid property value increases. Oklahoma offers a homestead exemption of $1,000 of assessed value for all homeowners and additional exemptions for seniors and disabled veterans.
+
+  Oklahoma's cost-of-living index is approximately 87, about 13% below the national average. Oklahoma City and Tulsa offer affordable urban living with growing job markets. The energy industry remains a significant economic driver, though the state has been diversifying into aerospace, healthcare, and technology.
+
+faqs:
+  - question: "What are Oklahoma's income tax rates?"
+    answer: "Six brackets from 0.25% to 4.75%. The top rate applies above $7,200 (single) or $12,200 (married), so most workers pay 4.75% on most of their income."
+  - question: "Does Oklahoma tax Social Security?"
+    answer: "No. Social Security is fully exempt. Up to $10,000 per person of other retirement income can also be excluded."
+  - question: "Does Oklahoma tax military retirement?"
+    answer: "No. Military retirement pay is 100% exempt from Oklahoma income tax."
+  - question: "Does Oklahoma tax groceries?"
+    answer: "Yes. Oklahoma taxes groceries at the full combined sales tax rate (averaging about 8.98%), one of the highest grocery tax rates nationally."
+
+tips:
+  - "Budget for the full sales tax on groceries — at nearly 9% combined, the tax on food adds up quickly for families"
+  - "If you receive retirement income, claim the $10,000 per person exclusion on your Oklahoma return"
+  - "Oklahoma's 3% cap on homestead assessment increases provides good protection in rising housing markets"

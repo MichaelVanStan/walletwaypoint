@@ -1,0 +1,73 @@
+slug: west-virginia
+name: West Virginia
+abbreviation: WV
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / West Virginia State Tax Department"
+revenueAuthorityUrl: "https://tax.wv.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 10000, rate: 2.36 }
+    - { min: 10001, max: 25000, rate: 3.15 }
+    - { min: 25001, max: 40000, rate: 3.54 }
+    - { min: 40001, max: 60000, rate: 4.72 }
+    - { min: 60001, max: 999999999, rate: 5.12 }
+  married:
+    - { min: 0, max: 10000, rate: 2.36 }
+    - { min: 10001, max: 25000, rate: 3.15 }
+    - { min: 25001, max: 40000, rate: 3.54 }
+    - { min: 40001, max: 60000, rate: 4.72 }
+    - { min: 60001, max: 999999999, rate: 5.12 }
+  head:
+    - { min: 0, max: 10000, rate: 2.36 }
+    - { min: 10001, max: 25000, rate: 3.15 }
+    - { min: 25001, max: 40000, rate: 3.54 }
+    - { min: 40001, max: 60000, rate: 4.72 }
+    - { min: 60001, max: 999999999, rate: 5.12 }
+
+standardDeductions:
+  single: 0
+  married: 0
+  head: 0
+
+personalExemptions:
+  single: 2000
+  married: 4000
+  dependent: 2000
+
+topRate: 5.12
+numberOfBrackets: 5
+
+editorialTitle: "West Virginia Paycheck Calculator 2026"
+editorialDescription: "Calculate your WV take-home pay with graduated rates up to 5.12%. WV has been reducing rates and has one of the lowest costs of living nationally."
+editorialContent: |
+  West Virginia levies a graduated income tax with five brackets, ranging from 2.36% to 5.12%. The state has been reducing its rates as part of tax reform efforts. The top rate was 6.50% as recently as 2022, and the state has set a path toward further reductions contingent on revenue performance. The bracket thresholds are the same for all filing statuses.
+
+  West Virginia does not offer a standard deduction. Instead, the state provides personal exemptions of $2,000 per person. West Virginia uses federal adjusted gross income as the starting point, with state-specific modifications. The absence of a standard deduction means that most income is subject to tax after the modest personal exemption.
+
+  West Virginia fully exempts Social Security benefits from state income tax. The state also provides a $2,000 deduction for each taxpayer and spouse who is 65 or older, blind, or deaf. West Virginia exempts military retirement pay for veterans with 20+ years of service. The state also provides a credit for the first $8,000 of contributions to West Virginia's SMART529 college savings plan.
+
+  The state sales tax rate is 6.00% with local additions bringing the average combined rate to approximately 6.55%. Groceries are exempt from sales tax. West Virginia also exempts prescription drugs. The relatively moderate combined sales tax rate combined with declining income tax rates is reducing the state's overall tax burden.
+
+  Property taxes in West Virginia are among the lowest in the nation, with an average effective rate of approximately 0.57%. The state assesses property at 60% of appraised market value, and offers a homestead exemption for homeowners 65 and older (or permanently disabled) that exempts the first $20,000 of assessed value. Combined with very affordable housing, West Virginia has some of the lowest actual property tax bills in the country.
+
+  West Virginia has one of the lowest costs of living in the nation, with an index of approximately 84. Housing is extremely affordable — the median home value is among the lowest of any state. Charleston (the capital and largest city), Huntington, and Morgantown (home to West Virginia University) are the primary population centers.
+
+faqs:
+  - question: "What are West Virginia's income tax rates?"
+    answer: "Five brackets from 2.36% to 5.12%. The top rate applies above $60,000. Rates have been declining from a high of 6.50% in 2022."
+  - question: "Does West Virginia tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt from West Virginia income tax."
+  - question: "Does West Virginia have a standard deduction?"
+    answer: "No. West Virginia provides personal exemptions of $2,000 per person but no standard deduction."
+  - question: "Is West Virginia affordable?"
+    answer: "Very. West Virginia has one of the lowest costs of living nationally at about 84% of the national average, with extremely affordable housing."
+
+tips:
+  - "West Virginia's declining income tax rates mean more take-home pay each year — verify your employer updates withholding"
+  - "The SMART529 college savings plan contributions are deductible up to $8,000 per person — take advantage for education savings"
+  - "With housing costs well below the national average, West Virginia offers exceptional value for remote workers earning salaries from higher-cost states"

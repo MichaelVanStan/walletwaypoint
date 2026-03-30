@@ -1,0 +1,82 @@
+slug: maryland
+name: Maryland
+abbreviation: MD
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Comptroller of Maryland"
+revenueAuthorityUrl: "https://www.marylandtaxes.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 1000, rate: 2.00 }
+    - { min: 1001, max: 2000, rate: 3.00 }
+    - { min: 2001, max: 3000, rate: 4.00 }
+    - { min: 3001, max: 100000, rate: 4.75 }
+    - { min: 100001, max: 125000, rate: 5.00 }
+    - { min: 125001, max: 150000, rate: 5.25 }
+    - { min: 150001, max: 250000, rate: 5.50 }
+    - { min: 250001, max: 999999999, rate: 5.75 }
+  married:
+    - { min: 0, max: 1000, rate: 2.00 }
+    - { min: 1001, max: 2000, rate: 3.00 }
+    - { min: 2001, max: 3000, rate: 4.00 }
+    - { min: 3001, max: 150000, rate: 4.75 }
+    - { min: 150001, max: 175000, rate: 5.00 }
+    - { min: 175001, max: 225000, rate: 5.25 }
+    - { min: 225001, max: 300000, rate: 5.50 }
+    - { min: 300001, max: 999999999, rate: 5.75 }
+  head:
+    - { min: 0, max: 1000, rate: 2.00 }
+    - { min: 1001, max: 2000, rate: 3.00 }
+    - { min: 2001, max: 3000, rate: 4.00 }
+    - { min: 3001, max: 125000, rate: 4.75 }
+    - { min: 125001, max: 150000, rate: 5.00 }
+    - { min: 150001, max: 187500, rate: 5.25 }
+    - { min: 187501, max: 275000, rate: 5.50 }
+    - { min: 275001, max: 999999999, rate: 5.75 }
+
+standardDeductions:
+  single: 2550
+  married: 5100
+  head: 2550
+
+personalExemptions:
+  single: 3200
+  married: 6400
+  dependent: 3200
+
+topRate: 5.75
+numberOfBrackets: 8
+
+editorialTitle: "Maryland Paycheck Calculator 2026"
+editorialDescription: "Calculate your Maryland take-home pay. MD has 8 brackets up to 5.75% plus county piggyback taxes of 2.25% to 3.20%. Understand the full picture."
+editorialContent: |
+  Maryland levies a graduated state income tax with eight brackets, ranging from 2.00% to 5.75%. The top rate of 5.75% applies to income above $250,000 for single filers and $300,000 for married couples. While the state rates are moderate, Maryland's total income tax burden is significantly higher because every county (and Baltimore City) imposes a county income tax piggyback on top of the state rate.
+
+  County income tax rates in Maryland range from 2.25% (Worcester County) to 3.20% (multiple counties including Howard, Montgomery, Prince George's, and Baltimore County). Baltimore City's rate is 3.20%. These county taxes are calculated as a percentage of Maryland taxable income and are mandatory — you cannot opt out. Combined, a resident of Montgomery County in the top state bracket pays 8.95% (5.75% state + 3.20% county) before federal taxes.
+
+  Maryland's standard deduction is $2,550 for single filers and $5,100 for married filing jointly, with a minimum of $1,800. Personal exemptions are $3,200 per person. Maryland begins with federal adjusted gross income and applies its own modifications.
+
+  Maryland does not tax Social Security benefits at the state level. The state provides a pension exclusion for taxpayers 65 and older of up to $39,500 per person of retirement income including pensions, 401(k)s, and IRAs. For taxpayers under 65, a smaller exclusion may apply for certain types of retirement income. Military retirement pay is fully exempt from Maryland income tax.
+
+  Maryland's sales tax is 6.00% statewide with no local additions. Groceries and prescription drugs are exempt. The uniform statewide rate keeps compliance simple, which is a notable contrast to the complexity of the county income tax system.
+
+  Property taxes in Maryland average approximately 1.05%, near the national average but varying significantly by county. Montgomery and Howard counties have high home values but competitive mill rates. The state offers a Homeowners' Property Tax Credit (circuit breaker) for homeowners whose property taxes exceed a percentage of their income, as well as a Homestead Tax Credit that limits annual assessment increases to 10%.
+
+faqs:
+  - question: "What is Maryland's top income tax rate?"
+    answer: "The state top rate is 5.75%, but county piggyback taxes add 2.25% to 3.20%, bringing the combined rate to 8.00% to 8.95% depending on your county."
+  - question: "How do Maryland county taxes work?"
+    answer: "Every Maryland county levies its own income tax (2.25%-3.20%) calculated on your Maryland taxable income. This is in addition to the state tax and is withheld from your paycheck."
+  - question: "Does Maryland tax Social Security?"
+    answer: "No. Social Security is fully exempt. Taxpayers 65+ can also exclude up to $39,500 of pension and retirement income."
+  - question: "Does Maryland tax military retirement?"
+    answer: "No. Military retirement pay is fully exempt from Maryland income tax."
+
+tips:
+  - "Your county piggyback tax is based on where you live, not where you work — moving even one county over can change your total rate by nearly 1%"
+  - "If you are 65+, claim the pension exclusion of up to $39,500 to significantly reduce your Maryland tax bill"
+  - "Apply for the Homeowners' Property Tax Credit if your property taxes feel disproportionate to your income — the circuit breaker program can provide substantial relief"

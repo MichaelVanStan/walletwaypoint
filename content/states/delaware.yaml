@@ -1,0 +1,81 @@
+slug: delaware
+name: Delaware
+abbreviation: DE
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / Delaware Division of Revenue"
+revenueAuthorityUrl: "https://revenue.delaware.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 2000, rate: 0.00 }
+    - { min: 2001, max: 5000, rate: 2.20 }
+    - { min: 5001, max: 10000, rate: 3.90 }
+    - { min: 10001, max: 20000, rate: 4.80 }
+    - { min: 20001, max: 25000, rate: 5.20 }
+    - { min: 25001, max: 60000, rate: 5.55 }
+    - { min: 60001, max: 999999999, rate: 6.60 }
+  married:
+    - { min: 0, max: 2000, rate: 0.00 }
+    - { min: 2001, max: 5000, rate: 2.20 }
+    - { min: 5001, max: 10000, rate: 3.90 }
+    - { min: 10001, max: 20000, rate: 4.80 }
+    - { min: 20001, max: 25000, rate: 5.20 }
+    - { min: 25001, max: 60000, rate: 5.55 }
+    - { min: 60001, max: 999999999, rate: 6.60 }
+  head:
+    - { min: 0, max: 2000, rate: 0.00 }
+    - { min: 2001, max: 5000, rate: 2.20 }
+    - { min: 5001, max: 10000, rate: 3.90 }
+    - { min: 10001, max: 20000, rate: 4.80 }
+    - { min: 20001, max: 25000, rate: 5.20 }
+    - { min: 25001, max: 60000, rate: 5.55 }
+    - { min: 60001, max: 999999999, rate: 6.60 }
+
+standardDeductions:
+  single: 3250
+  married: 6500
+  head: 3250
+
+personalExemptions:
+  single: 110
+  married: 220
+  dependent: 110
+
+topRate: 6.60
+numberOfBrackets: 7
+
+editorialTitle: "Delaware Paycheck Calculator 2026"
+editorialDescription: "Calculate your Delaware take-home pay. DE has graduated rates up to 6.60% but no sales tax. See how this trade-off affects your overall finances."
+editorialContent: |
+  Delaware uses a graduated income tax with seven brackets, ranging from 0% on the first $2,000 to 6.60% on income above $60,000. The bracket thresholds are the same for all filing statuses. Because the top rate begins at just $60,000, most full-time Delaware workers are in the top bracket for the majority of their income.
+
+  Delaware's standard deduction is $3,250 for single filers and $6,500 for married filing jointly. Personal exemptions are a modest $110 per person. The low deduction and exemption amounts mean that Delaware taxes a larger portion of income than states with higher deduction thresholds.
+
+  Delaware does not tax Social Security benefits at the state level. The state also provides an exclusion for taxpayers 60 and older of up to $12,500 per person from pension and eligible retirement income. This exclusion covers distributions from 401(k)s, IRAs, and other qualified retirement plans, providing meaningful tax relief for retirees.
+
+  Delaware's most distinctive financial feature is the absence of a sales tax. Delaware is one of only five states with no state or local sales tax, making it a popular shopping destination for residents of neighboring states (Pennsylvania, New Jersey, Maryland). This zero sales tax rate effectively reduces the cost of goods by 6-10% compared to neighboring states.
+
+  Property taxes in Delaware are low, with an average effective rate of approximately 0.57%. The state offers a Senior School Property Tax Credit that provides relief to homeowners 65 and older. Real estate transfer taxes are a notable cost when buying or selling property — Delaware charges 4% on the value of the transaction (2% from buyer, 2% from seller for properties over $100,000).
+
+  Delaware's cost-of-living index is approximately 106, slightly above the national average. Wilmington and its suburbs are the primary job market, with proximity to Philadelphia providing additional employment opportunities. Dover (the state capital) and beach communities like Rehoboth Beach offer lower costs than northern Delaware.
+
+  Delaware is also known as the corporate capital of the United States — over 60% of Fortune 500 companies are incorporated there. The state's Court of Chancery provides a specialized business court that is a major draw for corporate formation, though this does not directly affect individual tax obligations.
+
+faqs:
+  - question: "What is Delaware's top income tax rate?"
+    answer: "6.60% on income above $60,000. Delaware has 7 brackets starting with a 0% rate on the first $2,000, with the same thresholds for all filing statuses."
+  - question: "Does Delaware have a sales tax?"
+    answer: "No. Delaware has no state or local sales tax, making it one of only five states with zero sales tax."
+  - question: "Does Delaware tax Social Security?"
+    answer: "No. Social Security is fully exempt. Taxpayers 60+ can also exclude up to $12,500 per person of pension and retirement income."
+  - question: "What are Delaware's property taxes?"
+    answer: "Low at about 0.57% effective rate. However, real estate transfer taxes are high at 4% of transaction value (split between buyer and seller)."
+
+tips:
+  - "Delaware's lack of sales tax makes it ideal for large purchases — buying electronics, furniture, or vehicles in Delaware saves 6-10% compared to neighboring states"
+  - "If you are 60+, claim the retirement income exclusion of up to $12,500 per person on your Delaware return"
+  - "Budget for the 4% real estate transfer tax when buying property — this cost is often overlooked by first-time homebuyers"

@@ -1,0 +1,69 @@
+slug: north-dakota
+name: North Dakota
+abbreviation: ND
+taxYear: 2026
+lastVerified: "2026-03-30"
+dataSource: "Tax Foundation / North Dakota Office of State Tax Commissioner"
+revenueAuthorityUrl: "https://www.tax.nd.gov"
+
+hasIncomeTax: true
+taxType: graduated
+
+brackets:
+  single:
+    - { min: 0, max: 51050, rate: 0.00 }
+    - { min: 51051, max: 232900, rate: 1.95 }
+    - { min: 232901, max: 999999999, rate: 2.50 }
+  married:
+    - { min: 0, max: 68050, rate: 0.00 }
+    - { min: 68051, max: 259950, rate: 1.95 }
+    - { min: 259951, max: 999999999, rate: 2.50 }
+  head:
+    - { min: 0, max: 51050, rate: 0.00 }
+    - { min: 51051, max: 232900, rate: 1.95 }
+    - { min: 232901, max: 999999999, rate: 2.50 }
+
+standardDeductions:
+  single: 14600
+  married: 29200
+  head: 21900
+
+personalExemptions:
+  single: 0
+  married: 0
+  dependent: 0
+
+topRate: 2.50
+numberOfBrackets: 3
+
+editorialTitle: "North Dakota Paycheck Calculator 2026"
+editorialDescription: "Calculate your North Dakota take-home pay. ND has the nation's lowest graduated rates (0% to 2.50%) with a generous zero-bracket floor. Nearly a no-tax state."
+editorialContent: |
+  North Dakota has the lowest income tax rates of any state with a graduated system. The three brackets are 0.00%, 1.95%, and 2.50%. The zero-bracket floor is substantial: the first $51,050 of taxable income for single filers ($68,050 married) is taxed at 0%. This means that many North Dakota residents — particularly those with the standard deduction — pay little or no state income tax.
+
+  For a single filer using the standard deduction ($14,600), the first $65,650 of gross income faces zero state tax ($51,050 zero bracket + $14,600 deduction). This effectively makes North Dakota a near-zero-tax state for residents earning less than about $66,000 per year.
+
+  North Dakota conforms to the federal standard deduction and does not provide separate personal exemptions. The state uses federal taxable income as its starting point. The simplicity of the system — just three brackets with generous thresholds — makes North Dakota one of the most taxpayer-friendly states for middle-income earners.
+
+  North Dakota does not tax Social Security benefits at the state level. All retirement income, including pensions, 401(k) and IRA distributions, is taxed at the graduated rates — but given the generous zero bracket, many retirees with modest retirement income will pay little or no state tax. Military retirement pay is fully exempt.
+
+  The state sales tax rate is 5.00% with local additions bringing the average combined rate to approximately 6.96%. Groceries are exempt from sales tax. The moderate sales tax, combined with near-zero income tax for most residents, gives North Dakota one of the lightest overall tax burdens in the nation.
+
+  Property taxes in North Dakota average approximately 0.98%, right around the national average. The state derives substantial revenue from oil and gas extraction taxes (primarily in the Bakken formation in western ND), which allows it to maintain low income tax rates without relying heavily on property taxes.
+
+  North Dakota's cost-of-living index is approximately 90, about 10% below the national average. Fargo (the largest city) and Bismarck (the capital) offer affordable living with growing job markets. Western North Dakota (Williston, Dickinson) experienced significant cost-of-living spikes during the oil boom but has moderated somewhat.
+
+faqs:
+  - question: "What are North Dakota's income tax rates?"
+    answer: "Three brackets: 0% on the first $51,050 ($68,050 married), 1.95% up to $232,900 ($259,950 married), and 2.50% above that. These are the lowest rates of any graduated-rate state."
+  - question: "Is North Dakota nearly a no-income-tax state?"
+    answer: "For many residents, effectively yes. A single filer earning under about $66,000 pays zero state income tax due to the $51,050 zero bracket plus the $14,600 standard deduction."
+  - question: "Does North Dakota tax Social Security?"
+    answer: "No. Social Security benefits are fully exempt from North Dakota income tax. Military retirement pay is also fully exempt."
+  - question: "How does North Dakota afford such low tax rates?"
+    answer: "North Dakota generates substantial revenue from oil and gas extraction taxes, particularly from the Bakken formation. This reduces reliance on income and property taxes."
+
+tips:
+  - "If you earn under about $66,000 as a single filer, you likely owe zero North Dakota state income tax — verify your withholding is not overpaying"
+  - "North Dakota's near-zero tax burden makes it one of the most financially attractive states for early retirees and remote workers"
+  - "The state's oil revenue cushion protects residents from tax increases — North Dakota has been reducing rates, not raising them"
