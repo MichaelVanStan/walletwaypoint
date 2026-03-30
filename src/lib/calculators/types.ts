@@ -72,6 +72,8 @@ export interface CalculatorConfig {
   callouts: CalloutConfig[];
   interpretation: InterpretationConfig;
   mathModule: string;
+  /** Layout for result display: 'cards' (default scorecards) or 'table' (comparison table) */
+  resultLayout?: 'cards' | 'table';
   faqs?: Array<{ question: string; answer: string }>;
 }
 

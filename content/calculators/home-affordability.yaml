@@ -2,6 +2,7 @@ slug: home-affordability
 title: "Home Affordability Calculator"
 description: "Find out how much house you can afford based on your income, debts, and down payment."
 category: home
+resultLayout: table
 
 inputs:
   primary:
@@ -67,6 +68,42 @@ outputs:
     format: currency
   - key: aggressivePayment
     label: "Monthly Payment"
+    format: currency
+  - key: conservativeHousingDti
+    label: "Housing DTI (Conservative)"
+    format: percent
+  - key: conservativeTotalDti
+    label: "Total DTI (Conservative)"
+    format: percent
+  - key: moderateHousingDti
+    label: "Housing DTI (Moderate)"
+    format: percent
+  - key: moderateTotalDti
+    label: "Total DTI (Moderate)"
+    format: percent
+  - key: aggressiveHousingDti
+    label: "Housing DTI (Aggressive)"
+    format: percent
+  - key: aggressiveTotalDti
+    label: "Total DTI (Aggressive)"
+    format: percent
+  - key: conservativeDown
+    label: "Down Payment (Conservative)"
+    format: currency
+  - key: moderateDown
+    label: "Down Payment (Moderate)"
+    format: currency
+  - key: aggressiveDown
+    label: "Down Payment (Aggressive)"
+    format: currency
+  - key: conservativeDisposable
+    label: "Disposable Income (Conservative)"
+    format: currency
+  - key: moderateDisposable
+    label: "Disposable Income (Moderate)"
+    format: currency
+  - key: aggressiveDisposable
+    label: "Disposable Income (Aggressive)"
     format: currency
 
 callouts:

@@ -5,11 +5,13 @@ import { useQueryStates } from "nuqs";
 import { CalculatorInputs } from "./calculator-inputs";
 import { ScenarioToggle } from "./scenario-toggle";
 import { ResultCard } from "./result-card";
+import { ResultTable } from "./result-table";
 import { Interpretation } from "./interpretation";
 import { ActionCallout } from "./action-callout";
 import { DetailTable } from "./detail-table";
 import { CalculatorCharts } from "./calculator-charts";
 import { ComparisonView } from "./comparison-view";
+import { usePersistedState } from "@/lib/states/state-persistence";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Share2, RotateCcw } from "lucide-react";
@@ -184,6 +186,10 @@ export function CalculatorShell({
   }, []);
 
   const isComparing = Boolean((values as Record<string, unknown>).compare);
+  const { userState } = usePersistedState();
+
+  // Whether to use comparison table layout (home affordability)
+  const isTableLayout = config.resultLayout === 'table';
 
   // Build Scenario B inputs with b_ prefix
   const scenarioBInputs = useMemo(
@@ -325,27 +331,75 @@ export function CalculatorShell({
 
         {/* Results Panel */}
         <section className="flex-1 min-w-0" aria-label="Calculator results">
-          {/* Scorecards — sorted so primary renders first */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {[...config.outputs]
-              .sort((a, b) => {
-                if (a.primary && !b.primary) return -1;
-                if (!a.primary && b.primary) return 1;
-                return 0;
-              })
-              .map((output) => (
-                <ResultCard
-                  key={output.key}
-                  label={output.label}
-                  value={formatByType(
-                    results.outputs[output.key] ?? 0,
-                    output.format
-                  )}
-                  primary={output.primary}
-                  className={output.primary ? "sm:col-span-2 lg:col-span-1" : undefined}
-                />
-              ))}
-          </div>
+          {/* Results: Table layout (home affordability) or Scorecards (default) */}
+          {isTableLayout ? (
+            <ResultTable
+              tiers={[
+                {
+                  label: 'Conservative',
+                  dtiRule: '28/36',
+                  maxHomePrice: results.outputs.conservativePrice ?? 0,
+                  monthlyPayment: results.outputs.conservativePayment ?? 0,
+                  housingDti: results.outputs.conservativeHousingDti ?? 0,
+                  totalDti: results.outputs.conservativeTotalDti ?? 0,
+                  downPaymentAmount: results.outputs.conservativeDown ?? 0,
+                  estimatedDisposableIncome:
+                    (results.outputs.conservativeDisposable ?? -1) === -1
+                      ? null
+                      : results.outputs.conservativeDisposable,
+                },
+                {
+                  label: 'Moderate',
+                  dtiRule: '30/43',
+                  maxHomePrice: results.outputs.moderatePrice ?? 0,
+                  monthlyPayment: results.outputs.moderatePayment ?? 0,
+                  housingDti: results.outputs.moderateHousingDti ?? 0,
+                  totalDti: results.outputs.moderateTotalDti ?? 0,
+                  downPaymentAmount: results.outputs.moderateDown ?? 0,
+                  estimatedDisposableIncome:
+                    (results.outputs.moderateDisposable ?? -1) === -1
+                      ? null
+                      : results.outputs.moderateDisposable,
+                },
+                {
+                  label: 'Aggressive',
+                  dtiRule: '35/50',
+                  maxHomePrice: results.outputs.aggressivePrice ?? 0,
+                  monthlyPayment: results.outputs.aggressivePayment ?? 0,
+                  housingDti: results.outputs.aggressiveHousingDti ?? 0,
+                  totalDti: results.outputs.aggressiveTotalDti ?? 0,
+                  downPaymentAmount: results.outputs.aggressiveDown ?? 0,
+                  estimatedDisposableIncome:
+                    (results.outputs.aggressiveDisposable ?? -1) === -1
+                      ? null
+                      : results.outputs.aggressiveDisposable,
+                },
+              ]}
+              hasPersistedState={!!userState}
+              guidanceMessage="Lenders generally approve up to 43% total DTI. Below 36% gives you the most financial flexibility."
+            />
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {[...config.outputs]
+                .sort((a, b) => {
+                  if (a.primary && !b.primary) return -1;
+                  if (!a.primary && b.primary) return 1;
+                  return 0;
+                })
+                .map((output) => (
+                  <ResultCard
+                    key={output.key}
+                    label={output.label}
+                    value={formatByType(
+                      results.outputs[output.key] ?? 0,
+                      output.format
+                    )}
+                    primary={output.primary}
+                    className={output.primary ? "sm:col-span-2 lg:col-span-1" : undefined}
+                  />
+                ))}
+            </div>
+          )}
 
           {/* Recommendation nugget */}
           <div className="mt-4">
