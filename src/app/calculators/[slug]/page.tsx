@@ -14,8 +14,17 @@ import {
   AccordionContent,
 } from '@/components/ui/accordion';
 
+// Exclude calculators that have dedicated route directories with nested sub-routes.
+// /calculators/paycheck has its own page.tsx + [state]/page.tsx directory,
+// so Next.js static segments take precedence. We filter it out here to prevent
+// duplicate pre-rendering. /calculators/rent-affordability only has [city]/page.tsx
+// (no root page.tsx in that directory), so the [slug] route still serves it.
+const DEDICATED_ROUTES = ['paycheck'];
+
 export function generateStaticParams() {
-  return calculators.map((calc) => ({ slug: calc.slug }));
+  return calculators
+    .filter((calc) => !DEDICATED_ROUTES.includes(calc.slug))
+    .map((calc) => ({ slug: calc.slug }));
 }
 
 export async function generateMetadata({
