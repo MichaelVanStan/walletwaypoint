@@ -157,3 +157,20 @@ export const studentLoanParams = {
   b_rate: parseAsFloat.withDefault(5.5),
   b_income: parseAsInteger.withDefault(55000),
 };
+
+// ============================================================================
+// Car Affordability & Auto Loan Calculator
+// ============================================================================
+export const carAffordabilityParams = {
+  income: parseAsInteger.withDefault(4500),
+  price: parseAsInteger.withDefault(35000),
+  down: parseAsInteger.withDefault(5000),
+  rate: parseAsFloat.withDefault(6.84),
+  term: parseAsInteger.withDefault(5),
+  compare: parseAsBoolean.withDefault(false),
+  b_income: parseAsInteger.withDefault(4500),
+  b_price: parseAsInteger.withDefault(35000),
+  b_down: parseAsInteger.withDefault(5000),
+  b_rate: parseAsFloat.withDefault(6.84),
+  b_term: parseAsInteger.withDefault(5),
+};
