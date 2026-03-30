@@ -103,6 +103,31 @@ export const mainNavigation: NavItem[] = [
         href: '/compare/insurance',
         description: 'Compare auto and renters insurance',
       },
+      {
+        title: 'Auto Insurance',
+        href: '/compare/auto-insurance',
+        description: 'Compare auto insurance rates and coverage',
+      },
+      {
+        title: 'Life Insurance',
+        href: '/compare/life-insurance',
+        description: 'Compare life insurance policies and rates',
+      },
+      {
+        title: 'Investments',
+        href: '/compare/investment-platforms',
+        description: 'Compare investment platforms and brokerages',
+      },
+      {
+        title: 'Tax Software',
+        href: '/compare/tax-software',
+        description: 'Compare tax filing software',
+      },
+      {
+        title: 'Best Picks',
+        href: '/compare/best',
+        description: 'Our curated best-of lists',
+      },
     ],
   },
 ];

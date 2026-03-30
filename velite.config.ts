@@ -214,6 +214,23 @@ const products = defineCollection({
   }),
 });
 
+const listicles = defineCollection({
+  name: 'Listicle',
+  pattern: 'listicles/*.mdx',
+  schema: s.object({
+    slug: s.slug('listicles'),
+    title: s.string().max(120),
+    description: s.string().max(300),
+    category: s.string(),
+    audience: s.string(),
+    lastUpdated: s.isodate(),
+    relatedCalculator: s.string().optional(),
+    relatedCategory: s.string(),
+    metadata: s.metadata(),
+    body: s.mdx(),
+  }),
+});
+
 export default defineConfig({
   root: 'content',
   output: {
@@ -223,7 +240,7 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { calculators, guides, hubs, glossary, products },
+  collections: { calculators, guides, hubs, glossary, products, listicles },
   mdx: {
     rehypePlugins: [
       rehypeSlug,
