@@ -5,6 +5,63 @@ export const mainNavigation: NavItem[] = [
     title: 'Your Journey',
     href: '/hubs',
     description: 'Financial tools and guides for where you are in life',
+    children: [
+      {
+        title: 'View All Hubs',
+        href: '/hubs',
+        description: 'Browse all life-stage hubs',
+      },
+      {
+        title: 'Student / New Grad',
+        href: '/hubs/student-new-grad',
+        description: 'Tackle student loans, build your first budget, and start saving',
+      },
+      {
+        title: 'First-Time Renter',
+        href: '/hubs/first-time-renter',
+        description: 'Budget for rent, understand leases, and set up your first apartment',
+      },
+      {
+        title: 'First Home Buyer',
+        href: '/hubs/first-home-buyer',
+        description: 'Understand mortgages, save for a down payment, and buy with confidence',
+      },
+      {
+        title: 'Freelancer',
+        href: '/hubs/freelancer',
+        description: 'Manage taxes, budget for irregular income, and plan for retirement',
+      },
+      {
+        title: 'Wedding / Marriage',
+        href: '/hubs/wedding-marriage',
+        description: 'Wedding budgets, combining finances, and filing taxes together',
+      },
+      {
+        title: 'New Parents',
+        href: '/hubs/new-parents',
+        description: 'Plan for baby costs, insurance changes, and 529 savings',
+      },
+      {
+        title: 'Pre-Retirement',
+        href: '/hubs/pre-retirement',
+        description: 'Plan your retirement savings and understand withdrawal strategies',
+      },
+      {
+        title: 'FIRE / Early Retirement',
+        href: '/hubs/fire-early-retirement',
+        description: 'Master the math behind financial independence and retiring early',
+      },
+      {
+        title: 'Rent vs. Buy',
+        href: '/hubs/rent-vs-buy',
+        description: 'Compare the true costs of renting versus buying a home',
+      },
+      {
+        title: 'Debt Crisis / Recovery',
+        href: '/hubs/debt-crisis-recovery',
+        description: 'Step-by-step tools and guides to take control and rebuild',
+      },
+    ],
   },
   {
     title: 'Calculators',

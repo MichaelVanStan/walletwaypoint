@@ -1,0 +1,32 @@
+slug: wedding-marriage
+name: "Wedding / Marriage / Combining Finances"
+tagline: "Build your financial partnership"
+description: "Getting married? From wedding budgets to combining bank accounts to filing taxes jointly, navigate the financial side of your partnership with confidence."
+icon: Heart
+accentColor: "oklch(0.55 0.15 350)"
+intro: "Marriage is one of the biggest financial events of your life -- and it goes far beyond the wedding day. From deciding how to merge (or not merge) bank accounts to understanding how your taxes change, this hub helps you build a financial partnership that is as strong as your personal one."
+
+calculatorSlugs:
+  - budget
+  - savings-goal
+  - tax-estimator
+
+guideSlugs:
+  - wedding-budget-guide
+  - combining-finances-after-marriage
+
+tips:
+  - title: "Have the money talk before the wedding"
+    description: "Discuss debts, spending habits, and financial goals openly. Money is the number one source of conflict in marriages -- transparency prevents surprises."
+  - title: "Compare MFJ vs MFS filing"
+    description: "Married Filing Jointly usually saves money, but not always. Run the numbers both ways, especially if one spouse has student loans on an income-driven plan."
+  - title: "Set a realistic wedding budget"
+    description: "The average wedding costs over $30,000, but yours doesn't have to. Decide what matters most to you both and allocate accordingly."
+  - title: "Decide on a banking system together"
+    description: "Joint accounts, separate accounts, or a hybrid? There is no wrong answer -- but you both need to agree on a system and stick to it."
+
+nextSteps:
+  - hubSlug: new-parents
+    label: "Starting a family?"
+  - hubSlug: first-home-buyer
+    label: "Buying your first home together?"

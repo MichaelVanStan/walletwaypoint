@@ -1,0 +1,32 @@
+slug: debt-crisis-recovery
+name: "Debt Crisis / Financial Recovery"
+tagline: "Your roadmap back to solid ground"
+description: "Overwhelmed by debt? Whether it's credit cards, medical bills, or a financial emergency, get practical tools and step-by-step guides to take control and rebuild."
+icon: ShieldAlert
+accentColor: "oklch(0.55 0.12 30)"
+intro: "If you are reading this, you might be feeling overwhelmed -- and that is completely normal. Financial crises happen to millions of people every year, and they are recoverable. This hub gives you practical, judgment-free tools and step-by-step guides to stop the bleeding, make a plan, and start rebuilding."
+
+calculatorSlugs:
+  - credit-card-payoff
+  - loan-repayment
+  - budget
+
+guideSlugs:
+  - debt-recovery-guide
+  - debt-snowball-vs-avalanche
+
+tips:
+  - title: "Stop the bleeding first"
+    description: "Freeze new debt accumulation immediately. Cut up extra credit cards, remove saved payment methods, and switch to cash or debit for daily spending."
+  - title: "Call your creditors today"
+    description: "Most creditors offer hardship programs -- lower interest rates, payment deferrals, or reduced balances. You won't get them if you don't ask."
+  - title: "Use the debt snowball for motivation"
+    description: "Pay minimums on everything, then throw every extra dollar at your smallest debt. The quick wins build momentum to tackle bigger balances."
+  - title: "Protect a mini emergency fund"
+    description: "Before aggressively paying debt, keep $500-1,000 in a separate savings account. Without it, one car repair sends you right back to the credit card."
+
+nextSteps:
+  - hubSlug: student-new-grad
+    label: "Student loan strategies"
+  - hubSlug: first-time-renter
+    label: "Rebuilding? Budget-friendly living"

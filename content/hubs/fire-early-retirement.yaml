@@ -1,0 +1,32 @@
+slug: fire-early-retirement
+name: "FIRE / Early Retirement"
+tagline: "Financial independence on your terms"
+description: "Pursuing financial independence and early retirement? Master the math behind FIRE, understand safe withdrawal rates, and build an investment strategy that gets you to freedom faster."
+icon: Flame
+accentColor: "oklch(0.6 0.15 60)"
+intro: "Financial Independence, Retire Early -- FIRE -- is not about deprivation. It is about understanding the math so well that you can design your life on your own terms. Whether you are pursuing Lean FIRE, Fat FIRE, Coast FIRE, or Barista FIRE, this hub gives you the calculators and guides to map your path to freedom."
+
+calculatorSlugs:
+  - retirement
+  - compound-interest
+  - savings-goal
+
+guideSlugs:
+  - fire-basics
+  - four-percent-rule-explained
+
+tips:
+  - title: "Know your FIRE number"
+    description: "Multiply your annual expenses by 25. That is how much you need invested to safely withdraw 4% per year indefinitely."
+  - title: "Max out tax-advantaged accounts first"
+    description: "401(k), IRA, and HSA contributions reduce your tax bill today and grow tax-free. Use Roth ladders to access funds before 59.5."
+  - title: "Track your savings rate obsessively"
+    description: "Your savings rate -- not your income -- determines how fast you reach FIRE. A 50% savings rate means roughly 17 years to retirement."
+  - title: "Plan for healthcare before Medicare"
+    description: "If you retire before 65, you need a healthcare plan. Budget $500-1,500/month for ACA marketplace coverage or health-sharing alternatives."
+
+nextSteps:
+  - hubSlug: pre-retirement
+    label: "Traditional retirement planning"
+  - hubSlug: freelancer
+    label: "Self-employed? Freelancer tax tools"

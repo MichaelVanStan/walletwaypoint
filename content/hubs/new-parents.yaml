@@ -1,0 +1,32 @@
+slug: new-parents
+name: "New Parents / Growing Family"
+tagline: "Your family's financial foundation"
+description: "Starting or growing a family? Plan for the costs of raising a child, protect your family with the right insurance, and build a budget that works for your new normal."
+icon: Baby
+accentColor: "oklch(0.55 0.12 320)"
+intro: "Congratulations on the new addition to your family! A baby changes everything -- including your finances. Whether you are planning ahead or already in the thick of diapers and doctor visits, this hub gives you the tools and guides to build a financial foundation that works for your growing family."
+
+calculatorSlugs:
+  - budget
+  - savings-goal
+  - home-affordability
+
+guideSlugs:
+  - new-parent-financial-checklist
+  - cost-of-raising-a-child
+
+tips:
+  - title: "Update your health insurance now"
+    description: "A new baby is a qualifying life event. You have 30-60 days to add your child to your plan -- don't miss the window."
+  - title: "Start a 529 plan early"
+    description: "Even small contributions grow significantly over 18 years. Starting at birth gives compound interest maximum time to work."
+  - title: "Update your beneficiaries"
+    description: "Review life insurance, retirement accounts, and bank accounts to make sure your child is protected."
+  - title: "Build a baby emergency fund"
+    description: "Kids bring unexpected expenses. Aim for an extra $1,000-2,000 on top of your regular emergency fund for pediatric visits, gear, and surprises."
+
+nextSteps:
+  - hubSlug: first-home-buyer
+    label: "Need more space?"
+  - hubSlug: student-new-grad
+    label: "Still paying student loans?"
