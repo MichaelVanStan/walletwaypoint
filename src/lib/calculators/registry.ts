@@ -11,6 +11,7 @@ import {
   rentVsBuyParams,
   studentLoanParams,
   homeAffordabilityParams,
+  creditCardPayoffParams,
 } from './url-params';
 import { calculateMortgage } from './math/mortgage';
 import { calculateRentAffordability } from './math/rent-affordability';
@@ -23,6 +24,7 @@ import { calculateTax } from './math/tax';
 import { calculateRentVsBuy } from './math/rent-vs-buy';
 import { calculateStudentLoan } from './math/student-loan';
 import { calculateHomeAffordability } from './math/home-affordability';
+import { calculateCreditCardPayoff } from './math/credit-card-payoff';
 
 type ComputeFunction = (params: Record<string, number | string>) => CalculatorResults;
 
@@ -43,6 +45,7 @@ const registry: Record<string, CalculatorRegistryEntry> = {
   'rent-vs-buy': { compute: calculateRentVsBuy as ComputeFunction, params: rentVsBuyParams },
   'student-loan': { compute: calculateStudentLoan as ComputeFunction, params: studentLoanParams },
   'home-affordability': { compute: calculateHomeAffordability as ComputeFunction, params: homeAffordabilityParams },
+  'credit-card-payoff': { compute: calculateCreditCardPayoff as ComputeFunction, params: creditCardPayoffParams },
 };
 
 export function getCalculatorCompute(mathModule: string): ComputeFunction {
