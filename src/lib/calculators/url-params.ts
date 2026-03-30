@@ -146,6 +146,21 @@ export const rentVsBuyParams = {
 };
 
 // ============================================================================
+// Home Affordability Calculator
+// ============================================================================
+export const homeAffordabilityParams = {
+  income: parseAsInteger.withDefault(75000),
+  debts: parseAsInteger.withDefault(500),
+  dp: parseAsInteger.withDefault(20),
+  rate: parseAsFloat.withDefault(6.5),
+  compare: parseAsBoolean.withDefault(false),
+  b_income: parseAsInteger.withDefault(75000),
+  b_debts: parseAsInteger.withDefault(500),
+  b_dp: parseAsInteger.withDefault(20),
+  b_rate: parseAsFloat.withDefault(6.5),
+};
+
+// ============================================================================
 // Student Loan Repayment Calculator
 // ============================================================================
 export const studentLoanParams = {
