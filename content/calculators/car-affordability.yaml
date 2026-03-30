@@ -1,0 +1,105 @@
+slug: car-affordability
+title: "Car Affordability & Auto Loan Calculator"
+description: "Find out how much car you can afford and calculate your auto loan monthly payment."
+category: auto
+
+inputs:
+  primary:
+    - name: monthlyIncome
+      label: "Monthly Take-Home Pay"
+      type: currency
+      min: 1000
+      max: 30000
+      step: 100
+      default: 4500
+      urlKey: income
+      hint: "After taxes"
+    - name: vehiclePrice
+      label: "Vehicle Price"
+      type: currency
+      min: 5000
+      max: 150000
+      step: 500
+      default: 35000
+      urlKey: price
+      hint: "MSRP or asking price"
+    - name: downPayment
+      label: "Down Payment"
+      type: currency
+      min: 0
+      max: 50000
+      step: 500
+      default: 5000
+      urlKey: down
+      hint: "Typical: 10-20%"
+    - name: loanRate
+      label: "Loan APR"
+      type: percent
+      min: 0
+      max: 25
+      step: 0.1
+      default: 6.84
+      urlKey: rate
+      hint: "Avg new: ~6.8%"
+    - name: loanTerm
+      label: "Loan Term"
+      type: years
+      min: 2
+      max: 7
+      step: 1
+      default: 5
+      urlKey: term
+      hint: "3-5 years recommended"
+      unitToggle:
+        primary:
+          label: "Years"
+          suffix: "yr"
+        alternate:
+          label: "Months"
+          suffix: "mo"
+          multiplier: 12
+
+charts:
+  - type: bar
+    title: "How Much Car Can You Afford?"
+    dataKey: affordabilityTiers
+  - type: pie
+    title: "Total Cost Breakdown"
+    dataKey: loanBreakdown
+
+outputs:
+  - key: conservativePrice
+    label: "Conservative (10%)"
+    format: currency
+  - key: moderatePrice
+    label: "Moderate (12%)"
+    format: currency
+  - key: aggressivePrice
+    label: "Aggressive (15%)"
+    format: currency
+  - key: monthlyPayment
+    label: "Monthly Payment"
+    format: currency
+    primary: true
+  - key: totalInterest
+    label: "Total Interest"
+    format: currency
+  - key: totalCost
+    label: "Total Cost"
+    format: currency
+
+callouts:
+  - title: "Compare auto loan rates"
+    href: "/compare/personal-loans"
+  - title: "Budget for your car purchase"
+    href: "/calculators/budget"
+
+interpretation:
+  template: car-affordability
+  contextLabel: "of your take-home pay"
+
+mathModule: car-affordability
+
+seo:
+  schemaType: WebApplication
+  applicationCategory: FinanceApplication

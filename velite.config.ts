@@ -62,7 +62,7 @@ const calculators = defineCollection({
     slug: s.slug('calculators'),
     title: s.string(),
     description: s.string(),
-    category: s.enum(['home', 'savings', 'loans', 'retirement', 'budget', 'tax']),
+    category: s.enum(['home', 'savings', 'loans', 'retirement', 'budget', 'tax', 'auto']),
     inputs: s.object({
       primary: s.array(inputConfigSchema),
       advanced: s.array(inputConfigSchema).optional(),
