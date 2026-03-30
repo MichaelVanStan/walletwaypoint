@@ -2,73 +2,88 @@ import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/site-config';
 import { calculators, guides, hubs, products, listicles } from '#site/content';
 
+// Fixed content dates for sitemap freshness signals (not rebuild dates)
+const CONTENT_DATES = {
+  site: new Date('2026-03-29'),
+  about: new Date('2026-03-20'),
+  editorial: new Date('2026-03-20'),
+  privacy: new Date('2026-03-15'),
+  authors: new Date('2026-03-20'),
+  calculators: new Date('2026-03-29'),
+  guides: new Date('2026-03-29'),
+  hubs: new Date('2026-03-27'),
+  compare: new Date('2026-03-27'),
+  glossary: new Date('2026-03-27'),
+  howWeRank: new Date('2026-03-20'),
+} as const;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.site,
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.about,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/editorial-standards`,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.editorial,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.privacy,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: `${baseUrl}/authors/editorial-team`,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.authors,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/calculators`,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.calculators,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.guides,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/hubs`,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.hubs,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/compare`,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.compare,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/glossary`,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.glossary,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/how-we-rank`,
-      lastModified: new Date(),
+      lastModified: CONTENT_DATES.howWeRank,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
@@ -76,7 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const calculatorRoutes: MetadataRoute.Sitemap = calculators.map((calc) => ({
     url: `${baseUrl}/calculators/${calc.slug}`,
-    lastModified: new Date(),
+    lastModified: CONTENT_DATES.calculators,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
@@ -90,7 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const hubRoutes: MetadataRoute.Sitemap = hubs.map((hub) => ({
     url: `${baseUrl}/hubs/${hub.slug}`,
-    lastModified: new Date(),
+    lastModified: CONTENT_DATES.hubs,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
