@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Growth Engine
-status: planning
-stopped_at: Phase 5 context gathered
-last_updated: "2026-03-29T22:37:29.920Z"
-last_activity: 2026-03-29 — Roadmap created for v2.0 Growth Engine (3 phases, 55 requirements)
+status: executing
+stopped_at: Completed 06-01-PLAN.md
+last_updated: "2026-03-30T15:33:32Z"
+last_activity: 2026-03-30 — Completed 06-01 tax engine refactor + state data infrastructure
 progress:
   total_phases: 3
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
-  percent: 0
+  completed_phases: 1
+  total_plans: 10
+  completed_plans: 1
+  percent: 10
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-29)
 
 **Core value:** Users can find a trustworthy, interactive tool or guide that helps them make a confident financial decision at any life-stage milestone.
-**Current focus:** Phase 5 - Content Volume & Revenue Foundation
+**Current focus:** Phase 6 - Programmatic SEO & Life-Stage Hubs
 
 ## Current Position
 
-Phase: 5 of 7 (Content Volume & Revenue Foundation)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-03-29 — Roadmap created for v2.0 Growth Engine (3 phases, 55 requirements)
+Phase: 6 of 7 (Programmatic SEO & Life-Stage Hubs)
+Plan: 1 of 10 in current phase
+Status: Executing
+Last activity: 2026-03-30 — Completed 06-01 tax engine refactor + state data infrastructure
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [#░░░░░░░░░] 10%
 
 ## Performance Metrics
 
@@ -44,7 +44,7 @@ Progress: [░░░░░░░░░░] 0%
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 06-01 | 1 | 4min | 4min |
 
 **Recent Trend (v1.0):**
 
@@ -60,6 +60,8 @@ Progress: [░░░░░░░░░░] 0%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
+- [06-01]: Effective rate in calculateProgressiveTax uses taxableIncome as denominator; calculateTax wrapper uses gross income for user-facing display
+- [06-01]: Shared faqSchema and bracketSchema helpers reduce duplication across Velite collections
 - [Roadmap v2.0]: 3 coarse phases derived from 49 requirements -- Content Volume + Revenue Foundation, Programmatic SEO + Hubs, Engagement Engine + Lead Gen
 - [Roadmap v2.0]: Phase ordering follows dependency chain: standard calculators first (existing patterns), then state tax data + programmatic pages (new data layer), then engagement tools (novel UI patterns)
 - [Roadmap v2.0]: Ad containers ship in Phase 5 so all Phase 6/7 page templates are revenue-ready from day one
@@ -79,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T22:37:29.915Z
-Stopped at: Phase 5 context gathered
-Resume file: .planning/phases/05-content-volume-revenue-foundation/05-CONTEXT.md
+Last session: 2026-03-30T15:33:32Z
+Stopped at: Completed 06-01-PLAN.md
+Resume file: .planning/phases/06-programmatic-seo-life-stage-hubs/06-01-SUMMARY.md
