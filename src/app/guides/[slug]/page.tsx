@@ -8,6 +8,8 @@ import { notFound } from 'next/navigation';
 import { TableOfContents } from '@/components/content/table-of-contents';
 import { GuideCtaBanner } from '@/components/content/guide-cta-banner';
 import { RelatedContent } from '@/components/content/related-content';
+import { AdSlot } from '@/components/ads/ad-slot';
+import { AdBreak } from '@/components/ads/ad-break';
 import { Badge } from '@/components/ui/badge';
 import {
   Accordion,
@@ -85,7 +87,7 @@ export default async function GuidePage({
 
       {/* Two-column layout */}
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
-        <div className="lg:grid lg:grid-cols-[1fr_240px] lg:gap-8">
+        <div className="lg:grid lg:grid-cols-[1fr_300px] lg:gap-8">
           {/* Left: Article column */}
           <div>
             {/* Mobile-only CTA banner */}
@@ -107,6 +109,8 @@ export default async function GuidePage({
               <MDXContent code={guide.body} />
             </article>
 
+            <AdBreak className="max-w-[720px]" />
+
             {/* FAQ Section */}
             {guide.faqs.length > 0 && (
               <section className="mt-12 max-w-[720px]">
@@ -123,6 +127,8 @@ export default async function GuidePage({
                 </Accordion>
               </section>
             )}
+
+            <AdBreak className="max-w-[720px]" />
 
             {/* Related Guides */}
             {relatedGuides.length > 0 && (
@@ -142,6 +148,7 @@ export default async function GuidePage({
                 />
               )}
               <TableOfContents />
+              <AdSlot variant="sidebar" />
             </div>
           </div>
         </div>
