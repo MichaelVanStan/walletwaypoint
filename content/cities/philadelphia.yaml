@@ -1,0 +1,36 @@
+slug: philadelphia
+cityName: "Philadelphia"
+stateName: "Pennsylvania"
+stateAbbreviation: "PA"
+medianRents:
+  studio: 1086
+  oneBed: 1270
+  twoBed: 1504
+  threeBed: 1890
+  fourBed: 2124
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Philadelphia, PA 2026"
+editorialDescription: "Find out how much rent you can afford in Philadelphia with median rent data by apartment size and insights on Philly's neighborhood-driven market."
+editorialContent: |
+  Philadelphia offers one of the best value propositions among major East Coast cities. As the sixth-largest city in the United States, Philly provides walkable urban living, excellent public transit, and world-class cultural institutions at a fraction of what similar amenities cost in New York or Boston. The city's diverse neighborhoods each offer distinct character and pricing.
+
+  Center City and Rittenhouse Square are the most expensive areas, with one-bedroom apartments ranging from $1,500 to $2,500. University City, driven by the University of Pennsylvania and Drexel, commands premium rents near campus. Fishtown and Northern Liberties have transformed from working-class neighborhoods into trendy hotspots with rising rents. For better value, South Philadelphia, Germantown, and West Philadelphia offer authentic neighborhood charm at lower prices. Manayunk and Roxborough along the Schuylkill provide a more suburban feel within city limits.
+
+  Philadelphia has a unique tax consideration that renters must understand: the city wage tax. Philadelphia levies a 3.44% wage tax on all residents, regardless of where they work. This is on top of Pennsylvania's 3.07% flat state income tax, meaning Philadelphia residents face a combined 6.51% income tax burden before federal taxes. This wage tax effectively reduces take-home pay and must be factored into rental affordability calculations. Some employers in the suburbs offer higher salaries to offset this tax for city residents.
+
+  SEPTA, the city's transit system, provides extensive bus, subway, trolley, and regional rail service. A monthly TransPass costs $106 for unlimited rides within the city, making car-free living feasible in many neighborhoods. Philadelphia is also one of the most bikeable cities in the US, with an expanding network of protected bike lanes and the Indego bike-share system.
+faqs:
+  - question: "What is the average rent in Philadelphia?"
+    answer: "The median rent in Philadelphia for a one-bedroom apartment is approximately $1,270 per month based on HUD Fair Market Rent data for 2026. This is about 38% lower than New York City, making Philly one of the most affordable major cities on the East Coast."
+  - question: "Is Philadelphia affordable for renters?"
+    answer: "Philadelphia is relatively affordable for a major East Coast city. To afford the median one-bedroom at $1,270 without exceeding 30% of gross income, you need about $4,233 per month or $51,000 annually. However, factor in the 3.44% city wage tax when calculating take-home pay, as this reduces your effective income."
+  - question: "What percentage of income should go to rent in Philadelphia?"
+    answer: "Aim for 28-30% of gross income. Keep in mind that Philadelphia's 3.44% wage tax plus Pennsylvania's 3.07% state income tax reduces your take-home pay more than in many comparable cities. Calculate your after-tax income carefully before committing to a rent level."
+  - question: "Does the Philadelphia wage tax affect rent affordability?"
+    answer: "Yes, significantly. The 3.44% city wage tax on top of the 3.07% state income tax means Philadelphia residents lose about 6.51% of gross income to state and local taxes before federal taxes. On a $60,000 salary, that is roughly $3,900 per year less in take-home pay compared to a city with no local income tax. Use this calculator with your after-tax income for a more accurate picture."
+costContext: |
+  Philadelphia is one of the most affordable major cities on the East Coast, with a cost of living approximately 2% above the national average. Housing costs are well below New York, Boston, and Washington DC, while the city offers comparable cultural amenities, dining, and job opportunities in healthcare, education, and professional services.
+
+  The key financial factor unique to Philadelphia is the 3.44% city wage tax, which applies to all residents regardless of where they work. Combined with Pennsylvania's 3.07% flat state income tax, this creates a 6.51% combined state and local income tax burden. Renters should calculate affordability using net income after these taxes. On the plus side, SEPTA transit ($106/month unlimited) enables car-free living in many neighborhoods, and overall utilities are moderate at $120-$200/month.

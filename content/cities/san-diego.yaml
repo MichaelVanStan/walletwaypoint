@@ -1,0 +1,36 @@
+slug: san-diego
+cityName: "San Diego"
+stateName: "California"
+stateAbbreviation: "CA"
+medianRents:
+  studio: 1595
+  oneBed: 1815
+  twoBed: 2276
+  threeBed: 3115
+  fourBed: 3478
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for San Diego, CA 2026"
+editorialDescription: "Calculate how much rent you can afford in San Diego with median rent data by bedroom count and local insights for America's Finest City."
+editorialContent: |
+  San Diego offers a unique combination of year-round mild weather, beach access, and a strong biotech and defense job market, but these amenities come with some of the highest rents in California outside of the Bay Area and Los Angeles. The city's geography, bounded by the Pacific Ocean and mountains, limits developable land and keeps supply constrained.
+
+  Beach communities like La Jolla, Pacific Beach, and Ocean Beach command the highest rents, with one-bedroom apartments starting at $2,000 and often exceeding $2,500. Downtown San Diego (Gaslamp Quarter, East Village, Little Italy) has seen extensive high-rise development, with luxury one-bedrooms from $2,200 to $3,000. North Park, Hillcrest, and South Park offer a balance of walkability and relatively moderate rents. For the best value, look to City Heights, College Area, Clairemont, and Mission Valley, where one-bedrooms can be found from $1,400 to $1,700.
+
+  San Diego's climate is arguably its greatest financial perk. With average temperatures between 60 and 77 degrees year-round, many residents spend very little on heating or air conditioning. Utility bills typically run $80-$150 per month, significantly lower than cities with extreme seasonal temperatures. This climate dividend can offset some of the higher rent costs compared to inland or northern cities.
+
+  California's tenant protection laws apply in San Diego, with annual rent increase caps under AB 1482 for qualifying buildings. The San Diego Housing Commission also administers rental assistance programs and maintains a list of affordable housing developments. Military families benefit from a large military presence (multiple Navy and Marine Corps bases) and BAH rates that are calibrated to San Diego's rental market.
+faqs:
+  - question: "What is the average rent in San Diego?"
+    answer: "The median rent in San Diego for a one-bedroom apartment is approximately $1,815 per month based on HUD Fair Market Rent data for 2026. San Diego is the third most expensive major market in California, behind San Francisco and San Jose, with rents roughly comparable to Los Angeles."
+  - question: "Is San Diego affordable for renters?"
+    answer: "San Diego is expensive relative to national averages. To afford the median one-bedroom at $1,815 without exceeding 30% of gross income, you need about $6,050 per month or $72,600 annually. However, low utility costs and the possibility of car-free living in beach and downtown neighborhoods can offset some costs."
+  - question: "What percentage of income should go to rent in San Diego?"
+    answer: "Target 28-30% of gross income, though many San Diego renters stretch to 35%. The city's mild climate keeps utility costs low ($80-$150/month), which provides more budget flexibility than cities with extreme temperatures. Consider whether you can reduce or eliminate car costs by living near trolley lines or in walkable neighborhoods."
+  - question: "What are the cheapest neighborhoods in San Diego?"
+    answer: "The most affordable neighborhoods include City Heights, College Area, Encanto, and Linda Vista, where one-bedroom rents can start below $1,500. Spring Valley and Lemon Grove in East County offer lower rents with the trade-off of longer commutes. National City between San Diego and Chula Vista also provides budget-friendly options."
+costContext: |
+  San Diego ranks as one of the most expensive rental markets in California and the nation. The overall cost of living is approximately 40% above the national average, with housing as the primary driver. California's progressive income tax (top rate 13.3%) further reduces take-home pay, making it essential to budget carefully.
+
+  The financial upside of San Diego is minimal utility costs thanks to the temperate climate ($80-$150/month year-round) and the potential to reduce transportation costs in walkable neighborhoods or near the trolley system. The strong biotech, defense, and healthcare job markets support above-average salaries that help offset housing costs. Military families receiving BAH generally find rates aligned with local market rents.

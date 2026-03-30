@@ -1,0 +1,36 @@
+slug: nashville
+cityName: "Nashville"
+stateName: "Tennessee"
+stateAbbreviation: "TN"
+medianRents:
+  studio: 1098
+  oneBed: 1285
+  twoBed: 1498
+  threeBed: 1925
+  fourBed: 2248
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Nashville, TN 2026"
+editorialDescription: "Calculate how much rent you can afford in Nashville with median rent data and insights on Music City's booming rental market."
+editorialContent: |
+  Nashville has been one of the fastest-growing cities in the United States over the past decade, driven by its healthcare industry, burgeoning tech sector, and cultural appeal as Music City. The city's population has grown by over 100,000 since 2015, creating significant rental demand. However, aggressive construction of new apartment complexes has helped moderate rent growth from the torrid pace of 2020-2022.
+
+  The Gulch and Midtown near Vanderbilt University are the most expensive rental areas, with one-bedroom apartments from $1,600 to $2,500. East Nashville has transformed from an affordable alternative to a premium neighborhood with trendy restaurants and boutiques, pushing one-bedrooms to $1,300-$1,800. 12 South and the Nations have followed similar gentrification patterns. For value, Antioch in the southeast, Madison in the north, and Hermitage in the east offer one-bedroom rents from $900 to $1,200, with newer apartment complexes providing good amenities.
+
+  Tennessee has no state income tax on wages and salaries, which gives Nashville renters a significant take-home pay advantage. Combined with a lower cost of living than coastal cities, Nashville offers strong purchasing power for professionals in healthcare (HCA Healthcare, Vanderbilt Medical Center), music industry, and the growing tech sector. The state does have a 7% sales tax, one of the highest in the nation, plus Davidson County's additional 2.25% local sales tax for a combined 9.25%, which affects everyday spending.
+
+  Nashville's public transit (WeGo) is limited, making car ownership essential for most residents. The city is actively working to improve transit with plans for expanded bus rapid transit and potential light rail, but current options are bus-only with limited frequency and coverage. Budget $350-$500 per month for vehicle costs. Nashville's geography as a sprawling metro means that neighborhood choice significantly impacts commute time and fuel costs.
+faqs:
+  - question: "What is the average rent in Nashville?"
+    answer: "The median rent in Nashville for a one-bedroom apartment is approximately $1,285 per month based on HUD Fair Market Rent data for 2026. Nashville has moderated from its pandemic-era rent surge but remains more expensive than nearby Memphis, Louisville, and Birmingham."
+  - question: "Is Nashville affordable for renters?"
+    answer: "Nashville is moderately affordable for a fast-growing city. To afford the median one-bedroom at $1,285 without exceeding 30% of gross income, you need about $4,283 per month or $51,400 annually. Tennessee's zero state income tax significantly boosts take-home pay compared to most peer cities."
+  - question: "What percentage of income should go to rent in Nashville?"
+    answer: "Follow the 28-30% guideline. The no-state-income-tax benefit gives Nashville renters 4-7% more take-home pay than in states with income tax. However, the high combined sales tax (9.25%) impacts everyday spending. Budget for car expenses ($350-$500/month) and moderate heating and cooling costs ($80-$150/month)."
+  - question: "What are the most affordable areas in Nashville?"
+    answer: "Antioch in the southeast offers the best value near the city center, with newer apartments at 20-30% below Midtown prices. Madison north of downtown and Hermitage to the east also provide affordable one-bedrooms from $900 to $1,200. Old Hickory and Bellevue offer suburban-style living at below-median rents."
+costContext: |
+  Nashville offers a compelling value proposition: a dynamic economy and cultural scene with no state income tax on earned income. The overall cost of living is approximately 3% above the national average, with housing as the primary driver. The no-income-tax advantage saves residents $3,000-$8,000+ per year compared to states with moderate to high income tax rates.
+
+  The main financial trade-off is Tennessee's high sales tax (9.25% combined in Nashville), which adds up on everyday purchases. Car ownership is essential ($350-$500/month), and the city's rapid growth means traffic congestion has worsened, increasing fuel and time costs for long commutes. Seasonal utility costs are moderate ($80-$150/month), with hot summers requiring air conditioning but relatively mild winters reducing heating bills.

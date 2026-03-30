@@ -1,0 +1,36 @@
+slug: memphis
+cityName: "Memphis"
+stateName: "Tennessee"
+stateAbbreviation: "TN"
+medianRents:
+  studio: 718
+  oneBed: 835
+  twoBed: 1025
+  threeBed: 1340
+  fourBed: 1565
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Memphis, TN 2026"
+editorialDescription: "Calculate how much rent you can afford in Memphis with median rent data and insights on one of America's most affordable major cities."
+editorialContent: |
+  Memphis is one of the most affordable major cities in the United States, offering a rich cultural heritage centered on blues, barbecue, and civil rights history at remarkably low housing costs. The city serves as a major logistics hub, home to FedEx's global headquarters and one of the busiest cargo airports in the world. Healthcare, led by St. Jude Children's Research Hospital, and manufacturing round out the economic base.
+
+  Downtown Memphis and the Medical District have seen the most new apartment development, with renovated loft-style units from $900 to $1,400 for one-bedrooms. Midtown neighborhoods like Cooper-Young and Overton Square offer walkable urban living at $800 to $1,200. East Memphis and Germantown provide more suburban settings with higher-end apartments from $1,000 to $1,500. For the most affordable options, South Memphis, Whitehaven, and Raleigh-Frayser offer one-bedroom rents from $550 to $750.
+
+  Tennessee has no state income tax on wages, which gives Memphis renters a significant financial advantage. Combined with some of the lowest rents in any major US metro, Memphis provides exceptional purchasing power. The city's median household income is lower than the national average, but the extremely low cost of living means that a moderate salary goes much further here than in most cities. A household earning $40,000 in Memphis has comparable purchasing power to one earning $65,000-$70,000 in Nashville or Austin.
+
+  Memphis's public transit (MATA) provides basic bus service with limited frequency and coverage. The city is car-dependent, though lower gas prices and insurance rates in Tennessee help keep car costs manageable. Budget $250-$400 per month for vehicle expenses. Memphis has hot, humid summers requiring air conditioning ($80-$180/month June-September) and mild winters with moderate heating costs ($60-$120/month December-February).
+faqs:
+  - question: "What is the average rent in Memphis?"
+    answer: "The median rent in Memphis for a one-bedroom apartment is approximately $835 per month based on HUD Fair Market Rent data for 2026. Memphis is one of the five most affordable major cities in the US, with rents roughly 60% below New York City and 50% below Los Angeles."
+  - question: "Is Memphis affordable for renters?"
+    answer: "Memphis is extremely affordable. To afford the median one-bedroom at $835 without exceeding 30% of gross income, you need only about $2,783 per month or $33,400 annually. Tennessee's zero state income tax further extends your purchasing power."
+  - question: "What percentage of income should go to rent in Memphis?"
+    answer: "With Memphis's low rents, many residents can stay well below the 30% guideline. Allocating 20-25% of gross income to rent is realistic for many households, leaving more for savings and debt repayment. Budget for car expenses ($250-$400/month) and summer cooling costs ($80-$180/month). The no-state-income-tax advantage adds to the savings."
+  - question: "Is Memphis a good city for saving money?"
+    answer: "Memphis is one of the best cities in the US for building savings. The extremely low cost of living, combined with no state income tax, means that a moderate salary allows for aggressive saving and investing. A resident earning the national median income in Memphis can save $500-$1,000 more per month than the same earner in Nashville, Austin, or Charlotte."
+costContext: |
+  Memphis is one of the most affordable major cities in the nation. The overall cost of living is approximately 16% below the national average, with housing costs about 30% below the national median. Tennessee's zero state income tax provides additional savings, making Memphis a prime destination for cost-conscious renters and those pursuing financial independence.
+
+  Key costs beyond rent include car ownership ($250-$400/month), summer electricity ($80-$180/month), and the 9.75% combined sales tax rate (state 7% plus Shelby County 2.75%), one of the highest in the nation. Despite the high sales tax, the overall cost picture heavily favors Memphis residents. Food costs are approximately 10% below the national average, and the city's barbecue and soul food scene provides exceptional dining value.

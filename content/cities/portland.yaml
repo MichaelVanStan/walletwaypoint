@@ -1,0 +1,36 @@
+slug: portland
+cityName: "Portland"
+stateName: "Oregon"
+stateAbbreviation: "OR"
+medianRents:
+  studio: 1185
+  oneBed: 1345
+  twoBed: 1612
+  threeBed: 2185
+  fourBed: 2510
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Portland, OR 2026"
+editorialDescription: "Calculate how much rent you can afford in Portland with median rent data and insights on Oregon's largest city and its unique tax landscape."
+editorialContent: |
+  Portland offers a distinct Pacific Northwest lifestyle with a strong commitment to sustainability, walkable neighborhoods, and a renowned food and craft beverage scene. The city's rental market has moderated significantly from its 2016-2019 peak growth period, with substantial new apartment construction creating more options for tenants. Portland now offers better value than Seattle, though it remains pricier than most inland cities.
+
+  The Pearl District and Northwest Portland are the most expensive areas, with one-bedroom apartments from $1,600 to $2,400. Inner Southeast neighborhoods like Hawthorne, Division, and Sellwood have become increasingly popular with young professionals, pushing rents to $1,300-$1,800. Alberta Arts District and Mississippi Avenue in North Portland offer creative neighborhoods at moderate prices. For value, East Portland neighborhoods like Gateway, Lents, and David Douglas area offer one-bedroom rents from $1,000 to $1,300, with improving transit access.
+
+  Oregon's income tax landscape is notably complex and impacts rent affordability calculations. The state has one of the highest top marginal income tax rates at 9.90%, with no sales tax to partially offset it. Additionally, Multnomah County (where Portland sits) levies a county income tax surcharge that pushes the effective top rate above 11%. For renters in Portland, calculating after-tax income is essential for accurate affordability planning, as the tax burden can reduce take-home pay by $3,000-$8,000 compared to no-income-tax states like Washington (just across the Columbia River).
+
+  TriMet's MAX light rail, streetcar, and bus system provide excellent transit coverage. A monthly pass costs $100. Portland is also one of the most bikeable cities in the US, with an extensive network of bike lanes, paths, and the famous bike-friendly culture. Many residents commute by bike year-round despite the rain. Car-free living is feasible in central neighborhoods, saving $500-$700 per month. Some Portland residents live in Vancouver, Washington to avoid Oregon income tax while enjoying Portland's amenities, though this strategy involves crossing the Columbia River for commuting.
+faqs:
+  - question: "What is the average rent in Portland?"
+    answer: "The median rent in Portland for a one-bedroom apartment is approximately $1,345 per month based on HUD Fair Market Rent data for 2026. Portland is more affordable than Seattle but more expensive than cities like Boise or Sacramento. The market has become more tenant-friendly after years of heavy construction."
+  - question: "Is Portland affordable for renters?"
+    answer: "Portland is moderately affordable but Oregon's high income tax rate reduces take-home pay significantly. To afford the median one-bedroom at $1,345 without exceeding 30% of gross income, you need about $4,483 per month or $53,800 annually. Factor in Oregon's 9.90% top income tax rate when comparing to cities in no-tax states."
+  - question: "What percentage of income should go to rent in Portland?"
+    answer: "Aim for 28-30% of gross income, but calculate carefully using after-tax income given Oregon's high state income tax (up to 9.90% plus Multnomah County surcharge). Portland's excellent transit ($100/month TriMet pass) and bikeable infrastructure can eliminate car costs ($500-$700/month savings), partially offsetting the tax burden."
+  - question: "Is it cheaper to live in Portland or Vancouver, WA?"
+    answer: "Vancouver, WA offers lower effective costs for many workers. Washington has no income tax, saving 8-10% of gross income versus Oregon. Vancouver rents are comparable to or slightly lower than Portland. The trade-off is commuting across the Columbia River. If you work in Portland, Oregon will still tax your income. If you work in Vancouver or remotely, the tax savings are significant."
+costContext: |
+  Portland's cost of living is approximately 15% above the national average, driven by housing and Oregon's high income tax rates. The combined state and county income tax can reach 11%+ for higher earners, making Portland one of the highest-taxed cities in the western US. However, Oregon has no sales tax, which saves $1,000-$2,000 per year on purchases.
+
+  The key financial advantage of Portland is the ability to live car-free. TriMet transit ($100/month), extensive bike lanes, and walkable neighborhoods can save $500-$700 per month compared to car-dependent cities. Utility costs are moderate ($100-$180/month) with mild winters and cool summers. The combination of transit savings and no sales tax partially offsets Oregon's high income tax, but renters should compare after-tax costs carefully with competing cities.

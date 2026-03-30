@@ -2,6 +2,11 @@ import { defineConfig, defineCollection, s } from 'velite';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
+const faqSchema = s.object({
+  question: s.string(),
+  answer: s.string(),
+});
+
 const inputOptionSchema = s.object({
   value: s.string(),
   label: s.string(),
@@ -232,6 +237,32 @@ const listicles = defineCollection({
   }),
 });
 
+const cities = defineCollection({
+  name: 'City',
+  pattern: 'cities/*.yaml',
+  schema: s.object({
+    slug: s.slug('cities'),
+    cityName: s.string(),
+    stateName: s.string(),
+    stateAbbreviation: s.string().max(2),
+    medianRents: s.object({
+      studio: s.number(),
+      oneBed: s.number(),
+      twoBed: s.number(),
+      threeBed: s.number(),
+      fourBed: s.number(),
+    }),
+    dataSource: s.string(),
+    dataYear: s.number(),
+    lastVerified: s.isodate(),
+    editorialTitle: s.string(),
+    editorialDescription: s.string().max(300),
+    editorialContent: s.string(),
+    faqs: s.array(faqSchema),
+    costContext: s.string(),
+  }),
+});
+
 export default defineConfig({
   root: 'content',
   output: {
@@ -241,7 +272,7 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { calculators, guides, hubs, glossary, products, listicles },
+  collections: { calculators, guides, hubs, glossary, products, listicles, cities },
   mdx: {
     rehypePlugins: [
       rehypeSlug,

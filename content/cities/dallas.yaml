@@ -1,0 +1,36 @@
+slug: dallas
+cityName: "Dallas"
+stateName: "Texas"
+stateAbbreviation: "TX"
+medianRents:
+  studio: 1012
+  oneBed: 1175
+  twoBed: 1445
+  threeBed: 1925
+  fourBed: 2315
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Dallas, TX 2026"
+editorialDescription: "Calculate how much rent you can afford in Dallas with local median rent data and insights on the DFW metroplex rental landscape."
+editorialContent: |
+  Dallas is a major economic hub in the Sun Belt and the anchor of the Dallas-Fort Worth metroplex, one of the fastest-growing metro areas in the nation. The city's booming job market in finance, technology, telecommunications, and healthcare drives strong rental demand, but substantial new construction has helped moderate rent growth in recent years.
+
+  Uptown Dallas is the most expensive neighborhood, with luxury high-rises commanding $1,800 to $2,800 for one-bedrooms. Deep Ellum, the Design District, and Knox-Henderson have become popular with young professionals, with rents in the $1,300-$1,800 range. North Dallas along the Tollway corridor offers a mix of older and newer apartments at varying price points. For the most affordable options, look to South Dallas, Pleasant Grove, and Oak Cliff, where one-bedroom rents can fall below $900. The suburbs of Garland, Mesquite, and Irving also offer lower rents with freeway access to downtown.
+
+  The Dallas-Fort Worth metroplex is car-dependent, and transportation costs are a significant budget line item. DART (Dallas Area Rapid Transit) provides light rail and bus service, but coverage is limited compared to cities like Chicago or New York. A DART monthly pass costs $96 for local service. Most Dallas residents budget $350-$500 per month for car-related expenses. When comparing Dallas rents to transit-rich cities, add these costs for an accurate comparison.
+
+  Texas's no-state-income-tax advantage applies fully in Dallas, boosting take-home pay by 4-8% compared to income-tax states. The DFW area also benefits from a competitive rental market where landlords frequently offer move-in concessions, especially in newer communities. Look for one or two months free rent on 12-month leases, waived application fees, and reduced security deposits during non-peak months (October through February).
+faqs:
+  - question: "What is the average rent in Dallas?"
+    answer: "The median rent in Dallas for a one-bedroom apartment is approximately $1,175 per month based on HUD Fair Market Rent data for 2026. Dallas is slightly more expensive than Houston and San Antonio but remains well below coastal city rent levels."
+  - question: "Is Dallas affordable for renters?"
+    answer: "Dallas is moderately affordable for a major US city. To afford the median one-bedroom at $1,175 without exceeding 30% of gross income, you need about $3,917 per month or $47,000 annually. With no state income tax, more of your salary goes to housing costs."
+  - question: "What percentage of income should go to rent in Dallas?"
+    answer: "Follow the standard 28-30% guideline. Dallas renters should also budget for car expenses ($350-$500/month), summer electricity ($100-$250/month), and renter's insurance. The no-state-income-tax benefit gives you more flexibility, but DFW's car-dependent layout means transportation costs eat into savings."
+  - question: "Is it cheaper to rent in Dallas or Fort Worth?"
+    answer: "Fort Worth is generally 10-15% cheaper than Dallas for comparable apartment types. However, Dallas offers more walkable urban neighborhoods, better DART rail access, and proximity to more employment centers. The choice depends on whether you prioritize lower rent or reduced commute time and car dependence."
+costContext: |
+  Dallas offers a balanced cost-of-living picture for renters. The overall cost of living is approximately 2% above the national average, with housing costs close to the national median. Texas's zero state income tax provides a meaningful take-home pay boost, particularly for higher earners.
+
+  Key cost considerations for Dallas renters include car ownership (essential for most neighborhoods, $350-$500/month), summer electricity for cooling ($100-$250/month May-September), and relatively high property taxes that landlords pass through in rent. The competitive rental market frequently offers concessions and incentives that can reduce effective monthly costs by $50-$200 when negotiated during lease signing.

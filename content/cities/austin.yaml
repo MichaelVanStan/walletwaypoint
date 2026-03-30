@@ -1,0 +1,36 @@
+slug: austin
+cityName: "Austin"
+stateName: "Texas"
+stateAbbreviation: "TX"
+medianRents:
+  studio: 1145
+  oneBed: 1388
+  twoBed: 1688
+  threeBed: 2175
+  fourBed: 2580
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Austin, TX 2026"
+editorialDescription: "Calculate how much rent you can afford in Austin with local median rent data and insights on Texas's tech capital rental market."
+editorialContent: |
+  Austin has undergone a dramatic transformation from a mid-sized college town to a major tech hub, attracting companies like Tesla, Apple, Google, and Oracle. This growth fueled a massive rent spike from 2020 to 2023, but the construction boom that followed has actually brought rents down from their 2022 peaks. Austin now offers more rental inventory per capita than at any point in the last decade.
+
+  Downtown Austin and the South Congress (SoCo) area are the most expensive neighborhoods, with one-bedroom rents from $1,600 to $2,500. East Austin, once the city's most affordable area, has gentrified rapidly and now rivals central neighborhoods in price. The Domain area in North Austin has become a second downtown with extensive mixed-use development. For value, look to areas along the I-35 corridor in southeast Austin, Pflugerville, and Round Rock, where one-bedroom rents run 20-30% below the urban core.
+
+  Austin stands out from other Texas cities for its somewhat better public transit and bikeability. Capital Metro operates buses and the MetroRail commuter line, and the city has an expanding network of bike lanes and trails. While most Austin residents still need a car, those who work downtown or near UT can potentially reduce or eliminate car dependence. The $41.50 monthly CapMetro pass is one of the cheapest transit passes in any major city.
+
+  The Austin rental market has become increasingly tenant-friendly due to oversupply in the luxury apartment segment. Many complexes offer aggressive concessions including two or three months free rent, waived application and admin fees, and free parking. Shopping around and negotiating can save $100-$300 per month in effective rent. Lease terms of 14-15 months with more free months generally offer the best value.
+faqs:
+  - question: "What is the average rent in Austin?"
+    answer: "The median rent in Austin for a one-bedroom apartment is approximately $1,388 per month based on HUD Fair Market Rent data for 2026. After peaking in 2022, Austin rents have moderated due to significant new construction. The market is currently tenant-friendly with concessions widely available."
+  - question: "Is Austin affordable for renters?"
+    answer: "Austin is moderately affordable among tech hubs but pricier than other Texas cities. To afford the median one-bedroom at $1,388 without exceeding 30% of gross income, you need about $4,627 per month or $55,500 annually. With no state income tax, Austin offers better take-home pay than similar tech markets like Seattle or Denver."
+  - question: "What percentage of income should go to rent in Austin?"
+    answer: "Aim for 28-30% of gross income. Austin's current oversupply in the luxury segment means aggressive negotiation can reduce your effective rent. Factor in car expenses ($300-$450/month for most residents) and summer electricity ($100-$250/month). The no-state-income-tax advantage helps keep total costs manageable."
+  - question: "Are Austin rents going down?"
+    answer: "Austin rents have moderated from their 2022 peak due to a construction boom that added tens of thousands of new apartments. The luxury segment has the most oversupply, leading to generous concessions. Renters searching in 2026 have more leverage than at any point in the last five years, particularly in new complexes."
+costContext: |
+  Austin occupies a middle ground between affordable Texas cities like San Antonio and expensive tech hubs like San Francisco. The overall cost of living is approximately 5% above the national average, with housing as the primary driver. Texas's zero state income tax provides a significant advantage over competing tech cities in California or Washington.
+
+  The current rental market favors tenants due to significant new construction. Look for concessions that reduce effective rent by $100-$300/month. Budget for car expenses ($300-$450/month), summer electricity ($100-$250/month), and the relatively high property tax rate (approximately 1.7%) that is factored into rents. Austin's food, entertainment, and outdoor recreation scene offers excellent value, with many free or low-cost activities year-round.

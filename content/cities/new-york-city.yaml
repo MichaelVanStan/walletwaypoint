@@ -1,0 +1,38 @@
+slug: new-york-city
+cityName: "New York City"
+stateName: "New York"
+stateAbbreviation: "NY"
+medianRents:
+  studio: 1808
+  oneBed: 2048
+  twoBed: 2455
+  threeBed: 3104
+  fourBed: 3413
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for New York City, NY 2026"
+editorialDescription: "Calculate how much rent you can afford in New York City based on your income, with local median rent data for studios through 4-bedroom apartments."
+editorialContent: |
+  New York City is consistently ranked among the most expensive rental markets in the United States. With over 8.3 million residents spread across five boroughs, demand for housing far outpaces supply in most neighborhoods. The city's rental landscape varies dramatically by borough and neighborhood, making location one of the biggest factors in what you will pay each month.
+
+  Manhattan commands the highest rents, with median one-bedroom apartments often exceeding $3,500 in popular neighborhoods like the Upper West Side, Midtown, and the West Village. Brooklyn has become increasingly expensive, with areas like Williamsburg, DUMBO, and Park Slope rivaling Manhattan prices. Queens offers more affordable options, particularly in neighborhoods like Astoria, Jackson Heights, and Flushing, where one-bedroom apartments can still be found below $2,000. The Bronx and Staten Island remain the most budget-friendly boroughs, though prices have risen steadily.
+
+  Renters in New York City should be prepared for additional costs that are less common elsewhere. Many landlords require proof of income at 40 times the monthly rent, a credit check fee, and sometimes a broker's fee equal to one month's rent or more. Rent-stabilized apartments offer below-market rates but are increasingly difficult to find. The city's 421-a and Mitchell-Lama programs provide affordable housing options for income-qualified residents.
+
+  Transportation costs are a key consideration. While the MTA subway and bus system provides extensive coverage, a monthly MetroCard costs $132. Many New Yorkers forgo car ownership entirely, which can offset higher rent costs compared to car-dependent cities. Utilities in older buildings without central air can be reasonable, but newer luxury buildings often include amenities fees that add $100 to $300 per month.
+faqs:
+  - question: "What is the average rent in New York City?"
+    answer: "The median rent in New York City for a one-bedroom apartment is approximately $2,048 per month based on HUD Fair Market Rent data for 2026. However, actual rents vary enormously by borough and neighborhood. Manhattan averages significantly higher, while Queens, the Bronx, and Staten Island offer more affordable options."
+  - question: "Is New York City affordable for renters?"
+    answer: "New York City is one of the least affordable rental markets in the country. Financial guidelines suggest spending no more than 28-30% of gross income on rent. To afford the median one-bedroom at $2,048, you would need a gross monthly income of at least $6,827, or roughly $82,000 per year. Many residents spend a higher percentage of income on housing or share apartments with roommates."
+  - question: "What percentage of income should go to rent in NYC?"
+    answer: "The standard guideline is 28-30% of gross monthly income, but many NYC landlords require income of 40 times the monthly rent (effectively 30%). In practice, many New Yorkers spend 35-40% of their income on rent due to the high cost of living. If you are stretching beyond 30%, look for ways to reduce other expenses or consider neighborhoods further from Manhattan."
+  - question: "What is the cheapest borough to rent in NYC?"
+    answer: "The Bronx and Staten Island are generally the most affordable boroughs for renters. The Bronx offers convenient subway access to Manhattan, while Staten Island requires the free Staten Island Ferry or a car commute. Parts of eastern Queens, such as Jamaica and Far Rockaway, also offer below-average rents."
+  - question: "Should I use a broker to find an apartment in NYC?"
+    answer: "Broker-assisted rentals are common in NYC, especially in Manhattan and popular Brooklyn neighborhoods. Brokers typically charge a fee of one month's rent or 15% of annual rent. You can avoid broker fees by searching on no-fee listing platforms like StreetEasy, or by renting directly from management companies. In a competitive market, a broker can help you find apartments faster."
+costContext: |
+  New York City is one of the most expensive rental markets in the United States, with median rents significantly above the national average. The cost of living in NYC is roughly 87% higher than the national average, driven primarily by housing costs. A household earning the city's median income of approximately $70,000 would need to allocate over 35% of gross income to afford a median one-bedroom apartment, well above the recommended 28-30% threshold.
+
+  Despite high costs, NYC offers unique financial advantages: excellent public transit eliminates car payments and insurance for many residents, and the density of services means competitive pricing on groceries and everyday goods compared to suburban areas. Renters should factor in the full cost picture, including utilities (averaging $150-$250/month), renter's insurance ($15-$30/month), and the potential savings from not owning a vehicle ($500-$800/month in other cities).

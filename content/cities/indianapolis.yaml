@@ -1,0 +1,36 @@
+slug: indianapolis
+cityName: "Indianapolis"
+stateName: "Indiana"
+stateAbbreviation: "IN"
+medianRents:
+  studio: 728
+  oneBed: 862
+  twoBed: 1058
+  threeBed: 1405
+  fourBed: 1640
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Indianapolis, IN 2026"
+editorialDescription: "Calculate how much rent you can afford in Indianapolis with median rent data and insights on one of the most affordable state capitals."
+editorialContent: |
+  Indianapolis is one of the most affordable major cities in the United States, offering a low cost of living combined with a surprisingly robust cultural scene, professional sports teams, and a growing tech and life sciences sector. The city's unified city-county government (Unigov) encompasses a large geographic area, providing extensive housing options at various price points.
+
+  Mass Ave and the Wholesale District are the trendiest areas, with new loft-style apartments ranging from $1,100 to $1,800 for one-bedrooms. Broad Ripple and the Meridian-Kessler neighborhood offer a mix of charming bungalows and modern apartments near dining and nightlife. The Fountain Square arts district has seen rapid development with brewery-adjacent living. For the most affordable options, the Near Eastside, Near Westside, and southern neighborhoods like Beech Grove offer one-bedroom rents from $600 to $850, some of the lowest in any major US city.
+
+  Indiana has one of the lowest flat income tax rates in the nation at 2.95%, recently reduced from 3.05%. Indianapolis also levies a county income tax of approximately 2.02%, bringing the combined state and local income tax rate to about 4.97%. While higher than a no-tax state, this is still competitive with most major metro areas and significantly lower than coastal cities. The low tax burden combined with affordable rents creates exceptional purchasing power.
+
+  IndyGo, the city's bus system, launched the Red Line BRT (Bus Rapid Transit) corridor connecting Broad Ripple to downtown and the University of Indianapolis. This has improved transit viability along the route, but most Indianapolis residents still need a car. The planned Purple and Blue Line BRT expansions will eventually create a more comprehensive rapid transit network. Budget $300-$400 per month for vehicle costs.
+faqs:
+  - question: "What is the average rent in Indianapolis?"
+    answer: "The median rent in Indianapolis for a one-bedroom apartment is approximately $862 per month based on HUD Fair Market Rent data for 2026. Indianapolis is one of the most affordable major cities in the US, with rents roughly 60% below New York City and 50% below Los Angeles."
+  - question: "Is Indianapolis affordable for renters?"
+    answer: "Indianapolis is extremely affordable. To afford the median one-bedroom at $862 without exceeding 30% of gross income, you need about $2,873 per month or $34,500 annually. This is well below the city's median household income, meaning most working residents can comfortably afford housing."
+  - question: "What percentage of income should go to rent in Indianapolis?"
+    answer: "The 28-30% guideline is very achievable in Indianapolis. With some of the lowest rents among major US cities, many residents can allocate significantly less than 30% to housing, leaving more for savings, debt repayment, and entertainment. Budget for car expenses ($300-$400/month) and seasonal heating ($80-$150/month in winter)."
+  - question: "What are the up-and-coming neighborhoods in Indianapolis?"
+    answer: "Fountain Square has been the hottest emerging neighborhood, with a brewery and arts scene driving development. The Near Eastside along the Pennsy Trail and the Bates-Hendricks neighborhood south of downtown are also gaining attention. These areas offer lower rents than Mass Ave and Broad Ripple with improving amenities and walkability."
+costContext: |
+  Indianapolis is one of the most affordable major cities in the United States. The overall cost of living is approximately 12% below the national average, with housing costs about 20% below the national median. Indiana's 2.95% flat state income tax plus the Marion County income tax (approximately 2.02%) creates a combined rate of about 4.97%, which is moderate.
+
+  Key budget items beyond rent include car ownership ($300-$400/month), seasonal utilities (heating $80-$150/month in winter, cooling $60-$120/month in summer), and renter's insurance ($15-$25/month). The city's low cost of living means that middle-income households can build savings and invest at rates not possible in coastal metros. Indianapolis is particularly attractive for early-career professionals and those focused on financial independence.

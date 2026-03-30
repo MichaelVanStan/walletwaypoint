@@ -1,0 +1,36 @@
+slug: chicago
+cityName: "Chicago"
+stateName: "Illinois"
+stateAbbreviation: "IL"
+medianRents:
+  studio: 1058
+  oneBed: 1246
+  twoBed: 1475
+  threeBed: 1908
+  fourBed: 2129
+dataSource: "HUD Fair Market Rents FY2026"
+dataYear: 2026
+lastVerified: "2026-03-30"
+editorialTitle: "Rent Affordability Calculator for Chicago, IL 2026"
+editorialDescription: "Calculate how much rent you can afford in Chicago with local median rent data by apartment size and insights on the city's diverse neighborhood pricing."
+editorialContent: |
+  Chicago offers a rental market that is remarkably affordable for a major world-class city. As the third-largest city in the United States, Chicago provides big-city amenities, a world-class public transit system, and a thriving job market at rent levels significantly below New York or Los Angeles. The city's 77 community areas each have distinct character and pricing.
+
+  The North Side neighborhoods of Lincoln Park, Lakeview, and the Gold Coast are among the most expensive, with one-bedroom rents often exceeding $1,800. The West Loop and River North have seen rapid development of luxury apartments, pushing rents above $2,000 for one-bedrooms. However, affordable options exist throughout the city. Neighborhoods like Rogers Park, Uptown, and Edgewater on the far North Side offer lake access and good transit at lower prices. The South Side, including Hyde Park (home to the University of Chicago), Bridgeport, and Pilsen, offers some of the best value in the city.
+
+  Chicago's CTA system of trains (the "L") and buses provides comprehensive coverage, and a monthly transit pass costs $75, far less than owning a car. Many Chicagoans in transit-served neighborhoods live without a car, which can free up $400-$600 per month in your budget. Winter heating costs are a significant factor, with gas bills spiking to $150-$300 per month from November through March in older buildings. Many apartments include heat in the rent, which can represent substantial savings.
+
+  Illinois does not have rent control or rent stabilization laws, meaning landlords can raise rents without caps at lease renewal. However, the Chicago Residential Landlord and Tenant Ordinance provides strong protections including required security deposit interest payments and a right to withhold rent for serious maintenance issues. The city also requires a 30-day notice before any rent increase.
+faqs:
+  - question: "What is the average rent in Chicago?"
+    answer: "The median rent in Chicago for a one-bedroom apartment is approximately $1,246 per month based on HUD Fair Market Rent data for 2026. This is significantly lower than comparable large cities like New York ($2,048) and Los Angeles ($1,747), making Chicago one of the most affordable major cities in the country."
+  - question: "Is Chicago affordable for renters?"
+    answer: "Chicago is one of the most affordable large cities in the US for renters. To afford the median one-bedroom at $1,246 without exceeding 30% of gross income, you need to earn about $4,153 per month or roughly $50,000 annually. Chicago's median household income exceeds this threshold, making it feasible for many residents."
+  - question: "What percentage of income should go to rent in Chicago?"
+    answer: "The standard 28-30% guideline works well in Chicago since rents are moderate relative to local incomes. Many Chicagoans can stay within this range, especially if they explore neighborhoods on the North and South Sides beyond the downtown core. Budget extra for winter heating, which can add $100-$200/month from November to March."
+  - question: "What are the cheapest neighborhoods in Chicago?"
+    answer: "The most affordable neighborhoods include South Shore, Austin, Chatham, and Englewood on the South and West Sides, where one-bedroom rents can be under $800. On the North Side, Rogers Park and Uptown offer below-average rents with excellent lake and transit access."
+costContext: |
+  Chicago offers a rare combination of big-city amenities and relative affordability. The overall cost of living is about 7% above the national average, far less than coastal cities. Housing is the main driver of that difference, but Chicago rents remain accessible to middle-income households. The affordable CTA transit system ($75/month unlimited pass) further reduces the total housing-plus-transportation burden.
+
+  Key cost factors for Chicago renters include winter heating bills ($100-$300/month in cold months), Illinois state income tax (4.95% flat rate), and relatively high sales tax (10.25% combined). However, the absence of car-related expenses for many residents and the availability of affordable groceries and dining help balance the budget. Renters should also note that many Chicago apartments include heat and sometimes water in the rent, so always compare total costs rather than base rent alone.
