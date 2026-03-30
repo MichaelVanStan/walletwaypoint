@@ -14,12 +14,12 @@ import {
   AccordionContent,
 } from '@/components/ui/accordion';
 
-// Exclude slugs that have dedicated route directories (e.g., /calculators/rent-affordability/[city])
-const DEDICATED_ROUTE_SLUGS = ['rent-affordability'];
+// Exclude calculators that have dedicated route directories with nested sub-routes.
+const DEDICATED_ROUTES = ['paycheck', 'rent-affordability'];
 
 export function generateStaticParams() {
   return calculators
-    .filter((calc) => !DEDICATED_ROUTE_SLUGS.includes(calc.slug))
+    .filter((calc) => !DEDICATED_ROUTES.includes(calc.slug))
     .map((calc) => ({ slug: calc.slug }));
 }
 

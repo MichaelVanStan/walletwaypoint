@@ -1,6 +1,15 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/site-config';
-import { calculators, guides, hubs, products, listicles } from '#site/content';
+import {
+  calculators,
+  guides,
+  hubs,
+  products,
+  listicles,
+  states,
+  cities,
+  homebuyerPrograms,
+} from '#site/content';
 
 // Fixed content dates for sitemap freshness signals (not rebuild dates)
 const CONTENT_DATES = {
@@ -15,11 +24,50 @@ const CONTENT_DATES = {
   compare: new Date('2026-03-27'),
   glossary: new Date('2026-03-27'),
   howWeRank: new Date('2026-03-20'),
+  phase6: new Date('2026-03-30'),
 } as const;
 
-export default function sitemap(): MetadataRoute.Sitemap {
+/**
+ * Split sitemap into multiple sitemaps for crawl efficiency with 200+ URLs.
+ * Next.js generates /sitemap/core.xml, /sitemap/paycheck.xml, etc.
+ */
+export async function generateSitemaps() {
+  return [
+    { id: 'core' },
+    { id: 'paycheck' },
+    { id: 'state-taxes' },
+    { id: 'homebuyer' },
+    { id: 'city-rent' },
+  ];
+}
+
+export default async function sitemap(props: {
+  id: Promise<string>;
+}): Promise<MetadataRoute.Sitemap> {
+  const id = await props.id;
   const baseUrl = siteConfig.url;
 
+  switch (id) {
+    case 'core':
+      return coreUrls(baseUrl);
+    case 'paycheck':
+      return paycheckUrls(baseUrl);
+    case 'state-taxes':
+      return stateTaxUrls(baseUrl);
+    case 'homebuyer':
+      return homebuyerUrls(baseUrl);
+    case 'city-rent':
+      return cityRentUrls(baseUrl);
+    default:
+      return [];
+  }
+}
+
+/**
+ * Core sitemap: static pages, calculators, guides, hubs, products, listicles.
+ * Includes the base /calculators/paycheck page and /compare/best index.
+ */
+function coreUrls(baseUrl: string): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -58,6 +106,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/calculators/paycheck`,
+      lastModified: CONTENT_DATES.phase6,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/guides`,
       lastModified: CONTENT_DATES.guides,
       changeFrequency: 'weekly',
@@ -74,6 +128,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: CONTENT_DATES.compare,
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/compare/best`,
+      lastModified: CONTENT_DATES.phase6,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/glossary`,
@@ -124,5 +184,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...calculatorRoutes, ...guideRoutes, ...hubRoutes, ...comparisonRoutes, ...listicleRoutes];
+  return [
+    ...staticRoutes,
+    ...calculatorRoutes,
+    ...guideRoutes,
+    ...hubRoutes,
+    ...comparisonRoutes,
+    ...listicleRoutes,
+  ];
+}
+
+/**
+ * Paycheck sitemap: 51 state-specific paycheck calculator pages.
+ */
+function paycheckUrls(baseUrl: string): MetadataRoute.Sitemap {
+  return states.map((state) => ({
+    url: `${baseUrl}/calculators/paycheck/${state.slug}`,
+    lastModified: CONTENT_DATES.phase6,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+}
+
+/**
+ * State taxes sitemap: 51 state-specific tax guide pages.
+ */
+function stateTaxUrls(baseUrl: string): MetadataRoute.Sitemap {
+  return states.map((state) => ({
+    url: `${baseUrl}/guides/state-taxes/${state.slug}`,
+    lastModified: CONTENT_DATES.phase6,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+}
+
+/**
+ * Homebuyer sitemap: 51 state-specific first-time buyer program pages.
+ */
+function homebuyerUrls(baseUrl: string): MetadataRoute.Sitemap {
+  return homebuyerPrograms.map((program) => ({
+    url: `${baseUrl}/guides/first-time-buyer-programs/${program.slug}`,
+    lastModified: CONTENT_DATES.phase6,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+}
+
+/**
+ * City rent sitemap: 25 city-specific rent affordability calculator pages.
+ */
+function cityRentUrls(baseUrl: string): MetadataRoute.Sitemap {
+  return cities.map((city) => ({
+    url: `${baseUrl}/calculators/rent-affordability/${city.slug}`,
+    lastModified: CONTENT_DATES.phase6,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
 }
