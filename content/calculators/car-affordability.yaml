@@ -100,6 +100,16 @@ interpretation:
 
 mathModule: car-affordability
 
+faqs:
+  - question: "How much should I spend on a car based on my income?"
+    answer: "The 10-15% rule suggests your total monthly car costs (payment, insurance, gas, maintenance) should not exceed 10-15% of your monthly take-home pay. On a $4,500 monthly income, that's $450-$675 per month for all car-related expenses, not just the payment."
+  - question: "How long should my auto loan be?"
+    answer: "Financial advisors recommend 3-5 year terms (36-60 months). Longer loans (72-84 months) have lower monthly payments but cost significantly more in total interest. A 72-month loan at 7% adds roughly $2,500 more in interest compared to a 48-month loan on a $30,000 car."
+  - question: "Should I buy new or used to save money?"
+    answer: "A 2-3 year old used car typically costs 20-30% less than new while still having modern safety features and remaining warranty. New cars depreciate fastest in years 1-3. Consider certified pre-owned (CPO) vehicles for the best balance of value and peace of mind."
+  - question: "Is 0% financing really free?"
+    answer: "0% APR deals save you real money on interest, but they sometimes come instead of cash rebates. Compare total cost both ways: a $2,000 rebate with a 5% loan might be cheaper than 0% APR with no rebate, depending on the loan term. Also, 0% offers typically require excellent credit (740+)."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

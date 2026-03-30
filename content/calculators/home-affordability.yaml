@@ -83,6 +83,16 @@ interpretation:
 
 mathModule: home-affordability
 
+faqs:
+  - question: "What is the 28/36 rule for home buying?"
+    answer: "The 28/36 rule says your monthly housing costs should not exceed 28% of your gross income (front-end ratio), and your total debt payments should not exceed 36% (back-end ratio). This is the conservative standard most financial advisors recommend."
+  - question: "How much house can I afford on a $75,000 salary?"
+    answer: "Using the conservative 28/36 rule with 20% down and a 6.5% rate, a $75,000 salary typically supports a home price around $275,000-$300,000, depending on your existing debts. Use the calculator above to see your personalized range."
+  - question: "Does my down payment affect how much house I can afford?"
+    answer: "Yes -- a larger down payment means a smaller loan, which means lower monthly payments and potentially a better interest rate. With 20% down, you also avoid private mortgage insurance (PMI), saving $100-$300 per month on a typical mortgage."
+  - question: "What debts do lenders consider in the DTI calculation?"
+    answer: "Lenders count all recurring monthly debt payments: car loans, student loans, credit card minimum payments, personal loans, child support, and alimony. They typically do NOT count utilities, insurance (non-mortgage), subscriptions, or cell phone bills."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

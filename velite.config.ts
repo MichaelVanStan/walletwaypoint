@@ -73,6 +73,7 @@ const calculators = defineCollection({
     callouts: s.array(calloutConfigSchema),
     interpretation: interpretationConfigSchema,
     mathModule: s.string(),
+    faqs: s.array(s.object({ question: s.string(), answer: s.string() })).optional(),
   }),
 });
 

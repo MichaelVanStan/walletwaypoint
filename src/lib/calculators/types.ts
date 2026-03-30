@@ -72,6 +72,7 @@ export interface CalculatorConfig {
   callouts: CalloutConfig[];
   interpretation: InterpretationConfig;
   mathModule: string;
+  faqs?: Array<{ question: string; answer: string }>;
 }
 
 /** Generic calculator results shape */

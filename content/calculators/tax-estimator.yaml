@@ -81,6 +81,16 @@ interpretation:
 
 mathModule: tax
 
+faqs:
+  - question: "How do tax brackets work?"
+    answer: "Tax brackets are progressive -- you don't pay one flat rate on all your income. Each bracket only applies to income within that range. If you earn $100,000 as a single filer, you pay 10% on the first ~$11,600, 12% on the next chunk, 22% on the next, and 24% on the amount above ~$95,000."
+  - question: "What is the standard deduction for 2026?"
+    answer: "The projected 2026 standard deduction is approximately $15,700 for single filers, $31,400 for married filing jointly, and $23,050 for head of household. These amounts are adjusted annually for inflation."
+  - question: "Should I itemize or take the standard deduction?"
+    answer: "Itemize only if your total deductions (mortgage interest, state/local taxes up to $10,000, charitable donations, medical expenses above 7.5% of AGI) exceed the standard deduction. Since the 2018 tax reform doubled the standard deduction, roughly 90% of filers benefit from taking the standard deduction."
+  - question: "What is the difference between a tax deduction and a tax credit?"
+    answer: "A deduction reduces your taxable income. A $1,000 deduction in the 22% bracket saves you $220. A credit reduces your actual tax bill dollar-for-dollar. A $1,000 credit saves you exactly $1,000. Credits are more valuable than deductions of the same amount."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

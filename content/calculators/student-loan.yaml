@@ -79,6 +79,16 @@ interpretation:
 
 mathModule: student-loan
 
+faqs:
+  - question: "What are the different student loan repayment plans?"
+    answer: "Federal loans offer Standard (fixed payments over 10 years), Graduated (payments start low and increase every 2 years), and Income-Driven plans like SAVE (payments based on 10% of discretionary income). Private loans typically only offer standard repayment."
+  - question: "Should I pay off student loans or invest?"
+    answer: "If your loan rate is above 6-7%, prioritize paying it off -- guaranteed return. If below 4%, investing typically wins over time. Between 4-7%, consider splitting extra cash between both. Also factor in employer match -- always capture the full 401k match first."
+  - question: "Is student loan refinancing worth it?"
+    answer: "If you have good credit and stable income, refinancing can lower your rate significantly. But refinancing federal loans into private loans means losing access to income-driven repayment, forgiveness programs, and forbearance options. Only refinance federal loans if you're sure you won't need those protections."
+  - question: "How does income-driven repayment work?"
+    answer: "Income-driven plans cap your monthly payment at a percentage of your discretionary income (income minus 150% of the poverty line). After 20-25 years of qualifying payments, any remaining balance is forgiven. The SAVE plan caps payments at 10% of discretionary income."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

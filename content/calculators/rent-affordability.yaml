@@ -74,6 +74,16 @@ interpretation:
 
 mathModule: rent-affordability
 
+faqs:
+  - question: "How much of my income should go to rent?"
+    answer: "The general guideline is to spend no more than 28-30% of your gross monthly income on rent. If you earn $4,500 per month before taxes, aim for $1,260-$1,350 maximum. In expensive cities, some stretch to 35%, but this leaves less room for savings and emergencies."
+  - question: "What is the 30% rent rule?"
+    answer: "The 30% rule suggests spending no more than 30% of your gross (pre-tax) monthly income on housing costs. This guideline originated from the U.S. Department of Housing and Urban Development (HUD). It's a useful starting point, but your ideal number depends on your other expenses and savings goals."
+  - question: "Should I include utilities in my rent budget?"
+    answer: "Yes -- your total housing cost includes rent plus utilities (electricity, water, gas, internet). When budgeting, add estimated utilities to the rent price to see the true cost. Ask the landlord or previous tenant about typical utility costs before signing."
+  - question: "Can I afford to live alone or should I get roommates?"
+    answer: "If rent for a solo apartment exceeds 30% of your income, roommates are a smart financial move. Splitting a two-bedroom often saves 25-40% compared to a studio or one-bedroom. Run both scenarios through the calculator to see the actual difference."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

@@ -73,6 +73,16 @@ interpretation:
 
 mathModule: compound-interest
 
+faqs:
+  - question: "What is compound interest and how does it work?"
+    answer: "Compound interest means you earn interest on both your original deposit and on the interest you've already earned. Over time, this creates a snowball effect where your money grows exponentially rather than linearly."
+  - question: "How often should interest compound?"
+    answer: "The more frequently interest compounds, the faster your money grows. Daily compounding earns slightly more than monthly, which earns more than annually. For savings accounts, look for daily compounding. The difference is small in the short term but significant over decades."
+  - question: "What is the Rule of 72?"
+    answer: "The Rule of 72 is a quick way to estimate how long it takes to double your money. Divide 72 by your annual interest rate. At 7% annual returns, your money doubles in about 10.3 years (72 / 7 = 10.3)."
+  - question: "How much should I invest monthly to become a millionaire?"
+    answer: "At a 7% average annual return, investing $550 per month starting at age 25 would give you about $1 million by age 60. Starting at 35, you'd need roughly $1,100 per month. The key takeaway: starting early matters more than the amount."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

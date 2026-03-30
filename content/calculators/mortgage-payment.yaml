@@ -105,6 +105,16 @@ interpretation:
 
 mathModule: mortgage
 
+faqs:
+  - question: "What is included in a monthly mortgage payment?"
+    answer: "A mortgage payment typically includes four components known as PITI: principal (paying down the loan balance), interest (the cost of borrowing), property taxes, and homeowner's insurance. If your down payment is less than 20%, you may also pay private mortgage insurance (PMI)."
+  - question: "How much house can I afford on my salary?"
+    answer: "A common guideline is to keep your total housing costs below 28% of your gross monthly income. For a $75,000 salary, that means roughly $1,750 per month for mortgage, taxes, and insurance combined."
+  - question: "Is a 15-year or 30-year mortgage better?"
+    answer: "A 15-year mortgage saves you tens of thousands in interest but has higher monthly payments. A 30-year mortgage keeps payments affordable but costs more over time. Choose based on your monthly cash flow and long-term savings goals."
+  - question: "What credit score do I need for a good mortgage rate?"
+    answer: "Generally, a score of 740 or above gets you the best rates. Scores between 680-739 still qualify for competitive rates. Below 620, you may need an FHA loan, which has more flexible requirements but requires mortgage insurance."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

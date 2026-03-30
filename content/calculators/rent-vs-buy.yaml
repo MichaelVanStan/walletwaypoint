@@ -112,6 +112,16 @@ interpretation:
 
 mathModule: rent-vs-buy
 
+faqs:
+  - question: "Is it cheaper to rent or buy a home?"
+    answer: "It depends on where you live, how long you'll stay, and current mortgage rates. Generally, buying becomes cheaper than renting after 5-7 years in the same location due to equity building and fixed payments. In expensive markets with low rent-to-price ratios, renting may be better indefinitely."
+  - question: "How long should I plan to stay before buying makes sense?"
+    answer: "Most financial analysts recommend planning to stay at least 5 years. The upfront costs of buying (closing costs, moving, repairs) typically take 3-7 years to recoup through equity and appreciation. If you might move sooner, renting usually wins."
+  - question: "What are closing costs when buying a home?"
+    answer: "Closing costs typically run 2-5% of the home price and include loan origination fees, appraisal, title insurance, attorney fees, and prepaid taxes/insurance. On a $400,000 home, expect $8,000-$20,000 in closing costs on top of your down payment."
+  - question: "Does renting mean throwing money away?"
+    answer: "No -- rent buys you housing, flexibility, and freedom from maintenance costs. Homeowners also 'throw away' money on interest, property taxes, insurance, and maintenance. The real question is whether the equity you build outweighs the extra costs of ownership in your specific situation."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

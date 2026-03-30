@@ -85,6 +85,16 @@ interpretation:
 
 mathModule: loan
 
+faqs:
+  - question: "Does making extra payments on a loan save money?"
+    answer: "Yes -- extra payments go directly toward principal, reducing the balance that accrues interest. Even small additional payments can save hundreds or thousands in interest and shorten your payoff timeline by months or years."
+  - question: "Should I pay off my loan early or invest the money?"
+    answer: "Compare your loan's interest rate to expected investment returns. If your loan is at 4% and you expect 7% investment returns, investing may be better mathematically. But paying off debt provides guaranteed savings and psychological relief -- both are valid strategies."
+  - question: "What is amortization?"
+    answer: "Amortization is the process of spreading a loan into equal monthly payments where each one covers both principal and interest. In the early months, most of your payment goes to interest. Over time, more goes toward principal as the balance shrinks."
+  - question: "Is it better to refinance or make extra payments?"
+    answer: "Refinancing to a lower rate reduces the cost of every remaining payment. Extra payments attack the principal directly. If rates have dropped significantly since you took the loan, refinancing first and then making extra payments gives you the best of both worlds."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

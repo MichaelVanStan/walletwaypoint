@@ -87,6 +87,16 @@ interpretation:
 
 mathModule: credit-card-payoff
 
+faqs:
+  - question: "How long does it take to pay off a credit card with minimum payments?"
+    answer: "A $5,000 balance at 23% APR with 2% minimum payments takes roughly 30 years and costs over $12,000 in interest. Minimum payments are designed to maximize how much interest you pay -- even small extra payments can cut payoff time dramatically."
+  - question: "What is a good strategy to pay off credit card debt?"
+    answer: "The two most popular strategies are Avalanche (pay minimums on all cards, put extra money toward the highest-rate card first) and Snowball (pay minimums on all, put extra toward the smallest balance first). Avalanche saves more money; Snowball provides faster psychological wins."
+  - question: "Should I transfer my balance to a 0% APR card?"
+    answer: "A balance transfer can save significant interest if you can pay off the balance during the 0% promotional period (typically 12-21 months). Watch for the transfer fee (usually 3-5% of the balance) and have a plan to pay it off before the regular APR kicks in."
+  - question: "Is it better to pay off credit cards or save for emergencies?"
+    answer: "Build a small emergency fund first ($1,000-$2,000) to avoid adding more debt when unexpected expenses hit. Then aggressively pay down high-interest credit card debt. Once the cards are paid off, build your emergency fund to 3-6 months of expenses."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

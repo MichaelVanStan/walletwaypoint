@@ -97,6 +97,16 @@ interpretation:
 
 mathModule: retirement
 
+faqs:
+  - question: "How much do I need to retire?"
+    answer: "A common target is 25 times your annual spending (based on the 4% withdrawal rule). If you spend $50,000 per year, you'd need about $1.25 million saved. This is a starting estimate -- your actual number depends on healthcare costs, Social Security, and desired lifestyle."
+  - question: "What is the 4% rule for retirement?"
+    answer: "The 4% rule says you can withdraw 4% of your portfolio in the first year of retirement, then adjust for inflation each year, and your money should last at least 30 years. It's based on historical stock and bond returns. Some experts now suggest 3.5% as a more conservative target."
+  - question: "When should I start saving for retirement?"
+    answer: "As early as possible. Starting at 25 and saving $500/month at 7% returns gives you about $1.2 million by 65. Waiting until 35 to start would require $1,000/month to reach the same amount. Each decade of delay roughly doubles the monthly savings needed."
+  - question: "Should I choose a Roth or traditional retirement account?"
+    answer: "If you expect your tax rate to be higher in retirement than now, choose Roth (pay taxes now, withdraw tax-free later). If you expect a lower rate in retirement, choose traditional (deduct now, pay taxes on withdrawals later). Early career workers usually benefit more from Roth."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

@@ -52,6 +52,16 @@ interpretation:
 
 mathModule: budget
 
+faqs:
+  - question: "What is the 50/30/20 budget rule?"
+    answer: "The 50/30/20 rule divides your after-tax income into three categories: 50% for needs (housing, food, transportation), 30% for wants (entertainment, dining out, hobbies), and 20% for savings and debt repayment. It's a simple starting framework, not a rigid rule."
+  - question: "How do I budget if I have irregular income?"
+    answer: "Calculate your average monthly income over the past 6-12 months and budget based on that. In higher-earning months, save the surplus. In lower months, you'll have a buffer. Some freelancers prefer budgeting based on their lowest-earning month for safety."
+  - question: "What counts as a need vs a want?"
+    answer: "Needs are expenses you must pay regardless: rent, groceries, utilities, minimum debt payments, insurance, and transportation to work. Wants are everything else: streaming services, dining out, gym memberships, and upgrades beyond the basics."
+  - question: "Should I include taxes in my 50/30/20 budget?"
+    answer: "No -- the 50/30/20 rule applies to your after-tax income (take-home pay). If you're self-employed, set aside your estimated taxes first, then apply the rule to what's left."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication
