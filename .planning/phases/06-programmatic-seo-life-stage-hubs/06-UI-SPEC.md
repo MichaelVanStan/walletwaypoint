@@ -52,13 +52,13 @@ Exceptions: Touch targets for the state indicator badge use 36px minimum height 
 | Role | Size | Weight | Line Height | Usage |
 |------|------|--------|-------------|-------|
 | Body | 16px (text-base) | 400 (normal) | 1.5 | Editorial content, FAQ answers, guide text, state-specific editorial |
-| Label | 14px (text-sm) | 500 (medium) | 1.4 | Table headers, bracket labels, input labels, section subheadings |
-| Small | 12px (text-xs) | 500 (medium) | 1.33 | Badge text, scorecard labels, state indicator abbreviation, metadata |
+| Label | 14px (text-sm) | 600 (semibold) | 1.4 | Table headers, bracket labels, input labels, section subheadings |
+| Small | 12px (text-xs) | 600 (semibold) | 1.33 | Badge text, scorecard labels, state indicator abbreviation, metadata |
 | Heading | 24px (text-2xl) | 600 (semibold) | 1.2 | Page titles (h1), calculator titles, hub names |
 
-Font weights used: 400 (body text, editorial) and 600 (headings, emphasis). 500 used only for labels/small text where medium weight aids scanability.
+Font weights used: 400 (body text, editorial) and 600 (headings, labels, badges, emphasis). Size differences between the 14px Label and 12px Small roles provide sufficient visual hierarchy without a distinct mid-weight.
 
-**Source:** Existing patterns -- `calculator-shell.tsx` h1 uses `text-2xl font-semibold`, `result-card.tsx` labels use `text-xs font-medium`, body text uses `text-base`
+**Source:** Existing patterns -- `calculator-shell.tsx` h1 uses `text-2xl font-semibold`, `result-card.tsx` labels use `text-xs font-semibold`, body text uses `text-base`
 
 ---
 
@@ -162,7 +162,7 @@ Accent reserved for: primary result card values, state indicator badge, hub hero
 - Housing DTI: percent with DtiBadge color coding
 - Total DTI: percent with DtiBadge color coding
 - Down Payment Amount: currency
-- Est. Monthly Disposable Income: currency (uses net income from persisted state; shows "Set your state for accurate estimate" link if no state persisted)
+- Est. Monthly Disposable Income: currency (uses net income from persisted state; shows "Set your state for a more accurate take-home estimate" link if no state persisted)
 
 **Guidance banner:** Rendered below the table. Light blue-tinted background (accent/5). Text: "Lenders generally approve up to 43% total DTI. Below 36% gives you the most financial flexibility." Icon: Info circle (Lucide `Info`).
 
