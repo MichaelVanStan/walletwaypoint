@@ -1,12 +1,13 @@
 import { Suspense } from 'react';
-import { calculators } from '#site/content';
+import Link from 'next/link';
+import { calculators, cities } from '#site/content';
 import { CalculatorPageClient } from '@/components/calculator/calculator-page-client';
 import { WebAppSchema } from '@/components/seo/web-app-schema';
 import { FaqSchema } from '@/components/seo/faq-schema';
 import { createMetadata } from '@/lib/metadata';
 import { siteConfig } from '@/lib/site-config';
-import { notFound } from 'next/navigation';
 import { AdSlot } from '@/components/ads/ad-slot';
+import { AdBreak } from '@/components/ads/ad-break';
 import {
   Accordion,
   AccordionItem,
@@ -14,45 +15,25 @@ import {
   AccordionContent,
 } from '@/components/ui/accordion';
 
-// Exclude slugs that have dedicated route directories (e.g., /calculators/rent-affordability/[city])
-const DEDICATED_ROUTE_SLUGS = ['rent-affordability'];
+const calc = calculators.find((c) => c.slug === 'rent-affordability')!;
 
-export function generateStaticParams() {
-  return calculators
-    .filter((calc) => !DEDICATED_ROUTE_SLUGS.includes(calc.slug))
-    .map((calc) => ({ slug: calc.slug }));
-}
+export const revalidate = 86400;
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const calc = calculators.find((c) => c.slug === slug);
-  if (!calc) return {};
+export function generateMetadata() {
   return createMetadata({
     title: calc.title,
     description: calc.description,
-    path: `/calculators/${calc.slug}`,
+    path: '/calculators/rent-affordability',
   });
 }
 
-export default async function CalculatorPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const calc = calculators.find((c) => c.slug === slug);
-  if (!calc) notFound();
-
+export default function RentAffordabilityPage() {
   return (
     <>
       <WebAppSchema
         name={calc.title}
         description={calc.description}
-        url={`${siteConfig.url}/calculators/${calc.slug}`}
+        url={`${siteConfig.url}/calculators/rent-affordability`}
         applicationCategory={calc.seo.applicationCategory}
       />
       <Suspense
@@ -86,6 +67,25 @@ export default async function CalculatorPage({
           </section>
         </>
       )}
+      <AdBreak />
+      <section className="mx-auto max-w-[1080px] px-4 sm:px-6 py-8">
+        <h2 className="text-xl font-semibold mb-4">City-Specific Rent Calculators</h2>
+        <p className="text-muted-foreground mb-6">
+          Get rent affordability calculations pre-populated with local median rent data for major metro areas.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          {cities.map((city) => (
+            <Link
+              key={city.slug}
+              href={`/calculators/rent-affordability/${city.slug}`}
+              className="rounded-lg border border-border p-3 text-sm hover:bg-muted/50 transition-colors"
+            >
+              <span className="font-semibold">{city.cityName}</span>
+              <span className="text-muted-foreground ml-1">{city.stateAbbreviation}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
     </>
   );
 }
