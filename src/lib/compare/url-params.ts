@@ -5,6 +5,10 @@ import {
   personalLoanSortColumns,
   savingsSortColumns,
   insuranceSortColumns,
+  autoInsuranceSortColumns,
+  lifeInsuranceSortColumns,
+  investmentPlatformsSortColumns,
+  taxSoftwareSortColumns,
   type ProductCategory,
 } from './product-types';
 
@@ -59,10 +63,56 @@ export const insuranceParams = {
   deductible: parseAsStringLiteral(deductibleValues).withDefault('all'),
 };
 
+// Auto insurance filter values
+const amBestRatingValues = ['all', 'A+', 'A', 'A-'] as const;
+
+export const autoInsuranceParams = {
+  sort: parseAsStringLiteral(autoInsuranceSortColumns).withDefault('name'),
+  dir: parseAsStringLiteral(sortDirections).withDefault('asc'),
+  rating: parseAsStringLiteral(amBestRatingValues).withDefault('all'),
+};
+
+// Life insurance filter values
+const policyTypeValues = ['all', 'term', 'whole', 'universal'] as const;
+const medicalExamValues = ['all', 'required', 'no-exam'] as const;
+
+export const lifeInsuranceParams = {
+  sort: parseAsStringLiteral(lifeInsuranceSortColumns).withDefault('name'),
+  dir: parseAsStringLiteral(sortDirections).withDefault('asc'),
+  policy: parseAsStringLiteral(policyTypeValues).withDefault('all'),
+  exam: parseAsStringLiteral(medicalExamValues).withDefault('all'),
+};
+
+// Investment platform filter values
+const investMinValues = ['all', 'no-minimum', 'under-500', '500-plus'] as const;
+const feeValues = ['all', 'no-fee', 'under-050', '050-plus'] as const;
+
+export const investmentPlatformsParams = {
+  sort: parseAsStringLiteral(investmentPlatformsSortColumns).withDefault('name'),
+  dir: parseAsStringLiteral(sortDirections).withDefault('asc'),
+  invmin: parseAsStringLiteral(investMinValues).withDefault('all'),
+  mgmtfee: parseAsStringLiteral(feeValues).withDefault('all'),
+};
+
+// Tax software filter values
+const selfEmployedValues = ['all', 'yes', 'no'] as const;
+const auditDefenseValues = ['all', 'yes', 'no'] as const;
+
+export const taxSoftwareParams = {
+  sort: parseAsStringLiteral(taxSoftwareSortColumns).withDefault('name'),
+  dir: parseAsStringLiteral(sortDirections).withDefault('asc'),
+  selfemp: parseAsStringLiteral(selfEmployedValues).withDefault('all'),
+  audit: parseAsStringLiteral(auditDefenseValues).withDefault('all'),
+};
+
 // Map category to its params
-export const categoryParams: Record<ProductCategory, typeof creditCardParams | typeof personalLoanParams | typeof savingsParams | typeof insuranceParams> = {
+export const categoryParams: Record<ProductCategory, typeof creditCardParams | typeof personalLoanParams | typeof savingsParams | typeof insuranceParams | typeof autoInsuranceParams | typeof lifeInsuranceParams | typeof investmentPlatformsParams | typeof taxSoftwareParams> = {
   'credit-cards': creditCardParams,
   'personal-loans': personalLoanParams,
   'savings-accounts': savingsParams,
   'insurance': insuranceParams,
+  'auto-insurance': autoInsuranceParams,
+  'life-insurance': lifeInsuranceParams,
+  'investment-platforms': investmentPlatformsParams,
+  'tax-software': taxSoftwareParams,
 };

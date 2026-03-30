@@ -36,6 +36,14 @@ const categoryIntros: Record<ProductCategory, string> = {
     'Compare high-yield savings accounts and CD rates. Find the best APY with the deposit minimums and terms that fit your savings goals.',
   insurance:
     'Compare auto and renters insurance quotes, coverage levels, and deductibles. Find the right policy for your budget and coverage needs.',
+  'auto-insurance':
+    'Compare auto insurance rates, coverage options, and discounts from top providers. Filter by AM Best rating to find the best policy for your driving needs.',
+  'life-insurance':
+    'Compare life insurance policies, premiums, and coverage amounts. Find the right term, whole, or universal life plan for your family.',
+  'investment-platforms':
+    'Compare investment platforms, fees, and account types. Find the right brokerage or robo-advisor for your investing goals.',
+  'tax-software':
+    'Compare tax filing software features, prices, and support options. Find the best tool for your tax situation.',
 };
 
 export default async function CategoryPage({

@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-
-type ProductCategory = 'credit-cards' | 'personal-loans' | 'savings-accounts' | 'insurance';
+import type { ProductCategory } from '@/lib/compare/product-types';
 
 interface ProductImageProps {
   imageUrl?: string;
@@ -47,6 +46,32 @@ const issuerGradients: Record<string, string> = {
   'Liberty Mutual': 'from-yellow-500 to-yellow-700',
   'Nationwide': 'from-blue-700 to-blue-900',
   'Lemonade': 'from-pink-500 to-pink-700',
+  // Life insurance providers
+  'Haven Life (MassMutual)': 'from-blue-600 to-blue-800',
+  'Ladder': 'from-teal-500 to-teal-700',
+  'Bestow': 'from-green-500 to-green-700',
+  'Northwestern Mutual': 'from-blue-800 to-blue-950',
+  'New York Life': 'from-blue-700 to-blue-900',
+  'Prudential': 'from-slate-600 to-slate-800',
+  'MassMutual': 'from-blue-600 to-blue-800',
+  // The Hartford
+  'The Hartford': 'from-blue-700 to-blue-900',
+  // Investment platforms
+  'Fidelity': 'from-green-600 to-green-800',
+  'Vanguard': 'from-red-700 to-red-900',
+  'Charles Schwab': 'from-sky-600 to-sky-800',
+  'Robinhood': 'from-green-400 to-green-600',
+  'Betterment': 'from-blue-500 to-blue-700',
+  'M1 Finance': 'from-amber-500 to-amber-700',
+  'E*TRADE (Morgan Stanley)': 'from-violet-600 to-violet-800',
+  'Interactive Brokers': 'from-red-600 to-red-800',
+  // Tax software
+  'Intuit': 'from-blue-600 to-blue-800',
+  'H&R Block': 'from-green-600 to-green-800',
+  'TaxAct': 'from-blue-500 to-blue-700',
+  'TaxHawk': 'from-sky-500 to-sky-700',
+  'Cash App (Block)': 'from-green-500 to-green-700',
+  'TaxSlayer': 'from-blue-700 to-blue-900',
 };
 
 const defaultGradient = 'from-slate-500 to-slate-700';

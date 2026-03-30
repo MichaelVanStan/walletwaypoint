@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/site-config';
-import { calculators, guides, hubs, products } from '#site/content';
+import { calculators, guides, hubs, products, listicles } from '#site/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
@@ -102,5 +102,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...calculatorRoutes, ...guideRoutes, ...hubRoutes, ...comparisonRoutes];
+  const listicleRoutes: MetadataRoute.Sitemap = listicles.map((l) => ({
+    url: `${baseUrl}/compare/best/${l.slug}`,
+    lastModified: new Date(l.lastUpdated),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...calculatorRoutes, ...guideRoutes, ...hubRoutes, ...comparisonRoutes, ...listicleRoutes];
 }
