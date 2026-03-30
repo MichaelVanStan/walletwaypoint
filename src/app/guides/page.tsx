@@ -69,7 +69,6 @@ export default function GuidesPage() {
                     {pairedCalc && (
                       <Link
                         href={`/calculators/${pairedCalc.slug}`}
-                        onClick={(e) => e.stopPropagation()}
                         className="inline-flex items-center gap-1.5 rounded-md bg-accent/[0.08] px-2.5 py-1 text-xs font-medium text-accent transition-colors hover:bg-accent/[0.15]"
                       >
                         <Calculator className="size-3" />
