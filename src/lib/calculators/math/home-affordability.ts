@@ -17,6 +17,7 @@ import { formatCurrency } from '@/lib/calculators/formatters';
  * @param params.debts - Existing monthly debt payments ($)
  * @param params.dp - Down payment percentage (%)
  * @param params.rate - Annual mortgage interest rate (%)
+ * @param params.netIncome - Optional annual net income after taxes (from persisted state). 0 means not provided.
  */
 export function calculateHomeAffordability(
   params: Record<string, number | string>,
@@ -25,6 +26,7 @@ export function calculateHomeAffordability(
   const monthlyDebts = new Decimal(Number(params.debts));
   const downPaymentPct = new Decimal(Number(params.dp));
   const annualRate = new Decimal(Number(params.rate));
+  const netIncome = Number(params.netIncome) || 0; // 0 means not provided
 
   const grossMonthlyIncome = income.div(12);
   const monthlyRate = annualRate.div(100).div(12);
@@ -74,18 +76,39 @@ export function calculateHomeAffordability(
 
     const downPaymentAmount = maxHomePrice.times(downPaymentPct.div(100));
 
+    // DTI percentages for comparison table
+    const housingDti = grossMonthlyIncome.gt(0)
+      ? maxMonthlyPayment.div(grossMonthlyIncome).times(100).toNumber()
+      : 0;
+    const totalDti = grossMonthlyIncome.gt(0)
+      ? maxMonthlyPayment.plus(monthlyDebts).div(grossMonthlyIncome).times(100).toNumber()
+      : 0;
+
+    // Disposable income: monthly net minus housing payment minus debts
+    // -1 sentinel means "no state selected / no net income available"
+    let disposableIncome = -1;
+    if (netIncome > 0) {
+      const monthlyNet = netIncome / 12;
+      disposableIncome = Math.round(monthlyNet - maxMonthlyPayment.toNumber() - monthlyDebts.toNumber());
+    }
+
     return {
       label: tier.label,
+      frontEnd: tier.frontEnd,
+      backEnd: tier.backEnd,
       maxMonthlyPayment: Math.round(maxMonthlyPayment.toNumber()),
       maxLoanAmount: Math.round(maxLoanAmount.toNumber()),
       maxHomePrice: Math.round(maxHomePrice.toNumber()),
       downPaymentAmount: Math.round(downPaymentAmount.toNumber()),
+      housingDti,
+      totalDti,
+      disposableIncome,
     };
   });
 
   const [conservative, moderate, aggressive] = tierResults;
 
-  // Outputs for the result cards
+  // Outputs for the result cards + comparison table
   const outputs: Record<string, number> = {
     conservativePrice: conservative.maxHomePrice,
     conservativePayment: conservative.maxMonthlyPayment,
@@ -93,6 +116,21 @@ export function calculateHomeAffordability(
     moderatePayment: moderate.maxMonthlyPayment,
     aggressivePrice: aggressive.maxHomePrice,
     aggressivePayment: aggressive.maxMonthlyPayment,
+    // DTI percentages for comparison table
+    conservativeHousingDti: conservative.housingDti,
+    conservativeTotalDti: conservative.totalDti,
+    moderateHousingDti: moderate.housingDti,
+    moderateTotalDti: moderate.totalDti,
+    aggressiveHousingDti: aggressive.housingDti,
+    aggressiveTotalDti: aggressive.totalDti,
+    // Down payment amounts
+    conservativeDown: conservative.downPaymentAmount,
+    moderateDown: moderate.downPaymentAmount,
+    aggressiveDown: aggressive.downPaymentAmount,
+    // Disposable income (-1 means no state/net income available)
+    conservativeDisposable: conservative.disposableIncome,
+    moderateDisposable: moderate.disposableIncome,
+    aggressiveDisposable: aggressive.disposableIncome,
   };
 
   // Bar chart data for tier comparison

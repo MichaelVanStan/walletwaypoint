@@ -9,6 +9,7 @@ import {
   NavigationMenuContent,
 } from '@/components/ui/navigation-menu';
 import { HeaderMobile } from './header-mobile';
+import { StateIndicator } from '@/components/calculator/state-indicator';
 
 export function Header() {
   return (
@@ -108,8 +109,11 @@ export function Header() {
           </NavigationMenu>
         </nav>
 
-        {/* Mobile Hamburger */}
-        <HeaderMobile />
+        {/* State Indicator + Mobile Hamburger */}
+        <div className="flex items-center gap-2">
+          <StateIndicator />
+          <HeaderMobile />
+        </div>
       </div>
     </header>
   );

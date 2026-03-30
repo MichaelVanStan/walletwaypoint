@@ -84,6 +84,7 @@ const calculators = defineCollection({
     callouts: s.array(calloutConfigSchema),
     interpretation: interpretationConfigSchema,
     mathModule: s.string(),
+    resultLayout: s.enum(['cards', 'table']).default('cards').optional(),
     faqs: s.array(faqSchema).optional(),
   }),
 });
