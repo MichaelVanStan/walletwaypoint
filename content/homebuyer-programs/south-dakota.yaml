@@ -1,0 +1,65 @@
+slug: south-dakota
+stateName: South Dakota
+stateAbbreviation: SD
+programs:
+  - name: "Fixed Rate Plus DPA"
+    adminAgency: "South Dakota Housing Development Authority (SDHDA)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to 5% of the loan amount as a second mortgage"
+    incomeLimits: "Must not exceed SDHDA income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.sdhda.org/homebuyers"
+  - name: "Governor's House Program"
+    adminAgency: "South Dakota Housing Development Authority (SDHDA)"
+    assistanceType: "Affordable housing construction"
+    amount: "Energy-efficient new construction homes at below-market prices"
+    incomeLimits: "Income limits apply"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.sdhda.org/homebuyers"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "South Dakota First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore South Dakota's homebuyer assistance programs including Fixed Rate Plus DPA and Governor's House Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  South Dakota's housing market offers opportunities for first-time buyers, with a median home price of approximately $290,000. The South Dakota Housing Development Authority (SDHDA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Fixed Rate Plus DPA is a south dakota housing development authority's key offering for first-time buyers, providing up to 5% of the loan amount as a second mortgage. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Governor's House Program extends additional support through energy-efficient new construction homes at below-market prices. South Dakota has no state income tax. Property taxes average about 1.22%. Combined with no income tax, buyers keep more take-home pay for mortgage payments.
+
+  Federal programs complement state offerings in South Dakota. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Ellsworth Air Force Base. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of South Dakota.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in South Dakota?"
+    answer: "South Dakota offers programs through the South Dakota Housing Development Authority (SDHDA), including the Fixed Rate Plus DPA and Governor's House Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for South Dakota homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Fixed Rate Plus DPA requires must not exceed sdhda income limits. Check the South Dakota Housing Development Authority website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in South Dakota?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

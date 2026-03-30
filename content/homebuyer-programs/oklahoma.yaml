@@ -1,0 +1,65 @@
+slug: oklahoma
+stateName: Oklahoma
+stateAbbreviation: OK
+programs:
+  - name: "OHFA Homebuyer DPA"
+    adminAgency: "Oklahoma Housing Finance Agency (OHFA)"
+    assistanceType: "Down payment and closing cost assistance"
+    amount: "Up to 3.5% of the loan amount as a forgivable second mortgage (forgiven after 3 years)"
+    incomeLimits: "Must not exceed OHFA income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.ohfa.org/homebuyers/"
+  - name: "OHFA Gold Program"
+    adminAgency: "Oklahoma Housing Finance Agency (OHFA)"
+    assistanceType: "Down payment assistance grant"
+    amount: "Up to 3.5% of the loan amount as a grant"
+    incomeLimits: "Income limits apply; available with higher first mortgage rate"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.ohfa.org/homebuyers/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Oklahoma First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Oklahoma's homebuyer assistance programs including OHFA Homebuyer DPA and OHFA Gold Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Oklahoma's housing market offers opportunities for first-time buyers, with a median home price of approximately $195,000. The Oklahoma Housing Finance Agency (OHFA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The OHFA Homebuyer DPA is an oklahoma housing finance agency's key offering for first-time buyers, providing up to 3.5% of the loan amount as a forgivable second mortgage (forgiven after 3 years). This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The OHFA Gold Program extends additional support through up to 3.5% of the loan amount as a grant. Oklahoma has a graduated income tax from 0.25% to 4.75%. Property taxes average about 0.87%. With a median price under $200,000, even modest DPA amounts make a large impact.
+
+  Federal programs complement state offerings in Oklahoma. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Tinker Air Force Base, Fort Sill. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Oklahoma.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Oklahoma?"
+    answer: "Oklahoma offers programs through the Oklahoma Housing Finance Agency (OHFA), including the OHFA Homebuyer DPA and OHFA Gold Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Oklahoma homebuyer assistance?"
+    answer: "Income limits vary by program and county. The OHFA Homebuyer DPA requires must not exceed ohfa income limits. Check the Oklahoma Housing Finance Agency website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Oklahoma?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

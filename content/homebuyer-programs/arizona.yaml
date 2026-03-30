@@ -1,0 +1,67 @@
+slug: arizona
+stateName: Arizona
+stateAbbreviation: AZ
+programs:
+  - name: "Home Plus Program"
+    adminAgency: "Arizona Industrial Development Authority (AzIDA)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to 5% of the loan amount as a 3-year forgivable second lien"
+    incomeLimits: "Varies by county; generally up to $122,100 for most areas"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.azida.gov/home-plus"
+  - name: "Pathway to Purchase"
+    adminAgency: "Arizona Department of Housing (ADOH)"
+    assistanceType: "Down payment and closing cost assistance"
+    amount: "Up to 10% of purchase price, max $20,000 as 0% deferred loan"
+    incomeLimits: "Must not exceed 80% of area median income"
+    eligibleAreas: "Targeted census tracts statewide"
+    firstTimeBuyerRequired: true
+    url: "https://housing.az.gov/general-public/homeownership-programs"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Arizona First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Arizona's homebuyer assistance programs including Home Plus Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Arizona's housing market has experienced significant growth over the past decade, driven by population influx from higher-cost states like California. Despite rising prices, the state offers robust homebuyer assistance through the Arizona Industrial Development Authority and the Department of Housing.
+  
+  The Home Plus program is Arizona's most popular down payment assistance program, offering up to 5% of the loan amount as a forgivable second lien. If you remain in the home for three years, the assistance is completely forgiven, effectively making it a grant. The program is available to both first-time and repeat buyers and can be paired with FHA, VA, or conventional loans.
+  
+  The Pathway to Purchase program targets lower-income buyers in designated census tracts, providing up to $20,000 in down payment and closing cost assistance as a 0% interest deferred loan. This is repaid only when the home is sold, refinanced, or no longer owner-occupied. First-time buyer status is required for this program.
+  
+  Arizona has no state income tax on the first $27,272 for single filers (2.50% flat rate), keeping more take-home pay available for mortgage payments. Property taxes average about 0.63%, among the lowest in the western U.S. The combination of relatively low taxes, growing job markets in Phoenix, Tucson, and Scottsdale, and available assistance programs makes Arizona an attractive option for first-time buyers.
+  
+  Federal programs are widely available in Arizona, with USDA loans particularly relevant in rural areas throughout the state, including communities outside the Phoenix and Tucson metro areas. VA loans are available at Luke Air Force Base, Davis-Monthan Air Force Base, and Fort Huachuca.
+faqs:
+  - question: "What is the Home Plus program in Arizona?"
+    answer: "Home Plus provides up to 5% of the loan amount as a forgivable second lien through AzIDA. If you stay in the home for 3 years, the assistance is forgiven entirely. Both first-time and repeat buyers qualify."
+  - question: "Do I need to be a first-time buyer for Arizona programs?"
+    answer: "Not for the Home Plus program, which is open to all qualifying buyers. However, the Pathway to Purchase program requires first-time buyer status (no homeownership in the past 3 years)."
+  - question: "What are the income limits for Arizona homebuyer assistance?"
+    answer: "Home Plus income limits vary by county but generally cap at $122,100. Pathway to Purchase requires income at or below 80% of area median income. Check each program for current county-specific limits."
+  - question: "Can I combine Arizona state and federal homebuyer programs?"
+    answer: "Yes. Both Home Plus and Pathway to Purchase can be used alongside FHA, VA, conventional, and USDA loan programs, provided you meet all eligibility requirements."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

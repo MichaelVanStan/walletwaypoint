@@ -1,0 +1,65 @@
+slug: nebraska
+stateName: Nebraska
+stateAbbreviation: NE
+programs:
+  - name: "Homebuyer Assistance Program"
+    adminAgency: "Nebraska Investment Finance Authority (NIFA)"
+    assistanceType: "Down payment and closing cost assistance"
+    amount: "Up to 5% of the purchase price as a 0% second mortgage (10-year term)"
+    incomeLimits: "Must not exceed NIFA income limits by county"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.nifa.org/homebuyers"
+  - name: "Military Home Program"
+    adminAgency: "Nebraska Investment Finance Authority (NIFA)"
+    assistanceType: "Below-market rate mortgage"
+    amount: "Below-market interest rate for veterans and active military"
+    incomeLimits: "Must be active military, veteran, or surviving spouse"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.nifa.org/homebuyers"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Nebraska First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Nebraska's homebuyer assistance programs including Homebuyer Assistance Program and Military Home Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Nebraska's housing market offers opportunities for first-time buyers, with a median home price of approximately $245,000. The Nebraska Investment Finance Authority (NIFA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Homebuyer Assistance Program is a nebraska investment finance authority's key offering for first-time buyers, providing up to 5% of the purchase price as a 0% second mortgage (10-year term). This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Military Home Program extends additional support through below-market interest rate for veterans and active military. Nebraska has a graduated income tax from 2.46% to 5.84%. Property taxes average about 1.63%. NIFA provides competitive DPA and special military programs.
+
+  Federal programs complement state offerings in Nebraska. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Offutt Air Force Base. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Nebraska.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Nebraska?"
+    answer: "Nebraska offers programs through the Nebraska Investment Finance Authority (NIFA), including the Homebuyer Assistance Program and Military Home Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Nebraska homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Homebuyer Assistance Program requires must not exceed nifa income limits by county. Check the Nebraska Investment Finance Authority website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Nebraska?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

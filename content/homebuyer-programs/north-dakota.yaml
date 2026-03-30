@@ -1,0 +1,65 @@
+slug: north-dakota
+stateName: North Dakota
+stateAbbreviation: ND
+programs:
+  - name: "FirstHome Program"
+    adminAgency: "North Dakota Housing Finance Agency (NDHFA)"
+    assistanceType: "Below-market rate mortgage with DPA"
+    amount: "Below-market rate first mortgage with up to $12,000 in DPA as a second mortgage"
+    incomeLimits: "Must not exceed NDHFA income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.ndhfa.org/homebuyers/"
+  - name: "HomeAccess Program"
+    adminAgency: "North Dakota Housing Finance Agency (NDHFA)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to $5,000 as a grant for qualifying buyers"
+    incomeLimits: "Must meet specific criteria (disability, veteran, single parent)"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.ndhfa.org/homebuyers/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "North Dakota First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore North Dakota's homebuyer assistance programs including FirstHome Program and HomeAccess Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  North Dakota's housing market offers opportunities for first-time buyers, with a median home price of approximately $250,000. The North Dakota Housing Finance Agency (NDHFA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The FirstHome Program is a north dakota housing finance agency's key offering for first-time buyers, providing below-market rate first mortgage with up to $12,000 in dpa as a second mortgage. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The HomeAccess Program extends additional support through up to $5,000 as a grant for qualifying buyers. North Dakota has a flat income tax of 1.95% (one of the lowest in the nation). Property taxes average about 0.98%. Affordable home prices and low taxes make ND one of the easiest states for first-time buyers.
+
+  Federal programs complement state offerings in North Dakota. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Minot Air Force Base, Grand Forks Air Force Base. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of North Dakota.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in North Dakota?"
+    answer: "North Dakota offers programs through the North Dakota Housing Finance Agency (NDHFA), including the FirstHome Program and HomeAccess Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for North Dakota homebuyer assistance?"
+    answer: "Income limits vary by program and county. The FirstHome Program requires must not exceed ndhfa income limits. Check the North Dakota Housing Finance Agency website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in North Dakota?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

@@ -1,0 +1,65 @@
+slug: connecticut
+stateName: Connecticut
+stateAbbreviation: CT
+programs:
+  - name: "Time to Own"
+    adminAgency: "Connecticut Housing Finance Authority (CHFA)"
+    assistanceType: "Down payment and closing cost assistance"
+    amount: "Up to $20,000 as a low-interest second mortgage"
+    incomeLimits: "Varies by county and program; generally up to $145,000"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.chfa.org/homebuyers/"
+  - name: "CHFA Downpayment Assistance Program (DAP)"
+    adminAgency: "Connecticut Housing Finance Authority (CHFA)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to $10,000 as a low-interest second mortgage"
+    incomeLimits: "Must meet CHFA income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.chfa.org/homebuyers/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Connecticut First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Connecticut's homebuyer assistance programs including Time to Own. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Connecticut's proximity to New York City and Boston creates a housing market with significant price variation. Fairfield County, closest to NYC, has median home prices well above $500,000, while more affordable options exist in the eastern and northern parts of the state. The Connecticut Housing Finance Authority provides essential assistance for first-time buyers navigating these costs.
+  
+  The Time to Own program is CHFA's primary assistance offering, providing up to $20,000 for down payment and closing costs as a second mortgage with a low interest rate. This program requires first-time buyer status and completion of a homebuyer education course. The assistance can be combined with CHFA's first mortgage products for a comprehensive financing package.
+  
+  CHFA also offers the standard Downpayment Assistance Program, providing up to $10,000 for buyers who may not qualify for the full Time to Own benefit. Both programs require working with a CHFA-approved lender and meeting income limits that vary by county.
+  
+  Connecticut's graduated income tax ranges from 2% to 6.99%, and property taxes are among the highest in the nation, averaging about 2.14%. However, the state offers property tax credits of up to $300 for qualifying homeowners and has expanded the Earned Income Tax Credit, which can benefit lower-income homebuyers.
+  
+  Towns like Hartford, New Haven, and Waterbury offer significantly more affordable housing than the coastal communities, with median prices often below $250,000. Many of these areas also qualify for targeted assistance programs with enhanced benefits for buyers purchasing in underserved communities.
+faqs:
+  - question: "How much down payment assistance is available in Connecticut?"
+    answer: "CHFA's Time to Own program offers up to $20,000 and the DAP offers up to $10,000, both as low-interest second mortgages for first-time buyers."
+  - question: "What are the income limits for CHFA programs?"
+    answer: "Income limits vary by county and household size, generally capping around $145,000. CHFA publishes current limits on their website."
+  - question: "Are there affordable areas in Connecticut for first-time buyers?"
+    answer: "Yes. Cities like Hartford, New Haven, Waterbury, and many eastern Connecticut towns offer median prices well below $250,000, significantly lower than Fairfield County."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

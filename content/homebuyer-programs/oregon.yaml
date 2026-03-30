@@ -1,0 +1,65 @@
+slug: oregon
+stateName: Oregon
+stateAbbreviation: OR
+programs:
+  - name: "Oregon Bond Residential Loan Program"
+    adminAgency: "Oregon Housing and Community Services (OHCS)"
+    assistanceType: "Below-market rate mortgage with DPA"
+    amount: "Below-market rate first mortgage with up to $15,000 in down payment assistance"
+    incomeLimits: "Must not exceed OHCS income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.oregon.gov/ohcs/homeownership"
+  - name: "Cash Advantage Program"
+    adminAgency: "Oregon Housing and Community Services (OHCS)"
+    assistanceType: "Grant"
+    amount: "3% of the purchase price as a non-repayable grant"
+    incomeLimits: "Income limits apply"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.oregon.gov/ohcs/homeownership"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Oregon First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Oregon's homebuyer assistance programs including Oregon Bond Residential Loan Program and Cash Advantage Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Oregon's housing market offers opportunities for first-time buyers, with a median home price of approximately $470,000. The Oregon Housing and Community Services (OHCS) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Oregon Bond Residential Loan Program is an oregon housing and community services's key offering for first-time buyers, providing below-market rate first mortgage with up to $15,000 in down payment assistance. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Cash Advantage Program extends additional support through 3% of the purchase price as a non-repayable grant. Oregon has no sales tax. The income tax ranges from 4.75% to 9.90%. Property taxes average about 0.93%. The absence of sales tax reduces ongoing household costs for homeowners.
+
+  Federal programs complement state offerings in Oregon. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near multiple military installations. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Oregon.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Oregon?"
+    answer: "Oregon offers programs through the Oregon Housing and Community Services (OHCS), including the Oregon Bond Residential Loan Program and Cash Advantage Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Oregon homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Oregon Bond Residential Loan Program requires must not exceed ohcs income limits. Check the Oregon Housing and Community Services website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Oregon?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

@@ -1,0 +1,65 @@
+slug: arkansas
+stateName: Arkansas
+stateAbbreviation: AR
+programs:
+  - name: "ADFA Down Payment Assistance (DPA)"
+    adminAgency: "Arkansas Development Finance Authority (ADFA)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to $15,000 as a second mortgage at 0% interest, forgiven over 5-10 years"
+    incomeLimits: "Varies by program tier; generally up to $137,000"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.adfa.gov/homeownership"
+  - name: "ADFA Move-Up Program"
+    adminAgency: "Arkansas Development Finance Authority (ADFA)"
+    assistanceType: "Below-market rate mortgage"
+    amount: "Below-market 30-year fixed rate mortgage"
+    incomeLimits: "Income limits apply; varies by county"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.adfa.gov/homeownership"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Arkansas First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Arkansas's homebuyer assistance programs including ADFA Down Payment Assistance (DPA). Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Arkansas ranks among the most affordable states for homeownership, with a median home price near $185,000, well below the national average. The Arkansas Development Finance Authority provides the primary state-level assistance for buyers, offering both down payment help and competitive mortgage rates.
+  
+  ADFA's down payment assistance program offers up to $15,000 as a forgivable second mortgage at 0% interest. The forgiveness period ranges from 5 to 10 years depending on the assistance amount, making it an exceptional benefit for buyers who plan to stay in their home. First-time buyer status is required, though buyers in targeted areas may receive additional benefits.
+  
+  The ADFA Move-Up program extends below-market rate mortgages to repeat buyers as well, recognizing that affordability challenges affect purchasers at all stages. This 30-year fixed-rate mortgage program is processed through participating lenders across the state.
+  
+  Arkansas has relatively low property taxes, averaging about 0.62%, and a cost of living index well below the national average. Combined with a graduated income tax that tops out at 3.90% as of 2026, the state offers a favorable financial environment for homeowners. Cities like Little Rock, Fayetteville, and Bentonville provide growing job markets and increasing home values while remaining affordable compared to peer cities nationwide.
+  
+  Federal programs are particularly valuable in Arkansas, where much of the state qualifies for USDA rural development loans. This means many buyers outside the Little Rock and Fayetteville metro areas can access zero-down-payment financing.
+faqs:
+  - question: "How much down payment assistance can I get in Arkansas?"
+    answer: "ADFA offers up to $15,000 in down payment assistance as a 0% interest second mortgage that is forgiven over 5-10 years if you remain in the home."
+  - question: "Do I need to be a first-time buyer for ADFA programs?"
+    answer: "The DPA program requires first-time buyer status, but the Move-Up program is available to repeat buyers as well."
+  - question: "What are closing costs like in Arkansas?"
+    answer: "Arkansas closing costs typically range from 2-4% of the purchase price. ADFA DPA funds can be used to cover both down payment and closing costs."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

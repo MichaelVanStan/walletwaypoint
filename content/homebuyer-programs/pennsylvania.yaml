@@ -1,0 +1,65 @@
+slug: pennsylvania
+stateName: Pennsylvania
+stateAbbreviation: PA
+programs:
+  - name: "Keystone Advantage Assistance Loan"
+    adminAgency: "Pennsylvania Housing Finance Agency (PHFA)"
+    assistanceType: "Down payment and closing cost assistance"
+    amount: "Up to $6,000 as a 0% interest, 10-year second mortgage"
+    incomeLimits: "Must not exceed PHFA income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.phfa.org/homebuyers/"
+  - name: "HFA Preferred (K-FIT) Program"
+    adminAgency: "Pennsylvania Housing Finance Agency (PHFA)"
+    assistanceType: "Forgivable down payment assistance"
+    amount: "Up to 5% of the purchase price as a forgivable second mortgage (forgiven after 5 years)"
+    incomeLimits: "Income limits apply"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.phfa.org/homebuyers/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Pennsylvania First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Pennsylvania's homebuyer assistance programs including Keystone Advantage Assistance Loan and HFA Preferred (K-FIT) Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Pennsylvania's housing market offers opportunities for first-time buyers, with a median home price of approximately $260,000. The Pennsylvania Housing Finance Agency (PHFA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Keystone Advantage Assistance Loan is a pennsylvania housing finance agency's key offering for first-time buyers, providing up to $6,000 as a 0% interest, 10-year second mortgage. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The HFA Preferred (K-FIT) Program extends additional support through up to 5% of the purchase price as a forgivable second mortgage (forgiven after 5 years). Pennsylvania has a flat income tax of 3.07%, one of the lowest in the nation. Property taxes average about 1.53%. PHFA programs provide essential DPA for the state's diverse housing market.
+
+  Federal programs complement state offerings in Pennsylvania. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near multiple military installations. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Pennsylvania.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Pennsylvania?"
+    answer: "Pennsylvania offers programs through the Pennsylvania Housing Finance Agency (PHFA), including the Keystone Advantage Assistance Loan and HFA Preferred (K-FIT) Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Pennsylvania homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Keystone Advantage Assistance Loan requires must not exceed phfa income limits. Check the Pennsylvania Housing Finance Agency website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Pennsylvania?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

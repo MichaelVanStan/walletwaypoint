@@ -1,0 +1,75 @@
+slug: california
+stateName: California
+stateAbbreviation: CA
+programs:
+  - name: "CalHFA FHA Loan Program"
+    adminAgency: "California Housing Finance Agency (CalHFA)"
+    assistanceType: "Below-market rate mortgage"
+    amount: "Below-market 30-year fixed rate FHA mortgage"
+    incomeLimits: "Must not exceed CalHFA income limits (varies by county, up to $180,000+)"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.calhfa.ca.gov/homebuyer/programs/index.htm"
+  - name: "MyHome Assistance Program"
+    adminAgency: "California Housing Finance Agency (CalHFA)"
+    assistanceType: "Down payment and closing cost assistance"
+    amount: "Up to 3.5% of purchase price or appraised value as deferred-payment junior loan"
+    incomeLimits: "Must meet CalHFA income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.calhfa.ca.gov/homebuyer/programs/myhome.htm"
+  - name: "California Dream For All Shared Appreciation Loan"
+    adminAgency: "California Housing Finance Agency (CalHFA)"
+    assistanceType: "Shared appreciation loan"
+    amount: "Up to 20% of purchase price (max $150,000) for down payment and closing costs"
+    incomeLimits: "Must not exceed 150% of area median income"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.calhfa.ca.gov/dream/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "California First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore California's homebuyer assistance programs including CalHFA FHA Loan Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  California presents the greatest homeownership challenge of any state, with a median home price exceeding $800,000 as of early 2026. Despite these high costs, the California Housing Finance Agency provides several programs designed to help first-time buyers overcome the down payment barrier.
+  
+  The Dream For All program is CalHFA's most ambitious initiative, offering up to 20% of the purchase price (capped at $150,000) as a shared appreciation loan. This means CalHFA shares in the home's future appreciation when you sell, refinance, or transfer the property. While this reduces your equity growth, it dramatically lowers the barrier to entry in a state where a 20% down payment on a median-priced home would require over $160,000 in savings. The program has been extremely popular, with funding rounds often exhausted within days.
+  
+  The MyHome Assistance Program provides a more traditional down payment assistance structure, offering up to 3.5% of the purchase price as a deferred-payment junior loan. This is a silent second mortgage with no monthly payments required until the home is sold, refinanced, or paid off. Combined with a CalHFA first mortgage, this can bring out-of-pocket costs down significantly.
+  
+  California's high income tax rates (up to 13.30% for top earners) are a consideration for buyers budgeting monthly expenses. However, the state's mortgage interest deduction and property tax deductions can offset some of this burden. Property taxes are comparatively low in California due to Proposition 13, which limits annual increases to 2% of the assessed value.
+  
+  California homebuyers should also explore local city and county programs, as many municipalities offer additional down payment assistance. Cities like Los Angeles, San Francisco, San Diego, and Sacramento have their own first-time buyer programs that can be layered with CalHFA offerings.
+faqs:
+  - question: "What is California's Dream For All program?"
+    answer: "Dream For All provides up to 20% of the purchase price (max $150,000) as a shared appreciation loan for first-time buyers. CalHFA shares in the home's future appreciation when you sell or refinance."
+  - question: "What are the income limits for CalHFA programs?"
+    answer: "Income limits vary by county and can exceed $180,000 in high-cost areas. CalHFA publishes updated limits on their website. The Dream For All program caps at 150% of area median income."
+  - question: "Can I buy anywhere in California with CalHFA assistance?"
+    answer: "Yes. CalHFA programs are available statewide. The purchase price limit varies by county, and the home must be a primary residence."
+  - question: "How quickly does Dream For All funding run out?"
+    answer: "Dream For All has historically been very popular, with funding rounds exhausting within days or weeks. Check CalHFA's website for the latest funding availability and application windows."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

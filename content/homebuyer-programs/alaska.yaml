@@ -1,0 +1,67 @@
+slug: alaska
+stateName: Alaska
+stateAbbreviation: AK
+programs:
+  - name: "PRIOR (Payment Reduction & Interest Overhaul Refinance)"
+    adminAgency: "Alaska Housing Finance Corporation (AHFC)"
+    assistanceType: "Below-market rate mortgage"
+    amount: "Below-market interest rate on 30-year fixed mortgage"
+    incomeLimits: "Varies by program tier and household size"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.ahfc.us/buy/loan-programs"
+  - name: "PRIOR Plus Down Payment Assistance"
+    adminAgency: "Alaska Housing Finance Corporation (AHFC)"
+    assistanceType: "Down payment and closing cost assistance"
+    amount: "Up to $15,000 as a second mortgage"
+    incomeLimits: "Must qualify for AHFC PRIOR loan program"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.ahfc.us/buy/loan-programs"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Alaska First-Time Homebuyer Programs 2026"
+editorialDescription: "Discover Alaska's homebuyer programs through AHFC, including below-market rate mortgages and up to $15,000 in down payment assistance for first-time buyers."
+editorialContent: |
+  Alaska's housing market presents unique challenges due to its remote geography, extreme climate, and limited housing stock in many communities. The Alaska Housing Finance Corporation serves as the state's primary resource for first-time homebuyer assistance, offering both below-market rate mortgages and down payment assistance to qualifying buyers.
+
+  The PRIOR program provides first-time buyers with a 30-year fixed-rate mortgage at a below-market interest rate. This can save thousands of dollars over the life of the loan compared to conventional market rates. Buyers must complete a homebuyer education course and work with an AHFC-approved lender to access these rates.
+
+  For buyers who need help with upfront costs, the PRIOR Plus program provides up to $15,000 in down payment and closing cost assistance as a second mortgage. This is particularly valuable in Alaska, where median home prices in Anchorage and Fairbanks often exceed $350,000. The combination of a below-market rate first mortgage and down payment assistance can make homeownership accessible to many Alaskans who might otherwise be priced out.
+
+  The Permanent Fund Dividend, Alaska's unique annual payment to residents, can serve as a supplemental source for down payment savings. Many Alaskans set aside their PFD for several years to build a home purchase fund. Some lenders also allow PFD funds to be used as part of the buyer's down payment contribution.
+
+  Federal programs are widely available in Alaska, with USDA loans covering extensive rural areas throughout the state. VA loans are particularly relevant given the significant military presence at Joint Base Elmendorf-Richardson, Eielson Air Force Base, and Fort Wainwright.
+faqs:
+  - question: "What is the maximum down payment assistance available in Alaska?"
+    answer: "AHFC's PRIOR Plus program offers up to $15,000 in down payment and closing cost assistance as a second mortgage. This can be combined with the below-market rate PRIOR first mortgage."
+  - question: "Do I need to be a first-time homebuyer to use AHFC programs?"
+    answer: "Yes. AHFC's PRIOR and PRIOR Plus programs are generally limited to first-time homebuyers, defined as someone who has not owned a home in the past three years."
+  - question: "Can I use my Permanent Fund Dividend for a down payment?"
+    answer: "Yes. Many lenders accept PFD funds as part of the buyer's down payment contribution. Saving PFDs for several years can build a meaningful down payment fund."
+  - question: "Are USDA loans available in Alaska?"
+    answer: "Yes. Many areas throughout Alaska qualify as rural and are eligible for USDA zero-down-payment loans. Check the USDA eligibility map for specific locations."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

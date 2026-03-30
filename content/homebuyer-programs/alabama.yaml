@@ -1,0 +1,67 @@
+slug: alabama
+stateName: Alabama
+stateAbbreviation: AL
+programs:
+  - name: "Step Up Down Payment Assistance"
+    adminAgency: "Alabama Housing Finance Authority (AHFA)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to $10,000 as a 10-year second mortgage at 3%"
+    incomeLimits: "Varies by county; generally up to 115% of area median income"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.ahfa.com/homebuyers/step-up-program"
+  - name: "Affordable Income Subsidy Grant (AISG)"
+    adminAgency: "Alabama Housing Finance Authority (AHFA)"
+    assistanceType: "Grant"
+    amount: "1% of the mortgage loan amount"
+    incomeLimits: "Must be at or below 80% of area median income"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.ahfa.com/homebuyers"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Alabama First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Alabama's homebuyer assistance programs including AHFA Step Up and AISG grants. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Alabama offers several pathways to homeownership through programs administered by the Alabama Housing Finance Authority. The state's median home price of approximately $230,000 remains well below the national average, making Alabama one of the more affordable states for first-time buyers. Combined with state and federal assistance programs, many buyers can purchase a home with minimal out-of-pocket costs.
+
+  The Step Up program is AHFA's flagship down payment assistance offering, providing up to $10,000 as a 10-year second mortgage at a low 3% interest rate. This program is available to both first-time and repeat buyers, making it accessible to a broader pool of applicants. Borrowers must complete a HUD-approved homebuyer education course and work with an approved lender to qualify.
+
+  For lower-income buyers, the Affordable Income Subsidy Grant provides a 1% grant of the mortgage loan amount that does not need to be repaid. This can be combined with other AHFA programs for additional savings. Buyers must earn at or below 80% of the area median income for their county to qualify for the AISG benefit.
+
+  Federal programs like FHA, VA, and USDA loans are widely available throughout Alabama. USDA loans are particularly relevant here, as many areas across the state qualify as rural and eligible for zero-down-payment financing. Veterans and active-duty military members stationed at bases like Fort Novosel (formerly Fort Rucker), Redstone Arsenal, and Maxwell Air Force Base can take advantage of VA loan benefits.
+
+  Alabama does not charge a real estate transfer tax on property sales, which is an additional cost saving for buyers. Property taxes in Alabama are among the lowest in the nation, with an average effective rate of about 0.39%. The homestead exemption further reduces property tax burdens for owner-occupied residences.
+faqs:
+  - question: "What are the income limits for Alabama homebuyer programs?"
+    answer: "AHFA's Step Up program generally requires income at or below 115% of area median income. The AISG grant requires income at or below 80% of area median income. Limits vary by county."
+  - question: "Do I need to be a first-time buyer to use Alabama homebuyer programs?"
+    answer: "No. AHFA's Step Up and AISG programs are available to both first-time and repeat buyers, as long as income and credit requirements are met."
+  - question: "What is the minimum credit score for AHFA programs?"
+    answer: "AHFA generally requires a minimum credit score of 640 for conventional loans and 640 for FHA loans. Some lenders may have additional requirements."
+  - question: "Can I combine Alabama state programs with federal programs?"
+    answer: "Yes. You can use AHFA down payment assistance alongside FHA, VA, or USDA loan programs, provided you meet the eligibility requirements for each."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

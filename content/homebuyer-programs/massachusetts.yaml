@@ -1,0 +1,65 @@
+slug: massachusetts
+stateName: Massachusetts
+stateAbbreviation: MA
+programs:
+  - name: "MassHousing DPA Program"
+    adminAgency: "MassHousing"
+    assistanceType: "Down payment assistance"
+    amount: "Up to $50,000 in down payment assistance as a 15-year, 0% interest deferred loan"
+    incomeLimits: "Must not exceed MassHousing income limits (varies by community)"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.masshousing.com/homeownership"
+  - name: "ONE Mortgage Program"
+    adminAgency: "MassHousing"
+    assistanceType: "Affordable mortgage with DPA"
+    amount: "Fixed-rate mortgage with 3% down and no private mortgage insurance"
+    incomeLimits: "Must not exceed 100% of area median income"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.masshousing.com/homeownership"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Massachusetts First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Massachusetts's homebuyer assistance programs including MassHousing DPA Program and ONE Mortgage Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Massachusetts's housing market offers opportunities for first-time buyers, with a median home price of approximately $600,000. The MassHousing provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The MassHousing DPA Program is a masshousing's key offering for first-time buyers, providing up to $50,000 in down payment assistance as a 15-year, 0% interest deferred loan. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The ONE Mortgage Program extends additional support through fixed-rate mortgage with 3% down and no private mortgage insurance. Massachusetts has a graduated income tax of 5.00% plus a 9% surtax on income over $1 million. Property taxes average about 1.14%. MassHousing's generous $50,000 DPA is among the highest in the nation.
+
+  Federal programs complement state offerings in Massachusetts. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near multiple military installations. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Massachusetts.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Massachusetts?"
+    answer: "Massachusetts offers programs through the MassHousing, including the MassHousing DPA Program and ONE Mortgage Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Massachusetts homebuyer assistance?"
+    answer: "Income limits vary by program and county. The MassHousing DPA Program requires must not exceed masshousing income limits (varies by community). Check the MassHousing website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Massachusetts?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

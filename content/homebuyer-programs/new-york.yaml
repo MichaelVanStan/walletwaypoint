@@ -1,0 +1,65 @@
+slug: new-york
+stateName: New York
+stateAbbreviation: NY
+programs:
+  - name: "Down Payment Assistance Loan (DPAL)"
+    adminAgency: "State of New York Mortgage Agency (SONYMA)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to $15,000 as a 0% interest, non-amortizing second mortgage"
+    incomeLimits: "Must meet SONYMA income limits (varies by region)"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://hcr.ny.gov/sonyma"
+  - name: "Achieving the Dream Program"
+    adminAgency: "State of New York Mortgage Agency (SONYMA)"
+    assistanceType: "Below-market rate mortgage"
+    amount: "Below-market rate 30-year fixed mortgage for lower-income first-time buyers"
+    incomeLimits: "Must not exceed 80% of area median income"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://hcr.ny.gov/sonyma"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "New York First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore New York's homebuyer assistance programs including Down Payment Assistance Loan (DPAL) and Achieving the Dream Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  New York's housing market offers opportunities for first-time buyers, with a median home price of approximately $420,000. The State of New York Mortgage Agency (SONYMA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Down Payment Assistance Loan (DPAL) is a state of new york mortgage agency's key offering for first-time buyers, providing up to $15,000 as a 0% interest, non-amortizing second mortgage. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Achieving the Dream Program extends additional support through below-market rate 30-year fixed mortgage for lower-income first-time buyers. New York has a graduated income tax from 4% to 10.90% plus NYC income tax of up to 3.876% for city residents. Property taxes average about 1.72%. SONYMA programs are essential for making NY homeownership accessible.
+
+  Federal programs complement state offerings in New York. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Fort Drum, West Point. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of New York.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in New York?"
+    answer: "New York offers programs through the State of New York Mortgage Agency (SONYMA), including the Down Payment Assistance Loan (DPAL) and Achieving the Dream Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for New York homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Down Payment Assistance Loan (DPAL) requires must meet sonyma income limits (varies by region). Check the State of New York Mortgage Agency website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in New York?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

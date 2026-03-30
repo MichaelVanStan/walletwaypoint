@@ -1,0 +1,65 @@
+slug: new-hampshire
+stateName: New Hampshire
+stateAbbreviation: NH
+programs:
+  - name: "Home Flex Plus Program"
+    adminAgency: "New Hampshire Housing Finance Authority (NHHFA)"
+    assistanceType: "Down payment and closing cost assistance"
+    amount: "Up to $15,000 as a 0% interest second mortgage (deferred, due on sale or refinance)"
+    incomeLimits: "Must not exceed NHHFA income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.nhhfa.org/homebuyers/"
+  - name: "Home Preferred Plus"
+    adminAgency: "New Hampshire Housing Finance Authority (NHHFA)"
+    assistanceType: "Down payment assistance with lower rate"
+    amount: "Up to $10,000 in DPA with a below-market first mortgage rate"
+    incomeLimits: "Income limits apply"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.nhhfa.org/homebuyers/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "New Hampshire First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore New Hampshire's homebuyer assistance programs including Home Flex Plus Program and Home Preferred Plus. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  New Hampshire's housing market offers opportunities for first-time buyers, with a median home price of approximately $450,000. The New Hampshire Housing Finance Authority (NHHFA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Home Flex Plus Program is a new hampshire housing finance authority's key offering for first-time buyers, providing up to $15,000 as a 0% interest second mortgage (deferred, due on sale or refinance). This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Home Preferred Plus extends additional support through up to $10,000 in dpa with a below-market first mortgage rate. New Hampshire has no state income tax (the Hall Tax on interest and dividends was fully eliminated in 2025). Property taxes are among the highest nationally at about 1.86%. DPA programs help offset high purchase prices.
+
+  Federal programs complement state offerings in New Hampshire. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Portsmouth Naval Shipyard. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of New Hampshire.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in New Hampshire?"
+    answer: "New Hampshire offers programs through the New Hampshire Housing Finance Authority (NHHFA), including the Home Flex Plus Program and Home Preferred Plus. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for New Hampshire homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Home Flex Plus Program requires must not exceed nhhfa income limits. Check the New Hampshire Housing Finance Authority website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in New Hampshire?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

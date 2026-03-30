@@ -1,0 +1,65 @@
+slug: iowa
+stateName: Iowa
+stateAbbreviation: IA
+programs:
+  - name: "FirstHome Program"
+    adminAgency: "Iowa Finance Authority (IFA)"
+    assistanceType: "Below-market rate mortgage with DPA"
+    amount: "Below-market rate 30-year fixed mortgage with up to $2,500 in DPA as a grant"
+    incomeLimits: "Must not exceed IFA income limits by county"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://www.iowafinance.com/homeownership/"
+  - name: "Homes for Iowans Program"
+    adminAgency: "Iowa Finance Authority (IFA)"
+    assistanceType: "Down payment and closing cost assistance"
+    amount: "Up to $2,500 as a grant for eligible buyers"
+    incomeLimits: "Income limits vary by county"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.iowafinance.com/homeownership/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Iowa First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Iowa's homebuyer assistance programs including FirstHome Program and Homes for Iowans Program. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Iowa's housing market offers opportunities for first-time buyers, with a median home price of approximately $200,000. The Iowa Finance Authority (IFA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The FirstHome Program is an iowa finance authority's key offering for first-time buyers, providing below-market rate 30-year fixed mortgage with up to $2,500 in dpa as a grant. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Homes for Iowans Program extends additional support through up to $2,500 as a grant for eligible buyers. Iowa has a flat income tax of 3.80% as of 2026. Property taxes average about 1.52%. Iowa's affordable housing prices and state assistance make homeownership accessible.
+
+  Federal programs complement state offerings in Iowa. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near rural areas throughout the state. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Iowa.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Iowa?"
+    answer: "Iowa offers programs through the Iowa Finance Authority (IFA), including the FirstHome Program and Homes for Iowans Program. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Iowa homebuyer assistance?"
+    answer: "Income limits vary by program and county. The FirstHome Program requires must not exceed ifa income limits by county. Check the Iowa Finance Authority website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Iowa?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

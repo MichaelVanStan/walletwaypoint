@@ -1,0 +1,65 @@
+slug: colorado
+stateName: Colorado
+stateAbbreviation: CO
+programs:
+  - name: "CHFA SmartStep DPA"
+    adminAgency: "Colorado Housing and Finance Authority (CHFA)"
+    assistanceType: "Down payment assistance"
+    amount: "Up to 3% of the first mortgage as a second mortgage"
+    incomeLimits: "Varies by county; published on CHFA website"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.chfainfo.com/homeownership/programs"
+  - name: "CHFA Grant Program"
+    adminAgency: "Colorado Housing and Finance Authority (CHFA)"
+    assistanceType: "Grant"
+    amount: "3% of the first mortgage as a non-repayable grant"
+    incomeLimits: "Must meet CHFA income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://www.chfainfo.com/homeownership/programs"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Colorado First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Colorado's homebuyer assistance programs including CHFA SmartStep DPA. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Colorado's housing market, particularly along the Front Range corridor from Fort Collins through Denver to Colorado Springs, has seen strong price appreciation driven by population growth and a thriving tech economy. The Colorado Housing and Finance Authority provides critical assistance for buyers navigating these higher prices.
+  
+  CHFA's SmartStep program offers up to 3% of the first mortgage amount as a second mortgage for down payment assistance. This program works with FHA, VA, and conventional first mortgages and is available to both first-time and repeat buyers. The second mortgage has its own interest rate and repayment terms, making it important to factor into your budget.
+  
+  The CHFA Grant program goes a step further, providing 3% of the first mortgage as a non-repayable grant. This is free money that does not need to be paid back, making it the most advantageous option for qualifying buyers. However, the grant program typically comes with a slightly higher interest rate on the first mortgage compared to non-grant options.
+  
+  Colorado's flat income tax rate of 4.25% as of 2026 provides predictable tax planning for homeowners. Property taxes are relatively moderate, averaging about 0.51%, though they can vary significantly between counties. The state also offers a property tax deferral program for qualifying homeowners 65 and older.
+  
+  Housing costs vary dramatically across Colorado. While Denver metro area median prices approach $600,000, cities like Pueblo, Grand Junction, and many mountain communities offer significantly lower price points. USDA loans are available in many rural Colorado communities, providing zero-down-payment options outside the metro areas.
+faqs:
+  - question: "What is the difference between CHFA SmartStep and the Grant program?"
+    answer: "SmartStep provides up to 3% as a second mortgage that must be repaid. The Grant program provides 3% as a non-repayable grant but typically comes with a slightly higher first mortgage interest rate."
+  - question: "Do I need to be a first-time buyer for CHFA programs?"
+    answer: "No. CHFA programs are available to both first-time and repeat buyers, as long as income and purchase price limits are met."
+  - question: "What are the purchase price limits for CHFA loans?"
+    answer: "Purchase price limits vary by county and are updated annually. Check the CHFA website for current limits in your area."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

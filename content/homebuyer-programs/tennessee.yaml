@@ -1,0 +1,65 @@
+slug: tennessee
+stateName: Tennessee
+stateAbbreviation: TN
+programs:
+  - name: "Great Choice Home Loan"
+    adminAgency: "Tennessee Housing Development Agency (THDA)"
+    assistanceType: "Below-market rate mortgage with DPA"
+    amount: "Below-market rate 30-year fixed mortgage with up to $6,000 in DPA"
+    incomeLimits: "Must not exceed THDA income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://thda.org/homebuyers"
+  - name: "Homeownership for the Brave"
+    adminAgency: "Tennessee Housing Development Agency (THDA)"
+    assistanceType: "Down payment assistance for veterans"
+    amount: "Up to $6,000 in forgivable DPA for veterans and active military"
+    incomeLimits: "Must be veteran or active military; income limits apply"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://thda.org/homebuyers"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Tennessee First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Tennessee's homebuyer assistance programs including Great Choice Home Loan and Homeownership for the Brave. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Tennessee's housing market offers opportunities for first-time buyers, with a median home price of approximately $310,000. The Tennessee Housing Development Agency (THDA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The Great Choice Home Loan is a tennessee housing development agency's key offering for first-time buyers, providing below-market rate 30-year fixed mortgage with up to $6,000 in dpa. This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The Homeownership for the Brave extends additional support through up to $6,000 in forgivable dpa for veterans and active military. Tennessee has no state income tax (the Hall Tax was eliminated in 2021). Property taxes average about 0.64%. Combined with affordable home prices and THDA assistance, Tennessee offers strong value for buyers.
+
+  Federal programs complement state offerings in Tennessee. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Fort Campbell, Arnold Air Force Base. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Tennessee.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Tennessee?"
+    answer: "Tennessee offers programs through the Tennessee Housing Development Agency (THDA), including the Great Choice Home Loan and Homeownership for the Brave. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Tennessee homebuyer assistance?"
+    answer: "Income limits vary by program and county. The Great Choice Home Loan requires must not exceed thda income limits. Check the Tennessee Housing Development Agency website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Tennessee?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"

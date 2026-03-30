@@ -1,0 +1,65 @@
+slug: ohio
+stateName: Ohio
+stateAbbreviation: OH
+programs:
+  - name: "OHFA Grants for Grads"
+    adminAgency: "Ohio Housing Finance Agency (OHFA)"
+    assistanceType: "Down payment assistance grant"
+    amount: "Up to 5% of the purchase price as a grant for college graduates (within 48 months of graduation)"
+    incomeLimits: "Must not exceed OHFA income limits"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: true
+    url: "https://myohiohome.org/"
+  - name: "OHFA Your Choice! DPA"
+    adminAgency: "Ohio Housing Finance Agency (OHFA)"
+    assistanceType: "Down payment assistance"
+    amount: "2.5% or 5% of the purchase price as a forgivable second mortgage (forgiven over 7 years)"
+    incomeLimits: "Must not exceed OHFA income limits by county"
+    eligibleAreas: "Statewide"
+    firstTimeBuyerRequired: false
+    url: "https://myohiohome.org/"
+  - name: "FHA Loan Program"
+    adminAgency: "Federal Housing Administration"
+    assistanceType: "Low down payment mortgage"
+    amount: "3.5% minimum down payment"
+    incomeLimits: "No income limit; credit score minimums apply"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.hud.gov/buying/loans"
+  - name: "VA Home Loan"
+    adminAgency: "U.S. Department of Veterans Affairs"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment for eligible veterans"
+    incomeLimits: "No income limit; must have valid Certificate of Eligibility"
+    eligibleAreas: "Nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.va.gov/housing-assistance/home-loans/"
+  - name: "USDA Rural Development Loan"
+    adminAgency: "U.S. Department of Agriculture"
+    assistanceType: "Zero down payment mortgage"
+    amount: "0% down payment in eligible rural areas"
+    incomeLimits: "Must not exceed 115% of area median income"
+    eligibleAreas: "Eligible rural areas nationwide"
+    firstTimeBuyerRequired: false
+    url: "https://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program"
+editorialTitle: "Ohio First-Time Homebuyer Programs 2026"
+editorialDescription: "Explore Ohio's homebuyer assistance programs including OHFA Grants for Grads and OHFA Your Choice! DPA. Find eligibility details, benefit amounts, and application links."
+editorialContent: |
+  Ohio's housing market offers opportunities for first-time buyers, with a median home price of approximately $215,000. The Ohio Housing Finance Agency (OHFA) provides the primary state-level assistance through mortgage programs and down payment assistance for qualifying buyers.
+
+  The OHFA Grants for Grads is an ohio housing finance agency's key offering for first-time buyers, providing up to 5% of the purchase price as a grant for college graduates (within 48 months of graduation). This program is designed to reduce the upfront cost barrier that prevents many qualified buyers from purchasing a home. Buyers must complete a HUD-approved homebuyer education course and work with an approved lender.
+
+  The OHFA Your Choice! DPA extends additional support through 2.5% or 5% of the purchase price as a forgivable second mortgage (forgiven over 7 years). Ohio has a graduated income tax from 0% on income under $26,050 to 3.50% on income over $115,300. Property taxes average about 1.59%. OHFA's Grants for Grads program uniquely benefits recent college graduates.
+
+  Federal programs complement state offerings in Ohio. FHA loans require just 3.5% down with flexible credit requirements. VA loans provide zero-down-payment financing for veterans and active-duty military, particularly relevant near Wright-Patterson Air Force Base. USDA loans offer zero-down-payment options in eligible rural areas, which cover significant portions of Ohio.
+
+  Prospective buyers should compare all available options, as combining state and federal programs can dramatically reduce out-of-pocket costs. Working with a HUD-approved housing counselor can help navigate the application process and identify the best program combination for your situation.
+faqs:
+  - question: "What homebuyer programs are available in Ohio?"
+    answer: "Ohio offers programs through the Ohio Housing Finance Agency (OHFA), including the OHFA Grants for Grads and OHFA Your Choice! DPA. Federal programs (FHA, VA, USDA) are also available statewide."
+  - question: "What are the income limits for Ohio homebuyer assistance?"
+    answer: "Income limits vary by program and county. The OHFA Grants for Grads requires must not exceed ohfa income limits. Check the Ohio Housing Finance Agency website for current limits."
+  - question: "Can I combine state and federal homebuyer programs in Ohio?"
+    answer: "Yes. State DPA programs can typically be combined with FHA, VA, or USDA loans, provided you meet all eligibility requirements for each program."
+lastVerified: "2026-03-30"
+dataSource: "State HFA / USAGov / HUD"
