@@ -5,6 +5,7 @@ import { WebAppSchema } from '@/components/seo/web-app-schema';
 import { createMetadata } from '@/lib/metadata';
 import { siteConfig } from '@/lib/site-config';
 import { notFound } from 'next/navigation';
+import { AdSlot } from '@/components/ads/ad-slot';
 
 export function generateStaticParams() {
   return calculators.map((calc) => ({ slug: calc.slug }));
@@ -56,6 +57,7 @@ export default async function CalculatorPage({
       >
         <CalculatorPageClient config={calc} />
       </Suspense>
+      <AdSlot variant="in-content" className="mx-auto max-w-[1080px] px-4 sm:px-6 mt-8" />
     </>
   );
 }
