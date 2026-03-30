@@ -2,10 +2,17 @@ import { Suspense } from 'react';
 import { calculators } from '#site/content';
 import { CalculatorPageClient } from '@/components/calculator/calculator-page-client';
 import { WebAppSchema } from '@/components/seo/web-app-schema';
+import { FaqSchema } from '@/components/seo/faq-schema';
 import { createMetadata } from '@/lib/metadata';
 import { siteConfig } from '@/lib/site-config';
 import { notFound } from 'next/navigation';
 import { AdSlot } from '@/components/ads/ad-slot';
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@/components/ui/accordion';
 
 export function generateStaticParams() {
   return calculators.map((calc) => ({ slug: calc.slug }));
@@ -58,6 +65,22 @@ export default async function CalculatorPage({
         <CalculatorPageClient config={calc} />
       </Suspense>
       <AdSlot variant="in-content" className="mx-auto max-w-[1080px] px-4 sm:px-6 mt-8" />
+      {calc.faqs && calc.faqs.length > 0 && (
+        <>
+          <FaqSchema items={calc.faqs} />
+          <section className="mx-auto max-w-[1080px] px-4 sm:px-6 py-8">
+            <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+            <Accordion defaultValue={['faq-0']}>
+              {calc.faqs.map((faq, i) => (
+                <AccordionItem key={i} value={`faq-${i}`}>
+                  <AccordionTrigger>{faq.question}</AccordionTrigger>
+                  <AccordionContent>{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </section>
+        </>
+      )}
     </>
   );
 }

@@ -76,3 +76,84 @@ terms:
   - term: Index Fund
     slug: index-fund
     definition: "A type of investment fund that tracks a market index like the S&P 500, offering broad diversification at low cost. A popular choice for long-term investing."
+  - term: FICO Score
+    slug: fico-score
+    definition: "The most widely used credit scoring model, ranging from 300 to 850, developed by Fair Isaac Corporation."
+  - term: Balance Transfer
+    slug: balance-transfer
+    definition: "Moving debt from one credit card to another, typically to take advantage of a lower interest rate or 0% promotional APR."
+  - term: Minimum Payment
+    slug: minimum-payment
+    definition: "The smallest amount you must pay on a credit card balance each month to avoid penalties -- usually 1-3% of the balance or a flat $25, whichever is greater."
+  - term: Auto Loan
+    slug: auto-loan
+    definition: "A fixed-term loan used to purchase a vehicle, with the car serving as collateral. Typical terms range from 36 to 72 months."
+  - term: Front-End Ratio
+    slug: front-end-ratio
+    definition: "The percentage of your gross monthly income that goes toward housing costs (mortgage, taxes, insurance). Lenders typically prefer 28% or less."
+  - term: Back-End Ratio
+    slug: back-end-ratio
+    definition: "The percentage of your gross monthly income that goes toward all monthly debt payments combined. Lenders typically prefer 36% or less."
+  - term: Pre-Qualification
+    slug: pre-qualification
+    definition: "A preliminary estimate of how much a lender might offer you, based on self-reported financial information. Less rigorous than pre-approval."
+  - term: APY
+    slug: apy
+    definition: "Annual Percentage Yield -- the total amount of interest earned on a savings account in one year, including the effect of compound interest."
+  - term: "CD (Certificate of Deposit)"
+    slug: certificate-of-deposit
+    definition: "A savings product that pays a fixed interest rate for a set period (3 months to 5 years). Higher rates than regular savings but your money is locked until maturity."
+  - term: "401(k)"
+    slug: 401k
+    definition: "An employer-sponsored retirement savings plan that lets you contribute pre-tax dollars, often with an employer match. Contribution limit is $23,500 in 2026."
+  - term: Roth IRA
+    slug: roth-ira
+    definition: "An individual retirement account funded with after-tax dollars. Withdrawals in retirement are tax-free. Income limits apply for contributions."
+  - term: Traditional IRA
+    slug: traditional-ira
+    definition: "An individual retirement account funded with pre-tax dollars (tax-deductible contributions). Withdrawals in retirement are taxed as ordinary income."
+  - term: Marginal Tax Rate
+    slug: marginal-tax-rate
+    definition: "The tax rate applied to your last dollar of income -- the highest bracket your income falls into. Not the rate you pay on all your income."
+  - term: Effective Tax Rate
+    slug: effective-tax-rate
+    definition: "The average rate at which your total income is taxed, calculated by dividing total tax paid by total income. Always lower than your marginal rate."
+  - term: FDIC Insurance
+    slug: fdic-insurance
+    definition: "Federal Deposit Insurance Corporation coverage that protects bank deposits up to $250,000 per depositor, per bank, per ownership category."
+  - term: Depreciation
+    slug: depreciation
+    definition: "The decrease in an asset's value over time. New cars typically depreciate 20-30% in the first two years of ownership."
+  - term: Liquidity
+    slug: liquidity
+    definition: "How easily an asset can be converted to cash without losing value. Savings accounts are highly liquid; real estate is not."
+  - term: Collateral
+    slug: collateral
+    definition: "An asset pledged as security for a loan. If you default on the loan, the lender can seize the collateral -- your home for a mortgage, your car for an auto loan."
+  - term: Forbearance
+    slug: forbearance
+    definition: "A temporary pause or reduction in loan payments granted by a lender during financial hardship. Interest usually continues to accrue during forbearance."
+  - term: Asset Allocation
+    slug: asset-allocation
+    definition: "How you divide your investments among different asset categories like stocks, bonds, and cash. Your ideal mix depends on your age, goals, and risk tolerance."
+  - term: Diversification
+    slug: diversification
+    definition: "Spreading investments across different assets to reduce risk. If one investment drops, others may hold steady or grow, protecting your overall portfolio."
+  - term: Capital Gains
+    slug: capital-gains
+    definition: "The profit from selling an investment or property for more than you paid. Short-term gains (held less than a year) are taxed higher than long-term gains."
+  - term: Debt Consolidation
+    slug: debt-consolidation
+    definition: "Combining multiple debts into a single loan, usually to get a lower interest rate or simplify payments. Common for credit card and student loan debt."
+  - term: Lien
+    slug: lien
+    definition: "A legal claim on an asset as security for a debt. A mortgage is a lien on your home; an auto loan creates a lien on your car."
+  - term: Underwriting
+    slug: underwriting
+    definition: "The process a lender uses to evaluate your financial profile and determine whether to approve your loan application and at what terms."
+  - term: Adjustable Rate Mortgage
+    slug: adjustable-rate-mortgage
+    definition: "A mortgage with an interest rate that changes after an initial fixed period. Often starts lower than fixed rates but carries risk of future increases."
+  - term: Grace Period
+    slug: grace-period
+    definition: "The time between the end of a billing cycle and the payment due date during which no interest is charged. Credit cards typically offer 21-25 days."

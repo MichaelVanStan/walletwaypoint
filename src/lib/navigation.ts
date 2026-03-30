@@ -14,7 +14,7 @@ export const mainNavigation: NavItem[] = [
       {
         title: 'View All Calculators',
         href: '/calculators',
-        description: 'Browse all 10 interactive financial calculators',
+        description: 'Browse all 13 interactive financial calculators',
       },
       {
         title: 'Budget Calculator',
@@ -65,6 +65,21 @@ export const mainNavigation: NavItem[] = [
         title: 'Tax Estimator',
         href: '/calculators/tax-estimator',
         description: 'Estimate your federal tax liability by income and filing status',
+      },
+      {
+        title: 'Home Affordability',
+        href: '/calculators/home-affordability',
+        description: 'Find out how much house you can afford',
+      },
+      {
+        title: 'Credit Card Payoff',
+        href: '/calculators/credit-card-payoff',
+        description: 'See how extra payments can save you money',
+      },
+      {
+        title: 'Car Affordability',
+        href: '/calculators/car-affordability',
+        description: 'Find out how much car you can afford and your auto loan payment',
       },
     ],
   },
