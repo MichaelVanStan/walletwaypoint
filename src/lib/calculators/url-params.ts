@@ -1,4 +1,4 @@
-import { parseAsFloat, parseAsInteger, parseAsBoolean, parseAsStringLiteral } from 'nuqs';
+import { parseAsFloat, parseAsInteger, parseAsBoolean, parseAsString, parseAsStringLiteral } from 'nuqs';
 
 // ============================================================================
 // Mortgage Calculator
@@ -203,4 +203,19 @@ export const carAffordabilityParams = {
   b_down: parseAsInteger.withDefault(5000),
   b_rate: parseAsFloat.withDefault(6.84),
   b_term: parseAsInteger.withDefault(5),
+};
+
+// ============================================================================
+// Paycheck Calculator
+// ============================================================================
+const paycheckFilingStatuses = ['single', 'married', 'head'] as const;
+const payFrequencies = ['weekly', 'biweekly', 'semimonthly', 'monthly'] as const;
+
+export const paycheckParams = {
+  salary: parseAsInteger.withDefault(65000),
+  state: parseAsString.withDefault('california'),
+  filing: parseAsStringLiteral(paycheckFilingStatuses).withDefault('single'),
+  frequency: parseAsStringLiteral(payFrequencies).withDefault('biweekly'),
+  withholding: parseAsInteger.withDefault(0),
+  pretaxDeductions: parseAsInteger.withDefault(0),
 };
