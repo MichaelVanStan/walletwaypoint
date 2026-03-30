@@ -1,9 +1,10 @@
 import Decimal from 'decimal.js-light';
 import type { CalculatorResults } from '@/lib/calculators/types';
 import { formatCurrency } from '@/lib/calculators/formatters';
+import type { TaxBracket, ProgressiveTaxResult } from '@/lib/states/types';
 
 /** 2026 Federal Tax Brackets (Tax Foundation projections) */
-const TAX_BRACKETS: Record<string, Array<{ min: number; max: number; rate: number }>> = {
+const FEDERAL_TAX_BRACKETS: Record<string, TaxBracket[]> = {
   single: [
     { min: 0, max: 11925, rate: 10 },
     { min: 11926, max: 48475, rate: 12 },
@@ -40,36 +41,23 @@ const STANDARD_DEDUCTIONS: Record<string, number> = {
 };
 
 /**
- * Tax Estimator (TOOL-08)
+ * Generic progressive tax calculator.
  *
- * Computes federal tax liability using 2026 projected brackets for
- * single, married filing jointly, and head of household statuses.
+ * Walks through any set of tax brackets and computes the total tax,
+ * effective rate, marginal rate, and per-bracket breakdown. Reusable
+ * for federal, state, or any progressive tax system.
  *
- * @param params.income - Annual gross income
- * @param params.filing - Filing status ('single' | 'married' | 'head')
- * @param params.deduction - Standard or itemized deduction amount
+ * @param taxableIncome - Income after deductions/exemptions
+ * @param brackets - Array of { min, max, rate } bracket definitions
+ * @returns ProgressiveTaxResult with totalTax, effectiveRate, marginalRate, bracketDetails
  */
-export function calculateTax(params: Record<string, number | string>): CalculatorResults {
-  const income = Number(params.income);
-  const filing = String(params.filing) as 'single' | 'married' | 'head';
-  const deduction = Number(params.deduction);
-
-  // Taxable income after deduction
-  const taxableIncome = Math.max(income - deduction, 0);
-
-  // Get brackets for filing status
-  const brackets = TAX_BRACKETS[filing] || TAX_BRACKETS.single;
-
-  // Walk through brackets computing tax at each marginal rate
+export function calculateProgressiveTax(
+  taxableIncome: number,
+  brackets: TaxBracket[],
+): ProgressiveTaxResult {
   let totalTax = new Decimal(0);
   let marginalRate = 0;
-  const bracketDetails: Array<{
-    rate: number;
-    rangeMin: number;
-    rangeMax: number;
-    taxableAtRate: number;
-    taxAtRate: number;
-  }> = [];
+  const bracketDetails: ProgressiveTaxResult['bracketDetails'] = [];
 
   let remaining = new Decimal(taxableIncome);
 
@@ -102,13 +90,75 @@ export function calculateTax(params: Record<string, number | string>): Calculato
   }
 
   const totalTaxNum = totalTax.toDecimalPlaces(2).toNumber();
+  const effectiveRate = taxableIncome > 0
+    ? new Decimal(totalTaxNum).div(taxableIncome).times(100).toDecimalPlaces(2).toNumber()
+    : 0;
+
+  return {
+    totalTax: totalTaxNum,
+    effectiveRate,
+    marginalRate,
+    bracketDetails,
+  };
+}
+
+/**
+ * Convenience wrapper for federal income tax calculation.
+ *
+ * Applies the standard deduction (or a custom deduction) and runs
+ * the income through federal brackets. Used by the paycheck calculator
+ * and other modules that need federal tax without the full CalculatorResults wrapper.
+ *
+ * @param grossIncome - Annual gross income before deductions
+ * @param filingStatus - Filing status ('single' | 'married' | 'head')
+ * @param deduction - Optional custom deduction (defaults to standard deduction for filing status)
+ * @returns ProgressiveTaxResult
+ */
+export function calculateFederalTax(
+  grossIncome: number,
+  filingStatus: string,
+  deduction?: number,
+): ProgressiveTaxResult {
+  const filing = filingStatus as 'single' | 'married' | 'head';
+  const appliedDeduction = deduction ?? STANDARD_DEDUCTIONS[filing] ?? STANDARD_DEDUCTIONS.single;
+  const taxableIncome = Math.max(grossIncome - appliedDeduction, 0);
+  const brackets = FEDERAL_TAX_BRACKETS[filing] || FEDERAL_TAX_BRACKETS.single;
+
+  return calculateProgressiveTax(taxableIncome, brackets);
+}
+
+/**
+ * Tax Estimator (TOOL-08)
+ *
+ * Computes federal tax liability using 2026 projected brackets for
+ * single, married filing jointly, and head of household statuses.
+ *
+ * @param params.income - Annual gross income
+ * @param params.filing - Filing status ('single' | 'married' | 'head')
+ * @param params.deduction - Standard or itemized deduction amount
+ */
+export function calculateTax(params: Record<string, number | string>): CalculatorResults {
+  const income = Number(params.income);
+  const filing = String(params.filing) as 'single' | 'married' | 'head';
+  const deduction = Number(params.deduction);
+
+  // Taxable income after deduction
+  const taxableIncome = Math.max(income - deduction, 0);
+
+  // Get brackets for filing status
+  const brackets = FEDERAL_TAX_BRACKETS[filing] || FEDERAL_TAX_BRACKETS.single;
+
+  // Use the parameterized progressive tax calculator
+  const result = calculateProgressiveTax(taxableIncome, brackets);
+
+  const totalTaxNum = result.totalTax;
   const effectiveRate = income > 0
     ? new Decimal(totalTaxNum).div(income).times(100).toDecimalPlaces(2).toNumber()
     : 0;
   const takeHome = new Decimal(income).minus(totalTaxNum).toDecimalPlaces(2).toNumber();
 
   // Chart data: brackets bar chart (only non-zero)
-  const bracketsChart: Record<string, number | string>[] = bracketDetails.map((b) => ({
+  const bracketsChart: Record<string, number | string>[] = result.bracketDetails.map((b) => ({
     bracket: `${b.rate}%`,
     amount: b.taxAtRate,
   }));
@@ -120,7 +170,7 @@ export function calculateTax(params: Record<string, number | string>): Calculato
   ];
 
   // Detail rows: bracket-by-bracket breakdown
-  const detailRows: Array<Record<string, string | number>> = bracketDetails.map((b) => ({
+  const detailRows: Array<Record<string, string | number>> = result.bracketDetails.map((b) => ({
     rate: `${b.rate}%`,
     incomeRange: `${formatCurrency(b.rangeMin)} - ${b.rangeMax === taxableIncome && brackets.some((br) => br.max === Infinity && br.rate === b.rate) ? formatCurrency(taxableIncome) : formatCurrency(b.rangeMax)}`,
     taxableAmount: b.taxableAtRate,
@@ -141,13 +191,13 @@ export function calculateTax(params: Record<string, number | string>): Calculato
     head: 'head of household',
   };
 
-  const interpretation = `On **${formatCurrency(income)}** income (**${filingNames[filing] || filing}** filing), your estimated federal tax is **${formatCurrency(totalTaxNum)}** -- an effective rate of **${effectiveRate}%**. Your marginal rate is **${marginalRate}%**. You take home **${formatCurrency(takeHome)}**.`;
+  const interpretation = `On **${formatCurrency(income)}** income (**${filingNames[filing] || filing}** filing), your estimated federal tax is **${formatCurrency(totalTaxNum)}** -- an effective rate of **${effectiveRate}%**. Your marginal rate is **${result.marginalRate}%**. You take home **${formatCurrency(takeHome)}**.`;
 
   return {
     outputs: {
       totalTax: totalTaxNum,
       effectiveRate,
-      marginalRate,
+      marginalRate: result.marginalRate,
       takeHome,
       taxableIncome,
     },

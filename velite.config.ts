@@ -2,6 +2,17 @@ import { defineConfig, defineCollection, s } from 'velite';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
+const bracketSchema = s.object({
+  min: s.number(),
+  max: s.number(),
+  rate: s.number(),
+});
+
+const faqSchema = s.object({
+  question: s.string(),
+  answer: s.string(),
+});
+
 const inputOptionSchema = s.object({
   value: s.string(),
   label: s.string(),
@@ -73,7 +84,7 @@ const calculators = defineCollection({
     callouts: s.array(calloutConfigSchema),
     interpretation: interpretationConfigSchema,
     mathModule: s.string(),
-    faqs: s.array(s.object({ question: s.string(), answer: s.string() })).optional(),
+    faqs: s.array(faqSchema).optional(),
   }),
 });
 
@@ -88,10 +99,7 @@ const guides = defineCollection({
     hub: s.string(),
     lastUpdated: s.isodate(),
     keyTakeaways: s.array(s.string()),
-    faqs: s.array(s.object({
-      question: s.string(),
-      answer: s.string(),
-    })),
+    faqs: s.array(faqSchema),
     relatedGuides: s.array(s.string()).optional(),
     metadata: s.metadata(),
     body: s.mdx(),
@@ -232,6 +240,102 @@ const listicles = defineCollection({
   }),
 });
 
+const states = defineCollection({
+  name: 'State',
+  pattern: 'states/*.yaml',
+  schema: s.object({
+    slug: s.slug('states'),
+    name: s.string(),
+    abbreviation: s.string().max(2),
+    taxYear: s.number(),
+    lastVerified: s.isodate(),
+    dataSource: s.string(),
+    revenueAuthorityUrl: s.string(),
+    hasIncomeTax: s.boolean(),
+    taxType: s.enum(['graduated', 'flat', 'none']),
+    brackets: s.object({
+      single: s.array(bracketSchema),
+      married: s.array(bracketSchema),
+      head: s.array(bracketSchema),
+    }).optional(),
+    flatRate: s.number().optional(),
+    standardDeductions: s.object({
+      single: s.number(),
+      married: s.number(),
+      head: s.number(),
+    }).optional(),
+    personalExemptions: s.object({
+      single: s.number(),
+      married: s.number(),
+      dependent: s.number(),
+    }).optional(),
+    topRate: s.number(),
+    numberOfBrackets: s.number(),
+    editorialTitle: s.string(),
+    editorialDescription: s.string().max(300),
+    editorialContent: s.string(),
+    faqs: s.array(faqSchema),
+    tips: s.array(s.string()),
+    propertyTaxRate: s.number().optional(),
+    salesTaxRate: s.number().optional(),
+    costOfLivingIndex: s.number().optional(),
+  }),
+});
+
+const cities = defineCollection({
+  name: 'City',
+  pattern: 'cities/*.yaml',
+  schema: s.object({
+    slug: s.slug('cities'),
+    cityName: s.string(),
+    stateName: s.string(),
+    stateAbbreviation: s.string().max(2),
+    medianRents: s.object({
+      studio: s.number(),
+      oneBed: s.number(),
+      twoBed: s.number(),
+      threeBed: s.number(),
+      fourBed: s.number(),
+    }),
+    dataSource: s.string(),
+    dataYear: s.number(),
+    lastVerified: s.isodate(),
+    editorialTitle: s.string(),
+    editorialDescription: s.string().max(300),
+    editorialContent: s.string(),
+    faqs: s.array(faqSchema),
+    costContext: s.string(),
+  }),
+});
+
+const homebuyerProgramSchema = s.object({
+  name: s.string(),
+  adminAgency: s.string(),
+  assistanceType: s.string(),
+  amount: s.string(),
+  incomeLimits: s.string(),
+  eligibleAreas: s.string(),
+  firstTimeBuyerRequired: s.boolean(),
+  url: s.string(),
+});
+
+const homebuyerPrograms = defineCollection({
+  name: 'HomebuyerProgram',
+  pattern: 'homebuyer-programs/*.yaml',
+  schema: s.object({
+    slug: s.slug('homebuyer-programs'),
+    stateName: s.string(),
+    stateAbbreviation: s.string().max(2),
+    programs: s.array(homebuyerProgramSchema),
+    editorialTitle: s.string(),
+    editorialDescription: s.string().max(300),
+    editorialContent: s.string(),
+    faqs: s.array(faqSchema),
+    lastVerified: s.isodate(),
+    dataSource: s.string(),
+  }),
+});
+
 export default defineConfig({
   root: 'content',
   output: {
@@ -241,7 +345,7 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { calculators, guides, hubs, glossary, products, listicles },
+  collections: { calculators, guides, hubs, glossary, products, listicles, states, cities, homebuyerPrograms },
   mdx: {
     rehypePlugins: [
       rehypeSlug,
