@@ -155,8 +155,8 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
   for (let i = 0; i < maxLen; i++) {
     balanceOverTime.push({
       month: i + 1,
-      'Minimum Only': i < minBalances.length ? minBalances[i] : 0,
-      'With Extra': i < extraBalances.length ? extraBalances[i] : 0,
+      'No Extra Payments': i < minBalances.length ? minBalances[i] : 0,
+      'With Extra Payments': i < extraBalances.length ? extraBalances[i] : 0,
     });
   }
 
@@ -167,10 +167,10 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
   for (let i = 0; i < maxLen; i++) {
     cumulativeInterest.push({
       month: i + 1,
-      'Minimum Only': i < minCumulativeInterests.length
+      'No Extra Payments': i < minCumulativeInterests.length
         ? minCumulativeInterests[i]
         : (minCumulativeInterests[minCumulativeInterests.length - 1] ?? 0),
-      'With Extra': i < extraCumulativeInterests.length
+      'With Extra Payments': i < extraCumulativeInterests.length
         ? extraCumulativeInterests[i]
         : (extraCumulativeInterests[extraCumulativeInterests.length - 1] ?? 0),
     });
