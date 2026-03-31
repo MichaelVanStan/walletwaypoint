@@ -57,7 +57,7 @@ outputs:
     format: number
     deltaSemantic: lower_is_better
   - key: extraMonths
-    label: "Months to Payoff (Extra)"
+    label: "Months to Payoff (With Extra Payments)"
     format: number
     variant: success
     deltaSemantic: lower_is_better
@@ -72,7 +72,7 @@ outputs:
     format: currency
     deltaSemantic: lower_is_better
   - key: extraTotalInterest
-    label: "Interest Paid (Extra)"
+    label: "Interest Paid (With Extra Payments)"
     format: currency
     variant: success
     deltaSemantic: lower_is_better
