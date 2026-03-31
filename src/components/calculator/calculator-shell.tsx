@@ -337,6 +337,7 @@ export function CalculatorShell({
             <ResultNarrative
               config={config}
               results={results}
+              resultsB={isComparing ? resultsB : undefined}
               reducedMotion={prefersReducedMotion}
             />
           ) : isTableLayout ? (
@@ -454,6 +455,7 @@ export function CalculatorShell({
               <CalculatorCharts
                 charts={config.charts}
                 chartData={results.chartData}
+                chartDataB={isComparing ? resultsB?.chartData : undefined}
                 reducedMotion={prefersReducedMotion}
               />
             </div>

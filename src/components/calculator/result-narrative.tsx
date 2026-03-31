@@ -17,6 +17,7 @@ import { DetailTable } from "./detail-table";
 interface ResultNarrativeProps {
   config: CalculatorConfig;
   results: CalculatorResults;
+  resultsB?: CalculatorResults | null;
   reducedMotion: boolean;
 }
 
@@ -39,11 +40,13 @@ function NarrativeSectionRenderer({
   section,
   config,
   results,
+  resultsB,
   reducedMotion,
 }: {
   section: NarrativeSectionConfig;
   config: CalculatorConfig;
   results: CalculatorResults;
+  resultsB?: CalculatorResults | null;
   reducedMotion: boolean;
 }) {
   return (
@@ -72,6 +75,7 @@ function NarrativeSectionRenderer({
         <CalculatorCharts
           charts={config.charts.filter((c) => c.dataKey === section.chartKey)}
           chartData={results.chartData}
+          chartDataB={resultsB?.chartData}
           reducedMotion={reducedMotion}
         />
       )}
@@ -98,6 +102,7 @@ function NarrativeSectionRenderer({
 export function ResultNarrative({
   config,
   results,
+  resultsB,
   reducedMotion,
 }: ResultNarrativeProps) {
   const narrative = config.narrative!;
@@ -129,6 +134,7 @@ export function ResultNarrative({
           section={section}
           config={config}
           results={results}
+          resultsB={resultsB}
           reducedMotion={reducedMotion}
         />
       ))}

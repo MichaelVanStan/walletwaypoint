@@ -157,12 +157,42 @@ function CustomTooltip({
 interface CalculatorChartsProps {
   charts: ChartConfig[];
   chartData: Record<string, Record<string, number | string | unknown>[]>;
+  chartDataB?: Record<string, Record<string, number | string | unknown>[]> | null;
   reducedMotion?: boolean;
+}
+
+/** Merge Scenario B data into Scenario A data, suffixing B series with _B */
+function mergeChartData(
+  dataA: Record<string, number | string | unknown>[],
+  dataB: Record<string, number | string | unknown>[],
+  xKey: string,
+  seriesKeys: string[]
+): Record<string, number | string | unknown>[] {
+  const merged = new Map<string | number, Record<string, unknown>>();
+
+  for (const row of dataA) {
+    const key = row[xKey] as string | number;
+    merged.set(key, { ...row });
+  }
+
+  for (const row of dataB) {
+    const key = row[xKey] as string | number;
+    const existing = merged.get(key) ?? { [xKey]: key };
+    for (const sk of seriesKeys) {
+      if (row[sk] != null) {
+        existing[`${sk}_B`] = row[sk];
+      }
+    }
+    merged.set(key, existing);
+  }
+
+  return Array.from(merged.values());
 }
 
 export function CalculatorCharts({
   charts,
   chartData,
+  chartDataB,
   reducedMotion = false,
 }: CalculatorChartsProps) {
   if (!charts.length) return null;
@@ -171,6 +201,7 @@ export function CalculatorCharts({
     <div className="space-y-6">
       {charts.map((chart) => {
         const data = chartData[chart.dataKey];
+        const dataB = chartDataB?.[chart.dataKey];
         if (!data?.length) {
           return (
             <div key={chart.dataKey} className="py-8 text-center">
@@ -197,17 +228,30 @@ export function CalculatorCharts({
               {chart.type === "area" && (
                 <AreaChartRenderer
                   data={data}
+                  dataB={dataB}
                   reducedMotion={reducedMotion}
                 />
               )}
               {chart.type === "pie" && (
-                <PieChartRenderer data={data} reducedMotion={reducedMotion} />
+                <PieChartRenderer
+                  data={data}
+                  dataB={dataB}
+                  reducedMotion={reducedMotion}
+                />
               )}
               {chart.type === "line" && (
-                <LineChartRenderer data={data} reducedMotion={reducedMotion} />
+                <LineChartRenderer
+                  data={data}
+                  dataB={dataB}
+                  reducedMotion={reducedMotion}
+                />
               )}
               {chart.type === "bar" && (
-                <BarChartRenderer data={data} reducedMotion={reducedMotion} />
+                <BarChartRenderer
+                  data={data}
+                  dataB={dataB}
+                  reducedMotion={reducedMotion}
+                />
               )}
             </div>
           </div>
@@ -299,26 +343,35 @@ function LeaderDot({
 /** Area chart with gradient fills for amortization curves, growth projections */
 function AreaChartRenderer({
   data,
+  dataB,
   reducedMotion,
 }: {
   data: Record<string, number | string | unknown>[];
+  dataB?: Record<string, number | string | unknown>[];
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
 
+  // Merge B series when comparing
+  const chartData = dataB?.length
+    ? mergeChartData(data, dataB, xKey, seriesKeys)
+    : data;
+  const bSeriesKeys = dataB?.length ? seriesKeys.map((k) => `${k}_B`) : [];
+
   // Show labels: always for single series, only when distinct for multi-series
   const hasDistinctMultiple =
     seriesKeys.length > 1 &&
-    !seriesKeys.every((k) => seriesAreIdentical(data, seriesKeys[0], k));
-  const showLabels = seriesKeys.length === 1 || hasDistinctMultiple;
+    !seriesKeys.every((k) => seriesAreIdentical(chartData, seriesKeys[0], k));
+  const showLabels = seriesKeys.length === 1 || hasDistinctMultiple || bSeriesKeys.length > 0;
 
   // Precompute last indices and detect endpoint overlap for vertical offset
-  const lastIndices = seriesKeys.map((key) => findLastNonZeroIndex(data, key));
-  const endpointsSame = hasDistinctMultiple && lastIndices.every((idx) => idx === lastIndices[0]);
+  const allKeys = [...seriesKeys, ...bSeriesKeys];
+  const lastIndices = allKeys.map((key) => findLastNonZeroIndex(chartData, key));
+  const endpointsSame = allKeys.length > 1 && lastIndices.every((idx) => idx === lastIndices[0]);
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <AreaChart data={data} margin={showLabels ? { right: 130 } : undefined}>
+      <AreaChart data={chartData} margin={showLabels ? { right: 130 } : undefined}>
         <defs>
           {seriesKeys.map((key, i) => (
             <linearGradient
@@ -333,6 +386,27 @@ function AreaChartRenderer({
                 offset="5%"
                 stopColor={getColor(i)}
                 stopOpacity={0.3}
+              />
+              <stop
+                offset="95%"
+                stopColor={getColor(i)}
+                stopOpacity={0}
+              />
+            </linearGradient>
+          ))}
+          {bSeriesKeys.map((key, i) => (
+            <linearGradient
+              key={key}
+              id={`gradient-b-${i}`}
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+              <stop
+                offset="5%"
+                stopColor={getColor(i)}
+                stopOpacity={0.15}
               />
               <stop
                 offset="95%"
@@ -361,9 +435,9 @@ function AreaChartRenderer({
           }
         />
         {seriesKeys.map((key, i) => {
-          const lastIdx = showLabels ? lastIndices[i] : -1;
-          // When endpoints overlap, offset labels vertically: first up, second down
-          const yOffset = endpointsSame ? (i === 0 ? -12 : 12) : 0;
+          const keyIndex = i;
+          const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
+          const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
           return (
             <Area
               key={key}
@@ -394,6 +468,43 @@ function AreaChartRenderer({
             />
           );
         })}
+        {bSeriesKeys.map((key, i) => {
+          const keyIndex = seriesKeys.length + i;
+          const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
+          const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
+          const originalKey = seriesKeys[i];
+          return (
+            <Area
+              key={key}
+              type="monotone"
+              dataKey={key}
+              name={`${formatSeriesName(originalKey)} (Alt)`}
+              stroke={getColor(i)}
+              strokeWidth={2}
+              strokeDasharray="6 4"
+              strokeOpacity={0.6}
+              fill={`url(#gradient-b-${i})`}
+              animationDuration={reducedMotion ? 0 : 300}
+              isAnimationActive={!reducedMotion}
+              dot={
+                showLabels
+                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    ((props: any) => (
+                      <LeaderDot
+                        cx={props.cx}
+                        cy={props.cy}
+                        index={props.index}
+                        lastIndex={lastIdx}
+                        color={getColor(i)}
+                        label={`${formatSeriesName(originalKey)} (Alt)`}
+                        yOffset={yOffset}
+                      />
+                    )) as any
+                  : false
+              }
+            />
+          );
+        })}
       </AreaChart>
     </ResponsiveContainer>
   );
@@ -402,25 +513,52 @@ function AreaChartRenderer({
 /** Pie (donut) chart for breakdowns */
 function PieChartRenderer({
   data,
+  dataB,
   reducedMotion,
 }: {
   data: Record<string, number | string | unknown>[];
+  dataB?: Record<string, number | string | unknown>[];
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
   const valueKey = seriesKeys[0] ?? "value";
+  const hasDual = dataB && dataB.length > 0;
 
   return (
     <ResponsiveContainer width="100%" height="100%">
       <PieChart>
+        {hasDual && (
+          <>
+            <text
+              x="30%"
+              y={20}
+              textAnchor="middle"
+              fontSize={12}
+              fontWeight={600}
+              className="fill-foreground"
+            >
+              Your Scenario
+            </text>
+            <text
+              x="70%"
+              y={20}
+              textAnchor="middle"
+              fontSize={12}
+              fontWeight={600}
+              className="fill-foreground"
+            >
+              Alternative
+            </text>
+          </>
+        )}
         <Pie
           data={data}
           dataKey={valueKey}
           nameKey={xKey}
-          cx="50%"
+          cx={hasDual ? "30%" : "50%"}
           cy="50%"
-          innerRadius={60}
-          outerRadius={100}
+          innerRadius={hasDual ? 40 : 60}
+          outerRadius={hasDual ? 70 : 100}
           animationDuration={reducedMotion ? 0 : 300}
           isAnimationActive={!reducedMotion}
         >
@@ -428,6 +566,23 @@ function PieChartRenderer({
             <Cell key={i} fill={getColor(i)} />
           ))}
         </Pie>
+        {hasDual && (
+          <Pie
+            data={dataB}
+            dataKey={valueKey}
+            nameKey={xKey}
+            cx="70%"
+            cy="50%"
+            innerRadius={40}
+            outerRadius={70}
+            animationDuration={reducedMotion ? 0 : 300}
+            isAnimationActive={!reducedMotion}
+          >
+            {dataB.map((_, i) => (
+              <Cell key={i} fill={getColor(i)} opacity={0.6} />
+            ))}
+          </Pie>
+        )}
         <Tooltip
           content={
             <CustomTooltip formatter={(v) => formatCurrency(v)} />
@@ -446,27 +601,36 @@ function PieChartRenderer({
 /** Line chart for savings progress, projections */
 function LineChartRenderer({
   data,
+  dataB,
   reducedMotion,
 }: {
   data: Record<string, number | string | unknown>[];
+  dataB?: Record<string, number | string | unknown>[];
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
   const hasGoal = data.some((d) => "goal" in d && typeof d.goal === "number");
   const plotKeys = seriesKeys.filter((k) => k !== "goal");
 
+  // Merge B series when comparing
+  const chartData = dataB?.length
+    ? mergeChartData(data, dataB, xKey, plotKeys)
+    : data;
+  const bPlotKeys = dataB?.length ? plotKeys.map((k) => `${k}_B`) : [];
+
   // Show labels when there are multiple plotted series OR a goal reference line
   const hasDistinctSeries =
     plotKeys.length > 1 &&
-    !plotKeys.every((k) => seriesAreIdentical(data, plotKeys[0], k));
-  const showLabels = hasDistinctSeries || (plotKeys.length >= 1 && hasGoal);
+    !plotKeys.every((k) => seriesAreIdentical(chartData, plotKeys[0], k));
+  const showLabels = hasDistinctSeries || (plotKeys.length >= 1 && hasGoal) || bPlotKeys.length > 0;
 
-  const lastIndices = plotKeys.map((key) => findLastNonZeroIndex(data, key));
-  const endpointsSame = hasDistinctSeries && lastIndices.every((idx) => idx === lastIndices[0]);
+  const allKeys = [...plotKeys, ...bPlotKeys];
+  const lastIndices = allKeys.map((key) => findLastNonZeroIndex(chartData, key));
+  const endpointsSame = allKeys.length > 1 && lastIndices.every((idx) => idx === lastIndices[0]);
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <LineChart data={data} margin={showLabels ? { right: 130 } : undefined}>
+      <LineChart data={chartData} margin={showLabels ? { right: 130 } : undefined}>
         <XAxis
           dataKey={xKey}
           tick={{ fontSize: 14 }}
@@ -487,7 +651,7 @@ function LineChartRenderer({
         />
         {hasGoal && (
           <ReferenceLine
-            y={Number(data[0]?.goal ?? 0)}
+            y={Number(chartData[0]?.goal ?? 0)}
             stroke={getColor(2)}
             strokeDasharray="4 4"
             label={{
@@ -499,8 +663,9 @@ function LineChartRenderer({
           />
         )}
         {plotKeys.map((key, i) => {
-          const lastIdx = showLabels ? lastIndices[i] : -1;
-          const yOffset = endpointsSame ? (i === 0 ? -12 : 12) : 0;
+          const keyIndex = i;
+          const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
+          const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
           return (
             <Line
               key={key}
@@ -530,6 +695,42 @@ function LineChartRenderer({
             />
           );
         })}
+        {bPlotKeys.map((key, i) => {
+          const keyIndex = plotKeys.length + i;
+          const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
+          const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
+          const originalKey = plotKeys[i];
+          return (
+            <Line
+              key={key}
+              type="monotone"
+              dataKey={key}
+              name={`${formatSeriesName(originalKey)} (Alt)`}
+              stroke={getColor(i)}
+              strokeWidth={2}
+              strokeDasharray="6 4"
+              strokeOpacity={0.6}
+              dot={
+                showLabels
+                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    ((props: any) => (
+                      <LeaderDot
+                        cx={props.cx}
+                        cy={props.cy}
+                        index={props.index}
+                        lastIndex={lastIdx}
+                        color={getColor(i)}
+                        label={`${formatSeriesName(originalKey)} (Alt)`}
+                        yOffset={yOffset}
+                      />
+                    )) as any
+                  : false
+              }
+              animationDuration={reducedMotion ? 0 : 300}
+              isAnimationActive={!reducedMotion}
+            />
+          );
+        })}
       </LineChart>
     </ResponsiveContainer>
   );
@@ -538,16 +739,25 @@ function LineChartRenderer({
 /** Bar chart for plan comparisons, bracket visualization */
 function BarChartRenderer({
   data,
+  dataB,
   reducedMotion,
 }: {
   data: Record<string, number | string | unknown>[];
+  dataB?: Record<string, number | string | unknown>[];
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
 
+  // Merge B series when comparing
+  const chartData = dataB?.length
+    ? mergeChartData(data, dataB, xKey, seriesKeys)
+    : data;
+  const bSeriesKeys = dataB?.length ? seriesKeys.map((k) => `${k}_B`) : [];
+  const allKeys = [...seriesKeys, ...bSeriesKeys];
+
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <BarChart data={data}>
+      <BarChart data={chartData}>
         <XAxis
           dataKey={xKey}
           tick={{ fontSize: 14 }}
@@ -566,7 +776,7 @@ function BarChartRenderer({
             <CustomTooltip formatter={(v) => formatCurrency(v)} />
           }
         />
-        {seriesKeys.length > 1 && (
+        {allKeys.length > 1 && (
           <Legend iconType="circle" iconSize={8} />
         )}
         {seriesKeys.map((key, i) => (
@@ -575,12 +785,28 @@ function BarChartRenderer({
             dataKey={key}
             name={formatSeriesName(key)}
             fill={getColor(i)}
-            barSize={40}
+            barSize={bSeriesKeys.length > 0 ? 30 : 40}
             radius={[4, 4, 0, 0]}
             animationDuration={reducedMotion ? 0 : 300}
             isAnimationActive={!reducedMotion}
           />
         ))}
+        {bSeriesKeys.map((key, i) => {
+          const originalKey = seriesKeys[i];
+          return (
+            <Bar
+              key={key}
+              dataKey={key}
+              name={`${formatSeriesName(originalKey)} (Alt)`}
+              fill={getColor(i)}
+              fillOpacity={0.4}
+              barSize={30}
+              radius={[4, 4, 0, 0]}
+              animationDuration={reducedMotion ? 0 : 300}
+              isAnimationActive={!reducedMotion}
+            />
+          );
+        })}
       </BarChart>
     </ResponsiveContainer>
   );
