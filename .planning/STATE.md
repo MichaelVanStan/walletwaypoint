@@ -102,6 +102,7 @@ None yet.
 | # | Description | Date | Commit | Directory |
 |---|-------------|------|--------|-----------|
 | 260331-00k | add HeroMetric component for narrative calculator layout | 2026-03-31 | 2ccb454 | [260331-00k-add-herometric-component-for-narrative-c](./quick/260331-00k-add-herometric-component-for-narrative-c/) |
+| 260331-01k | add StatRow component for compact horizontal stats | 2026-03-31 | pending | [260331-01k-add-statrow-component-for-compact-horizontal](./quick/260331-01k-add-statrow-component-for-compact-horizontal/) |
 
 ## Session Continuity
 
