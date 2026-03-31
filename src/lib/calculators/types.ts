@@ -41,6 +41,26 @@ export interface OutputConfig {
   deltaSemantic?: 'lower_is_better' | 'higher_is_better' | 'neutral';
 }
 
+/** Section type for narrative calculator layout */
+export interface NarrativeSectionConfig {
+  label: string;
+  color: 'green' | 'orange' | 'blue' | 'red' | 'purple' | 'muted';
+  content: 'chart' | 'stats' | 'breakdown' | 'table' | 'plans' | 'comparison' | 'custom';
+  chartKey?: string;
+  statKeys?: string[];
+  prose?: string;
+}
+
+/** Narrative layout configuration for guided calculator results */
+export interface NarrativeConfig {
+  heroKey: string;
+  heroLabel?: string;
+  heroSubtitle?: string;
+  sections: NarrativeSectionConfig[];
+  tip?: string;
+  showDetailTable?: boolean;
+}
+
 /** Action callout card configuration */
 export interface CalloutConfig {
   title: string;
@@ -79,6 +99,7 @@ export interface CalculatorConfig {
   /** Layout for result display: 'cards' (default scorecards) or 'table' (comparison table) */
   resultLayout?: 'cards' | 'table';
   faqs?: Array<{ question: string; answer: string }>;
+  narrative?: NarrativeConfig;
 }
 
 /** Generic calculator results shape */
