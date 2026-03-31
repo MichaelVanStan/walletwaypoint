@@ -64,7 +64,7 @@ function DeltaBadge({ delta }: { delta: ComparisonDelta }) {
   if (delta.direction === "positive") {
     return (
       <Badge
-        className="bg-accent/10 text-accent"
+        className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
         aria-label={getDeltaAriaLabel(delta)}
       >
         {formatDelta(delta)}
