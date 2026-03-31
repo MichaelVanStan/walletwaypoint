@@ -502,7 +502,7 @@ function AreaChartRenderer({
               <stop
                 offset="5%"
                 stopColor={getColor(i)}
-                stopOpacity={0.3}
+                stopOpacity={0.1}
               />
               <stop
                 offset="95%"
@@ -523,7 +523,7 @@ function AreaChartRenderer({
               <stop
                 offset="5%"
                 stopColor={getAltColor(i)}
-                stopOpacity={0.15}
+                stopOpacity={0.05}
               />
               <stop
                 offset="95%"
