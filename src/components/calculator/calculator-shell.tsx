@@ -40,10 +40,11 @@ function computeDeltas(
     if (delta === 0 || semantic === "neutral") {
       direction = "neutral";
     } else if (semantic === "higher_is_better") {
-      direction = delta > 0 ? "positive" : "negative";
+      // Alternative has more (better) → positive (green)
+      direction = delta < 0 ? "positive" : "negative";
     } else {
-      // lower_is_better (default)
-      direction = delta > 0 ? "negative" : "positive";
+      // lower_is_better: alternative has less (better) → positive (green)
+      direction = delta > 0 ? "positive" : "negative";
     }
 
     return {
