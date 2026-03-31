@@ -474,13 +474,7 @@ export function CalculatorShell({
 
           {/* Comparison results */}
           {isComparing && resultsB && (
-            <div className="mt-8 rounded-lg border border-orange-300/40 bg-orange-50/30 p-5 dark:border-orange-500/20 dark:bg-orange-950/10">
-              <div className="mb-4 flex items-center gap-2">
-                <div className="size-2 rounded-full bg-orange-500" />
-                <h3 className="text-sm font-semibold text-orange-700 dark:text-orange-400">
-                  Alternative Scenario Comparison
-                </h3>
-              </div>
+            <div className="mt-8">
               <ComparisonView
                 deltas={computeDeltas(results, resultsB, config.outputs)}
                 calculatorSlug={config.slug}
