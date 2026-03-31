@@ -59,22 +59,24 @@ export function HubToolkitRow({ index, guide, calculator }: HubToolkitRowProps) 
       {hasCalculator && (
         <Link
           href={`/calculators/${calculator.slug}`}
-          className={`flex w-[280px] shrink-0 flex-col justify-center gap-2 bg-accent/[0.03] p-5 px-6 max-sm:w-full ${
-            !hasGuide ? '' : 'max-sm:border-t max-sm:border-border'
+          className={`flex shrink-0 flex-col justify-center gap-2 bg-accent/[0.03] p-5 px-6 ${
+            hasGuide
+              ? 'w-[280px] max-sm:w-full max-sm:border-t max-sm:border-border'
+              : 'flex-1'
           }`}
         >
           <div className="flex items-center gap-2">
             <HubIcon icon={calculator.icon} className="size-4 text-accent" />
-            <h3 className="text-[0.8125rem] font-semibold">
+            <h3 className={hasGuide ? 'text-[0.8125rem] font-semibold' : 'text-[0.9375rem] font-semibold'}>
               {calculator.title}
             </h3>
           </div>
-          <p className="line-clamp-2 text-xs text-muted-foreground">
+          <p className={`line-clamp-2 text-muted-foreground ${hasGuide ? 'text-xs' : 'text-sm'}`}>
             {calculator.description}
           </p>
-          <span className="flex items-center gap-1 text-xs text-accent">
-            Try it
-            <ArrowRight className="size-3" />
+          <span className={`flex items-center gap-1 text-accent ${hasGuide ? 'text-xs' : 'text-sm'}`}>
+            Try calculator
+            <ArrowRight className={hasGuide ? 'size-3' : 'size-3.5'} />
           </span>
         </Link>
       )}
