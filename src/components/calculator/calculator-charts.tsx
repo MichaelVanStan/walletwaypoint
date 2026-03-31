@@ -344,8 +344,8 @@ function seriesAreIdentical(
 }
 
 /**
- * Inline label rendered at the last data point, inside the chart area.
- * Shows a colored dot + text with a background for readability.
+ * Inline label rendered near the last data point, inside the chart area.
+ * Draws a dotted leader line from the label back to the endpoint dot.
  */
 function InlineLabel({
   cx,
@@ -365,23 +365,34 @@ function InlineLabel({
   yOffset?: number;
 }) {
   if (index !== lastIndex || cx == null || cy == null) return <g />;
+  const pullLeft = 50;
+  const labelX = cx - pullLeft;
   const labelY = cy + yOffset;
-  const textX = cx - 8;
   const textWidth = label.length * 6.2 + 12;
   return (
     <g>
       <circle cx={cx} cy={cy} r={4} fill={color} />
+      <line
+        x1={cx - 6}
+        y1={cy}
+        x2={labelX + 4}
+        y2={labelY}
+        stroke={color}
+        strokeWidth={1}
+        strokeDasharray="3 3"
+        opacity={0.5}
+      />
       <rect
-        x={textX - textWidth - 2}
+        x={labelX - textWidth}
         y={labelY - 8}
         width={textWidth}
         height={16}
         rx={3}
         fill="var(--color-card, white)"
-        fillOpacity={0.85}
+        fillOpacity={0.9}
       />
       <text
-        x={textX - 4}
+        x={labelX}
         y={labelY + 3.5}
         fontSize={11}
         fontWeight={500}
@@ -423,8 +434,7 @@ function AreaChartRenderer({
   // Precompute last indices and distribute vertical offsets within groups sharing the same endpoint
   const allKeys = [...seriesKeys, ...bSeriesKeys];
   const lastIndices = allKeys.map((key) => findLastNonZeroIndex(chartData, key));
-  const labelSpacing = 22;
-  const labelOffsets = computeGroupedOffsets(lastIndices, labelSpacing);
+  const labelOffsets = computeGroupedOffsets(lastIndices, 24);
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -701,7 +711,7 @@ function LineChartRenderer({
 
   const allKeys = [...plotKeys, ...bPlotKeys];
   const lastIndices = allKeys.map((key) => findLastNonZeroIndex(chartData, key));
-  const lineLabelOffsets = computeGroupedOffsets(lastIndices, 22);
+  const lineLabelOffsets = computeGroupedOffsets(lastIndices, 24);
 
   return (
     <ResponsiveContainer width="100%" height="100%">
