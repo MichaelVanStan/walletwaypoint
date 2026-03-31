@@ -16,6 +16,9 @@ import {
   Tooltip,
   Legend,
   ReferenceLine,
+  usePlotArea,
+  useXAxisScale,
+  useYAxisScale,
 } from "recharts";
 import type { ChartConfig } from "@/lib/calculators/types";
 import { formatCurrency, formatNumber } from "@/lib/calculators/formatters";
@@ -310,28 +313,6 @@ function findLastNonZeroIndex(
 }
 
 /**
- * Group endpoints sharing the same last-data index and distribute vertical
- * offsets within each group so labels don't stack on top of each other.
- */
-function computeGroupedOffsets(lastIndices: number[], spacing: number): number[] {
-  const offsets = new Array(lastIndices.length).fill(0);
-  const groups = new Map<number, number[]>();
-  lastIndices.forEach((idx, i) => {
-    const group = groups.get(idx) ?? [];
-    group.push(i);
-    groups.set(idx, group);
-  });
-  for (const members of groups.values()) {
-    if (members.length > 1) {
-      members.forEach((memberIdx, pos) => {
-        offsets[memberIdx] = (pos - (members.length - 1) / 2) * spacing;
-      });
-    }
-  }
-  return offsets;
-}
-
-/**
  * Check whether two series have identical data (e.g., extra payment = 0
  * means "standard" and "withExtra" are the same line).
  */
@@ -343,71 +324,114 @@ function seriesAreIdentical(
   return data.every((d) => d[keyA] === d[keyB]);
 }
 
-/**
- * Inline label rendered near the last data point, inside the chart area.
- * Draws a dotted leader line from the label back to the endpoint dot.
- */
-function InlineLabel({
-  cx,
-  cy,
-  index,
-  lastIndex,
-  color,
-  label,
-  yOffset = 0,
-}: {
-  cx?: number;
-  cy?: number;
-  index?: number;
-  lastIndex: number;
+/** Max inline labels before falling back to Legend */
+const MAX_INLINE_LABELS = 3;
+
+interface EndpointLabelConfig {
+  dataKey: string;
   color: string;
   label: string;
-  yOffset?: number;
+  lastIndex: number;
+}
+
+/**
+ * Renders endpoint labels for all series using Recharts hooks for exact
+ * plot area dimensions. Handles collision resolution and boundary clamping
+ * universally — no hardcoded pixel thresholds.
+ */
+function ChartEndpointLabels({
+  data,
+  series,
+  xKey,
+}: {
+  data: Record<string, number | string | unknown>[];
+  series: EndpointLabelConfig[];
+  xKey: string;
 }) {
-  if (index !== lastIndex || cx == null || cy == null) return <g />;
-  const pull = 90;
-  const textWidth = label.length * 6.2 + 12;
-  // Position label to the left when endpoint is on the right half, and vice versa
-  const placeRight = cx < 250;
-  const labelX = placeRight ? cx + pull : cx - pull;
-  // Clamp label so it doesn't overlap the x-axis (push up when near bottom)
-  const rawLabelY = cy + yOffset;
-  const labelY = rawLabelY > cy - 20 && cy > 180 ? cy - 24 : rawLabelY;
-  const lineEndX = placeRight ? labelX - 4 : labelX + 4;
-  const lineDotGap = placeRight ? 6 : -6;
-  const rectX = placeRight ? labelX - 4 : labelX - textWidth;
+  const plotArea = usePlotArea();
+  const xScale = useXAxisScale();
+  const yScale = useYAxisScale();
+
+  if (!plotArea || !xScale || !yScale || !series.length) return null;
+
+  const { x: pX, y: pY, width: pW, height: pH } = plotArea;
+  const pull = Math.max(pW * 0.12, 50);
+  const minGap = 22;
+  const topBound = pY + 10;
+  const bottomBound = pY + pH - 20;
+
+  // Compute pixel positions for each endpoint
+  const labels = series.map((s) => {
+    const row = data[s.lastIndex];
+    const px = xScale(row?.[xKey] as number) ?? pX + pW;
+    const py = yScale(row?.[s.dataKey] as number) ?? pY + pH;
+    const placeRight = px < pX + pW * 0.65;
+    return { ...s, px, py, labelY: py, placeRight };
+  });
+
+  // Sort by Y position for collision resolution
+  labels.sort((a, b) => a.labelY - b.labelY);
+
+  // Push overlapping labels apart
+  for (let pass = 0; pass < 3; pass++) {
+    for (let i = 0; i < labels.length - 1; i++) {
+      const gap = labels[i + 1].labelY - labels[i].labelY;
+      if (gap < minGap) {
+        const shift = (minGap - gap) / 2;
+        labels[i].labelY -= shift;
+        labels[i + 1].labelY += shift;
+      }
+    }
+  }
+
+  // Clamp to plot area bounds
+  for (const l of labels) {
+    l.labelY = Math.max(topBound, Math.min(bottomBound, l.labelY));
+  }
+
   return (
     <g>
-      <circle cx={cx} cy={cy} r={4} fill={color} />
-      <line
-        x1={cx + lineDotGap}
-        y1={cy}
-        x2={lineEndX}
-        y2={labelY}
-        stroke={color}
-        strokeWidth={1}
-        strokeDasharray="3 3"
-        opacity={0.5}
-      />
-      <rect
-        x={rectX}
-        y={labelY - 8}
-        width={textWidth}
-        height={16}
-        rx={3}
-        fill="var(--color-card, white)"
-        fillOpacity={0.9}
-      />
-      <text
-        x={placeRight ? labelX : labelX}
-        y={labelY + 3.5}
-        fontSize={11}
-        fontWeight={500}
-        fill={color}
-        textAnchor={placeRight ? "start" : "end"}
-      >
-        {label}
-      </text>
+      {labels.map((l) => {
+        const textWidth = l.label.length * 6.2 + 12;
+        const labelX = l.placeRight ? l.px + pull : l.px - pull;
+        const lineEndX = l.placeRight ? labelX - 4 : labelX + 4;
+        const dotGap = l.placeRight ? 6 : -6;
+        const rectX = l.placeRight ? labelX - 4 : labelX - textWidth;
+        return (
+          <g key={l.dataKey}>
+            <circle cx={l.px} cy={l.py} r={4} fill={l.color} />
+            <line
+              x1={l.px + dotGap}
+              y1={l.py}
+              x2={lineEndX}
+              y2={l.labelY}
+              stroke={l.color}
+              strokeWidth={1}
+              strokeDasharray="3 3"
+              opacity={0.5}
+            />
+            <rect
+              x={rectX}
+              y={l.labelY - 8}
+              width={textWidth}
+              height={16}
+              rx={3}
+              fill="var(--color-card, white)"
+              fillOpacity={0.9}
+            />
+            <text
+              x={labelX}
+              y={l.labelY + 3.5}
+              fontSize={11}
+              fontWeight={500}
+              fill={l.color}
+              textAnchor={l.placeRight ? "start" : "end"}
+            >
+              {l.label}
+            </text>
+          </g>
+        );
+      })}
     </g>
   );
 }
@@ -438,10 +462,29 @@ function AreaChartRenderer({
     !seriesKeys.every((k) => seriesAreIdentical(chartData, seriesKeys[0], k));
   const showLabels = seriesKeys.length === 1 || hasDistinctMultiple || bSeriesKeys.length > 0;
 
-  // Precompute last indices and distribute vertical offsets within groups sharing the same endpoint
   const allKeys = [...seriesKeys, ...bSeriesKeys];
   const lastIndices = allKeys.map((key) => findLastNonZeroIndex(chartData, key));
-  const labelOffsets = computeGroupedOffsets(lastIndices, 24);
+  const useInline = showLabels && allKeys.length <= MAX_INLINE_LABELS;
+
+  // Build series configs for inline labels
+  const seriesConfigs: EndpointLabelConfig[] = useInline
+    ? [
+        ...seriesKeys.map((key, i) => ({
+          dataKey: key,
+          color: getColor(i),
+          label: bSeriesKeys.length > 0
+            ? `${formatSeriesName(key)} (Baseline)`
+            : formatSeriesName(key),
+          lastIndex: lastIndices[i],
+        })),
+        ...bSeriesKeys.map((key, i) => ({
+          dataKey: key,
+          color: getAltColor(i),
+          label: `${formatSeriesName(seriesKeys[i])} (Alternative)`,
+          lastIndex: lastIndices[seriesKeys.length + i],
+        })),
+      ]
+    : [];
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -523,80 +566,41 @@ function AreaChartRenderer({
             }}
           />
         ))}
-        {seriesKeys.map((key, i) => {
-          const keyIndex = i;
-          const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
-          const yOffset = labelOffsets[keyIndex];
-          const label = bSeriesKeys.length > 0
-            ? `${formatSeriesName(key)} (Baseline)`
-            : formatSeriesName(key);
-          return (
-            <Area
-              key={key}
-              type="monotone"
-              dataKey={key}
-              name={label}
-              stroke={getColor(i)}
-              strokeWidth={2}
-              fill={`url(#gradient-${i})`}
-              animationDuration={reducedMotion ? 0 : 300}
-              isAnimationActive={!reducedMotion}
-              dot={
-                showLabels
-                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    ((props: any) => (
-                      <InlineLabel
-                        cx={props.cx}
-                        cy={props.cy}
-                        index={props.index}
-                        lastIndex={lastIdx}
-                        color={getColor(i)}
-                        label={label}
-                        yOffset={yOffset}
-                      />
-                    )) as any
-                  : false
-              }
-            />
-          );
-        })}
-        {bSeriesKeys.map((key, i) => {
-          const keyIndex = seriesKeys.length + i;
-          const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
-          const yOffset = labelOffsets[keyIndex];
-          const originalKey = seriesKeys[i];
-          const label = `${formatSeriesName(originalKey)} (Alternative)`;
-          return (
-            <Area
-              key={key}
-              type="monotone"
-              dataKey={key}
-              name={label}
-              stroke={getAltColor(i)}
-              strokeWidth={2}
-              strokeDasharray="6 4"
-              fill={`url(#gradient-b-${i})`}
-              animationDuration={reducedMotion ? 0 : 300}
-              isAnimationActive={!reducedMotion}
-              dot={
-                showLabels
-                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    ((props: any) => (
-                      <InlineLabel
-                        cx={props.cx}
-                        cy={props.cy}
-                        index={props.index}
-                        lastIndex={lastIdx}
-                        color={getAltColor(i)}
-                        label={label}
-                        yOffset={yOffset}
-                      />
-                    )) as any
-                  : false
-              }
-            />
-          );
-        })}
+        {seriesKeys.map((key, i) => (
+          <Area
+            key={key}
+            type="monotone"
+            dataKey={key}
+            name={bSeriesKeys.length > 0 ? `${formatSeriesName(key)} (Baseline)` : formatSeriesName(key)}
+            stroke={getColor(i)}
+            strokeWidth={2}
+            fill={`url(#gradient-${i})`}
+            animationDuration={reducedMotion ? 0 : 300}
+            isAnimationActive={!reducedMotion}
+            dot={false}
+          />
+        ))}
+        {bSeriesKeys.map((key, i) => (
+          <Area
+            key={key}
+            type="monotone"
+            dataKey={key}
+            name={`${formatSeriesName(seriesKeys[i])} (Alternative)`}
+            stroke={getAltColor(i)}
+            strokeWidth={2}
+            strokeDasharray="6 4"
+            fill={`url(#gradient-b-${i})`}
+            animationDuration={reducedMotion ? 0 : 300}
+            isAnimationActive={!reducedMotion}
+            dot={false}
+          />
+        ))}
+        {useInline && (
+          <ChartEndpointLabels data={chartData} series={seriesConfigs} xKey={xKey} />
+        )}
+        {!useInline && allKeys.length > 1 && (
+          <Legend iconType="circle" iconSize={8} />
+        )}
       </AreaChart>
     </ResponsiveContainer>
   );
@@ -718,7 +722,26 @@ function LineChartRenderer({
 
   const allKeys = [...plotKeys, ...bPlotKeys];
   const lastIndices = allKeys.map((key) => findLastNonZeroIndex(chartData, key));
-  const lineLabelOffsets = computeGroupedOffsets(lastIndices, 24);
+  const useInline = showLabels && allKeys.length <= MAX_INLINE_LABELS;
+
+  const seriesConfigs: EndpointLabelConfig[] = useInline
+    ? [
+        ...plotKeys.map((key, i) => ({
+          dataKey: key,
+          color: getColor(i),
+          label: bPlotKeys.length > 0
+            ? `${formatSeriesName(key)} (Baseline)`
+            : formatSeriesName(key),
+          lastIndex: lastIndices[i],
+        })),
+        ...bPlotKeys.map((key, i) => ({
+          dataKey: key,
+          color: getAltColor(i),
+          label: `${formatSeriesName(plotKeys[i])} (Alternative)`,
+          lastIndex: lastIndices[plotKeys.length + i],
+        })),
+      ]
+    : [];
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -754,78 +777,39 @@ function LineChartRenderer({
             }}
           />
         )}
-        {plotKeys.map((key, i) => {
-          const keyIndex = i;
-          const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
-          const yOffset = lineLabelOffsets[keyIndex];
-          const label = bPlotKeys.length > 0
-            ? `${formatSeriesName(key)} (Baseline)`
-            : formatSeriesName(key);
-          return (
-            <Line
-              key={key}
-              type="monotone"
-              dataKey={key}
-              name={label}
-              stroke={getColor(i)}
-              strokeWidth={2}
-              dot={
-                showLabels
-                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    ((props: any) => (
-                      <InlineLabel
-                        cx={props.cx}
-                        cy={props.cy}
-                        index={props.index}
-                        lastIndex={lastIdx}
-                        color={getColor(i)}
-                        label={label}
-                        yOffset={yOffset}
-                      />
-                    )) as any
-                  : false
-              }
-              animationDuration={reducedMotion ? 0 : 300}
-              isAnimationActive={!reducedMotion}
-            />
-          );
-        })}
-        {bPlotKeys.map((key, i) => {
-          const keyIndex = plotKeys.length + i;
-          const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
-          const yOffset = lineLabelOffsets[keyIndex];
-          const originalKey = plotKeys[i];
-          const label = `${formatSeriesName(originalKey)} (Alternative)`;
-          return (
-            <Line
-              key={key}
-              type="monotone"
-              dataKey={key}
-              name={label}
-              stroke={getAltColor(i)}
-              strokeWidth={2}
-              strokeDasharray="6 4"
-              dot={
-                showLabels
-                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    ((props: any) => (
-                      <InlineLabel
-                        cx={props.cx}
-                        cy={props.cy}
-                        index={props.index}
-                        lastIndex={lastIdx}
-                        color={getAltColor(i)}
-                        label={label}
-                        yOffset={yOffset}
-                      />
-                    )) as any
-                  : false
-              }
-              animationDuration={reducedMotion ? 0 : 300}
-              isAnimationActive={!reducedMotion}
-            />
-          );
-        })}
+        {plotKeys.map((key, i) => (
+          <Line
+            key={key}
+            type="monotone"
+            dataKey={key}
+            name={bPlotKeys.length > 0 ? `${formatSeriesName(key)} (Baseline)` : formatSeriesName(key)}
+            stroke={getColor(i)}
+            strokeWidth={2}
+            dot={false}
+            animationDuration={reducedMotion ? 0 : 300}
+            isAnimationActive={!reducedMotion}
+          />
+        ))}
+        {bPlotKeys.map((key, i) => (
+          <Line
+            key={key}
+            type="monotone"
+            dataKey={key}
+            name={`${formatSeriesName(plotKeys[i])} (Alternative)`}
+            stroke={getAltColor(i)}
+            strokeWidth={2}
+            strokeDasharray="6 4"
+            dot={false}
+            animationDuration={reducedMotion ? 0 : 300}
+            isAnimationActive={!reducedMotion}
+          />
+        ))}
+        {useInline && (
+          <ChartEndpointLabels data={chartData} series={seriesConfigs} xKey={xKey} />
+        )}
+        {!useInline && allKeys.length > 1 && (
+          <Legend iconType="circle" iconSize={8} />
+        )}
       </LineChart>
     </ResponsiveContainer>
   );
