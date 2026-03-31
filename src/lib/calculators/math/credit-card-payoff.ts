@@ -198,12 +198,30 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
     ? `${minMonths} months (${minYears} years${minRemMonths > 0 ? `, ${minRemMonths} months` : ''})`
     : `${minMonths} months`;
 
-  let interpretation = `With minimum payments only, it would take **${minTimeStr}** and cost **${formatCurrency(minTotalInterest.toDecimalPlaces(2).toNumber())}** in interest to pay off your **${formatCurrency(balanceNum)}** balance.`;
+  // Check if minimum payments can't cover interest
+  const firstMonthInterest = balance.times(monthlyRate);
+  const firstMinPayment = balance.times(minPaymentPct).div(100);
+  const minCantCoverInterest = firstMinPayment.lte(firstMonthInterest);
 
-  if (extraNum > 0) {
-    interpretation += ` By adding **${formatCurrency(extraNum)}** extra per month, you could be debt-free in **${extraMonths} months** -- saving **${monthsSaved} months** and **${formatCurrency(Math.max(interestSaved, 0))}** in interest.`;
+  let interpretation: string;
+  if (minCantCoverInterest) {
+    interpretation = `**Warning:** Your minimum payment of **${formatCurrency(firstMinPayment.toDecimalPlaces(2).toNumber())}**/mo doesn't cover the monthly interest of **${formatCurrency(firstMonthInterest.toDecimalPlaces(2).toNumber())}**. This debt will **never be paid off** with minimum payments alone.`;
+    if (extraNum > 0) {
+      if (extraMonths < MAX_MONTHS) {
+        interpretation += ` With **${formatCurrency(extraNum)}** extra per month, you could be debt-free in **${extraMonths} months**.`;
+      } else {
+        interpretation += ` Even with **${formatCurrency(extraNum)}** extra per month, the payments still don't cover interest. You need to pay at least **${formatCurrency(firstMonthInterest.minus(firstMinPayment).toDecimalPlaces(2).toNumber())}** extra per month to start making progress.`;
+      }
+    } else {
+      interpretation += ` You need to pay at least **${formatCurrency(firstMonthInterest.minus(firstMinPayment).toDecimalPlaces(2).toNumber())}** extra per month to start making progress.`;
+    }
   } else {
-    interpretation += ' Consider making extra payments to dramatically reduce your payoff time and interest costs.';
+    interpretation = `With minimum payments only, it would take **${minTimeStr}** and cost **${formatCurrency(minTotalInterest.toDecimalPlaces(2).toNumber())}** in interest to pay off your **${formatCurrency(balanceNum)}** balance.`;
+    if (extraNum > 0) {
+      interpretation += ` By adding **${formatCurrency(extraNum)}** extra per month, you could be debt-free in **${extraMonths} months** -- saving **${monthsSaved} months** and **${formatCurrency(Math.max(interestSaved, 0))}** in interest.`;
+    } else {
+      interpretation += ' Consider making extra payments to dramatically reduce your payoff time and interest costs.';
+    }
   }
 
   // ============================================================================

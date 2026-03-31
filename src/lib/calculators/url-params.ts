@@ -178,12 +178,12 @@ export const studentLoanParams = {
 // ============================================================================
 export const creditCardPayoffParams = {
   balance: parseAsInteger.withDefault(10000),
-  apr: parseAsFloat.withDefault(30),
+  apr: parseAsFloat.withDefault(24),
   minpct: parseAsFloat.withDefault(2),
   extra: parseAsInteger.withDefault(0),
   compare: parseAsBoolean.withDefault(false),
   b_balance: parseAsInteger.withDefault(10000),
-  b_apr: parseAsFloat.withDefault(30),
+  b_apr: parseAsFloat.withDefault(24),
   b_minpct: parseAsFloat.withDefault(2),
   b_extra: parseAsInteger.withDefault(0),
 };
