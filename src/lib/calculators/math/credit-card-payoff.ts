@@ -30,6 +30,8 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
   let minTotalPaid = new Decimal(0);
   let minMonths = 0;
   const minBalances: number[] = [];
+  let minCumulativeInterest = new Decimal(0);
+  const minCumulativeInterests: number[] = [];
 
   for (let month = 1; month <= MAX_MONTHS; month++) {
     if (minBalance.lte(0)) break;
@@ -53,6 +55,8 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
       minTotalInterest = minTotalInterest.plus(interest.times(MAX_MONTHS - month + 1));
       minTotalPaid = minTotalPaid.plus(payment.times(MAX_MONTHS - month + 1));
       for (let fill = month; fill <= MAX_MONTHS; fill++) {
+        minCumulativeInterest = minCumulativeInterest.plus(interest);
+        minCumulativeInterests.push(minCumulativeInterest.toDecimalPlaces(2).toNumber());
         minBalances.push(minBalance.toDecimalPlaces(2).toNumber());
       }
       break;
@@ -62,6 +66,8 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
     if (minBalance.lt(0)) minBalance = new Decimal(0);
 
     minTotalInterest = minTotalInterest.plus(interest);
+    minCumulativeInterest = minCumulativeInterest.plus(interest);
+    minCumulativeInterests.push(minCumulativeInterest.toDecimalPlaces(2).toNumber());
     minTotalPaid = minTotalPaid.plus(payment);
     minBalances.push(minBalance.toDecimalPlaces(2).toNumber());
     minMonths = month;
@@ -77,6 +83,8 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
   let extraTotalPaid = new Decimal(0);
   let extraMonths = 0;
   const extraBalances: number[] = [];
+  let extraCumulativeInterest = new Decimal(0);
+  const extraCumulativeInterests: number[] = [];
   const detailRows: Array<Record<string, string | number>> = [];
 
   for (let month = 1; month <= MAX_MONTHS; month++) {
@@ -95,10 +103,25 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
 
     const principal = payment.minus(interest);
 
+    // If payment doesn't cover interest, debt grows -- cap at max months
+    if (principal.lte(0)) {
+      extraMonths = MAX_MONTHS;
+      extraTotalInterest = extraTotalInterest.plus(interest.times(MAX_MONTHS - month + 1));
+      extraTotalPaid = extraTotalPaid.plus(payment.times(MAX_MONTHS - month + 1));
+      for (let fill = month; fill <= MAX_MONTHS; fill++) {
+        extraCumulativeInterest = extraCumulativeInterest.plus(interest);
+        extraCumulativeInterests.push(extraCumulativeInterest.toDecimalPlaces(2).toNumber());
+        extraBalances.push(extraBalance.toDecimalPlaces(2).toNumber());
+      }
+      break;
+    }
+
     extraBalance = extraBalance.minus(principal);
     if (extraBalance.lt(0)) extraBalance = new Decimal(0);
 
     extraTotalInterest = extraTotalInterest.plus(interest);
+    extraCumulativeInterest = extraCumulativeInterest.plus(interest);
+    extraCumulativeInterests.push(extraCumulativeInterest.toDecimalPlaces(2).toNumber());
     extraTotalPaid = extraTotalPaid.plus(payment);
 
     const balanceVal = extraBalance.toDecimalPlaces(2).toNumber();
@@ -134,6 +157,22 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
       month: i + 1,
       'Minimum Only': i < minBalances.length ? minBalances[i] : 0,
       'With Extra': i < extraBalances.length ? extraBalances[i] : 0,
+    });
+  }
+
+  // ============================================================================
+  // Chart data: cumulative interest paid over time (monotonically non-decreasing)
+  // ============================================================================
+  const cumulativeInterest: Array<Record<string, number | string | unknown>> = [];
+  for (let i = 0; i < maxLen; i++) {
+    cumulativeInterest.push({
+      month: i + 1,
+      'Minimum Only': i < minCumulativeInterests.length
+        ? minCumulativeInterests[i]
+        : (minCumulativeInterests[minCumulativeInterests.length - 1] ?? 0),
+      'With Extra': i < extraCumulativeInterests.length
+        ? extraCumulativeInterests[i]
+        : (extraCumulativeInterests[extraCumulativeInterests.length - 1] ?? 0),
     });
   }
 
@@ -180,6 +219,7 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
     },
     chartData: {
       balanceOverTime,
+      cumulativeInterest,
     },
     interpretation,
     detailRows,

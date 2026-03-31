@@ -47,6 +47,9 @@ charts:
   - type: area
     title: "Balance Over Time"
     dataKey: balanceOverTime
+  - type: area
+    title: "Cumulative Interest Paid"
+    dataKey: cumulativeInterest
 
 outputs:
   - key: minMonths
@@ -109,6 +112,10 @@ narrative:
       color: blue
       content: chart
       chartKey: balanceOverTime
+    - label: "Cumulative Interest Paid"
+      color: orange
+      content: chart
+      chartKey: cumulativeInterest
   tip: "Paying even $50 above the minimum each month can cut your payoff time in half and save thousands in interest."
 
 seo:
