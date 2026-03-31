@@ -63,6 +63,8 @@ function NarrativeSectionRenderer({
               ),
               color: outputConfig?.variant === "warning"
                 ? "text-orange-500"
+                : outputConfig?.variant === "success"
+                ? "text-emerald-500"
                 : outputConfig?.primary
                 ? "text-accent"
                 : undefined,

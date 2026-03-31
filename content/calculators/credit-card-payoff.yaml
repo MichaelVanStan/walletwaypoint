@@ -57,7 +57,7 @@ outputs:
     format: number
     deltaSemantic: lower_is_better
   - key: minTotalInterest
-    label: "Total Interest (Min.)"
+    label: "Interest Paid (Min. Payments Only)"
     format: currency
     deltaSemantic: lower_is_better
   - key: extraMonths
@@ -65,7 +65,7 @@ outputs:
     format: number
     deltaSemantic: lower_is_better
   - key: extraTotalInterest
-    label: "Total Interest (Extra)"
+    label: "Interest Paid (With Extra)"
     format: currency
     deltaSemantic: lower_is_better
   - key: monthsSaved
@@ -76,6 +76,7 @@ outputs:
   - key: interestSaved
     label: "Interest Saved"
     format: currency
+    variant: success
     deltaSemantic: higher_is_better
 
 callouts:

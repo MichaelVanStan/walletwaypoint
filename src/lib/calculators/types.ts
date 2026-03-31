@@ -33,8 +33,8 @@ export interface OutputConfig {
   label: string;
   format: 'currency' | 'percent' | 'number' | 'years';
   primary?: boolean;
-  /** Visual variant: 'warning' renders with orange accent */
-  variant?: 'default' | 'warning';
+  /** Visual variant: 'warning' renders with orange accent, 'success' renders with green */
+  variant?: 'default' | 'warning' | 'success';
   /** Row grouping — outputs with the same row render together */
   row?: number;
   /** How to color-code deltas in comparison mode */
