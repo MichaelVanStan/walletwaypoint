@@ -124,3 +124,19 @@
     @apply font-sans scroll-smooth scroll-pt-16;
   }
 }
+
+.anchor-link {
+  opacity: 0;
+  margin-right: 0.25em;
+  text-decoration: none;
+  font-weight: 400;
+  color: var(--muted-foreground);
+  transition: opacity 0.15s;
+}
+.anchor-link::after {
+  content: "#";
+}
+*:hover > .anchor-link,
+.anchor-link:focus {
+  opacity: 0.4;
+}

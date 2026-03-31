@@ -365,7 +365,7 @@ export default defineConfig({
   mdx: {
     rehypePlugins: [
       rehypeSlug,
-      [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+      [rehypeAutolinkHeadings, { behavior: 'prepend', properties: { className: ['anchor-link'], ariaHidden: true, tabIndex: -1 } }],
     ],
   },
 });
