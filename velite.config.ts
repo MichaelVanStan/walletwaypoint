@@ -47,6 +47,7 @@ const outputConfigSchema = s.object({
   label: s.string(),
   format: s.enum(['currency', 'percent', 'number', 'years']),
   primary: s.boolean().optional(),
+  variant: s.enum(['default', 'warning', 'success']).optional(),
   deltaSemantic: s.enum(['lower_is_better', 'higher_is_better', 'neutral']).optional(),
 });
 

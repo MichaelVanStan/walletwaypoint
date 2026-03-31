@@ -53,26 +53,29 @@ charts:
 
 outputs:
   - key: minMonths
-    label: "Payoff (Min. Only)"
+    label: "Months to Payoff"
     format: number
-    deltaSemantic: lower_is_better
-  - key: minTotalInterest
-    label: "Interest Paid (Min. Payments Only)"
-    format: currency
     deltaSemantic: lower_is_better
   - key: extraMonths
-    label: "Payoff (With Extra)"
+    label: "Months to Payoff (Extra)"
     format: number
-    deltaSemantic: lower_is_better
-  - key: extraTotalInterest
-    label: "Interest Paid (With Extra)"
-    format: currency
+    variant: success
     deltaSemantic: lower_is_better
   - key: monthsSaved
     label: "Months Saved"
     format: number
     primary: true
+    variant: success
     deltaSemantic: higher_is_better
+  - key: minTotalInterest
+    label: "Interest Paid"
+    format: currency
+    deltaSemantic: lower_is_better
+  - key: extraTotalInterest
+    label: "Interest Paid (Extra)"
+    format: currency
+    variant: success
+    deltaSemantic: lower_is_better
   - key: interestSaved
     label: "Interest Saved"
     format: currency
@@ -105,7 +108,11 @@ narrative:
   heroKey: monthsSaved
   heroLabel: "Months Saved With Extra Payments"
   sections:
-    - label: "Interest & Savings"
+    - label: "Payoff Timeline"
+      color: blue
+      content: stats
+      statKeys: ["minMonths", "extraMonths", "monthsSaved"]
+    - label: "Total Interest"
       color: blue
       content: stats
       statKeys: ["minTotalInterest", "extraTotalInterest", "interestSaved"]
