@@ -11,6 +11,7 @@ import { ActionCallout } from "./action-callout";
 import { DetailTable } from "./detail-table";
 import { CalculatorCharts } from "./calculator-charts";
 import { ComparisonView } from "./comparison-view";
+import { ResultNarrative } from "./result-narrative";
 import { usePersistedState } from "@/lib/states/state-persistence";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -331,8 +332,14 @@ export function CalculatorShell({
 
         {/* Results Panel */}
         <section className="flex-1 min-w-0" aria-label="Calculator results">
-          {/* Results: Table layout (home affordability) or Scorecards (default) */}
-          {isTableLayout ? (
+          {/* Results: Narrative layout, Table layout, or Scorecards */}
+          {config.narrative ? (
+            <ResultNarrative
+              config={config}
+              results={results}
+              reducedMotion={prefersReducedMotion}
+            />
+          ) : isTableLayout ? (
             <ResultTable
               tiers={[
                 {
@@ -434,22 +441,26 @@ export function CalculatorShell({
             </div>
           )}
 
-          {/* Recommendation nugget */}
-          <div className="mt-4">
-            <Interpretation text={results.interpretation} />
-          </div>
+          {/* Recommendation nugget (skip when narrative handles it) */}
+          {!config.narrative && (
+            <div className="mt-4">
+              <Interpretation text={results.interpretation} />
+            </div>
+          )}
 
-          {/* Charts */}
-          <div className="mt-8">
-            <CalculatorCharts
-              charts={config.charts}
-              chartData={results.chartData}
-              reducedMotion={prefersReducedMotion}
-            />
-          </div>
+          {/* Charts (skip when narrative handles it) */}
+          {!config.narrative && (
+            <div className="mt-8">
+              <CalculatorCharts
+                charts={config.charts}
+                chartData={results.chartData}
+                reducedMotion={prefersReducedMotion}
+              />
+            </div>
+          )}
 
-          {/* Detail table for single-scenario mode (per D-15) */}
-          {!isComparing && (
+          {/* Detail table for single-scenario mode (skip when narrative handles it) */}
+          {!config.narrative && !isComparing && (
             <div className="mt-8">
               <DetailTable
                 detailRows={results.detailRows}
