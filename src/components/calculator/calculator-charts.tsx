@@ -310,6 +310,28 @@ function findLastNonZeroIndex(
 }
 
 /**
+ * Group endpoints sharing the same last-data index and distribute vertical
+ * offsets within each group so labels don't stack on top of each other.
+ */
+function computeGroupedOffsets(lastIndices: number[], spacing: number): number[] {
+  const offsets = new Array(lastIndices.length).fill(0);
+  const groups = new Map<number, number[]>();
+  lastIndices.forEach((idx, i) => {
+    const group = groups.get(idx) ?? [];
+    group.push(i);
+    groups.set(idx, group);
+  });
+  for (const members of groups.values()) {
+    if (members.length > 1) {
+      members.forEach((memberIdx, pos) => {
+        offsets[memberIdx] = (pos - (members.length - 1) / 2) * spacing;
+      });
+    }
+  }
+  return offsets;
+}
+
+/**
  * Check whether two series have identical data (e.g., extra payment = 0
  * means "standard" and "withExtra" are the same line).
  */
@@ -399,14 +421,11 @@ function AreaChartRenderer({
     !seriesKeys.every((k) => seriesAreIdentical(chartData, seriesKeys[0], k));
   const showLabels = seriesKeys.length === 1 || hasDistinctMultiple || bSeriesKeys.length > 0;
 
-  // Precompute last indices and distribute vertical offsets to avoid label overlap
+  // Precompute last indices and distribute vertical offsets within groups sharing the same endpoint
   const allKeys = [...seriesKeys, ...bSeriesKeys];
   const lastIndices = allKeys.map((key) => findLastNonZeroIndex(chartData, key));
-  const endpointsSame = allKeys.length > 1 && lastIndices.every((idx) => idx === lastIndices[0]);
   const labelSpacing = 22;
-  const labelOffsets = allKeys.map((_, i) =>
-    endpointsSame ? (i - (allKeys.length - 1) / 2) * labelSpacing : 0
-  );
+  const labelOffsets = computeGroupedOffsets(lastIndices, labelSpacing);
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -683,11 +702,7 @@ function LineChartRenderer({
 
   const allKeys = [...plotKeys, ...bPlotKeys];
   const lastIndices = allKeys.map((key) => findLastNonZeroIndex(chartData, key));
-  const endpointsSame = allKeys.length > 1 && lastIndices.every((idx) => idx === lastIndices[0]);
-  const lineLabelSpacing = 22;
-  const lineLabelOffsets = allKeys.map((_, i) =>
-    endpointsSame ? (i - (allKeys.length - 1) / 2) * lineLabelSpacing : 0
-  );
+  const lineLabelOffsets = computeGroupedOffsets(lastIndices, 22);
 
   return (
     <ResponsiveContainer width="100%" height="100%">

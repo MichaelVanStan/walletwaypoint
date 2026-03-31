@@ -8,7 +8,7 @@ const SECTION_COLORS: Record<string, string> = {
   blue: "text-sky-500",
   red: "text-red-500",
   purple: "text-purple-400",
-  muted: "text-muted-foreground",
+  muted: "text-foreground",
 };
 
 interface NarrativeSectionProps {
@@ -28,7 +28,7 @@ export function NarrativeSection({
     <div className={cn("mb-6", className)}>
       <div
         className={cn(
-          "mb-3 text-[11px] font-medium uppercase tracking-[0.15em]",
+          "mb-3 text-sm font-semibold",
           SECTION_COLORS[color] ?? SECTION_COLORS.muted
         )}
       >
