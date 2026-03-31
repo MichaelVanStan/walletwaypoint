@@ -177,15 +177,15 @@ export const studentLoanParams = {
 // Credit Card Payoff Calculator
 // ============================================================================
 export const creditCardPayoffParams = {
-  balance: parseAsInteger.withDefault(5000),
+  balance: parseAsInteger.withDefault(10000),
   apr: parseAsFloat.withDefault(30),
   minpct: parseAsFloat.withDefault(2),
-  extra: parseAsInteger.withDefault(0),
+  extra: parseAsInteger.withDefault(100),
   compare: parseAsBoolean.withDefault(false),
-  b_balance: parseAsInteger.withDefault(5000),
+  b_balance: parseAsInteger.withDefault(10000),
   b_apr: parseAsFloat.withDefault(30),
   b_minpct: parseAsFloat.withDefault(2),
-  b_extra: parseAsInteger.withDefault(0),
+  b_extra: parseAsInteger.withDefault(100),
 };
 
 // ============================================================================
