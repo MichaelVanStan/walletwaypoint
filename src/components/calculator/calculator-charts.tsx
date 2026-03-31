@@ -370,7 +370,9 @@ function InlineLabel({
   // Position label to the left when endpoint is on the right half, and vice versa
   const placeRight = cx < 250;
   const labelX = placeRight ? cx + pull : cx - pull;
-  const labelY = cy + yOffset;
+  // Clamp label so it doesn't overlap the x-axis (push up when near bottom)
+  const rawLabelY = cy + yOffset;
+  const labelY = rawLabelY > cy - 20 && cy > 180 ? cy - 24 : rawLabelY;
   const lineEndX = placeRight ? labelX - 4 : labelX + 4;
   const lineDotGap = placeRight ? 6 : -6;
   const rectX = placeRight ? labelX - 4 : labelX - textWidth;
