@@ -253,7 +253,7 @@ export function CalculatorShell({
             </div>
 
             {isComparing && (
-              <div className="mt-6 -mx-6 border-t border-sky-300/40 bg-sky-50/30 px-6 pt-5 pb-1 dark:border-sky-500/20 dark:bg-sky-950/10">
+              <div className="mt-6 border-l-[3px] border-l-accent/40 pl-4 pt-1">
                 <CalculatorInputs
                   inputs={scenarioBInputs}
                   advancedInputs={scenarioBAdvanced}
