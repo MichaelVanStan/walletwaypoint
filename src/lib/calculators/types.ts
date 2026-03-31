@@ -118,6 +118,8 @@ export interface CalculatorResults {
   referenceLines?: Record<string, Array<{ x: number; label: string }>>;
   /** Dynamic hints keyed by input urlKey, overriding static YAML hints */
   computedHints?: Record<string, string>;
+  /** Output keys to hide from narrative stat rows (e.g., when extra payment is 0) */
+  hiddenOutputKeys?: string[];
 }
 
 /** Comparison delta between two scenarios */

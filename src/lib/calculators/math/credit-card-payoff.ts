@@ -263,6 +263,9 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
     computedHints: {
       minpct: `= ${formatCurrency(effectiveMinPayment.toDecimalPlaces(2).toNumber())}/mo on current balance`,
     },
+    hiddenOutputKeys: extraNum === 0
+      ? ['extraMonths', 'extraTotalInterest', 'monthsSaved', 'interestSaved']
+      : undefined,
     interpretation,
     detailRows,
     detailColumns,

@@ -49,11 +49,19 @@ function NarrativeSectionRenderer({
   resultsB?: CalculatorResults | null;
   reducedMotion: boolean;
 }) {
+  const hidden = new Set(results.hiddenOutputKeys ?? []);
+  const visibleStatKeys = section.statKeys?.filter((k) => !hidden.has(k));
+
+  // Skip entire section if all stats are hidden
+  if (section.content === "stats" && visibleStatKeys && visibleStatKeys.length === 0) {
+    return null;
+  }
+
   return (
     <NarrativeSection label={section.label} color={section.color}>
-      {section.content === "stats" && section.statKeys && (
+      {section.content === "stats" && visibleStatKeys && visibleStatKeys.length > 0 && (
         <StatRow
-          items={section.statKeys.map((key) => {
+          items={visibleStatKeys.map((key) => {
             const outputConfig = config.outputs.find((o) => o.key === key);
             return {
               label: outputConfig?.label ?? key,
