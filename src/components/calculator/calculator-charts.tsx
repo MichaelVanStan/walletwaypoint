@@ -399,10 +399,14 @@ function AreaChartRenderer({
     !seriesKeys.every((k) => seriesAreIdentical(chartData, seriesKeys[0], k));
   const showLabels = seriesKeys.length === 1 || hasDistinctMultiple || bSeriesKeys.length > 0;
 
-  // Precompute last indices and detect endpoint overlap for vertical offset
+  // Precompute last indices and distribute vertical offsets to avoid label overlap
   const allKeys = [...seriesKeys, ...bSeriesKeys];
   const lastIndices = allKeys.map((key) => findLastNonZeroIndex(chartData, key));
   const endpointsSame = allKeys.length > 1 && lastIndices.every((idx) => idx === lastIndices[0]);
+  const labelSpacing = 22;
+  const labelOffsets = allKeys.map((_, i) =>
+    endpointsSame ? (i - (allKeys.length - 1) / 2) * labelSpacing : 0
+  );
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -487,7 +491,7 @@ function AreaChartRenderer({
         {seriesKeys.map((key, i) => {
           const keyIndex = i;
           const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
-          const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
+          const yOffset = labelOffsets[keyIndex];
           const label = bSeriesKeys.length > 0
             ? `${formatSeriesName(key)} (Baseline)`
             : formatSeriesName(key);
@@ -524,7 +528,7 @@ function AreaChartRenderer({
         {bSeriesKeys.map((key, i) => {
           const keyIndex = seriesKeys.length + i;
           const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
-          const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
+          const yOffset = labelOffsets[keyIndex];
           const originalKey = seriesKeys[i];
           const label = `${formatSeriesName(originalKey)} (Alternative)`;
           return (
@@ -680,6 +684,10 @@ function LineChartRenderer({
   const allKeys = [...plotKeys, ...bPlotKeys];
   const lastIndices = allKeys.map((key) => findLastNonZeroIndex(chartData, key));
   const endpointsSame = allKeys.length > 1 && lastIndices.every((idx) => idx === lastIndices[0]);
+  const lineLabelSpacing = 22;
+  const lineLabelOffsets = allKeys.map((_, i) =>
+    endpointsSame ? (i - (allKeys.length - 1) / 2) * lineLabelSpacing : 0
+  );
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -718,7 +726,7 @@ function LineChartRenderer({
         {plotKeys.map((key, i) => {
           const keyIndex = i;
           const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
-          const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
+          const yOffset = lineLabelOffsets[keyIndex];
           const label = bPlotKeys.length > 0
             ? `${formatSeriesName(key)} (Baseline)`
             : formatSeriesName(key);
@@ -754,7 +762,7 @@ function LineChartRenderer({
         {bPlotKeys.map((key, i) => {
           const keyIndex = plotKeys.length + i;
           const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
-          const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
+          const yOffset = lineLabelOffsets[keyIndex];
           const originalKey = plotKeys[i];
           const label = `${formatSeriesName(originalKey)} (Alternative)`;
           return (

@@ -20,7 +20,7 @@ inputs:
       min: 0
       max: 36
       step: 0.1
-      default: 22.99
+      default: 30
       urlKey: apr
       hint: "Check your statement"
       tooltip: "Annual Percentage Rate on your credit card. The national average is around 23%. Find yours on your monthly statement or in your card agreement."
