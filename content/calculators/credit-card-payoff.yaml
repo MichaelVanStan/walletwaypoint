@@ -106,15 +106,15 @@ narrative:
   heroLabel: "Months Saved With Extra Payments"
   sections:
     - label: "Interest & Savings"
-      color: red
+      color: muted
       content: stats
       statKeys: ["minTotalInterest", "extraTotalInterest", "interestSaved"]
     - label: "Balance Over Time"
-      color: blue
+      color: muted
       content: chart
       chartKey: balanceOverTime
     - label: "Cumulative Interest Paid"
-      color: orange
+      color: muted
       content: chart
       chartKey: cumulativeInterest
   tip: "Paying even $50 above the minimum each month can cut your payoff time in half and save thousands in interest."

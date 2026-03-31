@@ -80,6 +80,7 @@ function NarrativeSectionRenderer({
           chartDataB={resultsB?.chartData}
           referenceLines={results.referenceLines}
           reducedMotion={reducedMotion}
+          hideTitle
         />
       )}
 

@@ -185,6 +185,7 @@ interface CalculatorChartsProps {
   chartDataB?: Record<string, Record<string, number | string | unknown>[]> | null;
   referenceLines?: Record<string, Array<{ x: number; label: string }>>;
   reducedMotion?: boolean;
+  hideTitle?: boolean;
 }
 
 /** Merge Scenario B data into Scenario A data, suffixing B series with _B */
@@ -221,6 +222,7 @@ export function CalculatorCharts({
   chartDataB,
   referenceLines,
   reducedMotion = false,
+  hideTitle = false,
 }: CalculatorChartsProps) {
   if (!charts.length) return null;
 
@@ -245,9 +247,11 @@ export function CalculatorCharts({
 
         return (
           <div key={chart.dataKey}>
-            <h3 className="mb-3 text-sm font-semibold text-foreground">
-              {chart.title}
-            </h3>
+            {!hideTitle && (
+              <h3 className="mb-3 text-sm font-semibold text-foreground">
+                {chart.title}
+              </h3>
+            )}
             <div
               className="h-[240px] md:h-[300px]"
               role="img"
