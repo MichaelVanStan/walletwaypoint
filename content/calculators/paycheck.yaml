@@ -98,3 +98,22 @@ faqs:
     answer: "FICA funds Social Security (6.2% up to $176,100) and Medicare (1.45% on all income, plus 0.9% surcharge above $200,000)."
   - question: "Why does my take-home pay vary by state?"
     answer: "Each state has its own income tax structure. Nine states have no state income tax, others use flat rates or progressive brackets."
+
+narrative:
+  heroKey: netPayPerPaycheck
+  heroLabel: "Your Take-Home Pay"
+  sections:
+    - label: "Your Taxes"
+      color: orange
+      content: stats
+      statKeys: ["federalTax", "stateTax", "ficaTotal"]
+    - label: "Tax Breakdown"
+      color: blue
+      content: chart
+      chartKey: breakdown
+    - label: "Monthly Overview"
+      color: muted
+      content: chart
+      chartKey: monthlyBreakdown
+  tip: "Contributing to a 401(k) reduces your taxable income and lowers both federal and state taxes."
+  showDetailTable: true

@@ -160,6 +160,32 @@ const paycheckConfig: CalculatorConfig = {
     contextLabel: 'paycheck',
   },
   faqs: PAYCHECK_FAQS,
+  narrative: {
+    heroKey: 'netPayPerPaycheck',
+    heroLabel: 'Your Take-Home Pay',
+    sections: [
+      {
+        label: 'Your Taxes',
+        color: 'orange' as const,
+        content: 'stats' as const,
+        statKeys: ['federalTax', 'stateTax', 'ficaTotal'],
+      },
+      {
+        label: 'Tax Breakdown',
+        color: 'blue' as const,
+        content: 'chart' as const,
+        chartKey: 'breakdown',
+      },
+      {
+        label: 'Monthly Overview',
+        color: 'muted' as const,
+        content: 'chart' as const,
+        chartKey: 'monthlyBreakdown',
+      },
+    ],
+    tip: 'Contributing to a 401(k) reduces your taxable income and lowers both federal and state taxes.',
+    showDetailTable: true,
+  },
 };
 
 export const metadata = createMetadata({
