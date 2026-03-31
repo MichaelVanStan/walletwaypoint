@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const SECTION_COLORS: Record<string, string> = {
   green: "text-accent",
   orange: "text-orange-500",
-  blue: "text-sky-500",
+  blue: "text-slate-600 dark:text-slate-300",
   red: "text-red-500",
   purple: "text-purple-400",
   muted: "text-foreground",
