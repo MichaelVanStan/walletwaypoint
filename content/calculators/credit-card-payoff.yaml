@@ -39,7 +39,7 @@ inputs:
       min: 0
       max: 5000
       step: 25
-      default: 100
+      default: 0
       urlKey: extra
       hint: "Any amount helps"
 
