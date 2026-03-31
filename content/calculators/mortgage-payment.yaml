@@ -115,6 +115,25 @@ faqs:
   - question: "What credit score do I need for a good mortgage rate?"
     answer: "Generally, a score of 740 or above gets you the best rates. Scores between 680-739 still qualify for competitive rates. Below 620, you may need an FHA loan, which has more flexible requirements but requires mortgage insurance."
 
+narrative:
+  heroKey: monthlyPayment
+  heroLabel: "Your Monthly Payment"
+  sections:
+    - label: "Payment Breakdown"
+      color: orange
+      content: chart
+      chartKey: paymentBreakdown
+    - label: "The Cost of Borrowing"
+      color: red
+      content: stats
+      statKeys: ["totalInterest", "totalCost", "loanAmount"]
+    - label: "Amortization Over Time"
+      color: blue
+      content: chart
+      chartKey: amortization
+  tip: "Adding extra payments to principal can save thousands in interest and shorten your loan term significantly."
+  showDetailTable: true
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

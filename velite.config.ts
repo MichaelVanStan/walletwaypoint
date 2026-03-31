@@ -86,6 +86,21 @@ const calculators = defineCollection({
     mathModule: s.string(),
     resultLayout: s.enum(['cards', 'table']).default('cards').optional(),
     faqs: s.array(faqSchema).optional(),
+    narrative: s.object({
+      heroKey: s.string(),
+      heroLabel: s.string().optional(),
+      heroSubtitle: s.string().optional(),
+      sections: s.array(s.object({
+        label: s.string(),
+        color: s.enum(['green', 'orange', 'blue', 'red', 'purple', 'muted']),
+        content: s.enum(['chart', 'stats', 'breakdown', 'table', 'plans', 'comparison', 'custom']),
+        chartKey: s.string().optional(),
+        statKeys: s.array(s.string()).optional(),
+        prose: s.string().optional(),
+      })),
+      tip: s.string().optional(),
+      showDetailTable: s.boolean().optional(),
+    }).optional(),
   }),
 });
 
