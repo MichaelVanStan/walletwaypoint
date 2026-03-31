@@ -253,7 +253,7 @@ export function CalculatorCharts({
               </h3>
             )}
             <div
-              className="h-[240px] md:h-[300px]"
+              className="h-[240px] md:h-[300px] overflow-hidden"
               role="img"
               aria-label={`${chart.title} chart`}
             >
@@ -365,17 +365,22 @@ function InlineLabel({
   yOffset?: number;
 }) {
   if (index !== lastIndex || cx == null || cy == null) return <g />;
-  const pullLeft = 50;
-  const labelX = cx - pullLeft;
-  const labelY = cy + yOffset;
+  const pull = 90;
   const textWidth = label.length * 6.2 + 12;
+  // Position label to the left when endpoint is on the right half, and vice versa
+  const placeRight = cx < 250;
+  const labelX = placeRight ? cx + pull : cx - pull;
+  const labelY = cy + yOffset;
+  const lineEndX = placeRight ? labelX - 4 : labelX + 4;
+  const lineDotGap = placeRight ? 6 : -6;
+  const rectX = placeRight ? labelX - 4 : labelX - textWidth;
   return (
     <g>
       <circle cx={cx} cy={cy} r={4} fill={color} />
       <line
-        x1={cx - 6}
+        x1={cx + lineDotGap}
         y1={cy}
-        x2={labelX + 4}
+        x2={lineEndX}
         y2={labelY}
         stroke={color}
         strokeWidth={1}
@@ -383,7 +388,7 @@ function InlineLabel({
         opacity={0.5}
       />
       <rect
-        x={labelX - textWidth}
+        x={rectX}
         y={labelY - 8}
         width={textWidth}
         height={16}
@@ -392,12 +397,12 @@ function InlineLabel({
         fillOpacity={0.9}
       />
       <text
-        x={labelX}
+        x={placeRight ? labelX : labelX}
         y={labelY + 3.5}
         fontSize={11}
         fontWeight={500}
         fill={color}
-        textAnchor="end"
+        textAnchor={placeRight ? "start" : "end"}
       >
         {label}
       </text>
