@@ -38,6 +38,23 @@ const CHART_COLORS_HEX = [
   "#38bdf8",
 ];
 
+/** Alternative palette for Scenario B — warmer tones to contrast A's cool palette */
+const CHART_COLORS_ALT = [
+  "oklch(0.60 0.15 30)",   // warm coral
+  "oklch(0.55 0.12 60)",   // amber
+  "oklch(0.60 0.10 330)",  // rose
+  "oklch(0.50 0.12 15)",   // burnt orange
+  "oklch(0.65 0.10 45)",   // gold
+];
+
+const CHART_COLORS_ALT_HEX = [
+  "#e05555",
+  "#d97706",
+  "#db2777",
+  "#c2410c",
+  "#ca8a04",
+];
+
 /** Get chart color with hex fallback for SVG rendering */
 function getColor(index: number): string {
   // Use OKLCH if CSS supports it, otherwise fall back to hex
@@ -45,6 +62,14 @@ function getColor(index: number): string {
     return CHART_COLORS[index % CHART_COLORS.length];
   }
   return CHART_COLORS_HEX[index % CHART_COLORS_HEX.length];
+}
+
+/** Get alternative chart color for Scenario B */
+function getAltColor(index: number): string {
+  if (typeof CSS !== "undefined" && CSS.supports?.("color", CHART_COLORS_ALT[0])) {
+    return CHART_COLORS_ALT[index % CHART_COLORS_ALT.length];
+  }
+  return CHART_COLORS_ALT_HEX[index % CHART_COLORS_ALT_HEX.length];
 }
 
 /** Keys commonly used for X-axis labels -- excluded when detecting data series */
@@ -405,12 +430,12 @@ function AreaChartRenderer({
             >
               <stop
                 offset="5%"
-                stopColor={getColor(i)}
+                stopColor={getAltColor(i)}
                 stopOpacity={0.15}
               />
               <stop
                 offset="95%"
-                stopColor={getColor(i)}
+                stopColor={getAltColor(i)}
                 stopOpacity={0}
               />
             </linearGradient>
@@ -438,12 +463,15 @@ function AreaChartRenderer({
           const keyIndex = i;
           const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
           const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
+          const label = bSeriesKeys.length > 0
+            ? `${formatSeriesName(key)} (Baseline)`
+            : formatSeriesName(key);
           return (
             <Area
               key={key}
               type="monotone"
               dataKey={key}
-              name={formatSeriesName(key)}
+              name={label}
               stroke={getColor(i)}
               strokeWidth={2}
               fill={`url(#gradient-${i})`}
@@ -459,7 +487,7 @@ function AreaChartRenderer({
                         index={props.index}
                         lastIndex={lastIdx}
                         color={getColor(i)}
-                        label={formatSeriesName(key)}
+                        label={label}
                         yOffset={yOffset}
                       />
                     )) as any
@@ -473,16 +501,16 @@ function AreaChartRenderer({
           const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
           const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
           const originalKey = seriesKeys[i];
+          const label = `${formatSeriesName(originalKey)} (Alternative)`;
           return (
             <Area
               key={key}
               type="monotone"
               dataKey={key}
-              name={`${formatSeriesName(originalKey)} (Alt)`}
-              stroke={getColor(i)}
+              name={label}
+              stroke={getAltColor(i)}
               strokeWidth={2}
               strokeDasharray="6 4"
-              strokeOpacity={0.6}
               fill={`url(#gradient-b-${i})`}
               animationDuration={reducedMotion ? 0 : 300}
               isAnimationActive={!reducedMotion}
@@ -495,8 +523,8 @@ function AreaChartRenderer({
                         cy={props.cy}
                         index={props.index}
                         lastIndex={lastIdx}
-                        color={getColor(i)}
-                        label={`${formatSeriesName(originalKey)} (Alt)`}
+                        color={getAltColor(i)}
+                        label={label}
                         yOffset={yOffset}
                       />
                     )) as any
@@ -537,7 +565,7 @@ function PieChartRenderer({
               fontWeight={600}
               className="fill-foreground"
             >
-              Your Scenario
+              Baseline
             </text>
             <text
               x="70%"
@@ -579,7 +607,7 @@ function PieChartRenderer({
             isAnimationActive={!reducedMotion}
           >
             {dataB.map((_, i) => (
-              <Cell key={i} fill={getColor(i)} opacity={0.6} />
+              <Cell key={i} fill={getAltColor(i)} />
             ))}
           </Pie>
         )}
@@ -666,12 +694,15 @@ function LineChartRenderer({
           const keyIndex = i;
           const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
           const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
+          const label = bPlotKeys.length > 0
+            ? `${formatSeriesName(key)} (Baseline)`
+            : formatSeriesName(key);
           return (
             <Line
               key={key}
               type="monotone"
               dataKey={key}
-              name={formatSeriesName(key)}
+              name={label}
               stroke={getColor(i)}
               strokeWidth={2}
               dot={
@@ -684,7 +715,7 @@ function LineChartRenderer({
                         index={props.index}
                         lastIndex={lastIdx}
                         color={getColor(i)}
-                        label={formatSeriesName(key)}
+                        label={label}
                         yOffset={yOffset}
                       />
                     )) as any
@@ -700,16 +731,16 @@ function LineChartRenderer({
           const lastIdx = showLabels ? lastIndices[keyIndex] : -1;
           const yOffset = endpointsSame ? (keyIndex === 0 ? -12 : 12) : 0;
           const originalKey = plotKeys[i];
+          const label = `${formatSeriesName(originalKey)} (Alternative)`;
           return (
             <Line
               key={key}
               type="monotone"
               dataKey={key}
-              name={`${formatSeriesName(originalKey)} (Alt)`}
-              stroke={getColor(i)}
+              name={label}
+              stroke={getAltColor(i)}
               strokeWidth={2}
               strokeDasharray="6 4"
-              strokeOpacity={0.6}
               dot={
                 showLabels
                   ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -719,8 +750,8 @@ function LineChartRenderer({
                         cy={props.cy}
                         index={props.index}
                         lastIndex={lastIdx}
-                        color={getColor(i)}
-                        label={`${formatSeriesName(originalKey)} (Alt)`}
+                        color={getAltColor(i)}
+                        label={label}
                         yOffset={yOffset}
                       />
                     )) as any
@@ -783,7 +814,7 @@ function BarChartRenderer({
           <Bar
             key={key}
             dataKey={key}
-            name={formatSeriesName(key)}
+            name={bSeriesKeys.length > 0 ? `${formatSeriesName(key)} (Baseline)` : formatSeriesName(key)}
             fill={getColor(i)}
             barSize={bSeriesKeys.length > 0 ? 30 : 40}
             radius={[4, 4, 0, 0]}
@@ -797,9 +828,8 @@ function BarChartRenderer({
             <Bar
               key={key}
               dataKey={key}
-              name={`${formatSeriesName(originalKey)} (Alt)`}
-              fill={getColor(i)}
-              fillOpacity={0.4}
+              name={`${formatSeriesName(originalKey)} (Alternative)`}
+              fill={getAltColor(i)}
               barSize={30}
               radius={[4, 4, 0, 0]}
               animationDuration={reducedMotion ? 0 : 300}
