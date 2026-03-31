@@ -110,6 +110,19 @@ faqs:
   - question: "Is 0% financing really free?"
     answer: "0% APR deals save you real money on interest, but they sometimes come instead of cash rebates. Compare total cost both ways: a $2,000 rebate with a 5% loan might be cheaper than 0% APR with no rebate, depending on the loan term. Also, 0% offers typically require excellent credit (740+)."
 
+narrative:
+  heroKey: moderatePrice
+  heroLabel: "Your Comfortable Budget"
+  sections:
+    - label: "Affordability Tiers"
+      color: green
+      content: stats
+      statKeys: ["conservativePrice", "moderatePrice", "aggressivePrice"]
+    - label: "Total Cost Breakdown"
+      color: orange
+      content: chart
+      chartKey: loanBreakdown
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

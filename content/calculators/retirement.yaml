@@ -107,6 +107,20 @@ faqs:
   - question: "Should I choose a Roth or traditional retirement account?"
     answer: "If you expect your tax rate to be higher in retirement than now, choose Roth (pay taxes now, withdraw tax-free later). If you expect a lower rate in retirement, choose traditional (deduct now, pay taxes on withdrawals later). Early career workers usually benefit more from Roth."
 
+narrative:
+  heroKey: retirementBalance
+  heroLabel: "Your Retirement Balance"
+  sections:
+    - label: "Withdrawal & Contributions"
+      color: green
+      content: stats
+      statKeys: ["monthlyWithdrawal", "annualWithdrawal", "totalContributed"]
+    - label: "Retirement Balance Projection"
+      color: blue
+      content: chart
+      chartKey: retirementProjection
+  tip: "Increasing your monthly contribution by just $100 can add years of retirement security through compounding returns."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

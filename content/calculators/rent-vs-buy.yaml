@@ -122,6 +122,23 @@ faqs:
   - question: "Does renting mean throwing money away?"
     answer: "No -- rent buys you housing, flexibility, and freedom from maintenance costs. Homeowners also 'throw away' money on interest, property taxes, insurance, and maintenance. The real question is whether the equity you build outweighs the extra costs of ownership in your specific situation."
 
+narrative:
+  heroKey: savingsAmount
+  heroLabel: "Your Potential Savings"
+  sections:
+    - label: "Cost Comparison"
+      color: orange
+      content: stats
+      statKeys: ["totalRentCost", "totalBuyCost", "netRentCost", "netBuyCost"]
+    - label: "Cumulative Cost Over Time"
+      color: blue
+      content: chart
+      chartKey: cumulativeCost
+    - label: "Net Position Over Time"
+      color: green
+      content: chart
+      chartKey: netPosition
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

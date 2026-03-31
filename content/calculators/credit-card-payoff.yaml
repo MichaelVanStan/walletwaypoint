@@ -97,6 +97,20 @@ faqs:
   - question: "Is it better to pay off credit cards or save for emergencies?"
     answer: "Build a small emergency fund first ($1,000-$2,000) to avoid adding more debt when unexpected expenses hit. Then aggressively pay down high-interest credit card debt. Once the cards are paid off, build your emergency fund to 3-6 months of expenses."
 
+narrative:
+  heroKey: monthsSaved
+  heroLabel: "Months Saved With Extra Payments"
+  sections:
+    - label: "Interest & Savings"
+      color: red
+      content: stats
+      statKeys: ["minTotalInterest", "extraTotalInterest", "interestSaved"]
+    - label: "Balance Over Time"
+      color: blue
+      content: chart
+      chartKey: balanceOverTime
+  tip: "Paying even $50 above the minimum each month can cut your payoff time in half and save thousands in interest."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

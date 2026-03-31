@@ -95,6 +95,21 @@ faqs:
   - question: "Is it better to refinance or make extra payments?"
     answer: "Refinancing to a lower rate reduces the cost of every remaining payment. Extra payments attack the principal directly. If rates have dropped significantly since you took the loan, refinancing first and then making extra payments gives you the best of both worlds."
 
+narrative:
+  heroKey: monthlyPayment
+  heroLabel: "Your Monthly Payment"
+  sections:
+    - label: "Cost of Borrowing"
+      color: red
+      content: stats
+      statKeys: ["totalInterest", "totalCost", "interestSaved"]
+    - label: "Loan Balance Over Time"
+      color: blue
+      content: chart
+      chartKey: balanceOverTime
+  tip: "Even small extra payments toward principal can save you hundreds in interest and shorten your payoff by months."
+  showDetailTable: true
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

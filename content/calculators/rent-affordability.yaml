@@ -84,6 +84,19 @@ faqs:
   - question: "Can I afford to live alone or should I get roommates?"
     answer: "If rent for a solo apartment exceeds 30% of your income, roommates are a smart financial move. Splitting a two-bedroom often saves 25-40% compared to a studio or one-bedroom. Run both scenarios through the calculator to see the actual difference."
 
+narrative:
+  heroKey: maxRent
+  heroLabel: "Your Max Rent"
+  sections:
+    - label: "Income Allocation"
+      color: green
+      content: chart
+      chartKey: incomeAllocation
+    - label: "Affordability Details"
+      color: blue
+      content: stats
+      statKeys: ["affordableRent", "monthlyRemaining", "annualRentCost"]
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

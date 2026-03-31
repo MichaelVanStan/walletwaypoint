@@ -89,6 +89,20 @@ faqs:
   - question: "How does income-driven repayment work?"
     answer: "Income-driven plans cap your monthly payment at a percentage of your discretionary income (income minus 150% of the poverty line). After 20-25 years of qualifying payments, any remaining balance is forgiven. The SAVE plan caps payments at 10% of discretionary income."
 
+narrative:
+  heroKey: standardMonthly
+  heroLabel: "Standard Monthly Payment"
+  sections:
+    - label: "Plan Comparison"
+      color: orange
+      content: stats
+      statKeys: ["standardTotal", "graduatedTotal", "idrTotal"]
+    - label: "Total Cost by Plan"
+      color: blue
+      content: chart
+      chartKey: planComparison
+  tip: "Income-driven plans lower your monthly payment but may cost more over time. Compare total cost, not just monthly amounts."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

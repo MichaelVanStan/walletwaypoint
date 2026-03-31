@@ -62,6 +62,19 @@ faqs:
   - question: "Should I include taxes in my 50/30/20 budget?"
     answer: "No -- the 50/30/20 rule applies to your after-tax income (take-home pay). If you're self-employed, set aside your estimated taxes first, then apply the rule to what's left."
 
+narrative:
+  heroKey: needs
+  heroLabel: "Your 50/30/20 Breakdown"
+  sections:
+    - label: "Budget Allocation"
+      color: green
+      content: chart
+      chartKey: budgetAllocation
+    - label: "Your Budget at a Glance"
+      color: blue
+      content: stats
+      statKeys: ["wants", "savings", "annualIncome"]
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

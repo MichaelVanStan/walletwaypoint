@@ -83,6 +83,20 @@ faqs:
   - question: "How much should I invest monthly to become a millionaire?"
     answer: "At a 7% average annual return, investing $550 per month starting at age 25 would give you about $1 million by age 60. Starting at 35, you'd need roughly $1,100 per month. The key takeaway: starting early matters more than the amount."
 
+narrative:
+  heroKey: futureValue
+  heroLabel: "Your Future Value"
+  sections:
+    - label: "Growth vs Contributions"
+      color: green
+      content: stats
+      statKeys: ["totalContributions", "totalInterestEarned"]
+    - label: "Investment Growth Over Time"
+      color: blue
+      content: chart
+      chartKey: growth
+  tip: "Increasing your monthly contribution by even $50 can add tens of thousands over decades thanks to compounding."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

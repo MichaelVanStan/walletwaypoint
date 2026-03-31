@@ -99,6 +99,20 @@ faqs:
   - question: "What's the difference between saving and investing?"
     answer: "Saving means putting money in safe, accessible accounts (savings accounts, CDs) with low but guaranteed returns. Investing means buying assets like stocks or bonds with higher potential returns but also risk of loss. Use saving for short-term goals and investing for long-term goals."
 
+narrative:
+  heroKey: monthlyRequired
+  heroLabel: "Monthly Savings Required"
+  sections:
+    - label: "Savings Breakdown"
+      color: green
+      content: stats
+      statKeys: ["projectedTotal", "totalContributed", "interestEarned"]
+    - label: "Savings Progress"
+      color: blue
+      content: chart
+      chartKey: savingsProgress
+  tip: "Saving more than the minimum each month can dramatically shorten your timeline to reach your goal."
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication

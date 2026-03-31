@@ -91,6 +91,20 @@ faqs:
   - question: "What is the difference between a tax deduction and a tax credit?"
     answer: "A deduction reduces your taxable income. A $1,000 deduction in the 22% bracket saves you $220. A credit reduces your actual tax bill dollar-for-dollar. A $1,000 credit saves you exactly $1,000. Credits are more valuable than deductions of the same amount."
 
+narrative:
+  heroKey: takeHome
+  heroLabel: "Your Take-Home Pay"
+  sections:
+    - label: "Tax Summary"
+      color: red
+      content: stats
+      statKeys: ["totalTax", "effectiveRate", "marginalRate"]
+    - label: "Tax by Bracket"
+      color: orange
+      content: chart
+      chartKey: brackets
+  showDetailTable: true
+
 seo:
   schemaType: WebApplication
   applicationCategory: FinanceApplication
