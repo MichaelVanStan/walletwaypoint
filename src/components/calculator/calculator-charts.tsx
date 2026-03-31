@@ -344,10 +344,10 @@ function seriesAreIdentical(
 }
 
 /**
- * Custom dot renderer that draws a leader line + label at the last data point.
- * For all other points, renders nothing.
+ * Inline label rendered at the last data point, inside the chart area.
+ * Shows a colored dot + text with a background for readability.
  */
-function LeaderDot({
+function InlineLabel({
   cx,
   cy,
   index,
@@ -366,28 +366,27 @@ function LeaderDot({
 }) {
   if (index !== lastIndex || cx == null || cy == null) return <g />;
   const labelY = cy + yOffset;
-  const lineEndX = cx + 18;
-  const dotX = lineEndX + 6;
-  const textX = dotX + 10;
+  const textX = cx - 8;
+  const textWidth = label.length * 6.2 + 12;
   return (
     <g>
-      <line
-        x1={cx}
-        y1={cy}
-        x2={lineEndX}
-        y2={labelY}
-        stroke={color}
-        strokeWidth={1}
-        strokeDasharray="3 3"
-        opacity={0.6}
+      <circle cx={cx} cy={cy} r={4} fill={color} />
+      <rect
+        x={textX - textWidth - 2}
+        y={labelY - 8}
+        width={textWidth}
+        height={16}
+        rx={3}
+        fill="var(--color-card, white)"
+        fillOpacity={0.85}
       />
-      <circle cx={dotX} cy={labelY} r={3.5} fill={color} />
       <text
-        x={textX}
-        y={labelY + 4}
+        x={textX - 4}
+        y={labelY + 3.5}
         fontSize={11}
         fontWeight={500}
         fill={color}
+        textAnchor="end"
       >
         {label}
       </text>
@@ -429,7 +428,7 @@ function AreaChartRenderer({
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <AreaChart data={chartData} margin={showLabels ? { right: 130 } : undefined}>
+      <AreaChart data={chartData}>
         <defs>
           {seriesKeys.map((key, i) => (
             <linearGradient
@@ -529,7 +528,7 @@ function AreaChartRenderer({
                 showLabels
                   ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     ((props: any) => (
-                      <LeaderDot
+                      <InlineLabel
                         cx={props.cx}
                         cy={props.cy}
                         index={props.index}
@@ -566,7 +565,7 @@ function AreaChartRenderer({
                 showLabels
                   ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     ((props: any) => (
-                      <LeaderDot
+                      <InlineLabel
                         cx={props.cx}
                         cy={props.cy}
                         index={props.index}
@@ -706,7 +705,7 @@ function LineChartRenderer({
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <LineChart data={chartData} margin={showLabels ? { right: 130 } : undefined}>
+      <LineChart data={chartData}>
         <XAxis
           dataKey={xKey}
           tick={{ fontSize: 14 }}
@@ -757,7 +756,7 @@ function LineChartRenderer({
                 showLabels
                   ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     ((props: any) => (
-                      <LeaderDot
+                      <InlineLabel
                         cx={props.cx}
                         cy={props.cy}
                         index={props.index}
@@ -793,7 +792,7 @@ function LineChartRenderer({
                 showLabels
                   ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     ((props: any) => (
-                      <LeaderDot
+                      <InlineLabel
                         cx={props.cx}
                         cy={props.cy}
                         index={props.index}
