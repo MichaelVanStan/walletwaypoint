@@ -25,17 +25,59 @@ interface DetailTableProps {
     format?: "currency" | "percent" | "number";
   }>;
   triggerLabel?: string;
+  /** When true, render the table directly without the Collapsible wrapper */
+  inline?: boolean;
 }
 
 export function DetailTable({
   detailRows,
   detailColumns,
   triggerLabel = "Show full amortization schedule",
+  inline = false,
 }: DetailTableProps) {
   const [open, setOpen] = useState(false);
 
   if (!detailRows || detailRows.length === 0 || !detailColumns || detailColumns.length === 0) {
     return null;
+  }
+
+  const tableContent = (
+    <div className={inline ? "max-h-[400px] overflow-y-auto rounded-lg border" : "mt-4 max-h-[400px] overflow-y-auto rounded-lg border"}>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            {detailColumns.map((col) => (
+              <TableHead key={col.key} scope="col">
+                {col.label}
+              </TableHead>
+            ))}
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {detailRows.map((row, rowIndex) => (
+            <TableRow
+              key={rowIndex}
+              className={rowIndex % 2 === 0 ? "bg-muted" : ""}
+            >
+              {detailColumns.map((col) => {
+                const cellValue = row[col.key];
+                const displayValue =
+                  col.format && typeof cellValue === "number"
+                    ? formatByType(cellValue, col.format)
+                    : String(cellValue ?? "");
+                return (
+                  <TableCell key={col.key}>{displayValue}</TableCell>
+                );
+              })}
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </div>
+  );
+
+  if (inline) {
+    return tableContent;
   }
 
   const closedLabel = triggerLabel;
@@ -54,38 +96,7 @@ export function DetailTable({
         {open ? openLabel : closedLabel}
       </CollapsibleTrigger>
       <CollapsibleContent>
-        <div className="mt-4 max-h-[400px] overflow-y-auto rounded-lg border">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                {detailColumns.map((col) => (
-                  <TableHead key={col.key} scope="col">
-                    {col.label}
-                  </TableHead>
-                ))}
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {detailRows.map((row, rowIndex) => (
-                <TableRow
-                  key={rowIndex}
-                  className={rowIndex % 2 === 0 ? "bg-muted" : ""}
-                >
-                  {detailColumns.map((col) => {
-                    const cellValue = row[col.key];
-                    const displayValue =
-                      col.format && typeof cellValue === "number"
-                        ? formatByType(cellValue, col.format)
-                        : String(cellValue ?? "");
-                    return (
-                      <TableCell key={col.key}>{displayValue}</TableCell>
-                    );
-                  })}
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+        {tableContent}
       </CollapsibleContent>
     </Collapsible>
   );
