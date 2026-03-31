@@ -183,6 +183,7 @@ interface CalculatorChartsProps {
   charts: ChartConfig[];
   chartData: Record<string, Record<string, number | string | unknown>[]>;
   chartDataB?: Record<string, Record<string, number | string | unknown>[]> | null;
+  referenceLines?: Record<string, Array<{ x: number; label: string }>>;
   reducedMotion?: boolean;
 }
 
@@ -218,6 +219,7 @@ export function CalculatorCharts({
   charts,
   chartData,
   chartDataB,
+  referenceLines,
   reducedMotion = false,
 }: CalculatorChartsProps) {
   if (!charts.length) return null;
@@ -227,6 +229,7 @@ export function CalculatorCharts({
       {charts.map((chart) => {
         const data = chartData[chart.dataKey];
         const dataB = chartDataB?.[chart.dataKey];
+        const refLines = referenceLines?.[chart.dataKey];
         if (!data?.length) {
           return (
             <div key={chart.dataKey} className="py-8 text-center">
@@ -254,6 +257,7 @@ export function CalculatorCharts({
                 <AreaChartRenderer
                   data={data}
                   dataB={dataB}
+                  refLines={refLines}
                   reducedMotion={reducedMotion}
                 />
               )}
@@ -369,10 +373,12 @@ function LeaderDot({
 function AreaChartRenderer({
   data,
   dataB,
+  refLines,
   reducedMotion,
 }: {
   data: Record<string, number | string | unknown>[];
   dataB?: Record<string, number | string | unknown>[];
+  refLines?: Array<{ x: number; label: string }>;
   reducedMotion: boolean;
 }) {
   const { xKey, seriesKeys } = getSeriesKeys(data);
@@ -459,6 +465,21 @@ function AreaChartRenderer({
             <CustomTooltip formatter={(v) => formatCurrency(v)} />
           }
         />
+        {refLines?.map((ref, i) => (
+          <ReferenceLine
+            key={`ref-${i}`}
+            x={ref.x}
+            stroke="oklch(0.55 0 0)"
+            strokeDasharray="4 4"
+            strokeWidth={1.5}
+            label={{
+              value: ref.label,
+              position: "top",
+              fontSize: 11,
+              fill: "oklch(0.55 0 0)",
+            }}
+          />
+        ))}
         {seriesKeys.map((key, i) => {
           const keyIndex = i;
           const lastIdx = showLabels ? lastIndices[keyIndex] : -1;

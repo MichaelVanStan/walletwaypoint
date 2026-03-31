@@ -24,6 +24,7 @@ interface CalculatorInputsProps {
   values: Record<string, number | string>;
   onChange: (key: string, value: number | string) => void;
   scenarioLabel?: string;
+  computedHints?: Record<string, string>;
 }
 
 export function CalculatorInputs({
@@ -32,6 +33,7 @@ export function CalculatorInputs({
   values,
   onChange,
   scenarioLabel,
+  computedHints,
 }: CalculatorInputsProps) {
   const [advancedOpen, setAdvancedOpen] = useState(false);
 
@@ -75,7 +77,7 @@ export function CalculatorInputs({
             min={input.min}
             max={input.max}
             step={input.step}
-            hint={input.hint}
+            hint={computedHints?.[input.urlKey] ?? input.hint}
             format={input.type}
             tooltip={input.tooltip}
             unitToggle={input.unitToggle}

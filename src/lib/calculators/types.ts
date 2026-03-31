@@ -114,6 +114,10 @@ export interface CalculatorResults {
   detailRows?: Array<Record<string, string | number>>;
   /** Detail table column headers */
   detailColumns?: Array<{ key: string; label: string; format?: 'currency' | 'percent' | 'number' }>;
+  /** Vertical reference lines keyed by chart dataKey */
+  referenceLines?: Record<string, Array<{ x: number; label: string }>>;
+  /** Dynamic hints keyed by input urlKey, overriding static YAML hints */
+  computedHints?: Record<string, string>;
 }
 
 /** Comparison delta between two scenarios */

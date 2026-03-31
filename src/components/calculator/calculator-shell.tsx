@@ -243,6 +243,7 @@ export function CalculatorShell({
               advancedInputs={config.inputs.advanced}
               values={values as Record<string, number | string>}
               onChange={handleChange}
+              computedHints={results.computedHints}
             />
 
             <div className="mt-6">
@@ -279,6 +280,7 @@ export function CalculatorShell({
                     advancedInputs={config.inputs.advanced}
                     values={values as Record<string, number | string>}
                     onChange={handleChange}
+                    computedHints={results.computedHints}
                   />
                 </TabsContent>
                 <TabsContent value="b">
@@ -296,6 +298,7 @@ export function CalculatorShell({
                 advancedInputs={config.inputs.advanced}
                 values={values as Record<string, number | string>}
                 onChange={handleChange}
+                computedHints={results.computedHints}
               />
             )}
 
@@ -456,6 +459,7 @@ export function CalculatorShell({
                 charts={config.charts}
                 chartData={results.chartData}
                 chartDataB={isComparing ? resultsB?.chartData : undefined}
+                referenceLines={results.referenceLines}
                 reducedMotion={prefersReducedMotion}
               />
             </div>

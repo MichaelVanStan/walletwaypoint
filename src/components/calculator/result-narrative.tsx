@@ -78,6 +78,7 @@ function NarrativeSectionRenderer({
           charts={config.charts.filter((c) => c.dataKey === section.chartKey)}
           chartData={results.chartData}
           chartDataB={resultsB?.chartData}
+          referenceLines={results.referenceLines}
           reducedMotion={reducedMotion}
         />
       )}

@@ -206,6 +206,24 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
     interpretation += ' Consider making extra payments to dramatically reduce your payoff time and interest costs.';
   }
 
+  // ============================================================================
+  // Reference lines: vertical payoff markers for cumulative interest chart
+  // ============================================================================
+  const cumulativeRefLines: Array<{ x: number; label: string }> = [];
+  if (extraMonths < MAX_MONTHS) {
+    cumulativeRefLines.push({ x: extraMonths, label: `Payoff (Extra): Mo. ${extraMonths}` });
+  }
+  if (minMonths < MAX_MONTHS && minMonths !== extraMonths) {
+    cumulativeRefLines.push({ x: minMonths, label: `Payoff (Min.): Mo. ${minMonths}` });
+  }
+
+  // ============================================================================
+  // Computed hints: show minimum payment as dollar amount
+  // ============================================================================
+  const minPaymentDollars = balance.times(minPaymentPct).div(100);
+  const floorAmount = new Decimal(25);
+  const effectiveMinPayment = minPaymentDollars.gt(floorAmount) ? minPaymentDollars : floorAmount;
+
   return {
     outputs: {
       minMonths,
@@ -220,6 +238,12 @@ export function calculateCreditCardPayoff(params: Record<string, number | string
     chartData: {
       balanceOverTime,
       cumulativeInterest,
+    },
+    referenceLines: {
+      cumulativeInterest: cumulativeRefLines,
+    },
+    computedHints: {
+      minpct: `= ${formatCurrency(effectiveMinPayment.toDecimalPlaces(2).toNumber())}/mo on current balance`,
     },
     interpretation,
     detailRows,
